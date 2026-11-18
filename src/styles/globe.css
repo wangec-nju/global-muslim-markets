@@ -1,0 +1,43 @@
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.globe-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  touch-action: none;
+  cursor: grab;
+}
+
+.globe-stage:active {
+  cursor: grabbing;
+}
+
+.globe-stage canvas {
+  display: block;
+  outline: none;
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 46%, transparent 26%, rgba(2, 8, 12, 0.18) 62%, rgba(1, 5, 8, 0.62) 100%),
+    linear-gradient(180deg, rgba(2, 7, 10, 0.5) 0%, transparent 18%, transparent 78%, rgba(2, 7, 10, 0.55) 100%);
+}
+
+.card-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "global-muslim-markets",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "3D globe explorer for Muslim markets — decoupled card shell and content renderers, ready for GitHub Pages.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "gen:facts": "node scripts/build-country-facts.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.2",
+    "globe.gl": "^2.46.2",
+    "three": "^0.187.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^26.6.6",
+    "@types/topojson-client": "^3.1.5",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0",
+    "world-countries": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

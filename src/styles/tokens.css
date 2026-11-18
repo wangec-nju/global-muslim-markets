@@ -1,0 +1,28 @@
+:root {
+  color-scheme: dark;
+
+  --bg: #030a0e;
+  --ink: #edf6f2;
+  --muted: #9db5ae;
+  --faint: #69817b;
+
+  --gold: #e9b96b;
+  --gold-bright: #ffd99a;
+  --gold-soft: rgba(233, 185, 107, 0.14);
+  --teal: #5fd6c2;
+  --teal-soft: rgba(95, 214, 194, 0.12);
+  --line: rgba(147, 205, 191, 0.14);
+
+  --card-width: 356px;
+
+  --font-sans:
+    'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei',
+    sans-serif;
+  --font-mono:
+    ui-monospace, 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas,
+    monospace;
+
+  --ease-out: cubic-bezier(0.16, 0.84, 0.32, 1);
+  --ease-spring: cubic-bezier(0.2, 1.25, 0.32, 1);
+}

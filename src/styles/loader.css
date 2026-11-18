@@ -1,0 +1,125 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(8, 27, 34, 0.98) 0%, rgba(3, 10, 14, 0.99) 58%, #02070a 100%);
+  transition:
+    opacity 0.5s var(--ease-out),
+    visibility 0.5s var(--ease-out);
+}
+
+.loader[hidden] {
+  display: none;
+}
+
+.loader.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.loader__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.loader__orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(233, 185, 107, 0.2);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(95, 214, 194, 0.08), transparent 68%);
+  box-shadow:
+    0 0 0 9px rgba(233, 185, 107, 0.02),
+    0 0 60px -10px rgba(95, 214, 194, 0.18);
+}
+
+.loader__orbit::before {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border: 1px dashed rgba(95, 214, 194, 0.28);
+  border-radius: 50%;
+  animation: loader-spin 9s linear infinite;
+}
+
+.loader__orbit::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid transparent;
+  border-top-color: var(--gold);
+  border-right-color: rgba(233, 185, 107, 0.18);
+  border-radius: 50%;
+  animation: loader-spin 1.5s cubic-bezier(0.55, 0.1, 0.35, 0.9) infinite;
+}
+
+.loader__core {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, #9fe8db, #2b8f82 45%, #0a2a30 78%);
+  box-shadow:
+    0 0 16px rgba(95, 214, 194, 0.35),
+    inset -3px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.loader__title {
+  margin: 0;
+  color: #eaf4f0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+}
+
+.loader__sub {
+  margin: 8px 0 0;
+  color: var(--faint);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+}
+
+.loader.is-error .loader__orbit {
+  display: none;
+}
+
+.loader.is-error .loader__title {
+  color: var(--gold);
+}
+
+.loader.is-error .loader__sub {
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .loader__orbit {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loader__title {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+}

@@ -1,0 +1,75 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Resolve Pages base path
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          BASE="/${REPO_NAME}/"
+          # User/organisation pages live at the domain root.
+          if [[ "${REPO_NAME}" == *.github.io ]]; then
+            BASE="/"
+          fi
+          # A repository variable lets a custom domain override the base.
+          if [[ -n "${VITE_BASE_OVERRIDE}" ]]; then
+            BASE="${VITE_BASE_OVERRIDE}"
+          fi
+          echo "VITE_BASE=${BASE}" >> "$GITHUB_ENV"
+        env:
+          VITE_BASE_OVERRIDE: ${{ vars.VITE_BASE }}
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          # First run can create the Pages site with the workflow token.
+          enablement: true
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
