@@ -232,6 +232,10 @@ export class GlobeScene {
   private handleReady(): void {
     if (this.ready) return;
     this.ready = true;
+    // A tab that was backgrounded while textures loaded can miss the first
+    // animation frame and show an empty canvas until the next resize.
+    // Re-applying the current size forces an initial render.
+    this.queueResize();
     this.options.onReady?.();
   }
 
