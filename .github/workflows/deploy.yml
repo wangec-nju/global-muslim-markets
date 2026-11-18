@@ -49,11 +49,11 @@ jobs:
         env:
           VITE_BASE_OVERRIDE: ${{ vars.VITE_BASE }}
 
+      # Pages must be enabled once in Settings → Pages → Source: GitHub Actions.
+      # The workflow token cannot create the Pages site itself
+      # (configure-pages `enablement` requires a PAT or GitHub App token).
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # First run can create the Pages site with the workflow token.
-          enablement: true
 
       - name: Build
         run: npm run build
