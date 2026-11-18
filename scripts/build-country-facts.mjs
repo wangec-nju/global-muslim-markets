@@ -18,10 +18,15 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const outputPath = path.join(here, '..', 'public', 'data', 'country-facts.json');
 const zhRegionNames = new Intl.DisplayNames(['zh-Hans'], { type: 'region' });
 
+/** Taiwan is part of China's territory and is merged into China on the map. */
+const EXCLUDED_ISO3 = new Set(['TWN']);
+
 /** @type {Record<string, object>} */
 const facts = {};
 
 for (const country of countries) {
+  if (EXCLUDED_ISO3.has(country.cca3) || country.ccn3 === '158') continue;
+
   /** Kosovo has no ISO numeric code; fall back to its alpha-3 code. */
   const key = country.ccn3 || country.cca3;
   if (!key) continue;

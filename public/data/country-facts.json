@@ -4,7 +4,7 @@
     "attribution": "https://github.com/mledoze/countries",
     "license": "ODbL-1.0",
     "generator": "scripts/build-country-facts.mjs",
-    "count": 250
+    "count": 249
   },
   "countries": {
     "100": {
@@ -174,18 +174,6 @@
       "area": 9706961,
       "flag": "🇨🇳",
       "unMember": true
-    },
-    "158": {
-      "name": "Taiwan",
-      "nameZh": "台湾",
-      "iso2": "TW",
-      "iso3": "TWN",
-      "capital": "Taipei",
-      "region": "Asia",
-      "subregion": "Eastern Asia",
-      "area": 36193,
-      "flag": "🇹🇼",
-      "unMember": false
     },
     "162": {
       "name": "Christmas Island",

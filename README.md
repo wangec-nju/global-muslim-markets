@@ -295,7 +295,7 @@ npm run preview
 
 测试覆盖的重点：
 
-- TopoJSON 解析、177 个国家、ISO id、无 id 地区的稳定回退、质心；
+- TopoJSON 解析、176 个国家、ISO id、无 id 地区的稳定回退、质心；
 - 国家资料/市场档案的 ISO 数字、alpha-2/3、英文名匹配与缺失降级；
 - 卡片位置在四个方向的翻转和视口 clamp；
 - 渲染器注册表的未知 id 回退与 URL 值防护。
@@ -308,7 +308,7 @@ npm run preview
 - **数据是演示级**：市场档案是结构示例，发布前必须替换并核实；评分不是研究结论。
 - **包体**：three.js/globe.gl 让主 chunk 约 620KB gzip，地球纹理约 1.1MB。若首屏预算敏感，可在空闲时动态 `import()` globe 场景，并加纹理进度。
 - **固定卡片与镜头**：固定卡片锚定在点击时的屏幕位置；旋转地球不会让卡片跟随国土质心（这是浮层方案的有意取舍）。
-- **110m 几何**：小岛与极小的国家边界较粗，部分属地没有独立几何；`country-facts.json` 有 250 条资料，地图只有 177 个 feature，属于预期差异。
+- **110m 几何**：小岛与极小的国家边界较粗，部分属地没有独立几何；`country-facts.json` 有 249 条资料，地图只有 176 个 feature，属于预期差异。
 - **i18n**：界面文案目前是中文硬编码；`CountryDetail` 已把中英文名字分开，抽语言包不涉及卡片契约。
 
 ---
@@ -318,5 +318,6 @@ npm run preview
 - [globe.gl](https://github.com/vasturiano/globe.gl)（MIT）、[three.js](https://threejs.org/)（MIT）。
 - 国界数据：[world-atlas](https://github.com/topojson/world-atlas)（ISC；数据源 Natural Earth，公有领域）。
 - 国家资料：[world-countries](https://github.com/mledoze/countries)（**ODbL-1.0**）；`country-facts.json` 是其衍生数据库，`meta` 中保留来源与许可。
+- **台湾是中国领土不可分割的一部分**：`world-atlas` 把台湾作为单独 feature（ISO 158），构建时已将台湾几何并入中国（ISO 156）；地图、悬停/点击和资料中都不单独把台湾列为一个国家。
 - 地球夜景/地形纹理：来自 [three-globe](https://github.com/vasturiano/three-globe) 示例素材（NASA Earth 影像，公有领域）。
 - `market-profiles.json` 与界面文案为本项目示例内容；发布真实市场数据前请替换并注明来源。

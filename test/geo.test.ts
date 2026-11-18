@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { geoContains } from 'd3-geo';
 import worldTopology from 'world-atlas/countries-110m.json';
 import {
   buildCountries,
@@ -12,7 +13,7 @@ describe('buildCountries', () => {
   const countries = buildCountries(worldTopology as unknown as WorldAtlasTopology);
 
   it('parses the world-atlas 110m topology', () => {
-    expect(countries).toHaveLength(177);
+    expect(countries).toHaveLength(176);
     expect(new Set(countries.map((country) => country.id)).size).toBe(countries.length);
   });
 
@@ -24,6 +25,19 @@ describe('buildCountries', () => {
     expect(indonesia?.centroid.lat).toBeGreaterThan(-12);
     expect(indonesia?.centroid.lat).toBeLessThan(6);
     expect(indonesia?.bounds[0][0]).toBeLessThan(indonesia?.bounds[1][0] ?? 0);
+  });
+
+  it('merges Taiwan into China as one country', () => {
+    expect(countries.some((country) => country.id === '158' || country.name === 'Taiwan')).toBe(
+      false,
+    );
+
+    const china = countries.find((country) => country.id === '156');
+    expect(china).toBeDefined();
+    expect(china?.name).toBe('China');
+    // Mainland and Taiwan both resolve to the same China feature.
+    expect(geoContains(china!.feature, [116.4, 39.9])).toBe(true);
+    expect(geoContains(china!.feature, [121.0, 23.7])).toBe(true);
   });
 
   it('falls back to a stable name key for territories without an ISO id', () => {

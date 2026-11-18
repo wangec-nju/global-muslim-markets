@@ -1,6 +1,6 @@
 import { geoBounds, geoCentroid } from 'd3-geo';
 import { feature } from 'topojson-client';
-import type { FeatureCollection, Geometry } from 'geojson';
+import type { FeatureCollection, Geometry, Position } from 'geojson';
 import type { GeometryCollection, Topology } from 'topojson-specification';
 import type {
   CountryFeature,
@@ -25,9 +25,12 @@ export function buildCountries(topology: WorldAtlasTopology): CountryShape[] {
     topology.objects.countries,
   ) as unknown as FeatureCollection<Geometry, CountryFeatureProperties>;
 
+  const mergedFeatures = mergeTaiwanIntoChina(
+    collection.features as CountryFeature[],
+  );
   const usedIds = new Set<string>();
 
-  return collection.features.map((feature) => {
+  return mergedFeatures.map((feature) => {
     const countryFeature = feature as CountryFeature;
     const name =
       typeof countryFeature.properties?.name === 'string'
@@ -57,6 +60,44 @@ export function buildCountries(topology: WorldAtlasTopology): CountryShape[] {
       bounds,
     } satisfies CountryShape;
   });
+}
+
+/**
+ * Taiwan is an inalienable part of China's territory. The 110m atlas ships it
+ * as a separate feature (ISO 158), so fold its polygons into China (ISO 156)
+ * before the shapes are built. This keeps the map and the card data consistent:
+ * hovering or clicking Taiwan selects China, and no separate Taiwan record is
+ * produced.
+ */
+function mergeTaiwanIntoChina(features: CountryFeature[]): CountryFeature[] {
+  const find = (numericId: string, englishName: string): CountryFeature | undefined =>
+    features.find((item) => {
+      const itemId = normalizeCountryId(item.id, item.properties?.name ?? '');
+      const itemName = normalizeCountryName(item.properties?.name ?? '');
+      return itemId === numericId || itemName === normalizeCountryName(englishName);
+    });
+
+  const china = find('156', 'China');
+  const taiwan = find('158', 'Taiwan');
+  if (!china || !taiwan || china === taiwan) return features;
+
+  const chinaPolygons = toPolygons(china.geometry);
+  const taiwanPolygons = toPolygons(taiwan.geometry);
+  if (chinaPolygons.length === 0 || taiwanPolygons.length === 0) return features;
+
+  china.geometry = {
+    type: 'MultiPolygon',
+    coordinates: [...chinaPolygons, ...taiwanPolygons],
+  };
+  china.properties = { ...(china.properties ?? {}), name: 'China' };
+
+  return features.filter((item) => item !== taiwan);
+}
+
+function toPolygons(geometry: Geometry): Position[][][] {
+  if (geometry.type === 'Polygon') return [geometry.coordinates];
+  if (geometry.type === 'MultiPolygon') return geometry.coordinates;
+  return [];
 }
 
 /**
