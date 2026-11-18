@@ -73,8 +73,10 @@ export class GlobeScene {
     const height = options.container.clientHeight || window.innerHeight;
 
     this.globe = new Globe(options.container, {
-      animateIn: !this.reducedMotion,
-      waitForGlobeReady: true,
+      // The globe should be interactive immediately: textures are applied in
+      // the background instead of gating the whole scene on a 1 MB download.
+      animateIn: false,
+      waitForGlobeReady: false,
       rendererConfig: { antialias: true, alpha: true },
     });
 
@@ -116,6 +118,11 @@ export class GlobeScene {
     }
 
     this.globe.pointOfView(options.initialView, 0);
+
+    // With waitForGlobeReady disabled, onGlobeReady may fire during the
+    // constructor, before the callback below is attached. Resolve readiness
+    // after the first frame so the boot loader never waits on image downloads.
+    requestAnimationFrame(() => this.handleReady());
 
     options.container.addEventListener('pointerenter', this.onPointerEnterStage, { passive: true });
     options.container.addEventListener('pointerdown', this.onPointerDown, { passive: true });
