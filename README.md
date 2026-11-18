@@ -318,6 +318,5 @@ npm run preview
 - [globe.gl](https://github.com/vasturiano/globe.gl)（MIT）、[three.js](https://threejs.org/)（MIT）。
 - 国界数据：[world-atlas](https://github.com/topojson/world-atlas)（ISC；数据源 Natural Earth，公有领域）。
 - 国家资料：[world-countries](https://github.com/mledoze/countries)（**ODbL-1.0**）；`country-facts.json` 是其衍生数据库，`meta` 中保留来源与许可。
-- **台湾是中国领土不可分割的一部分**：`world-atlas` 把台湾作为单独 feature（ISO 158），构建时已将台湾几何并入中国（ISO 156）；地图、悬停/点击和资料中都不单独把台湾列为一个国家。
 - 地球夜景/地形纹理：来自 [three-globe](https://github.com/vasturiano/three-globe) 示例素材（NASA Earth 影像，公有领域）。
 - `market-profiles.json` 与界面文案为本项目示例内容；发布真实市场数据前请替换并注明来源。
