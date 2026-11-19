@@ -33,6 +33,9 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: Audit market data
+        run: npm run audit:markets
+
       - name: Resolve Pages base path
         run: |
           REPO_NAME="${GITHUB_REPOSITORY#*/}"

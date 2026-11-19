@@ -75,14 +75,14 @@ function metricGrid(market: MarketCountry, compact: boolean): HTMLElement {
   }
 
   const section = el('section', { className: 'market-section' });
-  section.append(sectionLabel('市场基本面'), grid);
+  section.append(sectionLabel('市场基本面', 'data/source/market-latest.csv（世界银行 WDI）'), grid);
   return section;
 }
 
 function tradeSection(market: MarketCountry, compact: boolean): HTMLElement {
   const trade = market.chinaTrade;
   const section = el('section', { className: 'market-section' });
-  section.append(sectionLabel(`中国贸易 · ${trade?.year ?? '暂无年份'}`));
+  section.append(sectionLabel(`中国贸易 · ${trade?.year ?? '暂无年份'}`, 'data/source/china-trade-yearly.csv + china-trade-cagr.csv（中国海关）'));
 
   const list = el('div', { className: 'trade-list' });
   list.append(
@@ -137,7 +137,7 @@ function tradeFlow(
 
 function muslimSection(market: MarketCountry): HTMLElement {
   const section = el('section', { className: 'market-section' });
-  section.append(sectionLabel('穆斯林人口'));
+  section.append(sectionLabel('穆斯林人口', 'data/source/muslim-official.csv（各国官方统计）'));
 
   const stats = el('div', { className: 'muslim-stats' });
   stats.append(
@@ -172,7 +172,7 @@ function muslimSection(market: MarketCountry): HTMLElement {
 
 function productsSection(market: MarketCountry): HTMLElement {
   const section = el('section', { className: 'market-section' });
-  section.append(sectionLabel('代表进口品类 · 2025'));
+  section.append(sectionLabel('代表进口品类 · 2025', 'data/source/products-idn-mys.csv（UN Comtrade）'));
 
   const list = el('div', { className: 'product-list' });
   for (const product of market.products) {

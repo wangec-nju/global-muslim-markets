@@ -12,6 +12,7 @@
  *
  * Run: npm run gen:markets
  */
+import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -21,6 +22,18 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(here, '..');
 const sourceDir = path.join(root, 'data', 'source');
 const outputPath = path.join(root, 'public', 'data', 'markets.json');
+
+const SOURCE_FILES = [
+  'scope.csv',
+  'market-latest.csv',
+  'muslim-official.csv',
+  'china-trade-yearly.csv',
+  'china-trade-cagr.csv',
+  'products-idn-mys.csv',
+  'product-meta.csv',
+  'wdi-dictionary.csv',
+  'metric-long.csv',
+];
 
 const METRIC_FIELDS = {
   population: ['总人口_人', '总人口_年份'],
@@ -43,6 +56,91 @@ const METRIC_FIELDS = {
   internetPenetration: ['使用互联网的人口占比_%', '使用互联网的人口占比_年份'],
   goodsExports: ['货物出口额_美元', '货物出口额_年份'],
   goodsImports: ['货物进口额_美元', '货物进口额_年份'],
+};
+
+const FIELD_SOURCES = {
+  nameZh: { file: 'scope.csv', field: '国家' },
+  nameEn: { source: 'world-countries@5.1.0', field: 'name.common' },
+  flag: { source: 'world-countries@5.1.0', field: 'flag' },
+  focus: { file: 'scope.csv', field: '16国重点样本' },
+  ...Object.fromEntries(
+    Object.entries(METRIC_FIELDS).map(([key, [valueField, yearField]]) => [
+      `metrics.${key}`,
+      { file: 'market-latest.csv', valueField, yearField },
+    ]),
+  ),
+  'chinaTrade.year': {
+    file: 'china-trade-yearly.csv',
+    filter: 'latest year with a non-empty amount',
+    field: '年份',
+  },
+  'chinaTrade.exports.value': {
+    file: 'china-trade-yearly.csv',
+    filter: 'direction=X; year=latest',
+    field: '金额_美元',
+  },
+  'chinaTrade.exports.yoy': {
+    file: 'china-trade-yearly.csv',
+    filter: 'direction=X; year=latest',
+    field: '同比_百分比',
+  },
+  'chinaTrade.exports.shareOfChinaTotal': {
+    file: 'china-trade-yearly.csv',
+    filter: 'direction=X; year=latest',
+    field: '占中国同方向全球货物贸易_百分比',
+  },
+  'chinaTrade.exports.cagr2020_2025': {
+    file: 'china-trade-cagr.csv',
+    filter: 'direction=X',
+    field: '2020至2025五年CAGR_百分比',
+  },
+  'chinaTrade.imports.value': {
+    file: 'china-trade-yearly.csv',
+    filter: 'direction=M; year=latest',
+    field: '金额_美元',
+  },
+  'chinaTrade.imports.yoy': {
+    file: 'china-trade-yearly.csv',
+    filter: 'direction=M; year=latest',
+    field: '同比_百分比',
+  },
+  'chinaTrade.imports.shareOfChinaTotal': {
+    file: 'china-trade-yearly.csv',
+    filter: 'direction=M; year=latest',
+    field: '占中国同方向全球货物贸易_百分比',
+  },
+  'chinaTrade.imports.cagr2020_2025': {
+    file: 'china-trade-cagr.csv',
+    filter: 'direction=M',
+    field: '2020至2025五年CAGR_百分比',
+  },
+  'muslim.status': {
+    file: 'muslim-official.csv',
+    derived: 'official when 穆斯林占比_百分比 is non-empty; otherwise unavailable',
+  },
+  'muslim.share': { file: 'muslim-official.csv', field: '穆斯林占比_百分比' },
+  'muslim.population': { file: 'muslim-official.csv', field: '穆斯林人口_人' },
+  'muslim.year': { file: 'muslim-official.csv', field: '普查年份' },
+  'muslim.source': { file: 'muslim-official.csv', field: '统计机构' },
+  'muslim.note': { file: 'muslim-official.csv', field: '注意' },
+  'products[].code': { file: 'products-idn-mys.csv', field: 'HS编码' },
+  'products[].name': { file: 'product-meta.csv', field: '中文名称' },
+  'products[].category': { file: 'product-meta.csv', field: '二级品类' },
+  'products[].worldImports': {
+    file: 'products-idn-mys.csv',
+    filter: 'year=2025; sort=自世界进口_美元 desc; top=4',
+    field: '自世界进口_美元',
+  },
+  'products[].chinaImports': {
+    file: 'products-idn-mys.csv',
+    filter: 'year=2025; top=4 by worldImports',
+    field: '自中国进口_美元',
+  },
+  'products[].chinaShare': {
+    file: 'products-idn-mys.csv',
+    filter: 'year=2025; top=4 by worldImports',
+    field: '中国占该国该商品进口_百分比',
+  },
 };
 
 const scope = readCsv('scope.csv');
@@ -73,6 +171,7 @@ const markets = scope.map((row) => {
   const base = latest.get(iso3) ?? {};
   const wc = worldCountries.get(iso3);
   const unM49 = String(row['UN_M49代码']).trim().padStart(3, '0');
+  const reportName = iso3 === 'IDN' ? '印度尼西亚' : iso3 === 'MYS' ? '马来西亚' : null;
   if (!unM49 || !/^\d{3}$/.test(unM49)) {
     throw new Error(`Invalid UN M49 code for ${iso3}: ${row['UN_M49代码']}`);
   }
@@ -100,6 +199,16 @@ const markets = scope.map((row) => {
       imports: buildTradeFlow(tradeYearly, tradeCagr, iso3, 'M'),
     },
     products: buildProducts(productRows, productMeta, iso3),
+    sourceRow: {
+      scope: `scope.csv#${iso3}`,
+      metrics: `market-latest.csv#${iso3}`,
+      trade: `china-trade-yearly.csv#${iso3}/X,M/2025`,
+      cagr: `china-trade-cagr.csv#${iso3}/X,M`,
+      muslim: `muslim-official.csv#${iso3}`,
+      ...(reportName
+        ? { products: `products-idn-mys.csv#${reportName}/2025` }
+        : {}),
+    },
   };
 });
 
@@ -124,6 +233,13 @@ const dataset = {
     focusCount,
     marketCount: markets.length,
     officialMuslimCount,
+    sourceFiles: Object.fromEntries(
+      SOURCE_FILES.map((file) => [
+        file,
+        createHash('sha256').update(readFileSync(path.join(sourceDir, file))).digest('hex'),
+      ]),
+    ),
+    fieldSources: FIELD_SOURCES,
     notes: [
       '国家总体指标覆盖全部人口与经济，不是穆斯林专属口径。',
       '缺失值保持为空，不补零、不前填。',

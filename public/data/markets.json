@@ -6,6 +6,201 @@
     "focusCount": 16,
     "marketCount": 57,
     "officialMuslimCount": 6,
+    "sourceFiles": {
+      "scope.csv": "af4a3c032afb4bb732dfab43d66488354d7c65daa2df71984ff3be5dd012e403",
+      "market-latest.csv": "6a82dd3af0d25f93423c111d7784e22131bfe4c8b75f745f53107f2c3b2c6f29",
+      "muslim-official.csv": "9cec8bcbe70d8636ea370dfdb61ff952344f141b170f77b670c4fd5080a921e2",
+      "china-trade-yearly.csv": "bd4fc24ec26090aa584276e3ff328b7de288d3a647fada8a231b22d9dea4e720",
+      "china-trade-cagr.csv": "d107e770109961f8c4c44c994e9e3db8c70363817eb84ba7ce5de136f21b1f4e",
+      "products-idn-mys.csv": "3897bf4e83a7b9dd62ab55d078e75f2b86dad182c2be3e48dc48ca7ec244965a",
+      "product-meta.csv": "1caa60b52ee38820d6fb25e8cd719cc7ce40d1c0c31f43615be9dc05ccb1e1af",
+      "wdi-dictionary.csv": "236097ada2ec0cb76b0e8408c05c90140500bbb2c9048c60abd76354744d3cb4",
+      "metric-long.csv": "b586b3496d0197a947b7c0480a90cc57fb2868362ab96094195c2806d52df9c8"
+    },
+    "fieldSources": {
+      "nameZh": {
+        "file": "scope.csv",
+        "field": "国家"
+      },
+      "nameEn": {
+        "source": "world-countries@5.1.0",
+        "field": "name.common"
+      },
+      "flag": {
+        "source": "world-countries@5.1.0",
+        "field": "flag"
+      },
+      "focus": {
+        "file": "scope.csv",
+        "field": "16国重点样本"
+      },
+      "metrics.population": {
+        "file": "market-latest.csv",
+        "valueField": "总人口_人",
+        "yearField": "总人口_年份"
+      },
+      "metrics.populationGrowth": {
+        "file": "market-latest.csv",
+        "valueField": "人口年增长率_%",
+        "yearField": "人口年增长率_年份"
+      },
+      "metrics.urbanShare": {
+        "file": "market-latest.csv",
+        "valueField": "城镇人口占比_%",
+        "yearField": "城镇人口占比_年份"
+      },
+      "metrics.youthShare": {
+        "file": "market-latest.csv",
+        "valueField": "0至14岁人口占比_%",
+        "yearField": "0至14岁人口占比_年份"
+      },
+      "metrics.workingAgeShare": {
+        "file": "market-latest.csv",
+        "valueField": "15至64岁人口占比_%",
+        "yearField": "15至64岁人口占比_年份"
+      },
+      "metrics.seniorShare": {
+        "file": "market-latest.csv",
+        "valueField": "65岁及以上人口占比_%",
+        "yearField": "65岁及以上人口占比_年份"
+      },
+      "metrics.gdp": {
+        "file": "market-latest.csv",
+        "valueField": "GDP现价美元_美元",
+        "yearField": "GDP现价美元_年份"
+      },
+      "metrics.gdpPerCapita": {
+        "file": "market-latest.csv",
+        "valueField": "人均GDP现价美元_美元/人",
+        "yearField": "人均GDP现价美元_年份"
+      },
+      "metrics.gniPerCapita": {
+        "file": "market-latest.csv",
+        "valueField": "人均GNI阿特拉斯法_美元/人",
+        "yearField": "人均GNI阿特拉斯法_年份"
+      },
+      "metrics.householdConsumption": {
+        "file": "market-latest.csv",
+        "valueField": "住户和为住户服务的非营利机构最终消费支出_美元",
+        "yearField": "住户和为住户服务的非营利机构最终消费支出_年份"
+      },
+      "metrics.householdConsumptionPerCapita": {
+        "file": "market-latest.csv",
+        "valueField": "住户和非营利机构人均最终消费支出不变价_2015年不变价美元/人",
+        "yearField": "住户和非营利机构人均最终消费支出不变价_年份"
+      },
+      "metrics.internetPenetration": {
+        "file": "market-latest.csv",
+        "valueField": "使用互联网的人口占比_%",
+        "yearField": "使用互联网的人口占比_年份"
+      },
+      "metrics.goodsExports": {
+        "file": "market-latest.csv",
+        "valueField": "货物出口额_美元",
+        "yearField": "货物出口额_年份"
+      },
+      "metrics.goodsImports": {
+        "file": "market-latest.csv",
+        "valueField": "货物进口额_美元",
+        "yearField": "货物进口额_年份"
+      },
+      "chinaTrade.year": {
+        "file": "china-trade-yearly.csv",
+        "filter": "latest year with a non-empty amount",
+        "field": "年份"
+      },
+      "chinaTrade.exports.value": {
+        "file": "china-trade-yearly.csv",
+        "filter": "direction=X; year=latest",
+        "field": "金额_美元"
+      },
+      "chinaTrade.exports.yoy": {
+        "file": "china-trade-yearly.csv",
+        "filter": "direction=X; year=latest",
+        "field": "同比_百分比"
+      },
+      "chinaTrade.exports.shareOfChinaTotal": {
+        "file": "china-trade-yearly.csv",
+        "filter": "direction=X; year=latest",
+        "field": "占中国同方向全球货物贸易_百分比"
+      },
+      "chinaTrade.exports.cagr2020_2025": {
+        "file": "china-trade-cagr.csv",
+        "filter": "direction=X",
+        "field": "2020至2025五年CAGR_百分比"
+      },
+      "chinaTrade.imports.value": {
+        "file": "china-trade-yearly.csv",
+        "filter": "direction=M; year=latest",
+        "field": "金额_美元"
+      },
+      "chinaTrade.imports.yoy": {
+        "file": "china-trade-yearly.csv",
+        "filter": "direction=M; year=latest",
+        "field": "同比_百分比"
+      },
+      "chinaTrade.imports.shareOfChinaTotal": {
+        "file": "china-trade-yearly.csv",
+        "filter": "direction=M; year=latest",
+        "field": "占中国同方向全球货物贸易_百分比"
+      },
+      "chinaTrade.imports.cagr2020_2025": {
+        "file": "china-trade-cagr.csv",
+        "filter": "direction=M",
+        "field": "2020至2025五年CAGR_百分比"
+      },
+      "muslim.status": {
+        "file": "muslim-official.csv",
+        "derived": "official when 穆斯林占比_百分比 is non-empty; otherwise unavailable"
+      },
+      "muslim.share": {
+        "file": "muslim-official.csv",
+        "field": "穆斯林占比_百分比"
+      },
+      "muslim.population": {
+        "file": "muslim-official.csv",
+        "field": "穆斯林人口_人"
+      },
+      "muslim.year": {
+        "file": "muslim-official.csv",
+        "field": "普查年份"
+      },
+      "muslim.source": {
+        "file": "muslim-official.csv",
+        "field": "统计机构"
+      },
+      "muslim.note": {
+        "file": "muslim-official.csv",
+        "field": "注意"
+      },
+      "products[].code": {
+        "file": "products-idn-mys.csv",
+        "field": "HS编码"
+      },
+      "products[].name": {
+        "file": "product-meta.csv",
+        "field": "中文名称"
+      },
+      "products[].category": {
+        "file": "product-meta.csv",
+        "field": "二级品类"
+      },
+      "products[].worldImports": {
+        "file": "products-idn-mys.csv",
+        "filter": "year=2025; sort=自世界进口_美元 desc; top=4",
+        "field": "自世界进口_美元"
+      },
+      "products[].chinaImports": {
+        "file": "products-idn-mys.csv",
+        "filter": "year=2025; top=4 by worldImports",
+        "field": "自中国进口_美元"
+      },
+      "products[].chinaShare": {
+        "file": "products-idn-mys.csv",
+        "filter": "year=2025; top=4 by worldImports",
+        "field": "中国占该国该商品进口_百分比"
+      }
+    },
     "notes": [
       "国家总体指标覆盖全部人口与经济，不是穆斯林专属口径。",
       "缺失值保持为空，不补零、不前填。",
@@ -125,7 +320,14 @@
           "cagr2020_2025": 11.089563287413728
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#AFG",
+        "metrics": "market-latest.csv#AFG",
+        "trade": "china-trade-yearly.csv#AFG/X,M/2025",
+        "cagr": "china-trade-cagr.csv#AFG/X,M",
+        "muslim": "muslim-official.csv#AFG"
+      }
     },
     {
       "id": "008",
@@ -218,7 +420,14 @@
           "cagr2020_2025": 14.802747417330497
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#ALB",
+        "metrics": "market-latest.csv#ALB",
+        "trade": "china-trade-yearly.csv#ALB/X,M/2025",
+        "cagr": "china-trade-cagr.csv#ALB/X,M",
+        "muslim": "muslim-official.csv#ALB"
+      }
     },
     {
       "id": "012",
@@ -311,7 +520,14 @@
           "cagr2020_2025": 6.366368515052678
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#DZA",
+        "metrics": "market-latest.csv#DZA",
+        "trade": "china-trade-yearly.csv#DZA/X,M/2025",
+        "cagr": "china-trade-cagr.csv#DZA/X,M",
+        "muslim": "muslim-official.csv#DZA"
+      }
     },
     {
       "id": "031",
@@ -401,7 +617,14 @@
           "cagr2020_2025": -27.395590185234564
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#AZE",
+        "metrics": "market-latest.csv#AZE",
+        "trade": "china-trade-yearly.csv#AZE/X,M/2025",
+        "cagr": "china-trade-cagr.csv#AZE/X,M",
+        "muslim": "muslim-official.csv#AZE"
+      }
     },
     {
       "id": "048",
@@ -494,7 +717,14 @@
           "cagr2020_2025": 14.003505052300325
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#BHR",
+        "metrics": "market-latest.csv#BHR",
+        "trade": "china-trade-yearly.csv#BHR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#BHR/X,M",
+        "muslim": "muslim-official.csv#BHR"
+      }
     },
     {
       "id": "050",
@@ -587,7 +817,14 @@
           "cagr2020_2025": 10.744980987737573
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#BGD",
+        "metrics": "market-latest.csv#BGD",
+        "trade": "china-trade-yearly.csv#BGD/X,M/2025",
+        "cagr": "china-trade-cagr.csv#BGD/X,M",
+        "muslim": "muslim-official.csv#BGD"
+      }
     },
     {
       "id": "204",
@@ -680,7 +917,14 @@
           "cagr2020_2025": -29.574415490922966
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#BEN",
+        "metrics": "market-latest.csv#BEN",
+        "trade": "china-trade-yearly.csv#BEN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#BEN/X,M",
+        "muslim": "muslim-official.csv#BEN"
+      }
     },
     {
       "id": "096",
@@ -773,7 +1017,14 @@
           "cagr2020_2025": 6.296858500718083
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#BRN",
+        "metrics": "market-latest.csv#BRN",
+        "trade": "china-trade-yearly.csv#BRN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#BRN/X,M",
+        "muslim": "muslim-official.csv#BRN"
+      }
     },
     {
       "id": "854",
@@ -866,7 +1117,14 @@
           "cagr2020_2025": -5.620879017809244
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#BFA",
+        "metrics": "market-latest.csv#BFA",
+        "trade": "china-trade-yearly.csv#BFA/X,M/2025",
+        "cagr": "china-trade-cagr.csv#BFA/X,M",
+        "muslim": "muslim-official.csv#BFA"
+      }
     },
     {
       "id": "120",
@@ -959,7 +1217,14 @@
           "cagr2020_2025": -14.324953751555093
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#CMR",
+        "metrics": "market-latest.csv#CMR",
+        "trade": "china-trade-yearly.csv#CMR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#CMR/X,M",
+        "muslim": "muslim-official.csv#CMR"
+      }
     },
     {
       "id": "148",
@@ -1052,7 +1317,14 @@
           "cagr2020_2025": 6.002557894888572
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#TCD",
+        "metrics": "market-latest.csv#TCD",
+        "trade": "china-trade-yearly.csv#TCD/X,M/2025",
+        "cagr": "china-trade-cagr.csv#TCD/X,M",
+        "muslim": "muslim-official.csv#TCD"
+      }
     },
     {
       "id": "174",
@@ -1145,7 +1417,14 @@
           "cagr2020_2025": 11.737720371383077
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#COM",
+        "metrics": "market-latest.csv#COM",
+        "trade": "china-trade-yearly.csv#COM/X,M/2025",
+        "cagr": "china-trade-cagr.csv#COM/X,M",
+        "muslim": "muslim-official.csv#COM"
+      }
     },
     {
       "id": "384",
@@ -1238,7 +1517,14 @@
           "cagr2020_2025": 17.488349740603827
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#CIV",
+        "metrics": "market-latest.csv#CIV",
+        "trade": "china-trade-yearly.csv#CIV/X,M/2025",
+        "cagr": "china-trade-cagr.csv#CIV/X,M",
+        "muslim": "muslim-official.csv#CIV"
+      }
     },
     {
       "id": "262",
@@ -1331,7 +1617,14 @@
           "cagr2020_2025": -16.854091751829603
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#DJI",
+        "metrics": "market-latest.csv#DJI",
+        "trade": "china-trade-yearly.csv#DJI/X,M/2025",
+        "cagr": "china-trade-cagr.csv#DJI/X,M",
+        "muslim": "muslim-official.csv#DJI"
+      }
     },
     {
       "id": "818",
@@ -1424,7 +1717,14 @@
           "cagr2020_2025": -2.3361479088505943
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#EGY",
+        "metrics": "market-latest.csv#EGY",
+        "trade": "china-trade-yearly.csv#EGY/X,M/2025",
+        "cagr": "china-trade-cagr.csv#EGY/X,M",
+        "muslim": "muslim-official.csv#EGY"
+      }
     },
     {
       "id": "266",
@@ -1517,7 +1817,14 @@
           "cagr2020_2025": -0.4587226905626962
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#GAB",
+        "metrics": "market-latest.csv#GAB",
+        "trade": "china-trade-yearly.csv#GAB/X,M/2025",
+        "cagr": "china-trade-cagr.csv#GAB/X,M",
+        "muslim": "muslim-official.csv#GAB"
+      }
     },
     {
       "id": "270",
@@ -1610,7 +1917,14 @@
           "cagr2020_2025": 2.7696034004844217
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#GMB",
+        "metrics": "market-latest.csv#GMB",
+        "trade": "china-trade-yearly.csv#GMB/X,M/2025",
+        "cagr": "china-trade-cagr.csv#GMB/X,M",
+        "muslim": "muslim-official.csv#GMB"
+      }
     },
     {
       "id": "324",
@@ -1703,7 +2017,14 @@
           "cagr2020_2025": 37.81186133617644
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#GIN",
+        "metrics": "market-latest.csv#GIN",
+        "trade": "china-trade-yearly.csv#GIN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#GIN/X,M",
+        "muslim": "muslim-official.csv#GIN"
+      }
     },
     {
       "id": "624",
@@ -1796,7 +2117,14 @@
           "cagr2020_2025": 8.486113013535368
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#GNB",
+        "metrics": "market-latest.csv#GNB",
+        "trade": "china-trade-yearly.csv#GNB/X,M/2025",
+        "cagr": "china-trade-cagr.csv#GNB/X,M",
+        "muslim": "muslim-official.csv#GNB"
+      }
     },
     {
       "id": "328",
@@ -1883,7 +2211,14 @@
           "cagr2020_2025": 36.8055699718588
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#GUY",
+        "metrics": "market-latest.csv#GUY",
+        "trade": "china-trade-yearly.csv#GUY/X,M/2025",
+        "cagr": "china-trade-cagr.csv#GUY/X,M",
+        "muslim": "muslim-official.csv#GUY"
+      }
     },
     {
       "id": "360",
@@ -2009,7 +2344,15 @@
           "chinaImports": 118,
           "chinaShare": 0.000020270281903629262
         }
-      ]
+      ],
+      "sourceRow": {
+        "scope": "scope.csv#IDN",
+        "metrics": "market-latest.csv#IDN",
+        "trade": "china-trade-yearly.csv#IDN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#IDN/X,M",
+        "muslim": "muslim-official.csv#IDN",
+        "products": "products-idn-mys.csv#印度尼西亚/2025"
+      }
     },
     {
       "id": "364",
@@ -2102,7 +2445,14 @@
           "cagr2020_2025": -13.979512150598216
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#IRN",
+        "metrics": "market-latest.csv#IRN",
+        "trade": "china-trade-yearly.csv#IRN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#IRN/X,M",
+        "muslim": "muslim-official.csv#IRN"
+      }
     },
     {
       "id": "368",
@@ -2195,7 +2545,14 @@
           "cagr2020_2025": 11.928686653792964
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#IRQ",
+        "metrics": "market-latest.csv#IRQ",
+        "trade": "china-trade-yearly.csv#IRQ/X,M/2025",
+        "cagr": "china-trade-cagr.csv#IRQ/X,M",
+        "muslim": "muslim-official.csv#IRQ"
+      }
     },
     {
       "id": "400",
@@ -2282,7 +2639,14 @@
           "cagr2020_2025": 0.4085023912403951
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#JOR",
+        "metrics": "market-latest.csv#JOR",
+        "trade": "china-trade-yearly.csv#JOR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#JOR/X,M",
+        "muslim": "muslim-official.csv#JOR"
+      }
     },
     {
       "id": "398",
@@ -2375,7 +2739,14 @@
           "cagr2020_2025": 12.804321965330633
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#KAZ",
+        "metrics": "market-latest.csv#KAZ",
+        "trade": "china-trade-yearly.csv#KAZ/X,M/2025",
+        "cagr": "china-trade-cagr.csv#KAZ/X,M",
+        "muslim": "muslim-official.csv#KAZ"
+      }
     },
     {
       "id": "414",
@@ -2468,7 +2839,14 @@
           "cagr2020_2025": 3.163772012846744
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#KWT",
+        "metrics": "market-latest.csv#KWT",
+        "trade": "china-trade-yearly.csv#KWT/X,M/2025",
+        "cagr": "china-trade-cagr.csv#KWT/X,M",
+        "muslim": "muslim-official.csv#KWT"
+      }
     },
     {
       "id": "417",
@@ -2561,7 +2939,14 @@
           "cagr2020_2025": 172.4473529478309
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#KGZ",
+        "metrics": "market-latest.csv#KGZ",
+        "trade": "china-trade-yearly.csv#KGZ/X,M/2025",
+        "cagr": "china-trade-cagr.csv#KGZ/X,M",
+        "muslim": "muslim-official.csv#KGZ"
+      }
     },
     {
       "id": "422",
@@ -2654,7 +3039,14 @@
           "cagr2020_2025": 27.65478514435964
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#LBN",
+        "metrics": "market-latest.csv#LBN",
+        "trade": "china-trade-yearly.csv#LBN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#LBN/X,M",
+        "muslim": "muslim-official.csv#LBN"
+      }
     },
     {
       "id": "434",
@@ -2747,7 +3139,14 @@
           "cagr2020_2025": -0.7535574418128688
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#LBY",
+        "metrics": "market-latest.csv#LBY",
+        "trade": "china-trade-yearly.csv#LBY/X,M/2025",
+        "cagr": "china-trade-cagr.csv#LBY/X,M",
+        "muslim": "muslim-official.csv#LBY"
+      }
     },
     {
       "id": "458",
@@ -2873,7 +3272,15 @@
           "chinaImports": 2321856.559,
           "chinaShare": 0.2985628004426134
         }
-      ]
+      ],
+      "sourceRow": {
+        "scope": "scope.csv#MYS",
+        "metrics": "market-latest.csv#MYS",
+        "trade": "china-trade-yearly.csv#MYS/X,M/2025",
+        "cagr": "china-trade-cagr.csv#MYS/X,M",
+        "muslim": "muslim-official.csv#MYS",
+        "products": "products-idn-mys.csv#马来西亚/2025"
+      }
     },
     {
       "id": "462",
@@ -2966,7 +3373,14 @@
           "cagr2020_2025": -58.61705647207094
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#MDV",
+        "metrics": "market-latest.csv#MDV",
+        "trade": "china-trade-yearly.csv#MDV/X,M/2025",
+        "cagr": "china-trade-cagr.csv#MDV/X,M",
+        "muslim": "muslim-official.csv#MDV"
+      }
     },
     {
       "id": "466",
@@ -3059,7 +3473,14 @@
           "cagr2020_2025": -1.463883765116214
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#MLI",
+        "metrics": "market-latest.csv#MLI",
+        "trade": "china-trade-yearly.csv#MLI/X,M/2025",
+        "cagr": "china-trade-cagr.csv#MLI/X,M",
+        "muslim": "muslim-official.csv#MLI"
+      }
     },
     {
       "id": "478",
@@ -3152,7 +3573,14 @@
           "cagr2020_2025": 0.23317659643782296
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#MRT",
+        "metrics": "market-latest.csv#MRT",
+        "trade": "china-trade-yearly.csv#MRT/X,M/2025",
+        "cagr": "china-trade-cagr.csv#MRT/X,M",
+        "muslim": "muslim-official.csv#MRT"
+      }
     },
     {
       "id": "504",
@@ -3245,7 +3673,14 @@
           "cagr2020_2025": 12.649763519843194
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#MAR",
+        "metrics": "market-latest.csv#MAR",
+        "trade": "china-trade-yearly.csv#MAR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#MAR/X,M",
+        "muslim": "muslim-official.csv#MAR"
+      }
     },
     {
       "id": "508",
@@ -3338,7 +3773,14 @@
           "cagr2020_2025": 21.762670306031808
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#MOZ",
+        "metrics": "market-latest.csv#MOZ",
+        "trade": "china-trade-yearly.csv#MOZ/X,M/2025",
+        "cagr": "china-trade-cagr.csv#MOZ/X,M",
+        "muslim": "muslim-official.csv#MOZ"
+      }
     },
     {
       "id": "562",
@@ -3431,7 +3873,14 @@
           "cagr2020_2025": 26.830365135214727
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#NER",
+        "metrics": "market-latest.csv#NER",
+        "trade": "china-trade-yearly.csv#NER/X,M/2025",
+        "cagr": "china-trade-cagr.csv#NER/X,M",
+        "muslim": "muslim-official.csv#NER"
+      }
     },
     {
       "id": "566",
@@ -3518,7 +3967,14 @@
           "cagr2020_2025": 3.581698183745652
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#NGA",
+        "metrics": "market-latest.csv#NGA",
+        "trade": "china-trade-yearly.csv#NGA/X,M/2025",
+        "cagr": "china-trade-cagr.csv#NGA/X,M",
+        "muslim": "muslim-official.csv#NGA"
+      }
     },
     {
       "id": "512",
@@ -3611,7 +4067,14 @@
           "cagr2020_2025": 11.740132645862712
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#OMN",
+        "metrics": "market-latest.csv#OMN",
+        "trade": "china-trade-yearly.csv#OMN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#OMN/X,M",
+        "muslim": "muslim-official.csv#OMN"
+      }
     },
     {
       "id": "586",
@@ -3704,7 +4167,14 @@
           "cagr2020_2025": 6.03141685338382
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#PAK",
+        "metrics": "market-latest.csv#PAK",
+        "trade": "china-trade-yearly.csv#PAK/X,M/2025",
+        "cagr": "china-trade-cagr.csv#PAK/X,M",
+        "muslim": "muslim-official.csv#PAK"
+      }
     },
     {
       "id": "275",
@@ -3791,7 +4261,14 @@
           "cagr2020_2025": 66.4212004469013
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#PSE",
+        "metrics": "market-latest.csv#PSE",
+        "trade": "china-trade-yearly.csv#PSE/X,M/2025",
+        "cagr": "china-trade-cagr.csv#PSE/X,M",
+        "muslim": "muslim-official.csv#PSE"
+      }
     },
     {
       "id": "634",
@@ -3884,7 +4361,14 @@
           "cagr2020_2025": 17.132157877796473
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#QAT",
+        "metrics": "market-latest.csv#QAT",
+        "trade": "china-trade-yearly.csv#QAT/X,M/2025",
+        "cagr": "china-trade-cagr.csv#QAT/X,M",
+        "muslim": "muslim-official.csv#QAT"
+      }
     },
     {
       "id": "682",
@@ -3977,7 +4461,14 @@
           "cagr2020_2025": 6.933893432721372
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SAU",
+        "metrics": "market-latest.csv#SAU",
+        "trade": "china-trade-yearly.csv#SAU/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SAU/X,M",
+        "muslim": "muslim-official.csv#SAU"
+      }
     },
     {
       "id": "686",
@@ -4070,7 +4561,14 @@
           "cagr2020_2025": 19.980444566431576
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SEN",
+        "metrics": "market-latest.csv#SEN",
+        "trade": "china-trade-yearly.csv#SEN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SEN/X,M",
+        "muslim": "muslim-official.csv#SEN"
+      }
     },
     {
       "id": "694",
@@ -4163,7 +4661,14 @@
           "cagr2020_2025": 53.36323163092081
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SLE",
+        "metrics": "market-latest.csv#SLE",
+        "trade": "china-trade-yearly.csv#SLE/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SLE/X,M",
+        "muslim": "muslim-official.csv#SLE"
+      }
     },
     {
       "id": "706",
@@ -4256,7 +4761,14 @@
           "cagr2020_2025": -17.592782239211846
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SOM",
+        "metrics": "market-latest.csv#SOM",
+        "trade": "china-trade-yearly.csv#SOM/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SOM/X,M",
+        "muslim": "muslim-official.csv#SOM"
+      }
     },
     {
       "id": "729",
@@ -4346,7 +4858,14 @@
           "cagr2020_2025": -39.053276832670846
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SDN",
+        "metrics": "market-latest.csv#SDN",
+        "trade": "china-trade-yearly.csv#SDN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SDN/X,M",
+        "muslim": "muslim-official.csv#SDN"
+      }
     },
     {
       "id": "740",
@@ -4433,7 +4952,14 @@
           "cagr2020_2025": -8.31638380751457
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SUR",
+        "metrics": "market-latest.csv#SUR",
+        "trade": "china-trade-yearly.csv#SUR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SUR/X,M",
+        "muslim": "muslim-official.csv#SUR"
+      }
     },
     {
       "id": "760",
@@ -4523,7 +5049,14 @@
           "cagr2020_2025": -1.0253548954986091
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#SYR",
+        "metrics": "market-latest.csv#SYR",
+        "trade": "china-trade-yearly.csv#SYR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#SYR/X,M",
+        "muslim": "muslim-official.csv#SYR"
+      }
     },
     {
       "id": "762",
@@ -4616,7 +5149,14 @@
           "cagr2020_2025": 64.43260085215104
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#TJK",
+        "metrics": "market-latest.csv#TJK",
+        "trade": "china-trade-yearly.csv#TJK/X,M/2025",
+        "cagr": "china-trade-cagr.csv#TJK/X,M",
+        "muslim": "muslim-official.csv#TJK"
+      }
     },
     {
       "id": "768",
@@ -4709,7 +5249,14 @@
           "cagr2020_2025": 50.39691961848782
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#TGO",
+        "metrics": "market-latest.csv#TGO",
+        "trade": "china-trade-yearly.csv#TGO/X,M/2025",
+        "cagr": "china-trade-cagr.csv#TGO/X,M",
+        "muslim": "muslim-official.csv#TGO"
+      }
     },
     {
       "id": "788",
@@ -4802,7 +5349,14 @@
           "cagr2020_2025": 3.5085530235646534
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#TUN",
+        "metrics": "market-latest.csv#TUN",
+        "trade": "china-trade-yearly.csv#TUN/X,M/2025",
+        "cagr": "china-trade-cagr.csv#TUN/X,M",
+        "muslim": "muslim-official.csv#TUN"
+      }
     },
     {
       "id": "792",
@@ -4895,7 +5449,14 @@
           "cagr2020_2025": 3.9244728960429187
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#TUR",
+        "metrics": "market-latest.csv#TUR",
+        "trade": "china-trade-yearly.csv#TUR/X,M/2025",
+        "cagr": "china-trade-cagr.csv#TUR/X,M",
+        "muslim": "muslim-official.csv#TUR"
+      }
     },
     {
       "id": "795",
@@ -4979,7 +5540,14 @@
           "cagr2020_2025": -0.15161146019705418
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#TKM",
+        "metrics": "market-latest.csv#TKM",
+        "trade": "china-trade-yearly.csv#TKM/X,M/2025",
+        "cagr": "china-trade-cagr.csv#TKM/X,M",
+        "muslim": "muslim-official.csv#TKM"
+      }
     },
     {
       "id": "800",
@@ -5072,7 +5640,14 @@
           "cagr2020_2025": 28.26800689690141
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#UGA",
+        "metrics": "market-latest.csv#UGA",
+        "trade": "china-trade-yearly.csv#UGA/X,M/2025",
+        "cagr": "china-trade-cagr.csv#UGA/X,M",
+        "muslim": "muslim-official.csv#UGA"
+      }
     },
     {
       "id": "784",
@@ -5165,7 +5740,14 @@
           "cagr2020_2025": 15.443636908107173
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#ARE",
+        "metrics": "market-latest.csv#ARE",
+        "trade": "china-trade-yearly.csv#ARE/X,M/2025",
+        "cagr": "china-trade-cagr.csv#ARE/X,M",
+        "muslim": "muslim-official.csv#ARE"
+      }
     },
     {
       "id": "860",
@@ -5258,7 +5840,14 @@
           "cagr2020_2025": 2.8698686381029237
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#UZB",
+        "metrics": "market-latest.csv#UZB",
+        "trade": "china-trade-yearly.csv#UZB/X,M/2025",
+        "cagr": "china-trade-cagr.csv#UZB/X,M",
+        "muslim": "muslim-official.csv#UZB"
+      }
     },
     {
       "id": "887",
@@ -5333,7 +5922,14 @@
           "cagr2020_2025": -47.84942900731175
         }
       },
-      "products": []
+      "products": [],
+      "sourceRow": {
+        "scope": "scope.csv#YEM",
+        "metrics": "market-latest.csv#YEM",
+        "trade": "china-trade-yearly.csv#YEM/X,M/2025",
+        "cagr": "china-trade-cagr.csv#YEM/X,M",
+        "muslim": "muslim-official.csv#YEM"
+      }
     }
   ]
 }

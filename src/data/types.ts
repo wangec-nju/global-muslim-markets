@@ -37,6 +37,18 @@ export interface TradeFlow {
   cagr2020_2025: number | null;
 }
 
+export interface FieldSource {
+  file?: string;
+  source?: string;
+  field?: string;
+  valueField?: string;
+  yearField?: string;
+  filter?: string;
+  derived?: string;
+  fields?: string[];
+  crossCheck?: string;
+}
+
 export interface ProductImport {
   code: string;
   name: string;
@@ -62,6 +74,8 @@ export interface MarketCountry {
     imports: TradeFlow | null;
   } | null;
   products: ProductImport[];
+  /** Human-readable source row locators for this record. */
+  sourceRow: Record<string, string>;
 }
 
 export interface MarketMeta {
@@ -71,6 +85,10 @@ export interface MarketMeta {
   focusCount: number;
   marketCount: number;
   officialMuslimCount: number;
+  /** SHA-256 of each curated CSV at generation time. */
+  sourceFiles: Record<string, string>;
+  /** JSON field -> source file/column mapping. */
+  fieldSources: Record<string, FieldSource>;
   notes: string[];
   sources: Array<{ name: string; note: string }>;
 }

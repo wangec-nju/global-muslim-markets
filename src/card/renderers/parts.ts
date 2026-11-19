@@ -55,8 +55,12 @@ export function chip(text: string, variant = 'default'): HTMLElement {
   });
 }
 
-export function sectionLabel(text: string): HTMLElement {
-  return el('p', { className: 'card-section-label', text });
+export function sectionLabel(text: string, source?: string): HTMLElement {
+  return el('p', {
+    className: 'card-section-label',
+    text,
+    attrs: source ? { title: `数据来源：${source}` } : {},
+  });
 }
 
 export function sourceNote(text: string): HTMLElement {

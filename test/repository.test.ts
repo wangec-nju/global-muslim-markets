@@ -39,6 +39,13 @@ const market = (overrides: Partial<MarketCountry>): MarketCountry => ({
   },
   chinaTrade: null,
   products: [],
+  sourceRow: {
+    scope: 'scope.csv#AFG',
+    metrics: 'market-latest.csv#AFG',
+    trade: 'china-trade-yearly.csv#AFG/X,M/2025',
+    cagr: 'china-trade-cagr.csv#AFG/X,M',
+    muslim: 'muslim-official.csv#AFG',
+  },
   ...overrides,
 });
 
@@ -50,6 +57,8 @@ const dataset: MarketDataset = {
     focusCount: 1,
     marketCount: 2,
     officialMuslimCount: 0,
+    sourceFiles: {},
+    fieldSources: {},
     notes: [],
     sources: [],
   },

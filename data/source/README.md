@@ -12,6 +12,7 @@ These CSVs are the curated inputs for `npm run gen:markets`. They were extracted
 | `products-idn-mys.csv` | `03_分商品贸易/02_代表HS6进口需求与中国份额.csv` | representative product imports for IDN/MYS |
 | `product-meta.csv` | `00_国家与指标字典/既有代表产品清单_非完整认证目录.csv` | Chinese HS labels and categories |
 | `wdi-dictionary.csv` | `00_国家与指标字典/WDI指标字典.csv` | WDI definitions and quality notes |
+| `metric-long.csv` | `01_市场规模与结构/05_各国各指标最新可得值.csv` | long WDI table used to cross-check the wide table |
 
 ## Rules applied by the generator
 
@@ -20,3 +21,5 @@ These CSVs are the curated inputs for `npm run gen:markets`. They were extracted
 - Muslim population is only emitted for the six countries with a verified official census snapshot; all others are marked unavailable.
 - `chinaTrade.exports` is China's export flow (X); `chinaTrade.imports` is China's import flow (M).
 - Representative product imports are limited to Indonesia and Malaysia and are a research screening scope, not a halal certification list.
+
+Run `npm run audit:markets` to verify every generated value against these tables, check the formulas, and compare the six official Muslim snapshots with the Wikipedia reference in `data/reference/`.

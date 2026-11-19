@@ -32,4 +32,16 @@ describe('generated market dataset', () => {
     const withProducts = dataset.countries.filter((market) => market.products.length > 0);
     expect(withProducts.map((market) => market.iso3).sort()).toEqual(['IDN', 'MYS']);
   });
+
+  it('pins source hashes and maps every visual field to a source column', () => {
+    expect(Object.keys(dataset.meta.sourceFiles)).toHaveLength(9);
+    expect(dataset.meta.fieldSources['metrics.population']?.valueField).toBe('总人口_人');
+    expect(dataset.meta.fieldSources['chinaTrade.exports.cagr2020_2025']).toBeDefined();
+    expect(dataset.meta.fieldSources['muslim.share']).toBeDefined();
+    for (const market of dataset.countries) {
+      expect(market.sourceRow.scope).toContain(market.iso3);
+      expect(market.sourceRow.metrics).toContain(market.iso3);
+      expect(market.sourceRow.trade).toContain(market.iso3);
+    }
+  });
 });
