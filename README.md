@@ -103,7 +103,9 @@ npm run audit:markets
 
 ### Wikipedia 参照与可信度
 
-用户给出的英文主页面 [Organisation of Islamic Cooperation](https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation) 的 Members 段确认 57 国/5 观察员国，但**没有**截图中的加入年份与比例表，而是链接到单独的 Member states 条目；截图表格实际对应中文 OIC 条目。中文表的穆斯林比例列引用 **Pew Forum 2013 的二手汇总**，没有逐国普查年份，并含 `>99.0%`、`~6.4%` 等区间/约数；当前英文 Member states 表与中文表也不一致（孟加拉国 92% vs 89.80%，文莱 84% vs 75.10%，哈萨克斯坦 74% vs 70.40%）。
+用户给出的英文主页面 [Organisation of Islamic Cooperation](https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation) 的 Members 段确认 57 国/5 观察员国，但**没有**截图中的加入年份与比例表，而是链接到单独的 Member states 条目；截图表格实际对应中文 OIC 条目。中文表的穆斯林比例列引用 **Pew Forum 2010 年估计表（Wikipedia 于 2013 年引用）**，没有逐国普查年份，并含 `>99.0%`、`~6.4%` 等区间/约数；当前英文 Member states 表与中文表也不一致（孟加拉国 92% vs 89.80%，文莱 84% vs 75.10%，哈萨克斯坦 74% vs 70.40%）。
+
+已直接核验 Wikipedia 引用的 Pew 原始表及存档 PDF：6 个有官方普查的抽样值全部与 Pew 2010 表一致；但该表是 **2010 年估计**，且加入年份列没有引用，属于 Wikipedia 自身元数据。
 
 因此：
 
@@ -318,7 +320,7 @@ npm test
 - 分品类进口：UN Comtrade（印度尼西亚、马来西亚，2021—2025）。
 - OIC 57 国范围：SESRIC / OIC 研究样本。
 - 穆斯林人口：仅各国官方统计机构已核实的普查快照。
-- Wikipedia 参照：[中文 OIC 条目](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87)（截图 + Pew Forum 2013 引用）；仅用于核验，不注入卡片。
+- Wikipedia 参照：[中文 OIC 条目](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87)（截图 + Pew Forum 2010 年估计，2013 存档）；仅用于核验，不注入卡片。
 - 地理边界：[world-atlas](https://github.com/topojson/world-atlas)（ISC，50m；数据源 Natural Earth，公有领域）。
 - 国家英文名/旗帜：[world-countries](https://github.com/mledoze/countries)（ODbL-1.0；仅用于名称与旗帜，不生成国家概况数据）。
 - 地球夜景/地形纹理：来自 [three-globe](https://github.com/vasturiano/three-globe) 示例素材（NASA Earth 影像，公有领域）。

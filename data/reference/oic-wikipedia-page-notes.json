@@ -18,7 +18,7 @@
     "observers": 5,
     "containsShareTable": true,
     "containsJoinYears": true,
-    "shareSource": "Pew Forum, Religious Composition by Country (archived 2013)",
+    "shareSource": "Pew Forum, Religious Composition by Country (2010 estimates; archived 2013)",
     "note": "The image's join years and share values match this table."
   },
   "englishMemberStatesPage": {
@@ -46,5 +46,5 @@
     ],
     "note": "The English Member states article has a share table but values differ from the image/Chinese table; the supplied main article itself has no share table."
   },
-  "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+  "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2010 estimates, archived 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
 }

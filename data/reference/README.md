@@ -40,6 +40,17 @@ The supplied URL [Organisation of Islamic Cooperation](https://en.wikipedia.org/
 - It has **no join-year or Muslim-share table**. The section lists members by continent and links to the separate [Member states article](https://en.wikipedia.org/wiki/Member_states_of_the_Organisation_of_Islamic_Cooperation);
 - Its lead says **48** members are Muslim-majority, citing Pew Forum 2012/2010 data, while the Members section names **8** non-Muslim-majority members; 57 − 8 = **49**. The page therefore contradicts itself on this count;
 - It records Syria's suspension in 2012 and restoration in 2025;
-- The image's join-year/share table matches the **Chinese** OIC page (Pew Forum 2013), not a table on the supplied English main page. The English Member states page has yet another set of share values (Bangladesh 92%, Brunei 84%, Kazakhstan 74% vs the image's 89.80%, 75.10%, 70.40%).
+- The image's join-year/share table matches the **Chinese** OIC page (Pew Forum 2010 estimates（2013 存档）), not a table on the supplied English main page. The English Member states page has yet another set of share values (Bangladesh 92%, Brunei 84%, Kazakhstan 74% vs the image's 89.80%, 75.10%, 70.40%).
 
 The machine-readable page notes are in `oic-wikipedia-page-notes.json`; the audit includes this page-level contradiction in its quality report.
+
+## Citation verification
+
+The cited Pew PDF was downloaded from the archived URL and checked against `pew-2010-verification.json`:
+
+- The table is **Religious Composition by Country, 2010 estimates** (one decimal place);
+- The six sampled countries used by the app match exactly: Bangladesh 89.8%, Brunei 75.1%, Indonesia 87.2%, Kazakhstan 70.4%, Malaysia 63.7%, Pakistan 96.4%;
+- The share column is therefore traceable to a real, reputable Pew table, but it is a 2010 estimate, not a current official census;
+- The **join-year column has no citation** in the Chinese Wikipedia table. It is stored as reference metadata only and is not injected into the app.
+
+PDF SHA-256: `1d3f0516542c7931df7d2e2d927f75327000ea837b41f0015126843d8023cb65`.

@@ -1,0 +1,59 @@
+{
+  "accessed": "2026-11-19",
+  "citation": "Pew Forum on Religion & Public Life, Global Religious Landscape: Table: Religious Composition by Country (2010 estimates)",
+  "citationUrl": "http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+  "archiveUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+  "pdfSha256": "1d3f0516542c7931df7d2e2d927f75327000ea837b41f0015126843d8023cb65",
+  "tableYear": 2010,
+  "publisher": "Pew Research Center (Pew Forum on Religion & Public Life)",
+  "sampledValues": [
+    {
+      "iso3": "BGD",
+      "nameZh": "孟加拉国",
+      "wikipedia": "89.80%",
+      "pew": "89.8%",
+      "match": true
+    },
+    {
+      "iso3": "BRN",
+      "nameZh": "文莱",
+      "wikipedia": "75.10%",
+      "pew": "75.1%",
+      "match": true
+    },
+    {
+      "iso3": "IDN",
+      "nameZh": "印度尼西亚",
+      "wikipedia": "87.20%",
+      "pew": "87.2%",
+      "match": true
+    },
+    {
+      "iso3": "KAZ",
+      "nameZh": "哈萨克斯坦",
+      "wikipedia": "70.40%",
+      "pew": "70.4%",
+      "match": true
+    },
+    {
+      "iso3": "MYS",
+      "nameZh": "马来西亚",
+      "wikipedia": "63.70%",
+      "pew": "63.7%",
+      "match": true
+    },
+    {
+      "iso3": "PAK",
+      "nameZh": "巴基斯坦",
+      "wikipedia": "96.40%",
+      "pew": "96.4%",
+      "match": true
+    }
+  ],
+  "joinYears": {
+    "verified": false,
+    "note": "中文 Wikipedia 成员表没有为加入年份列提供引用；只有穆斯林比例列挂了 Pew 来源。因此加入年份属于 Wikipedia 自身元数据，不被 Pew 引用覆盖。"
+  },
+  "roundingNote": "Pew 表只给一位小数；Wikipedia 部分行为两位小数或 >99.0% 等等价表达，并非逐字复制。上述 6 个抽样行完全一致。",
+  "assessment": "所引 Pew 来源真实存在且有存档，2010 年表支持抽样的 Wikipedia 比例值。Pew 是可信的研究机构，但这是 2010 年估计，不是当前全国普查；比例列可追溯，加入年份列不在该引用范围内。对“某一年份的全国穆斯林占比”，官方普查仍是更强的来源。"
+}

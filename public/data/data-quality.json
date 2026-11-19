@@ -25,8 +25,9 @@
       "metric-long.csv": "b586b3496d0197a947b7c0480a90cc57fb2868362ab96094195c2806d52df9c8"
     },
     "referenceFiles": {
-      "oic-wikipedia.csv": "6c85bbcc0ecf0fda0150711a7bf398c9a4a18fc2c726671746267378548813ef",
-      "oic-wikipedia-page-notes.json": "561f34df733cab73cde99ee39a04aa1c2ee5ac17dee178cd1a1e4f9b399baaa1"
+      "oic-wikipedia.csv": "f73b47181c23869b723142da8d7180c62c0a7517467442a66af08ee625a4e99a",
+      "oic-wikipedia-page-notes.json": "62f8fd333e8ee28b9a89a785da1262ae94f6e96b21881ee1381b2dd460af8cbd",
+      "pew-2010-verification.json": "a90b81662b6ab4fbc6045de895ced5d4f533fe3798da5e287b0b370fafca4d70"
     },
     "fieldSources": {
       "nameZh": {
@@ -258,7 +259,7 @@
     "info": [
       {
         "label": "源文件",
-        "value": "9 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 6c85bbcc0ecf…，页面核验 SHA-256 561f34df733c…"
+        "value": "9 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 f73b47181c23…，页面核验 62f8fd333e8e…，Pew 核验 a90b81662b6a…"
       },
       {
         "label": "市场指标",
@@ -299,6 +300,10 @@
       {
         "label": "官方与 Wikipedia 比较",
         "value": "6 个官方普查与参照比较；51 个市场只有 Wikipedia/Pew 参照"
+      },
+      {
+        "label": "Pew 引用源",
+        "value": "6/6 个抽样值与 Pew 2010 表一致；加入年份列无引用"
       }
     ]
   },
@@ -405,7 +410,7 @@
         "observers": 5,
         "containsShareTable": true,
         "containsJoinYears": true,
-        "shareSource": "Pew Forum, Religious Composition by Country (archived 2013)",
+        "shareSource": "Pew Forum, Religious Composition by Country (2010 estimates; archived 2013)",
         "note": "The image's join years and share values match this table."
       },
       "englishMemberStatesPage": {
@@ -433,9 +438,68 @@
         ],
         "note": "The English Member states article has a share table but values differ from the image/Chinese table; the supplied main article itself has no share table."
       },
-      "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+      "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2010 estimates, archived 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
     },
-    "referenceSource": "Chinese Wikipedia OIC table (image), share column cited to Pew Forum 2013",
+    "sourceVerification": {
+      "accessed": "2026-11-19",
+      "citation": "Pew Forum on Religion & Public Life, Global Religious Landscape: Table: Religious Composition by Country (2010 estimates)",
+      "citationUrl": "http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "archiveUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "pdfSha256": "1d3f0516542c7931df7d2e2d927f75327000ea837b41f0015126843d8023cb65",
+      "tableYear": 2010,
+      "publisher": "Pew Research Center (Pew Forum on Religion & Public Life)",
+      "sampledValues": [
+        {
+          "iso3": "BGD",
+          "nameZh": "孟加拉国",
+          "wikipedia": "89.80%",
+          "pew": "89.8%",
+          "match": true
+        },
+        {
+          "iso3": "BRN",
+          "nameZh": "文莱",
+          "wikipedia": "75.10%",
+          "pew": "75.1%",
+          "match": true
+        },
+        {
+          "iso3": "IDN",
+          "nameZh": "印度尼西亚",
+          "wikipedia": "87.20%",
+          "pew": "87.2%",
+          "match": true
+        },
+        {
+          "iso3": "KAZ",
+          "nameZh": "哈萨克斯坦",
+          "wikipedia": "70.40%",
+          "pew": "70.4%",
+          "match": true
+        },
+        {
+          "iso3": "MYS",
+          "nameZh": "马来西亚",
+          "wikipedia": "63.70%",
+          "pew": "63.7%",
+          "match": true
+        },
+        {
+          "iso3": "PAK",
+          "nameZh": "巴基斯坦",
+          "wikipedia": "96.40%",
+          "pew": "96.4%",
+          "match": true
+        }
+      ],
+      "joinYears": {
+        "verified": false,
+        "note": "中文 Wikipedia 成员表没有为加入年份列提供引用；只有穆斯林比例列挂了 Pew 来源。因此加入年份属于 Wikipedia 自身元数据，不被 Pew 引用覆盖。"
+      },
+      "roundingNote": "Pew 表只给一位小数；Wikipedia 部分行为两位小数或 >99.0% 等等价表达，并非逐字复制。上述 6 个抽样行完全一致。",
+      "assessment": "所引 Pew 来源真实存在且有存档，2010 年表支持抽样的 Wikipedia 比例值。Pew 是可信的研究机构，但这是 2010 年估计，不是当前全国普查；比例列可追溯，加入年份列不在该引用范围内。对“某一年份的全国穆斯林占比”，官方普查仍是更强的来源。"
+    },
+    "referenceSource": "Chinese Wikipedia OIC table (image), share column cited to Pew Forum 2010 estimates (archived 2013)",
     "languageVariation": [
       {
         "country": "孟加拉国",
@@ -477,7 +541,7 @@
       "observers": 5,
       "containsShareTable": true,
       "containsJoinYears": true,
-      "shareSource": "Pew Forum, Religious Composition by Country (archived 2013)",
+      "shareSource": "Pew Forum, Religious Composition by Country (2010 estimates; archived 2013)",
       "note": "The image's join years and share values match this table."
     },
     "englishMemberStatesPage": {
@@ -505,11 +569,70 @@
       ],
       "note": "The English Member states article has a share table but values differ from the image/Chinese table; the supplied main article itself has no share table."
     },
-    "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+    "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2010 estimates, archived 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+  },
+  "wikipediaSourceVerification": {
+    "accessed": "2026-11-19",
+    "citation": "Pew Forum on Religion & Public Life, Global Religious Landscape: Table: Religious Composition by Country (2010 estimates)",
+    "citationUrl": "http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+    "archiveUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+    "pdfSha256": "1d3f0516542c7931df7d2e2d927f75327000ea837b41f0015126843d8023cb65",
+    "tableYear": 2010,
+    "publisher": "Pew Research Center (Pew Forum on Religion & Public Life)",
+    "sampledValues": [
+      {
+        "iso3": "BGD",
+        "nameZh": "孟加拉国",
+        "wikipedia": "89.80%",
+        "pew": "89.8%",
+        "match": true
+      },
+      {
+        "iso3": "BRN",
+        "nameZh": "文莱",
+        "wikipedia": "75.10%",
+        "pew": "75.1%",
+        "match": true
+      },
+      {
+        "iso3": "IDN",
+        "nameZh": "印度尼西亚",
+        "wikipedia": "87.20%",
+        "pew": "87.2%",
+        "match": true
+      },
+      {
+        "iso3": "KAZ",
+        "nameZh": "哈萨克斯坦",
+        "wikipedia": "70.40%",
+        "pew": "70.4%",
+        "match": true
+      },
+      {
+        "iso3": "MYS",
+        "nameZh": "马来西亚",
+        "wikipedia": "63.70%",
+        "pew": "63.7%",
+        "match": true
+      },
+      {
+        "iso3": "PAK",
+        "nameZh": "巴基斯坦",
+        "wikipedia": "96.40%",
+        "pew": "96.4%",
+        "match": true
+      }
+    ],
+    "joinYears": {
+      "verified": false,
+      "note": "中文 Wikipedia 成员表没有为加入年份列提供引用；只有穆斯林比例列挂了 Pew 来源。因此加入年份属于 Wikipedia 自身元数据，不被 Pew 引用覆盖。"
+    },
+    "roundingNote": "Pew 表只给一位小数；Wikipedia 部分行为两位小数或 >99.0% 等等价表达，并非逐字复制。上述 6 个抽样行完全一致。",
+    "assessment": "所引 Pew 来源真实存在且有存档，2010 年表支持抽样的 Wikipedia 比例值。Pew 是可信的研究机构，但这是 2010 年估计，不是当前全国普查；比例列可追溯，加入年份列不在该引用范围内。对“某一年份的全国穆斯林占比”，官方普查仍是更强的来源。"
   },
   "credibility": {
     "officialCensus": "6 个有官方普查的国家：国家统计机构 + 普查年份，是判断“某一年份穆斯林占比”的更可信来源，网页采用这一口径。",
-    "wikipedia": "用户提供的中文 Wikipedia 表适合核对 OIC 成员范围，也可作为外部参照；但其穆斯林比例列来自 Pew Forum 2013 的二手汇总，没有逐国普查年份，因此不把 Wikipedia 数值注入为官方数据。",
+    "wikipedia": "用户提供的中文 Wikipedia 表适合核对 OIC 成员范围，也可作为外部参照；但其穆斯林比例列来自 Pew Forum 2010 年估计表（2013 存档），没有逐国普查年份，因此不把 Wikipedia 数值注入为官方数据。",
     "marketAndTrade": "人口、GDP、消费、互联网与中国贸易，以 WDI / 中国海关 / UN Comtrade 原始表为主；Wikipedia 图片没有可比的市场或贸易表。",
     "languageVariation": "同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表）；英文主页面自身还把穆斯林多数国写成 48 个，而其 Members 段列出 8 个非穆斯林多数国（57−8=49）。这些页面级矛盾进一步说明 Wikipedia 百分比不能当作第一手统计。"
   }

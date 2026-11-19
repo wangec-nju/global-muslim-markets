@@ -29,6 +29,9 @@ const wikipedia = readCsv(referenceDir, 'oic-wikipedia.csv');
 const wikipediaPageNotes = JSON.parse(
   readFileSync(path.join(referenceDir, 'oic-wikipedia-page-notes.json'), 'utf8'),
 );
+const pewVerification = JSON.parse(
+  readFileSync(path.join(referenceDir, 'pew-2010-verification.json'), 'utf8'),
+);
 
 const scope = readCsv(sourceDir, 'scope.csv');
 const latest = indexBy(readCsv(sourceDir, 'market-latest.csv'), (row) => row['国家代码']);
@@ -146,9 +149,10 @@ function checkSourceHashes() {
 
   const referenceHash = hashFile(path.join(referenceDir, 'oic-wikipedia.csv'));
   const pageNotesHash = hashFile(path.join(referenceDir, 'oic-wikipedia-page-notes.json'));
+  const pewHash = hashFile(path.join(referenceDir, 'pew-2010-verification.json'));
   info.push({
     label: '源文件',
-    value: `${expectedNames.length} 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 ${referenceHash.slice(0, 12)}…，页面核验 SHA-256 ${pageNotesHash.slice(0, 12)}…`,
+    value: `${expectedNames.length} 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 ${referenceHash.slice(0, 12)}…，页面核验 ${pageNotesHash.slice(0, 12)}…，Pew 核验 ${pewHash.slice(0, 12)}…`,
   });
 }
 
@@ -630,6 +634,24 @@ function checkWikipedia() {
     value: `${officialComparisons.length} 个官方普查与参照比较；${unavailableWithReference} 个市场只有 Wikipedia/Pew 参照`,
   });
 
+  const pewMismatches = pewVerification.sampledValues.filter((sample) => {
+    const ref = wikipedia.find((row) => row.iso3 === sample.iso3);
+    return !ref || toNumber(ref.muslim_share) !== Number.parseFloat(sample.pew);
+  });
+  if (pewMismatches.length > 0) {
+    conflicts.push({
+      type: 'wikipedia-citation',
+      severity: 'medium',
+      message: `${pewMismatches.length}/${pewVerification.sampledValues.length} sampled Wikipedia shares do not match the cited Pew 2010 table`,
+      samples: pewMismatches,
+    });
+  } else {
+    info.push({
+      label: 'Pew 引用源',
+      value: `${pewVerification.sampledValues.length}/${pewVerification.sampledValues.length} 个抽样值与 Pew 2010 表一致；加入年份列无引用`,
+    });
+  }
+
   return {
     membership: {
       referenceMembers: refMembers.length,
@@ -641,7 +663,8 @@ function checkWikipedia() {
     officialComparisons,
     unavailableWithReference,
     pageVetting,
-    referenceSource: 'Chinese Wikipedia OIC table (image), share column cited to Pew Forum 2013',
+    sourceVerification: pewVerification,
+    referenceSource: 'Chinese Wikipedia OIC table (image), share column cited to Pew Forum 2010 estimates (archived 2013)',
     languageVariation: [
       {
         country: '孟加拉国',
@@ -729,6 +752,9 @@ function writeReports(wikipediaComparison) {
         'oic-wikipedia-page-notes.json': hashFile(
           path.join(referenceDir, 'oic-wikipedia-page-notes.json'),
         ),
+        'pew-2010-verification.json': hashFile(
+          path.join(referenceDir, 'pew-2010-verification.json'),
+        ),
       },
       fieldSources,
       note: 'Every emitted market field is mapped to a source file/column; source files are SHA-256 pinned in markets.json.',
@@ -740,11 +766,12 @@ function writeReports(wikipediaComparison) {
     },
     wikipediaComparison,
     wikipediaPageVetting: wikipediaComparison.pageVetting,
+    wikipediaSourceVerification: wikipediaComparison.sourceVerification,
     credibility: {
       officialCensus:
         '6 个有官方普查的国家：国家统计机构 + 普查年份，是判断“某一年份穆斯林占比”的更可信来源，网页采用这一口径。',
       wikipedia:
-        '用户提供的中文 Wikipedia 表适合核对 OIC 成员范围，也可作为外部参照；但其穆斯林比例列来自 Pew Forum 2013 的二手汇总，没有逐国普查年份，因此不把 Wikipedia 数值注入为官方数据。',
+        '用户提供的中文 Wikipedia 表适合核对 OIC 成员范围，也可作为外部参照；但其穆斯林比例列来自 Pew Forum 2010 年估计表（2013 存档），没有逐国普查年份，因此不把 Wikipedia 数值注入为官方数据。',
       marketAndTrade:
         '人口、GDP、消费、互联网与中国贸易，以 WDI / 中国海关 / UN Comtrade 原始表为主；Wikipedia 图片没有可比的市场或贸易表。',
       languageVariation:
@@ -821,13 +848,23 @@ function renderMarkdown(quality) {
   lines.push(`  - Members 段确认 ${vetting.englishMainPage.members} 个成员国、${vetting.englishMainPage.observers} 个观察员国；`);
   lines.push('  - **没有**加入年份或穆斯林比例表，只有成员列表，并链接到单独的 Member states 条目；');
   lines.push(`  - 导言称 ${vetting.englishMainPage.leadMuslimMajority} 个穆斯林多数国，Members 段却列出 ${vetting.englishMainPage.membersSectionNonMuslimMajority} 个非穆斯林多数国，隐含 ${vetting.englishMainPage.impliedMuslimMajority} 个，页面内部不一致。`);
-  lines.push(`- 截图中的加入年份/比例表与[中文 OIC 条目](${vetting.chinesePage.url})匹配，比例列引用 Pew Forum 2013；`);
+  lines.push(`- 截图中的加入年份/比例表与[中文 OIC 条目](${vetting.chinesePage.url})匹配，比例列引用 Pew Forum 2010 年估计表（2013 存档）；`);
   lines.push(`- [英文 Member states 条目](${vetting.englishMemberStatesPage.url})另有比例表，但数值与截图不同（孟加拉国 92%、文莱 84%、哈萨克斯坦 74%）。`);
+  lines.push('');
+  lines.push('## Wikipedia 引用源核验');
+  lines.push('');
+  const verification = quality.wikipediaSourceVerification;
+  lines.push(`- 引用：${verification.citation}；`);
+  lines.push(`- 原文：[Pew 2010 表](${verification.citationUrl})，[存档 PDF](${verification.archiveUrl})，PDF SHA-256 \`${verification.pdfSha256.slice(0, 16)}…\`；`);
+  lines.push(`- 抽样 6 个有官方普查的国家，Wikipedia 比例与 Pew 2010 表全部一致：${verification.sampledValues.map((sample) => `${sample.nameZh} ${sample.wikipedia}`).join('、')}；`);
+  lines.push(`- Pew 表为 **2010 年估计**，只给一位小数；Wikipedia 部分行为两位小数或 \`>99.0%\`，属于舍入/表达差异；`);
+  lines.push(`- **加入年份列没有引用**：中文 Wikipedia 表只给穆斯林比例列挂了 Pew 来源，加入年份未给出处；`);
+  lines.push(`- 结论：${verification.assessment}`);
   lines.push('');
   lines.push('## 穆斯林人口：官方普查与 Wikipedia 参照');
   lines.push('');
   lines.push(
-    'Wikipedia 表列的穆斯林比例来自 Pew Forum 2013 的二手汇总；官方普查标明统计机构与普查年份。下表只比较有官方普查的 6 个国家。',
+    'Wikipedia 表列的穆斯林比例来自 Pew Forum 2010 年估计表（页面于 2013 年引用存档）；官方普查标明统计机构与普查年份。下表只比较有官方普查的 6 个国家。',
   );
   lines.push('');
   lines.push('| 国家 | 官方普查 | 官方年份/来源 | Wikipedia 参照 | 差值 | 判断 |');
@@ -872,7 +909,7 @@ function renderMarkdown(quality) {
   lines.push('- 中国贸易：[中国海关](http://stats.customs.gov.cn/)（`china-trade-yearly.csv` / `china-trade-cagr.csv`）。');
   lines.push('- 分品类进口：[UN Comtrade](https://comtradeplus.un.org/)（`products-idn-mys.csv`）。');
   lines.push('- 穆斯林人口：各国官方统计（`muslim-official.csv`，仅 6 国）。');
-  lines.push('- Wikipedia：[中文 OIC 条目](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87)截图及 Pew Forum 2013 引用（`data/reference/oic-wikipedia.csv`，仅参照）。');
+  lines.push('- Wikipedia：[中文 OIC 条目](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87)截图及 Pew Forum 2010 年估计表（2013 存档）引用（`data/reference/oic-wikipedia.csv`，仅参照）。');
   lines.push('');
   return `${lines.join('\n')}\n`;
 }
