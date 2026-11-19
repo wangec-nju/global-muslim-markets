@@ -1,0 +1,5339 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-19",
+    "dataUpdated": "2026-11",
+    "scope": "OIC 57 国固定研究样本",
+    "focusCount": 16,
+    "marketCount": 57,
+    "officialMuslimCount": 6,
+    "notes": [
+      "国家总体指标覆盖全部人口与经济，不是穆斯林专属口径。",
+      "缺失值保持为空，不补零、不前填。",
+      "穆斯林人口与占比只采用已核实的官方普查快照；其余国家不推断。",
+      "代表进口品类为研究筛选口径，不是清真认证目录。",
+      "中国贸易为 2025 年中国对目标市场出口（X）与进口（M）。"
+    ],
+    "sources": [
+      {
+        "name": "世界银行 WDI",
+        "note": "2020—2025 各指标最新可得值"
+      },
+      {
+        "name": "中国海关",
+        "note": "2020—2025 中国对 57 国进出口"
+      },
+      {
+        "name": "UN Comtrade",
+        "note": "印度尼西亚、马来西亚代表品类进口"
+      },
+      {
+        "name": "各国官方统计",
+        "note": "穆斯林人口仅采用已核实官方普查"
+      },
+      {
+        "name": "SESRIC / OIC",
+        "note": "57 国固定研究样本范围"
+      }
+    ]
+  },
+  "countries": [
+    {
+      "id": "004",
+      "unM49": "004",
+      "iso3": "AFG",
+      "nameZh": "阿富汗",
+      "nameEn": "Afghanistan",
+      "flag": "🇦🇫",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 43844111,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.76719430653303,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 25.9401644699898,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 42.5609240593232,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 55.013497080446,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.42557886023075,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 17778508875.7396,
+          "year": "2024"
+        },
+        "gdpPerCapita": {
+          "value": 416.871146273728,
+          "year": "2024"
+        },
+        "gniPerCapita": {
+          "value": 390,
+          "year": "2024"
+        },
+        "householdConsumption": {
+          "value": 19858023950.4086,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": {
+          "value": 16.09499931,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 926000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 3606000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1795779692,
+          "yoy": 16.311713970159246,
+          "shareOfChinaTotal": 0.0475529297286434,
+          "cagr2020_2025": 29.103638370646223
+        },
+        "imports": {
+          "year": "2025",
+          "value": 92227578,
+          "yoy": 118.6941168860289,
+          "shareOfChinaTotal": 0.003575745777239639,
+          "cagr2020_2025": 11.089563287413728
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "008",
+      "unM49": "008",
+      "iso3": "ALB",
+      "nameZh": "阿尔巴尼亚",
+      "nameEn": "Albania",
+      "flag": "🇦🇱",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 2349580,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": -1.16564475393365,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 58.871474331067,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 16.6061971688693,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 65.7716964503975,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 17.6221063807332,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 30540188271.3421,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 12998.147869552,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 12060,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 21131317779.0074,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 4814.11769560894,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 85.86389923,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 4347000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 10280000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1459478895,
+          "yoy": 28.34741798868552,
+          "shareOfChinaTotal": 0.038647556625990134,
+          "cagr2020_2025": 20.636375286229924
+        },
+        "imports": {
+          "year": "2025",
+          "value": 161767922,
+          "yoy": -20.49181953429273,
+          "shareOfChinaTotal": 0.006271887178738786,
+          "cagr2020_2025": 14.802747417330497
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "012",
+      "unM49": "012",
+      "iso3": "DZA",
+      "nameZh": "阿尔及利亚",
+      "nameEn": "Algeria",
+      "flag": "🇩🇿",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 47435312,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.31780475504384,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 75.8187358069877,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 29.9254996986791,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 63.2685694495755,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 6.80593085174533,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 287031225987.736,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 6051.00322704182,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 5850,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 119866905688.327,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1968.93618349589,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 77.4178009,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 45400000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 50100000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 13913871391,
+          "yoy": 19.103506888088905,
+          "shareOfChinaTotal": 0.3684446101362888,
+          "cagr2020_2025": 19.980055090287262
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1357503681,
+          "yoy": 69.64801543946469,
+          "shareOfChinaTotal": 0.052631633185932905,
+          "cagr2020_2025": 6.366368515052678
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "031",
+      "unM49": "031",
+      "iso3": "AZE",
+      "nameZh": "阿塞拜疆",
+      "nameEn": "Azerbaijan",
+      "flag": "🇦🇿",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 10246996,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.431945667113889,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 58.6371024281175,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 21.2004793746471,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 69.6311486958719,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 9.16837192948103,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 75937647058.8235,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 7410.72281660142,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 7360,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 45083234134.1176,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": {
+          "value": 90.80000181,
+          "year": "2025"
+        },
+        "goodsExports": {
+          "value": 25043000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 24380000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 3157916187,
+          "yoy": null,
+          "shareOfChinaTotal": 0.08362282255353432,
+          "cagr2020_2025": 38.58016478482749
+        },
+        "imports": {
+          "year": "2025",
+          "value": 140979313,
+          "yoy": null,
+          "shareOfChinaTotal": 0.005465894194227841,
+          "cagr2020_2025": -27.395590185234564
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "048",
+      "unM49": "048",
+      "iso3": "BHR",
+      "nameZh": "巴林",
+      "nameEn": "Bahrain",
+      "flag": "🇧🇭",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 1600366,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.733516488465226,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 100,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 18.4203856616879,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 77.5636565111786,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.01595782713348,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 48965725531.9149,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 30596.5794898885,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 28790,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 18812825000,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 11566.2727329295,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 100,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 26456000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 16451000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1633096319,
+          "yoy": 21.10818040667617,
+          "shareOfChinaTotal": 0.04324501209333935,
+          "cagr2020_2025": 7.829997468888283
+        },
+        "imports": {
+          "year": "2025",
+          "value": 281748830,
+          "yoy": 122.11350068302451,
+          "shareOfChinaTotal": 0.010923654409689789,
+          "cagr2020_2025": 14.003505052300325
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "050",
+      "unM49": "050",
+      "iso3": "BGD",
+      "nameZh": "孟加拉国",
+      "nameEn": "Bangladesh",
+      "flag": "🇧🇩",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 175686899,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.21664463269168,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 33.2395847043975,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 27.645743159125,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 65.6858333367082,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 6.66842350416686,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 456319229255.578,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 2597.34352335275,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 2840,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 329554497280.582,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1391.77514788893,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 53.42171316,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 48167000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 69373000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "official",
+        "share": 91.04,
+        "population": null,
+        "year": "2022",
+        "source": "孟加拉国统计局BBS",
+        "note": "初步普查报告；不是最终修订值；禁止用于声称最新宗教结构"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 22812626806,
+          "yoy": -0.303502612929607,
+          "shareOfChinaTotal": 0.604087040444984,
+          "cagr2020_2025": 8.637549651004672
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1332223308,
+          "yoy": 14.190756562609552,
+          "shareOfChinaTotal": 0.05165149048933307,
+          "cagr2020_2025": 10.744980987737573
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "204",
+      "unM49": "204",
+      "iso3": "BEN",
+      "nameZh": "贝宁",
+      "nameEn": "Benin",
+      "flag": "🇧🇯",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 14814460,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.40291500851022,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 53.3620073968188,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 41.2595376834369,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 55.5874076944893,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.15305462207379,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 24566420903.5337,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1658.27312662991,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1600,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 14325815408.9214,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 895.189366587752,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 33.98379898,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 3988000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 4951000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1694581930,
+          "yoy": 75.46451840306165,
+          "shareOfChinaTotal": 0.04487317447441037,
+          "cagr2020_2025": 11.385229756686744
+        },
+        "imports": {
+          "year": "2025",
+          "value": 10090899,
+          "yoy": -92.86776599069266,
+          "shareOfChinaTotal": 0.00039123318935906234,
+          "cagr2020_2025": -29.574415490922966
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "096",
+      "unM49": "096",
+      "iso3": "BRN",
+      "nameZh": "文莱",
+      "nameEn": "Brunei",
+      "flag": "🇧🇳",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 466330,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.776925734682091,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 75.0109886586819,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 20.625929464189,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 72.1355347763014,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 7.23853575950962,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 15031980994.1121,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 32234.6428368582,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 34790,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 4406333388.09618,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 9809.13648772969,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 96.29828801,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 10498000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 6036000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "official",
+        "share": 82.1,
+        "population": 362035,
+        "year": "2021",
+        "source": "文莱经济规划与统计局DEPS",
+        "note": "2021普查；占比为公布的四舍五入值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 726567165,
+          "yoy": 2.413180648217317,
+          "shareOfChinaTotal": 0.019239775065005387,
+          "cagr2020_2025": 9.279146987257336
+        },
+        "imports": {
+          "year": "2025",
+          "value": 2003026639,
+          "yoy": -4.657803431550212,
+          "shareOfChinaTotal": 0.0776591362520954,
+          "cagr2020_2025": 6.296858500718083
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "854",
+      "unM49": "854",
+      "iso3": "BFA",
+      "nameZh": "布基纳法索",
+      "nameEn": "Burkina Faso",
+      "flag": "🇧🇫",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 24074580,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.20824551344995,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 28.9226360719085,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 41.1699311057555,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.145860073156,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.68420882108847,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 27627297461.3181,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1147.57131635601,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 980,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 16575058922.0602,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 511.339660232327,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 28.25270081,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 11076000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 7572000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1032689666,
+          "yoy": 50.4795486003184,
+          "shareOfChinaTotal": 0.027346015403538836,
+          "cagr2020_2025": 26.206651238272215
+        },
+        "imports": {
+          "year": "2025",
+          "value": 59873567,
+          "yoy": 8.506465318791111,
+          "shareOfChinaTotal": 0.0023213518018279154,
+          "cagr2020_2025": -5.620879017809244
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "120",
+      "unM49": "120",
+      "iso3": "CMR",
+      "nameZh": "喀麦隆",
+      "nameEn": "Cameroon",
+      "flag": "🇨🇲",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 29879337,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.56133847709635,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 55.6692041661323,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 41.1173982876528,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.0650107463897,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.81759096595751,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 58933453923.761,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1972.3815800786,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1860,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 44679625697.6809,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1144.16232939574,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 46.25880051,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 5100000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 9400000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 4346104011,
+          "yoy": 19.29000513767505,
+          "shareOfChinaTotal": 0.11508648836444144,
+          "cagr2020_2025": 16.531654037171005
+        },
+        "imports": {
+          "year": "2025",
+          "value": 351433232,
+          "yoy": -67.17003898518047,
+          "shareOfChinaTotal": 0.013625381068834728,
+          "cagr2020_2025": -14.324953751555093
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "148",
+      "unM49": "148",
+      "iso3": "TCD",
+      "nameZh": "乍得",
+      "nameEn": "Chad",
+      "flag": "🇹🇩",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 21003705,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 3.41211675890953,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 27.5658786336865,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 45.961619628537,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 51.9194327857871,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.11894758567596,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 21472835225.4338,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1022.33559390754,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 970,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 12250006800.9216,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 569.56063626081,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 12.62689972,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 4000000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 2200000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 545811330,
+          "yoy": 45.93055195296798,
+          "shareOfChinaTotal": 0.014453291757454285,
+          "cagr2020_2025": 12.842276093827131
+        },
+        "imports": {
+          "year": "2025",
+          "value": 564091814,
+          "yoy": -25.30472829176127,
+          "shareOfChinaTotal": 0.021870344701949648,
+          "cagr2020_2025": 6.002557894888572
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "174",
+      "unM49": "174",
+      "iso3": "COM",
+      "nameZh": "科摩罗",
+      "nameEn": "Comoros",
+      "flag": "🇰🇲",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 882847,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.85420936957363,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 33.941547481361,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 36.8698444521846,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 58.6758755051127,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.45428004270273,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 1814920856.27026,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 2055.75921566281,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1950,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 1840973638.9153,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1416.16158773469,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 32.51750183,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 48000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 371000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 137439875,
+          "yoy": 42.273094032062694,
+          "shareOfChinaTotal": 0.003639460200437846,
+          "cagr2020_2025": 22.152027856640988
+        },
+        "imports": {
+          "year": "2025",
+          "value": 204418,
+          "yoy": -8.809136127406148,
+          "shareOfChinaTotal": 0.000007925468890571674,
+          "cagr2020_2025": 11.737720371383077
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "384",
+      "unM49": "384",
+      "iso3": "CIV",
+      "nameZh": "科特迪瓦",
+      "nameEn": "Ivory Coast",
+      "flag": "🇨🇮",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 32711547,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.40496595908985,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 54.5489501450761,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 40.4553985241878,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.8911439268089,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.65345754900338,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 99773555666.1988,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3050.10202257321,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 2780,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 66824489909.9551,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1531.61254718647,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 41.43219902,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 28471000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 19275000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 6118422550,
+          "yoy": 47.2355971311653,
+          "shareOfChinaTotal": 0.1620181578321898,
+          "cagr2020_2025": 21.261947535235915
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1299435875,
+          "yoy": 44.73621596661636,
+          "shareOfChinaTotal": 0.05038029235490653,
+          "cagr2020_2025": 17.488349740603827
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "262",
+      "unM49": "262",
+      "iso3": "DJI",
+      "nameZh": "吉布提",
+      "nameEn": "Djibouti",
+      "flag": "🇩🇯",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 1184076,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.30518794764358,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 72.9758660686475,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 28.8031220955741,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 66.2248173998893,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.97206050453666,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 4624533092.31886,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3905.604954681,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 3960,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 3178375093.5455,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2628.92294438313,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 65.29889679,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 6090000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 6264000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 3772641121,
+          "yoy": 24.232666893721564,
+          "shareOfChinaTotal": 0.09990097277383816,
+          "cagr2020_2025": 10.306854295828272
+        },
+        "imports": {
+          "year": "2025",
+          "value": 18378306,
+          "yoy": -10.587516059120627,
+          "shareOfChinaTotal": 0.0007125433790781963,
+          "cagr2020_2025": -16.854091751829603
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "818",
+      "unM49": "818",
+      "iso3": "EGY",
+      "nameZh": "埃及",
+      "nameEn": "Egypt",
+      "flag": "🇪🇬",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 118365995,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.55618628611795,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 42.9043204925248,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 31.5562617099458,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 63.1725431918709,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 5.27119509818337,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 365254630179.737,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3085.80712036204,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 3260,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 340994546616.78,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 3747.25245204787,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 74.64839935,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 51403000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 97539000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 19979174216,
+          "yoy": 18.919956461930653,
+          "shareOfChinaTotal": 0.5290561374327939,
+          "cagr2020_2025": 7.952000676058479
+        },
+        "imports": {
+          "year": "2025",
+          "value": 820536615,
+          "yoy": 42.163658340679945,
+          "shareOfChinaTotal": 0.031812939250738616,
+          "cagr2020_2025": -2.3361479088505943
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "266",
+      "unM49": "266",
+      "iso3": "GAB",
+      "nameZh": "加蓬",
+      "nameEn": "Gabon",
+      "flag": "🇬🇦",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 2593130,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.11142428155027,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 92.0876666682068,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 36.2428486506362,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 59.6270645179888,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.13008683137499,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 21427119323.2764,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 8263.03321595,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 8090,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 8124962222.29068,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2285.61894629569,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 68.72090149,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 11600000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 4000000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 750882582,
+          "yoy": 4.167129191564234,
+          "shareOfChinaTotal": 0.01988365656175842,
+          "cagr2020_2025": 12.567475981245524
+        },
+        "imports": {
+          "year": "2025",
+          "value": 3170340170,
+          "yoy": 8.76863372717811,
+          "shareOfChinaTotal": 0.12291692703120426,
+          "cagr2020_2025": -0.4587226905626962
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "270",
+      "unM49": "270",
+      "iso3": "GMB",
+      "nameZh": "冈比亚",
+      "nameEn": "Gambia",
+      "flag": "🇬🇲",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 2822093,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.22524763449017,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 64.9884861325581,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 39.723265675511,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 57.0917755013743,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.18495882311462,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 2593673987.53306,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 919.060423427951,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 930,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 2233292839.90581,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 593.51352054154,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 49.49430084,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 514000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 894000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 436340722,
+          "yoy": 0.486851241044417,
+          "shareOfChinaTotal": 0.01155446839244662,
+          "cagr2020_2025": -4.018551499019496
+        },
+        "imports": {
+          "year": "2025",
+          "value": 34278766,
+          "yoy": -43.97314432186031,
+          "shareOfChinaTotal": 0.001329018450137395,
+          "cagr2020_2025": 2.7696034004844217
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "324",
+      "unM49": "324",
+      "iso3": "GIN",
+      "nameZh": "几内亚",
+      "nameEn": "Guinea",
+      "flag": "🇬🇳",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 15099727,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.31092272302565,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 38.5165334466562,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 40.5483688546157,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 55.9786047787486,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.47302636663564,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 28346024753.2924,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1877.2541220972,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1730,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 19029523620.1644,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 721.876814971166,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 33.30469894,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 15104000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 8344000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 6242703633,
+          "yoy": 58.840520218316314,
+          "shareOfChinaTotal": 0.16530916821215277,
+          "cagr2020_2025": 26.70436708872348
+        },
+        "imports": {
+          "year": "2025",
+          "value": 12123228621,
+          "yoy": 58.72447509567065,
+          "shareOfChinaTotal": 0.4700284284604273,
+          "cagr2020_2025": 37.81186133617644
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "624",
+      "unM49": "624",
+      "iso3": "GNB",
+      "nameZh": "几内亚比绍",
+      "nameEn": "Guinea-Bissau",
+      "flag": "🇬🇼",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 2249515,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.16429203622489,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 46.6510315281292,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 38.3251723149212,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 58.4375965485894,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.23723113648942,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 2527930272.92988,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1123.76679992349,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1090,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 1816319554.56739,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 636.075932789481,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 29.77739906,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 313000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 489000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 83680490,
+          "yoy": -14.247366206486788,
+          "shareOfChinaTotal": 0.0022158912244946176,
+          "cagr2020_2025": 10.225090464492892
+        },
+        "imports": {
+          "year": "2025",
+          "value": 8086,
+          "yoy": 832.641291810842,
+          "shareOfChinaTotal": 3.1350145999453356e-7,
+          "cagr2020_2025": 8.486113013535368
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "328",
+      "unM49": "328",
+      "iso3": "GUY",
+      "nameZh": "圭亚那",
+      "nameEn": "Guyana",
+      "flag": "🇬🇾",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 835986,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.58773840166977,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 26.4913876548981,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 28.9333194575029,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 64.0859416306015,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 6.98073891189565,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 27097477218.2254,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 32413.7930757518,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 28470,
+          "year": "2025"
+        },
+        "householdConsumption": null,
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": {
+          "value": 83.00080109,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 18693000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 10217000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1421641956,
+          "yoy": 45.36209779210325,
+          "shareOfChinaTotal": 0.03764562008030501,
+          "cagr2020_2025": 39.87979469645635
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1480086520,
+          "yoy": 246.62811044682496,
+          "shareOfChinaTotal": 0.057384279611455404,
+          "cagr2020_2025": 36.8055699718588
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "360",
+      "unM49": "360",
+      "iso3": "IDN",
+      "nameZh": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "flag": "🇮🇩",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 285721236,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.784708535785041,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 59.3929063969984,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 24.2472504288188,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 68.2099803183862,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 7.542769252795,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 1445642584163.81,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 5059.62596411213,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 5120,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 798424917156.092,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2546.74550843784,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 72.78075544,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 282909000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 241857000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "official",
+        "share": 87.18,
+        "population": 207176162,
+        "year": "2010",
+        "source": "印度尼西亚宗教事务部引用BPS2010人口普查",
+        "note": "历史普查快照；不是2025人口"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 85403950840,
+          "yoy": 11.39253036330945,
+          "shareOfChinaTotal": 2.261529123497313,
+          "cagr2020_2025": 15.818818844738836
+        },
+        "imports": {
+          "year": "2025",
+          "value": 82262184508,
+          "yoy": 15.775814694483259,
+          "shareOfChinaTotal": 3.189378548800111,
+          "cagr2020_2025": 17.02505990438514
+        }
+      },
+      "products": [
+        {
+          "code": "3004",
+          "name": "零售包装药品",
+          "category": "药品制剂",
+          "worldImports": 799224378.737,
+          "chinaImports": 43999332.93,
+          "chinaShare": 5.505254106428955
+        },
+        {
+          "code": "020230",
+          "name": "冻去骨牛肉",
+          "category": "肉类及肉制品",
+          "worldImports": 761676523.54,
+          "chinaImports": null,
+          "chinaShare": null
+        },
+        {
+          "code": "210690",
+          "name": "其他食品制剂",
+          "category": "复配食品",
+          "worldImports": 703973413.422,
+          "chinaImports": 160159773.37,
+          "chinaShare": 22.750826993801752
+        },
+        {
+          "code": "040210",
+          "name": "脂肪含量不超过1.5%的乳及稀奶油粉",
+          "category": "乳制品",
+          "worldImports": 582132999.24,
+          "chinaImports": 118,
+          "chinaShare": 0.000020270281903629262
+        }
+      ]
+    },
+    {
+      "id": "364",
+      "unM49": "364",
+      "iso3": "IRN",
+      "nameZh": "伊朗",
+      "nameEn": "Iran",
+      "flag": "🇮🇷",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 92417681,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.923930875479985,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 77.3761530941751,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 22.0217357542222,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 69.397121098505,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 8.58114314727287,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 362682115433.364,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3924.38017821898,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 4650,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 194650671419.312,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2552.79444560613,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 85.3404007,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 113225000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 65632000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 6930589531,
+          "yoy": -22.595156194325583,
+          "shareOfChinaTotal": 0.18352464860467677,
+          "cagr2020_2025": -3.981699673266892
+        },
+        "imports": {
+          "year": "2025",
+          "value": 3033893492,
+          "yoy": -31.70863652615603,
+          "shareOfChinaTotal": 0.11762676715433015,
+          "cagr2020_2025": -13.979512150598216
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "368",
+      "unM49": "368",
+      "iso3": "IRQ",
+      "nameZh": "伊拉克",
+      "nameEn": "Iraq",
+      "flag": "🇮🇶",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 47020774,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.10351548706844,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 69.9396739468105,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 36.0269984071296,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 60.5238144314681,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.44918716140232,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 254367293538.462,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 5409.67899716967,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 5690,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 129777653769.231,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2596.36416521915,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 81.47450256,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 92912000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 85185000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 17208763170,
+          "yoy": 7.650657711601094,
+          "shareOfChinaTotal": 0.4556945984997121,
+          "cagr2020_2025": 9.517924243340016
+        },
+        "imports": {
+          "year": "2025",
+          "value": 33911660324,
+          "yoy": -11.404883388260433,
+          "shareOfChinaTotal": 1.3147854343819807,
+          "cagr2020_2025": 11.928686653792964
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "400",
+      "unM49": "400",
+      "iso3": "JOR",
+      "nameZh": "约旦",
+      "nameEn": "Jordan",
+      "flag": "🇯🇴",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 11520684,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": -0.279038179525473,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 93.2085150119551,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 30.196204921678,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 65.0502016611947,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.75359341712725,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 61610052535.2113,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 5347.77731384797,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 5260,
+          "year": "2025"
+        },
+        "householdConsumption": null,
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": {
+          "value": 95.62244985,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 14913000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 28945000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 6288846055,
+          "yoy": 27.590520936579566,
+          "shareOfChinaTotal": 0.16653103710879436,
+          "cagr2020_2025": 14.600945440207692
+        },
+        "imports": {
+          "year": "2025",
+          "value": 434496657,
+          "yoy": -1.6843590097402328,
+          "shareOfChinaTotal": 0.01684582442891962,
+          "cagr2020_2025": 0.4085023912403951
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "398",
+      "unM49": "398",
+      "iso3": "KAZ",
+      "nameZh": "哈萨克斯坦",
+      "nameEn": "Kazakhstan",
+      "flag": "🇰🇿",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 20843754,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.21239553353742,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 62.3855569507987,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 29.1373946090183,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 61.8599038863176,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 9.00270150466414,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 306239209650.024,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 14692.1331757237,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 13740,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 152372515073.167,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 6789.15043250285,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 93.39167254,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 78793000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 64459000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "official",
+        "share": 69.3,
+        "population": null,
+        "year": "2021",
+        "source": "哈萨克斯坦国家统计局",
+        "note": "2021普查，统计局新闻稿公布精度为1位小数"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 29739396640,
+          "yoy": 6.385649635988688,
+          "shareOfChinaTotal": 0.787510542019301,
+          "cagr2020_2025": 20.505461596520647
+        },
+        "imports": {
+          "year": "2025",
+          "value": 18934039263,
+          "yoy": 18.99503655920123,
+          "shareOfChinaTotal": 0.7340896552738464,
+          "cagr2020_2025": 12.804321965330633
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "414",
+      "unM49": "414",
+      "iso3": "KWT",
+      "nameZh": "科威特",
+      "nameEn": "Kuwait",
+      "flag": "🇰🇼",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 4865298,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": -0.654851001278566,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 100,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 17.973071445874,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 78.8520272518679,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.17490130225807,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 157209026926.418,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 32312.3119953634,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 41110,
+          "year": "2024"
+        },
+        "householdConsumption": {
+          "value": 66908781890.8227,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 11076.7552795453,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 100,
+          "year": "2025"
+        },
+        "goodsExports": {
+          "value": 72073000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 41612000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 6045828986,
+          "yoy": 25.186708305150663,
+          "shareOfChinaTotal": 0.16009585262792547,
+          "cagr2020_2025": 11.249929631458233
+        },
+        "imports": {
+          "year": "2025",
+          "value": 12544046625,
+          "yoy": 9.405907746347486,
+          "shareOfChinaTotal": 0.48634391926502607,
+          "cagr2020_2025": 3.163772012846744
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "417",
+      "unM49": "417",
+      "iso3": "KGZ",
+      "nameZh": "吉尔吉斯斯坦",
+      "nameEn": "Kyrgyzstan",
+      "flag": "🇰🇬",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 7343064,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.66425490124613,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 34.7463537261057,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 31.9082109892695,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 62.1262174976691,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 5.96557151306138,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 22623752095.4613,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3080.96893823359,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 2800,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 21116051336.0002,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1995.09764175669,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 92.0286026,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 2852000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 12973000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 21977411013,
+          "yoy": 10.412956037804854,
+          "shareOfChinaTotal": 0.5819702083582213,
+          "cagr2020_2025": 50.30041502977682
+        },
+        "imports": {
+          "year": "2025",
+          "value": 5224031630,
+          "yoy": 86.28077446246596,
+          "shareOfChinaTotal": 0.20254038375743544,
+          "cagr2020_2025": 172.4473529478309
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "422",
+      "unM49": "422",
+      "iso3": "LBN",
+      "nameZh": "黎巴嫩",
+      "nameEn": "Lebanon",
+      "flag": "🇱🇧",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 5849421,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.745736135898232,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 90.9602314263044,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 25.5876800103532,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 63.9693196958571,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 10.4430002937898,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 25971643441.3408,
+          "year": "2024"
+        },
+        "gdpPerCapita": {
+          "value": 4473.27134441128,
+          "year": "2024"
+        },
+        "gniPerCapita": {
+          "value": 3560,
+          "year": "2024"
+        },
+        "householdConsumption": {
+          "value": 33569100067.0391,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 6386.62038456975,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 80.63400269,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 4598000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 21672000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 2700461366,
+          "yoy": 27.901345638404717,
+          "shareOfChinaTotal": 0.07150924478341543,
+          "cagr2020_2025": 23.35144324765357
+        },
+        "imports": {
+          "year": "2025",
+          "value": 107793271,
+          "yoy": 16.326224130705302,
+          "shareOfChinaTotal": 0.004179241631967154,
+          "cagr2020_2025": 27.65478514435964
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "434",
+      "unM49": "434",
+      "iso3": "LBY",
+      "nameZh": "利比亚",
+      "nameEn": "Libya",
+      "flag": "🇱🇾",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 7458555,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.04494488295615,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 87.9112413015221,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 26.8472061174856,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 67.961224926358,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 5.19156895615632,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 48098909613.6316,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 6448.82415074121,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 7250,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 14880295025.9864,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2614.4188443681,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 81.95449829,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 30085000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 19312000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 4045882368,
+          "yoy": 12.834610338700259,
+          "shareOfChinaTotal": 0.10713650499164981,
+          "cagr2020_2025": 16.5607051187775
+        },
+        "imports": {
+          "year": "2025",
+          "value": 796369510,
+          "yoy": -31.44038315762574,
+          "shareOfChinaTotal": 0.030875958951290045,
+          "cagr2020_2025": -0.7535574418128688
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "458",
+      "unM49": "458",
+      "iso3": "MYS",
+      "nameZh": "马来西亚",
+      "nameEn": "Malaysia",
+      "flag": "🇲🇾",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 35977838,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.17471679693395,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 77.3948812296229,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 21.3091653811994,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 70.6576531919455,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 8.03318142685505,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 472193128644.597,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 13124.5554178269,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 12380,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 291011520801.863,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 7491.00407625203,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 98.0206059,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 376041000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 340436000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "official",
+        "share": 63.5,
+        "population": null,
+        "year": "2020",
+        "source": "马来西亚统计局DOSM",
+        "note": "2020普查；占比为公布的四舍五入值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 103789984263,
+          "yoy": 2.2975191604708955,
+          "shareOfChinaTotal": 2.74839828637256,
+          "cagr2020_2025": 13.012932451478099
+        },
+        "imports": {
+          "year": "2025",
+          "value": 88116208837,
+          "yoy": -20.312462344249347,
+          "shareOfChinaTotal": 3.4163443135768885,
+          "cagr2020_2025": 3.227931222875924
+        }
+      },
+      "products": [
+        {
+          "code": "3004",
+          "name": "零售包装药品",
+          "category": "药品制剂",
+          "worldImports": 1230700224.373,
+          "chinaImports": 37780872.718,
+          "chinaShare": 3.0698680287677758
+        },
+        {
+          "code": "210690",
+          "name": "其他食品制剂",
+          "category": "复配食品",
+          "worldImports": 1127621922.465,
+          "chinaImports": 146814862.714,
+          "chinaShare": 13.019865948780094
+        },
+        {
+          "code": "3006",
+          "name": "税目注释所列医药用品",
+          "category": "其他医药用品",
+          "worldImports": 819682526.589,
+          "chinaImports": 38029889.158,
+          "chinaShare": 4.63958763599077
+        },
+        {
+          "code": "020230",
+          "name": "冻去骨牛肉",
+          "category": "肉类及肉制品",
+          "worldImports": 777677780.205,
+          "chinaImports": 2321856.559,
+          "chinaShare": 0.2985628004426134
+        }
+      ]
+    },
+    {
+      "id": "462",
+      "unM49": "462",
+      "iso3": "MDV",
+      "nameZh": "马尔代夫",
+      "nameEn": "Maldives",
+      "flag": "🇲🇻",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 529676,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.35499694483684,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 42.5061567995467,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 19.0365430942689,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 76.0052371638511,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.95821974187994,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 7741066860.6337,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 14614.7208116541,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 12950,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 3656985621.60102,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 6071.74848875038,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 85.23999786,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 444000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 3619000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 625028647,
+          "yoy": 0.8608083508379494,
+          "shareOfChinaTotal": 0.016550996462198583,
+          "cagr2020_2025": 17.785754542009258
+        },
+        "imports": {
+          "year": "2025",
+          "value": 70043,
+          "yoy": 130.1472037852402,
+          "shareOfChinaTotal": 0.000002715629824684283,
+          "cagr2020_2025": -58.61705647207094
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "466",
+      "unM49": "466",
+      "iso3": "MLI",
+      "nameZh": "马里",
+      "nameEn": "Mali",
+      "flag": "🇲🇱",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 25198821,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.89981455024173,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 32.2127137183989,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 45.7939034966377,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 51.8430177379526,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.36307876540972,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 30069148580.7688,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1193.27601004701,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1120,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 21510130850.4266,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 682.926495678299,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 36.80149841,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 4855000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 6977000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1435158117,
+          "yoy": 42.78681589603186,
+          "shareOfChinaTotal": 0.03800353316791667,
+          "cagr2020_2025": 25.097616941467706
+        },
+        "imports": {
+          "year": "2025",
+          "value": 156664122,
+          "yoy": 113.46044573417826,
+          "shareOfChinaTotal": 0.006074008282928731,
+          "cagr2020_2025": -1.463883765116214
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "478",
+      "unM49": "478",
+      "iso3": "MRT",
+      "nameZh": "毛里塔尼亚",
+      "nameEn": "Mauritania",
+      "flag": "🇲🇷",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 5315065,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.77895808619534,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 61.4888190537696,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 42.3845750131537,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 54.368691104313,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.24673388253332,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 11679910946.4371,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 2197.51046251309,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 2210,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 6302752678.90648,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1066.22166667975,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 45.77939987,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 4510000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 5685000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1263341676,
+          "yoy": 21.524648561454107,
+          "shareOfChinaTotal": 0.03345376841587235,
+          "cagr2020_2025": 11.287814295292154
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1292012598,
+          "yoy": -5.748750402745994,
+          "shareOfChinaTotal": 0.05009248525900697,
+          "cagr2020_2025": 0.23317659643782296
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "504",
+      "unM49": "504",
+      "iso3": "MAR",
+      "nameZh": "摩洛哥",
+      "nameEn": "Morocco",
+      "flag": "🇲🇦",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 38430770,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.913842778572571,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 63.1278612260269,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 25.1994729743901,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 66.3502201491149,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 8.45030687649506,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 182374250612.28,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 4672.46826171875,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 4360,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 108089780926.815,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2114.50317382813,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 91.2,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 49777000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 87389000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 9877500015,
+          "yoy": 27.637135633264776,
+          "shareOfChinaTotal": 0.26155995983273944,
+          "cagr2020_2025": 18.80313526647559
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1080474036,
+          "yoy": -16.785805147434484,
+          "shareOfChinaTotal": 0.04189094580412889,
+          "cagr2020_2025": 12.649763519843194
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "508",
+      "unM49": "508",
+      "iso3": "MOZ",
+      "nameZh": "莫桑比克",
+      "nameEn": "Mozambique",
+      "flag": "🇲🇿",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 35631653,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.84630186701375,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 37.2077944927189,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 44.1685262258251,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 53.0975927499069,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.73388102426795,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 22337997046.1913,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 626.914419215727,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 570,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 15842458917.4961,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 415.908341481926,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 20.52729988,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 8100000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 9210000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 3810865196,
+          "yoy": 12.620560237557733,
+          "shareOfChinaTotal": 0.10091316082814954,
+          "cagr2020_2025": 13.761612960237457
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1551040808,
+          "yoy": -15.430056178799045,
+          "shareOfChinaTotal": 0.060135240887843305,
+          "cagr2020_2025": 21.762670306031808
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "562",
+      "unM49": "562",
+      "iso3": "NER",
+      "nameZh": "尼日尔",
+      "nameEn": "Niger",
+      "flag": "🇳🇪",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 27917831,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 3.22289981385576,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 18.3740697195469,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 46.2263651499287,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 51.1556359804599,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.61799886961133,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 21646191388.2507,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 775.353622143879,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 750,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 14758356576.2955,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 404.391114311533,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 15.55760002,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 1900000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 2700000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 324463837,
+          "yoy": 39.72797980733649,
+          "shareOfChinaTotal": 0.008591925896635547,
+          "cagr2020_2025": 1.369227467745282
+        },
+        "imports": {
+          "year": "2025",
+          "value": 737414746,
+          "yoy": 22.034381349236543,
+          "shareOfChinaTotal": 0.028590229964444488,
+          "cagr2020_2025": 26.830365135214727
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "566",
+      "unM49": "566",
+      "iso3": "NGA",
+      "nameZh": "尼日利亚",
+      "nameEn": "Nigeria",
+      "flag": "🇳🇬",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 237527782,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.06227178599451,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 63.7754180467872,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 40.5197233739162,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.4107403158649,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.06953631021894,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 290794361542.112,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1224.25410237743,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1360,
+          "year": "2025"
+        },
+        "householdConsumption": null,
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": {
+          "value": 41.21139908,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 55468000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 41450000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 24911818193,
+          "yoy": 31.818817385666563,
+          "shareOfChinaTotal": 0.6596744273375318,
+          "cagr2020_2025": 8.214201612969685
+        },
+        "imports": {
+          "year": "2025",
+          "value": 2963500472,
+          "yoy": -1.0572298897069787,
+          "shareOfChinaTotal": 0.11489756674084706,
+          "cagr2020_2025": 3.581698183745652
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "512",
+      "unM49": "512",
+      "iso3": "OMN",
+      "nameZh": "阿曼",
+      "nameEn": "Oman",
+      "flag": "🇴🇲",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 5494691,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 3.95650101545376,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 79.4781383307689,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 24.3203302970085,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 72.9926305228083,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.6870391801832,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 109604780696.23,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 19947.3966227092,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 19520,
+          "year": "2024"
+        },
+        "householdConsumption": {
+          "value": 41919969570.8713,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 7834.07433366455,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 95.25174678,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 55276000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 44501000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 5613310576,
+          "yoy": -3.149020744117992,
+          "shareOfChinaTotal": 0.14864260051203362,
+          "cagr2020_2025": 12.780337019389542
+        },
+        "imports": {
+          "year": "2025",
+          "value": 27278578647,
+          "yoy": -11.859430661884552,
+          "shareOfChinaTotal": 1.0576149186755142,
+          "cagr2020_2025": 11.740132645862712
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "586",
+      "unM49": "586",
+      "iso3": "PAK",
+      "nameZh": "巴基斯坦",
+      "nameEn": "Pakistan",
+      "flag": "🇵🇰",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 255219554,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.55994397009632,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 39.5256010979606,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 36.244101546694,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 59.3940359691365,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.36186248416949,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 407307214476.222,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1595.90912252837,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1500,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 340587347229.426,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1563.97382451424,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 57.253,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 30545000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 65849000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "official",
+        "share": 96.35,
+        "population": null,
+        "year": "2023",
+        "source": "巴基斯坦统计局PBS",
+        "note": "2023普查覆盖范围；不可套用于世界银行全国人口计算人数"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 22400594210,
+          "yoy": 10.741098042725339,
+          "shareOfChinaTotal": 0.5931762604808354,
+          "cagr2020_2025": 7.841836976698224
+        },
+        "imports": {
+          "year": "2025",
+          "value": 2847776758,
+          "yoy": 1.1540866876882605,
+          "shareOfChinaTotal": 0.11041085473305705,
+          "cagr2020_2025": 6.03141685338382
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "275",
+      "unM49": "275",
+      "iso3": "PSE",
+      "nameZh": "巴勒斯坦",
+      "nameEn": "Palestine",
+      "flag": "🇵🇸",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 5413596,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.32556364928187,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 87.3818962963393,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 37.5908894034535,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 58.5574375946285,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.85167300191802,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 17167100000,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3171.10844621579,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 3250,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 15554900000,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 2001.90409480131,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 86.63765334,
+          "year": "2023"
+        },
+        "goodsExports": null,
+        "goodsImports": null
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 243233603,
+          "yoy": 57.36660072092543,
+          "shareOfChinaTotal": 0.006440918383603007,
+          "cagr2020_2025": 19.346489497836483
+        },
+        "imports": {
+          "year": "2025",
+          "value": 110257,
+          "yoy": 117.2423305026304,
+          "shareOfChinaTotal": 0.0000042747626112561565,
+          "cagr2020_2025": 66.4212004469013
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "634",
+      "unM49": "634",
+      "iso3": "QAT",
+      "nameZh": "卡塔尔",
+      "nameEn": "Qatar",
+      "flag": "🇶🇦",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 2972215,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 3.92476698437933,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 99.3593427696312,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 15.0002960632256,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 83.2988889044008,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 1.70081503237359,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 215559615384.615,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 72524.9066385222,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 74330,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 45955965357.1429,
+          "year": "2022"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 13470.095220045,
+          "year": "2020"
+        },
+        "internetPenetration": {
+          "value": 98.08540344,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 88771000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 37537000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 5547698507,
+          "yoy": 32.94770662037367,
+          "shareOfChinaTotal": 0.14690516795256803,
+          "cagr2020_2025": 16.09087387443826
+        },
+        "imports": {
+          "year": "2025",
+          "value": 18311540231,
+          "yoy": -8.686308619720595,
+          "shareOfChinaTotal": 0.7099548104337297,
+          "cagr2020_2025": 17.132157877796473
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "682",
+      "unM49": "682",
+      "iso3": "SAU",
+      "nameZh": "沙特阿拉伯",
+      "nameEn": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 36973555,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 4.63120314543082,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 84.6123121062185,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 23.6210800290965,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 73.322138816712,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.05678115419144,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 1276942933333.33,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 34536.6555456551,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 36070,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 589870666666.667,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 11864.905736363,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 100,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 310672000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 254063000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 53440341923,
+          "yoy": 6.783891055163704,
+          "shareOfChinaTotal": 1.4151205938345666,
+          "cagr2020_2025": 13.723085003837054
+        },
+        "imports": {
+          "year": "2025",
+          "value": 54628370020,
+          "yoy": -5.039539186612252,
+          "shareOfChinaTotal": 2.1179908185000746,
+          "cagr2020_2025": 6.933893432721372
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "686",
+      "unM49": "686",
+      "iso3": "SEN",
+      "nameZh": "塞内加尔",
+      "nameEn": "Senegal",
+      "flag": "🇸🇳",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 18931966,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.29738465638923,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 55.7672494455246,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 37.7428065911695,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 58.6110270161317,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.64616639269883,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 37006536238.3731,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1954.71174194867,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1780,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 23620022151.2404,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1001.28411175979,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 60.11780167,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 10243000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 11947000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 5448662132,
+          "yoy": 15.111386742995059,
+          "shareOfChinaTotal": 0.14428264704873184,
+          "cagr2020_2025": 16.272391359477623
+        },
+        "imports": {
+          "year": "2025",
+          "value": 783401428,
+          "yoy": -27.995625708227657,
+          "shareOfChinaTotal": 0.030373174800865994,
+          "cagr2020_2025": 19.980444566431576
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "694",
+      "unM49": "694",
+      "iso3": "SLE",
+      "nameZh": "塞拉利昂",
+      "nameEn": "Sierra Leone",
+      "flag": "🇸🇱",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 8819794,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.03619305233604,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 45.9267781356681,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 37.6507206404141,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 59.0656312380992,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.28364812148674,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 7464157904.43509,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 846.296172499617,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 830,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 5834704607.2195,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1023.40439788176,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 25.10499954,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 1534000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 1893000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 940240332,
+          "yoy": 15.94559165506142,
+          "shareOfChinaTotal": 0.024897921852449784,
+          "cagr2020_2025": 20.416496094371062
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1344659401,
+          "yoy": 41.12258267241089,
+          "shareOfChinaTotal": 0.052133648949897964,
+          "cagr2020_2025": 53.36323163092081
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "706",
+      "unM49": "706",
+      "iso3": "SOM",
+      "nameZh": "索马里",
+      "nameEn": "Somalia",
+      "flag": "🇸🇴",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 19654739,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 3.3397984923678,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 55.1399062872976,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 46.5538794486154,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 50.8286500268459,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.61747052453864,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 12995200000.2658,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 661.173877723116,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 640,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 17327899999.8671,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 625.338552861284,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 27.94020081,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 1300000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 3930000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1024133319,
+          "yoy": 5.751272248332895,
+          "shareOfChinaTotal": 0.027119440078382028,
+          "cagr2020_2025": 2.787764915049018
+        },
+        "imports": {
+          "year": "2025",
+          "value": 2991617,
+          "yoy": -3.945697969437212,
+          "shareOfChinaTotal": 0.00011598766970621648,
+          "cagr2020_2025": -17.592782239211846
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "729",
+      "unM49": "729",
+      "iso3": "SDN",
+      "nameZh": "苏丹",
+      "nameEn": "Sudan",
+      "flag": "🇸🇩",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 51662147,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.3763155422004,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 34.9349444966605,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 40.2133389828597,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.3996454076943,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.38701560944597,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 60162634574.4689,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1164.53991699219,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 900,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 49057445182.5428,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 530.945007324219,
+          "year": "2025"
+        },
+        "internetPenetration": null,
+        "goodsExports": {
+          "value": 2800000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 6200000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1952793107,
+          "yoy": 134.4163171733879,
+          "shareOfChinaTotal": 0.05171070471808756,
+          "cagr2020_2025": -4.907187446333405
+        },
+        "imports": {
+          "year": "2025",
+          "value": 64438885,
+          "yoy": -88.51043360366198,
+          "shareOfChinaTotal": 0.0024983532683551628,
+          "cagr2020_2025": -39.053276832670846
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "740",
+      "unM49": "740",
+      "iso3": "SUR",
+      "nameZh": "苏里南",
+      "nameEn": "Suriname",
+      "flag": "🇸🇷",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 639850,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.850523968746845,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 65.7886836406706,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 25.3373446901618,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 66.4713604751114,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 8.19129483472689,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 4523657796.86421,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 7069.87230892274,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 6140,
+          "year": "2025"
+        },
+        "householdConsumption": null,
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": {
+          "value": 87.4,
+          "year": "2023"
+        },
+        "goodsExports": {
+          "value": 2690000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 2200000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 541148477,
+          "yoy": 48.95530987358177,
+          "shareOfChinaTotal": 0.014329817635304564,
+          "cagr2020_2025": 19.579183075488118
+        },
+        "imports": {
+          "year": "2025",
+          "value": 39583930,
+          "yoy": -35.087471361297375,
+          "shareOfChinaTotal": 0.001534704408523549,
+          "cagr2020_2025": -8.31638380751457
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "760",
+      "unM49": "760",
+      "iso3": "SYR",
+      "nameZh": "叙利亚",
+      "nameEn": "Syria",
+      "flag": "🇸🇾",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 25620427,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 3.76901619394327,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 72.0836286208518,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 28.4407365349675,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 66.720081728538,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.83918173649451,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 23737634644.3994,
+          "year": "2022"
+        },
+        "gdpPerCapita": {
+          "value": 1056.78264718197,
+          "year": "2022"
+        },
+        "gniPerCapita": {
+          "value": 720,
+          "year": "2022"
+        },
+        "householdConsumption": {
+          "value": 27118984509.2228,
+          "year": "2022"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 242.229822761451,
+          "year": "2022"
+        },
+        "internetPenetration": null,
+        "goodsExports": {
+          "value": 3385000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 7905000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 668080717,
+          "yoy": 72.914749693072,
+          "shareOfChinaTotal": 0.01769103166167373,
+          "cagr2020_2025": -4.328424425037136
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1264596,
+          "yoy": -55.124534600988206,
+          "shareOfChinaTotal": 0.0000490295192064367,
+          "cagr2020_2025": -1.0253548954986091
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "762",
+      "unM49": "762",
+      "iso3": "TJK",
+      "nameZh": "塔吉克斯坦",
+      "nameEn": "Tajikistan",
+      "flag": "🇹🇯",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 10786734,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.83193545840317,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 26.16476270853,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 35.8670954464574,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 60.0650743804879,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.06783017305471,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 17660626562.4832,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1637.2542942547,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 2080,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 13366619466.9157,
+          "year": "2024"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 1129.67946121382,
+          "year": "2024"
+        },
+        "internetPenetration": {
+          "value": 55.79339981,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 2489000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 8307000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 3752171198,
+          "yoy": 6.8435084673959645,
+          "shareOfChinaTotal": 0.09935892142182312,
+          "cagr2020_2025": 29.839509039079104
+        },
+        "imports": {
+          "year": "2025",
+          "value": 544471459,
+          "yoy": 58.58938788965313,
+          "shareOfChinaTotal": 0.021109645971043013,
+          "cagr2020_2025": 64.43260085215104
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "768",
+      "unM49": "768",
+      "iso3": "TGO",
+      "nameZh": "多哥",
+      "nameEn": "Togo",
+      "flag": "🇹🇬",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 8591626,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.17758924189303,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 44.3949892074399,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 40.4253513828465,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.0978678541175,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 3.4768505984781,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 11889949067.4697,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1383.89974929887,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1350,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 7295738041.66792,
+          "year": "2023"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 771.987707763592,
+          "year": "2023"
+        },
+        "internetPenetration": {
+          "value": 39.48320007,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 1800000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 3400000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 4157347092,
+          "yoy": 26.58197252634398,
+          "shareOfChinaTotal": 0.11008813330730995,
+          "cagr2020_2025": 11.072400952961159
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1263478147,
+          "yoy": 494.0336741158399,
+          "shareOfChinaTotal": 0.048986179044730134,
+          "cagr2020_2025": 50.39691961848782
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "788",
+      "unM49": "788",
+      "iso3": "TUN",
+      "nameZh": "突尼斯",
+      "nameEn": "Tunisia",
+      "flag": "🇹🇳",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 12348573,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.580403828948731,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 70.7029326009864,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 23.5608681262199,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 66.5014815881965,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 9.9376502855836,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 57502836548.0878,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 4656.63818386852,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 4300,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 45775211906.8277,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 3100.27363340468,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 76.5,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 21293000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 28591000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 2568762117,
+          "yoy": 8.09204464865314,
+          "shareOfChinaTotal": 0.06802179854437415,
+          "cagr2020_2025": 12.465658563681025
+        },
+        "imports": {
+          "year": "2025",
+          "value": 264628375,
+          "yoy": -47.65568400494017,
+          "shareOfChinaTotal": 0.01025987904012873,
+          "cagr2020_2025": 3.5085530235646534
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "792",
+      "unM49": "792",
+      "iso3": "TUR",
+      "nameZh": "土耳其",
+      "nameEn": "Türkiye",
+      "flag": "🇹🇷",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 85878556,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 0.419954927193433,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 89.494060002186,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 21.0229035096437,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 68.4061556592084,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 10.5709408311479,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 1597293229287,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 18599.4420922378,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 16300,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 873800672532.763,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 10915.4086524399,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 89.77024003,
+          "year": "2025"
+        },
+        "goodsExports": {
+          "value": 273361000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 365370000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 40079888686,
+          "yoy": 5.173479048302987,
+          "shareOfChinaTotal": 1.0613307070504547,
+          "cagr2020_2025": 14.521677056909033
+        },
+        "imports": {
+          "year": "2025",
+          "value": 4522905266,
+          "yoy": -4.801298938405074,
+          "shareOfChinaTotal": 0.17535708685480633,
+          "cagr2020_2025": 3.9244728960429187
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "795",
+      "unM49": "795",
+      "iso3": "TKM",
+      "nameZh": "土库曼斯坦",
+      "nameEn": "Turkmenistan",
+      "flag": "🇹🇲",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 7618847,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.64558945876185,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 47.1053608253747,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 31.2185274741357,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 63.97368499632,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 4.80778752954433,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 49828621355.6516,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 6540.17876401136,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 6340,
+          "year": "2025"
+        },
+        "householdConsumption": null,
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": null,
+        "goodsExports": {
+          "value": 15561000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 4761000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1600208041,
+          "yoy": 55.50470322058545,
+          "shareOfChinaTotal": 0.04237411797442418,
+          "cagr2020_2025": 29.258407175756695
+        },
+        "imports": {
+          "year": "2025",
+          "value": 8439202121,
+          "yoy": -12.25909132462224,
+          "shareOfChinaTotal": 0.3271954224737156,
+          "cagr2020_2025": -0.15161146019705418
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "800",
+      "unM49": "800",
+      "iso3": "UGA",
+      "nameZh": "乌干达",
+      "nameEn": "Uganda",
+      "flag": "🇺🇬",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 51384894,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.70194383324801,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 31.9399557536617,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 43.1111622026505,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 54.6603355842283,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.22850221312123,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 61985829288.1496,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 1206.30450825002,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 1120,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 40422925137.2133,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 724.959535458174,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 8.949831061,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 12500000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 18400000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 1962271832,
+          "yoy": 41.7947748844411,
+          "shareOfChinaTotal": 0.051961704963746934,
+          "cagr2020_2025": 19.94850372124768
+        },
+        "imports": {
+          "year": "2025",
+          "value": 137815548,
+          "yoy": 73.77411683941855,
+          "shareOfChinaTotal": 0.005343232192424773,
+          "cagr2020_2025": 28.26800689690141
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "784",
+      "unM49": "784",
+      "iso3": "ARE",
+      "nameZh": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "flag": "🇦🇪",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 11513149,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 4.68316292656212,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 85.9617641324017,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 15.9773973206416,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 82.2302882072977,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 1.79231447206064,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 552324919095.872,
+          "year": "2024"
+        },
+        "gdpPerCapita": {
+          "value": 50273.5126243239,
+          "year": "2024"
+        },
+        "gniPerCapita": {
+          "value": 51550,
+          "year": "2024"
+        },
+        "householdConsumption": {
+          "value": 234510006807.352,
+          "year": "2023"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 22906.4179237624,
+          "year": "2023"
+        },
+        "internetPenetration": {
+          "value": 100,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 706671000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 618875000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 72902934584,
+          "yoy": 11.144922147138026,
+          "shareOfChinaTotal": 1.9304974550769332,
+          "cagr2020_2025": 17.67422930137763
+        },
+        "imports": {
+          "year": "2025",
+          "value": 34969572596,
+          "yoy": -3.6207437031384515,
+          "shareOfChinaTotal": 1.3558016403946116,
+          "cagr2020_2025": 15.443636908107173
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "860",
+      "unM49": "860",
+      "iso3": "UZB",
+      "nameZh": "乌兹别克斯坦",
+      "nameEn": "Uzbekistan",
+      "flag": "🇺🇿",
+      "focus": true,
+      "metrics": {
+        "population": {
+          "value": 37053428,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 1.88404754637167,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 51.0173495084299,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 31.2904692650839,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 62.6402164463704,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 6.06931428854572,
+          "year": "2025"
+        },
+        "gdp": {
+          "value": 147038081129.405,
+          "year": "2025"
+        },
+        "gdpPerCapita": {
+          "value": 3968.2720079072,
+          "year": "2025"
+        },
+        "gniPerCapita": {
+          "value": 3670,
+          "year": "2025"
+        },
+        "householdConsumption": {
+          "value": 94314485220.9637,
+          "year": "2025"
+        },
+        "householdConsumptionPerCapita": {
+          "value": 3748.45828182264,
+          "year": "2025"
+        },
+        "internetPenetration": {
+          "value": 89.50550079,
+          "year": "2024"
+        },
+        "goodsExports": {
+          "value": 23654000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 41746000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 14264952008,
+          "yoy": 22.45523242193892,
+          "shareOfChinaTotal": 0.3777413584978299,
+          "cagr2020_2025": 22.65444189253827
+        },
+        "imports": {
+          "year": "2025",
+          "value": 1865186469,
+          "yoy": -7.156815717403886,
+          "shareOfChinaTotal": 0.07231494944268473,
+          "cagr2020_2025": 2.8698686381029237
+        }
+      },
+      "products": []
+    },
+    {
+      "id": "887",
+      "unM49": "887",
+      "iso3": "YEM",
+      "nameZh": "也门",
+      "nameEn": "Yemen",
+      "flag": "🇾🇪",
+      "focus": false,
+      "metrics": {
+        "population": {
+          "value": 41773878,
+          "year": "2025"
+        },
+        "populationGrowth": {
+          "value": 2.8917915150724,
+          "year": "2025"
+        },
+        "urbanShare": {
+          "value": 37.0336664607078,
+          "year": "2025"
+        },
+        "youthShare": {
+          "value": 41.0204008473956,
+          "year": "2025"
+        },
+        "workingAgeShare": {
+          "value": 56.4342536792281,
+          "year": "2025"
+        },
+        "seniorShare": {
+          "value": 2.54534547337627,
+          "year": "2025"
+        },
+        "gdp": null,
+        "gdpPerCapita": null,
+        "gniPerCapita": null,
+        "householdConsumption": null,
+        "householdConsumptionPerCapita": null,
+        "internetPenetration": null,
+        "goodsExports": {
+          "value": 196000000,
+          "year": "2025"
+        },
+        "goodsImports": {
+          "value": 4649000000,
+          "year": "2025"
+        }
+      },
+      "muslim": {
+        "status": "unavailable",
+        "share": null,
+        "population": null,
+        "year": null,
+        "source": null,
+        "note": "不得用OIC成员身份或非官方宗教比例补值"
+      },
+      "chinaTrade": {
+        "year": "2025",
+        "exports": {
+          "year": "2025",
+          "value": 2842316328,
+          "yoy": 14.979063208749267,
+          "shareOfChinaTotal": 0.07526561816802177,
+          "cagr2020_2025": -0.27191365027222636
+        },
+        "imports": {
+          "year": "2025",
+          "value": 25999653,
+          "yoy": 30.04350063169474,
+          "shareOfChinaTotal": 0.0010080298262244935,
+          "cagr2020_2025": -47.84942900731175
+        }
+      },
+      "products": []
+    }
+  ]
+}

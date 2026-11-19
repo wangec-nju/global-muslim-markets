@@ -7,6 +7,8 @@ import type { ScreenPoint } from '../shared/coords';
 export interface GlobeSceneOptions {
   container: HTMLElement;
   countries: CountryShape[];
+  /** Market ids that should use the stronger focus-sample styling. */
+  focusIds?: ReadonlySet<string>;
   textureUrl: string;
   bumpTextureUrl?: string | null;
   initialView: InitialView;
@@ -21,15 +23,16 @@ export interface GlobeSceneOptions {
   onReady?: () => void;
 }
 
-const BASE_CAP = 'rgba(38, 143, 128, 0.22)';
-const DIMMED_CAP = 'rgba(38, 143, 128, 0.10)';
-const HOVER_CAP = 'rgba(246, 193, 104, 0.62)';
-const SELECTED_CAP = 'rgba(235, 169, 81, 0.48)';
-const SELECTED_HOVER_CAP = 'rgba(255, 216, 146, 0.78)';
+const MARKET_CAP = 'rgba(95, 214, 194, 0.11)';
+const FOCUS_CAP = 'rgba(233, 185, 107, 0.15)';
+const HOVER_CAP = 'rgba(246, 193, 104, 0.55)';
+const SELECTED_CAP = 'rgba(235, 169, 81, 0.42)';
+const SELECTED_HOVER_CAP = 'rgba(255, 216, 146, 0.72)';
 
-const BASE_STROKE = 'rgba(133, 224, 205, 0.38)';
-const ACTIVE_STROKE = 'rgba(255, 224, 166, 0.95)';
-const SIDE_COLOR = 'rgba(3, 17, 22, 0.72)';
+const MARKET_STROKE = 'rgba(126, 226, 208, 0.62)';
+const FOCUS_STROKE = 'rgba(255, 214, 138, 0.86)';
+const ACTIVE_STROKE = 'rgba(255, 224, 166, 0.98)';
+const SIDE_COLOR = 'rgba(3, 17, 22, 0.78)';
 
 /**
  * Owns the 3D globe and raw pointer interaction. It emits normalized country
@@ -41,6 +44,7 @@ export class GlobeScene {
   private readonly shapeByFeature = new Map<object, CountryShape>();
   private readonly shapeById = new Map<string, CountryShape>();
   private readonly shapeByFeatureName = new Map<string, CountryShape>();
+  private readonly focusIds: ReadonlySet<string>;
 
   private hovered: CountryShape | null = null;
   private selectedId: string | null = null;
@@ -58,6 +62,7 @@ export class GlobeScene {
 
   constructor(options: GlobeSceneOptions) {
     this.options = options;
+    this.focusIds = options.focusIds ?? new Set();
     this.reducedMotion =
       options.reducedMotion ??
       window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ??
@@ -268,29 +273,29 @@ export class GlobeScene {
   private altitudeFor(datum: object): number {
     const country = this.lookupShape(datum);
     if (!country) return 0.008;
-    if (this.hovered?.id === country.id) return 0.024;
-    if (this.selectedId === country.id) return 0.016;
-    return 0.008;
+    if (this.hovered?.id === country.id) return 0.022;
+    if (this.selectedId === country.id) return 0.014;
+    return this.focusIds.has(country.id) ? 0.01 : 0.007;
   }
 
   private capColorFor(datum: object): string {
     const country = this.lookupShape(datum);
-    if (!country) return BASE_CAP;
+    if (!country) return MARKET_CAP;
     const hovered = this.hovered?.id === country.id;
     const selected = this.selectedId === country.id;
     if (hovered && selected) return SELECTED_HOVER_CAP;
     if (hovered) return HOVER_CAP;
     if (selected) return SELECTED_CAP;
-    return this.selectedId ? DIMMED_CAP : BASE_CAP;
+    return this.focusIds.has(country.id) ? FOCUS_CAP : MARKET_CAP;
   }
 
   private strokeColorFor(datum: object): string {
     const country = this.lookupShape(datum);
-    if (!country) return BASE_STROKE;
+    if (!country) return MARKET_STROKE;
     if (this.hovered?.id === country.id || this.selectedId === country.id) {
       return ACTIVE_STROKE;
     }
-    return BASE_STROKE;
+    return this.focusIds.has(country.id) ? FOCUS_STROKE : MARKET_STROKE;
   }
 
   private lookupShape(datum: object): CountryShape | null {

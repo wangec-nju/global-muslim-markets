@@ -6,15 +6,15 @@
     <meta name="theme-color" content="#030a0e" />
     <meta
       name="description"
-      content="基于 globe.gl 的 3D 国家与市场探索器：悬停预览国家卡片，点击固定，支持 GitHub Pages 部署。"
+      content="基于 globe.gl 的 3D 穆斯林市场探索器：仅 OIC 57 国可交互，悬停预览市场卡片，点击固定。"
     />
-    <meta property="og:title" content="Global Muslim Markets · 3D 国家与市场探索器" />
+    <meta property="og:title" content="Global Muslim Markets · OIC 市场探索器" />
     <meta
       property="og:description"
-      content="3D 地球、国家点击、悬浮卡片。卡片外壳与内容渲染解耦，可替换为任意市场数据。"
+      content="3D 地球、OIC 市场高亮、悬浮市场卡片。人口、GDP、家庭消费、互联网与中国贸易数据。"
     />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
-    <title>Global Muslim Markets · 3D 国家与市场探索器</title>
+    <title>Global Muslim Markets · OIC 市场探索器</title>
   </head>
   <body>
     <div id="app">
@@ -23,7 +23,7 @@
       <div
         id="globe"
         class="globe-stage"
-        aria-label="可交互的 3D 地球。悬停国家预览卡片，点击国家固定卡片。"
+        aria-label="可交互的 3D 地球，仅 OIC 57 个市场有高亮边界。悬停查看市场预览，点击固定卡片。"
       ></div>
       <div class="vignette" aria-hidden="true"></div>
 
@@ -42,19 +42,23 @@
           <div class="brand__text">
             <h1>Global Muslim Markets</h1>
             <p>
-              3D 国家与市场探索器
+              3D 穆斯林市场探索器
               <span class="brand__dot" aria-hidden="true">·</span>
-              <span data-ref="country-count">国家边界加载中</span>
+              <span data-ref="market-count">市场加载中</span>
             </p>
           </div>
         </div>
 
-        <div
-          id="renderer-switch"
-          class="renderer-switch"
-          role="group"
-          aria-label="卡片内容视图"
-        ></div>
+        <div class="map-legend" aria-label="地图图例">
+          <span class="map-legend__item">
+            <i class="legend-dot legend-dot--focus" aria-hidden="true"></i>
+            <span data-ref="focus-count">重点样本 16</span>
+          </span>
+          <span class="map-legend__item">
+            <i class="legend-dot legend-dot--oic" aria-hidden="true"></i>
+            <span data-ref="oic-count">OIC 其他 41</span>
+          </span>
+        </div>
       </header>
 
       <div class="hints" aria-hidden="true">
@@ -64,8 +68,7 @@
         <span><b>点击</b>固定</span>
       </div>
       <p class="sr-only">
-        操作提示：拖拽旋转地球，滚轮缩放；悬停国家显示预览卡片，点击固定卡片；按
-        Esc 或点击地球空白处关闭卡片。
+        操作提示：拖拽旋转地球，滚轮缩放；只有高亮边界的 OIC 市场可以悬停和点击；点击固定卡片，按 Esc 或点击地球空白处关闭卡片。
       </p>
 
       <div id="card-layer" class="card-layer"></div>
@@ -78,7 +81,7 @@
             <span class="loader__core"></span>
           </div>
           <p class="loader__title" data-ref="loader-title">正在校准地球坐标</p>
-          <p class="loader__sub" data-ref="loader-sub">载入国家边界与夜间影像</p>
+          <p class="loader__sub" data-ref="loader-sub">载入 OIC 市场数据与地图边界</p>
         </div>
       </div>
     </div>

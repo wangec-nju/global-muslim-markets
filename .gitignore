@@ -10,3 +10,6 @@ dist/
 .playwright-tools/
 
 .tools/
+
+/数据.zip
+data/.cache/

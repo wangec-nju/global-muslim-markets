@@ -1,0 +1,63 @@
+﻿序号,调研类别,二级品类,代表产品,HS编码,编码层级,HS版本,中文名称,英文名称,研究优先级,清真认证相关性,首批建议,建议用途,备注
+1,清真食品,肉类及肉制品,冷冻去骨牛肉,020230,HS6,HS 2022,冻去骨牛肉,Frozen boneless meat of bovine animals,P1-食品扩展,高：涉及动物来源、屠宰方式和交叉污染,食品扩展候选,市场扫描；肉类产品认证研究,动物源性最强，建议与屠宰及供应链认证资料配套分析
+2,清真食品,肉类及肉制品,冷冻鸡块及杂碎,020714,HS6,HS 2022,冻鸡块及杂碎,Frozen cuts and edible offal of fowls of the species Gallus domesticus,P1-食品扩展,高：涉及屠宰、加工和交叉污染,食品扩展候选,市场扫描；禽肉产品认证研究,适合观察印尼、马来西亚清真禽肉进口需求
+3,清真食品,水产及水产制品,冷冻虾,030617,HS6,HS 2022,其他冻虾,"Frozen shrimps and prawns, other",P1-食品扩展,中：水产本身多为允许食品，关注加工助剂和交叉污染,食品扩展候选,市场扫描；水产加工企业研究,清真风险通常低于陆生动物，但仍需看加工和添加剂
+4,清真食品,乳制品,乳粉,040210,HS6,HS 2022,脂肪含量不超过1.5%的乳及稀奶油粉,"Milk and cream in powder, granules or other solid forms, of a fat content not exceeding 1.5%",P1-食品扩展,中高：关注凝乳酶、明胶及加工助剂来源,食品扩展候选,市场扫描；乳制品原料研究,适合进一步追踪乳粉、乳清和复配乳制品
+5,清真食品,乳制品,加工奶酪,040630,HS6,HS 2022,加工奶酪，非磨碎或粉状,"Processed cheese, not grated or powdered",P1-食品扩展,中高：关注凝乳酶、乳化盐和动物源配料,食品扩展候选,市场扫描；乳制品加工研究,可与乳粉、乳清等原料合并观察
+6,清真食品,蜂蜜及天然甜味品,天然蜂蜜,040900,HS6,HS 2022,天然蜂蜜,Natural honey,P1-食品扩展,低至中：关注掺假、加工助剂和共用生产线,食品扩展候选,市场扫描；天然食品研究,产品属性较简单，认证重点在来源和加工控制
+7,清真食品,茶及植物饮料原料,小包装红茶,090230,HS6,HS 2022,每件净重不超过3千克的红茶及部分发酵茶,"Black tea and partly fermented tea, in immediate packings not exceeding 3 kg",P1-食品扩展,低至中：关注添加剂、香精和交叉污染,食品扩展候选,市场扫描；茶饮原料研究,可作为食品基础品类，不作为清真动物源风险重点
+8,清真食品,谷物及主食,精米,100630,HS6,HS 2022,半碾或全碾米,Semi-milled or wholly milled rice,P1-食品扩展,低至中：关注加工助剂、仓储和交叉污染,食品扩展候选,市场扫描；主食贸易研究,适合作为区域食品贸易背景数据
+9,清真食品,谷物及主食,小麦粉,110100,HS6,HS 2022,小麦或混合麦细粉,Wheat or meslin flour,P1-食品扩展,低至中：关注加工助剂、强化剂和共用产线,食品扩展候选,市场扫描；烘焙原料研究,可作为烘焙食品上游原料观察项
+10,清真食品,油脂,初榨大豆油,150710,HS6,HS 2022,初榨大豆油，不论是否脱胶,"Crude soya-bean oil, whether or not degummed",P1-食品扩展,中：关注精炼助剂、动物源设备润滑剂和共用产线,食品扩展候选,市场扫描；植物油脂研究,建议同时核对精炼和包装环节
+11,清真食品,油脂,初榨棕榈油,151110,HS6,HS 2022,初榨棕榈油,Crude palm oil,P1-食品扩展,中：关注精炼助剂和共用产线,食品扩展候选,市场扫描；植物油脂研究,印尼、马来西亚为棕榈油重要市场，需注意上下游关系
+12,清真食品,油脂,食用油脂混合物,151790,HS6,HS 2022,其他食用动物油、植物油及其分离品,"Edible mixtures or preparations of animal or vegetable fats or oils, other",P1-食品扩展,中高：可能含动物油，必须核查配方,食品扩展候选,市场扫描；复配油脂研究,编码本身不能判断是否含动物成分，应核对配方
+13,清真食品,肉类及肉制品,香肠及类似肉制品,160100,HS6,HS 2022,香肠及类似制品；以肉、杂碎或血为基料的食品,"Sausages and similar products; food preparations based on meat, offal or blood",P1-食品核心,高：肉源、屠宰、添加剂和产线均需核查,首批核心候选,首批贸易数据；企业访谈；认证路径研究,食品首批核心编码之一
+14,清真食品,肉类及肉制品,鸡肉制品,160232,HS6,HS 2022,鸡的肉或杂碎制品,Prepared or preserved meat or offal of fowls of the species Gallus domesticus,P1-食品核心,高：涉及禽肉来源、屠宰和加工,首批核心候选,首批贸易数据；企业访谈；认证路径研究,食品首批核心编码之一
+15,清真食品,肉类及肉制品,牛肉制品,160250,HS6,HS 2022,牛的肉或杂碎制品,Prepared or preserved meat or offal of bovine animals,P1-食品核心,高：涉及牛源、屠宰和加工,首批核心候选,首批贸易数据；企业访谈；认证路径研究,食品首批核心编码之一
+16,清真食品,糖食,不含可可糖食,170490,HS6,HS 2022,不含可可的糖食,"Sugar confectionery, not containing cocoa",P1-食品核心,中高：关注明胶、乳化剂、香精和酒精,首批核心候选,首批贸易数据；配方与添加剂研究,食品首批核心编码之一
+17,清真食品,可可及巧克力,大包装或膏状含可可食品,180620,HS6,HS 2022,超过2千克的块状、片状或条状含可可食品，或液体、膏状、粉状、粒状含可可食品,"Chocolate and other food preparations containing cocoa, in blocks, slabs or bars weighing more than 2 kg or in liquid, paste, powder, granular or other bulk form",P1-食品扩展,中高：关注明胶、乳化剂、香精和酒精,食品扩展候选,市场扫描；巧克力原料研究,与180690可形成巧克力细分观察
+18,清真食品,可可及巧克力,其他含可可食品,180690,HS6,HS 2022,其他含可可的食品,Other chocolate and food preparations containing cocoa,P1-食品核心,中高：复配成分较多，关注明胶、乳化剂和酒精,首批核心候选,首批贸易数据；配方与添加剂研究,食品首批核心编码之一
+19,清真食品,谷物制品及面食,其他面食,190230,HS6,HS 2022,其他面食,"Pasta, other than uncooked pasta and stuffed pasta",P1-食品扩展,中：关注蛋、乳、肉类配料和加工助剂,食品扩展候选,市场扫描；方便食品研究,可观察方便面、调味面制品等相关贸易
+20,清真食品,烘焙食品,甜饼干,190531,HS6,HS 2022,甜饼干,Sweet biscuits,P1-食品核心,中高：关注起酥油、乳制品、明胶和香精,首批核心候选,首批贸易数据；烘焙食品研究,食品首批核心编码之一，也是1905的细分
+21,清真食品,烘焙食品,其他面包糕点饼干,190590,HS6,HS 2022,其他面包、糕点、饼干及其他焙烤食品,"Other bread, pastry, cakes, biscuits and other bakers' wares",P1-食品核心,中高：配方和共用产线影响较大,首批核心候选,首批贸易数据；烘焙食品研究,食品首批核心编码之一
+22,清真食品,烘焙食品,焙烤食品宽口径,1905,HS4,HS 2022,面包、糕点、饼干及其他焙烤食品,"Bread, pastry, cakes, biscuits and other bakers' wares",P1-食品扩展,中高：为宽口径，需下钻到六位子目核配方,前期已采口径,衔接已有2021—2025年贸易数据,宽口径，不与190531、190590等六位子目重复加总
+23,清真食品,蔬菜制品,其他保藏蔬菜,200599,HS6,HS 2022,其他非醋方法制作或保藏的蔬菜,Other vegetables prepared or preserved otherwise than by vinegar or acetic acid,P1-食品扩展,中：关注调味料、添加剂和共用产线,食品扩展候选,市场扫描；蔬菜加工研究,适合观察酱腌菜、调味蔬菜等产品
+24,清真食品,调味品,酱油,210310,HS6,HS 2022,酱油,Soya sauce,P1-食品扩展,中：关注发酵助剂、防腐剂和酒精残留,食品扩展候选,市场扫描；调味品研究,可与210390形成调味品组合
+25,清真食品,调味品,其他调味汁及混合调味品,210390,HS6,HS 2022,其他调味汁及混合调味品,Other sauces and preparations; mixed condiments and mixed seasonings,P1-食品核心,中高：复配原料和添加剂较多,首批核心候选,首批贸易数据；调味品研究,食品首批核心编码之一
+26,清真食品,冷冻饮品,冰淇淋及食用冰,210500,HS6,HS 2022,冰淇淋及其他可食用冰,Ice cream and other edible ice,P1-食品扩展,中：关注明胶、乳化剂、乳制品和香精,食品扩展候选,市场扫描；冷冻甜品研究,建议与乳制品和糖食编码联动分析
+27,清真食品,复配食品,其他食品制剂,210690,HS6,HS 2022,其他食品制剂,"Food preparations, other",P1-食品核心,高：复配成分复杂，需逐项核查原料和加工助剂,首批核心候选,首批贸易数据；企业访谈；配方研究,食品首批核心编码之一
+28,清真食品,饮料,加糖或加味水,220210,HS6,HS 2022,加糖、加味或含其他甜味物质的饮用水及汽水,"Waters, including mineral and aerated waters, containing added sugar or other sweetening matter or flavoured",P1-食品扩展,中：关注香精、色素、防腐剂和酒精,食品扩展候选,市场扫描；饮料研究,适合观察包装饮料和风味水
+29,清真食品,饮料,其他无酒精饮料,220299,HS6,HS 2022,其他无酒精饮料,"Non-alcoholic beverages, other",P1-食品核心,中高：复配添加剂较多，关注酒精和动物源澄清剂,首批核心候选,首批贸易数据；饮料研究,食品首批核心编码之一
+30,清真食品,调味品,醋及醋代用品,220900,HS6,HS 2022,醋及由醋酸制得的醋代用品,Vinegar and substitutes for vinegar obtained from acetic acid,P1-食品扩展,中：关注原料、发酵助剂和酒精残留,食品扩展候选,市场扫描；调味品研究,可作为调味品组合的补充编码
+31,化妆品,香水及化妆水,香水和化妆水,330300,HS6,HS 2022,香水及化妆水,Perfumes and toilet waters,P2-相关品类,中：关注酒精、动物源香精和溶剂,后续扩展,品类扫描；认证链条研究,化妆品是否为清真认证重点取决于成分和目标市场要求
+32,化妆品,唇部彩妆,唇膏及唇部彩妆,330410,HS6,HS 2022,唇部化妆制品,Lip make-up preparations,P2-相关品类,中高：关注蜂蜡、羊毛脂、色素和香精,后续扩展,企业访谈；配方风险研究,适合作为化妆品清真成分研究样本
+33,化妆品,眼部彩妆,眼线、眼影及睫毛制品,330420,HS6,HS 2022,眼部化妆制品,Eye make-up preparations,P2-相关品类,中：关注动物源色素、油脂和防腐剂,后续扩展,企业访谈；配方风险研究,与唇部彩妆可合并做彩妆样本
+34,化妆品,护肤及美妆,面霜、乳液及其他美妆品,330499,HS6,HS 2022,其他美容或化妆制品及护肤制品,Other beauty or make-up preparations and preparations for the care of the skin,P2-相关品类,中高：关注甘油、胶原、透明质酸、酒精和香精,后续扩展,企业访谈；配方风险研究,范围较宽，实际研究需再下钻到国内税号或企业产品
+35,化妆品,洗发护发,洗发水,330510,HS6,HS 2022,洗发水,Shampoos,P2-相关品类,中：关注表面活性剂、动物源蛋白和防腐剂,后续扩展,品类扫描；配方研究,与日用品中的洗涤用品存在交叉
+36,化妆品,口腔护理,牙膏,330610,HS6,HS 2022,洁齿品,Dentifrices,P2-相关品类,中：关注甘油、摩擦剂和动物源成分,后续扩展,品类扫描；配方研究,与日用品中的口腔护理存在交叉
+37,化妆品,身体护理,除臭剂及止汗剂,330720,HS6,HS 2022,人体除臭剂及止汗剂,Personal deodorants and antiperspirants,P2-相关品类,中：关注酒精、香精和动物源载体,后续扩展,品类扫描；配方研究,可与个人护理用品合并观察
+38,化妆品,其他香料及盥洗品,其他香料、化妆品及盥洗品,330790,HS6,HS 2022,其他香料、化妆品或盥洗品,"Other perfumery, cosmetic or toilet preparations",P2-相关品类,中：成分差异较大，需逐项核查,后续扩展,品类扫描；配方研究,作为兜底编码，不适合作为唯一代表产品
+39,医药,动物源原料,腺体及器官提取物,3001,HS4,HS 2022,腺体、其他器官及其分泌物提取物,Extracts of glands or other organs or of their secretions,P2-相关品类,中高：动物来源、屠宰方式和加工工艺均重要,后续扩展,认证链条研究；企业访谈,医药清真问题常集中在动物源辅料和原料
+40,医药,血液及免疫制品,抗血清、血液组分和疫苗,3002,HS4,HS 2022,人血、动物血、抗血清、其他血液组分及疫苗等,"Human blood; animal blood; antisera, other blood fractions and immunological products; vaccines",P2-相关品类,中高：动物来源、培养介质和生产工艺需核查,后续扩展,认证链条研究；企业访谈,清真认证与药品注册是两个不同制度
+41,医药,药品制剂,非零售包装药品,3003,HS4,HS 2022,由两种或以上成分混合的药品，非零售包装,"Medicaments consisting of two or more constituents, not put up in measured doses or retail packings",P2-相关品类,中高：关注明胶、乳糖、硬脂酸镁等辅料,后续扩展,品类扫描；辅料研究,建议后续用国内八位或十位税号下钻
+42,医药,药品制剂,零售包装药品,3004,HS4,HS 2022,零售包装药品,Medicaments put up in measured doses or in forms or packings for retail sale,P2-相关品类,中高：关注胶囊壳、辅料和包衣材料,后续扩展,企业访谈；产品案例研究,明胶胶囊是医药清真研究的典型切入点
+43,医药,医用敷料,纱布、绷带及类似制品,3005,HS4,HS 2022,药棉、纱布、绷带及类似制品,"Wadding, gauze, bandages and similar articles",P2-相关品类,低至中：关注动物源纤维、胶黏剂和灭菌工艺,后续扩展,品类扫描；补充研究,通常不是药品清真认证的主要品类
+44,医药,其他医药用品,急救箱及诊断用配制品等,3006,HS4,HS 2022,税目注释所列医药用品,Pharmaceutical goods specified in Note 4 to Chapter 30,P2-相关品类,中：取决于具体产品成分和用途,后续扩展,品类扫描；补充研究,范围较杂，实际研究需落到具体产品
+45,服装,针织服装,棉制针织T恤,610910,HS6,HS 2022,棉制针织或钩编T恤衫、汗衫及其他背心,"T-shirts, singlets and other vests, of cotton, knitted or crocheted",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,穆斯林友好服装市场研究,适用于modest fashion市场观察，不宜按食品认证逻辑处理
+46,服装,针织服装,棉制针织套头衫,611020,HS6,HS 2022,棉制针织或钩编套头衫、开襟衫及类似品,"Jerseys, pullovers, cardigans, waistcoats and similar articles, of cotton, knitted or crocheted",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,穆斯林友好服装市场研究,可与服装设计和渠道研究结合
+47,服装,男装,棉制男式长裤,620342,HS6,HS 2022,棉制男式或男童长裤、背带裤及短裤,"Men's or boys' trousers, bib and brace overalls, breeches and shorts, of cotton",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,品类扫描；市场研究,服装重点应是款式、渠道和消费者偏好
+48,服装,女装,棉制女式长裤,620462,HS6,HS 2022,棉制女式或女童长裤、背带裤及短裤,"Women's or girls' trousers, bib and brace overalls, breeches and shorts, of cotton",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,品类扫描；市场研究,可作为穆斯林女装扩展样本
+49,服装,女装,合成纤维女式连衣裙,620443,HS6,HS 2022,合成纤维制女式或女童连衣裙,"Women's or girls' dresses, of synthetic fibres",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,穆斯林友好服装市场研究,适合与modest fashion款式和品牌研究配套
+50,服装,男装,棉制男式衬衫,620520,HS6,HS 2022,棉制男式或男童衬衫,"Men's or boys' shirts, of cotton",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,品类扫描；市场研究,服装清真属性不应与食品认证混同
+51,服装,女装,棉制女式衬衫,620630,HS6,HS 2022,棉制女式或女童衬衫、罩衫及衬衫式上衣,"Women's or girls' blouses, shirts and shirt-blouses, of cotton",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,品类扫描；市场研究,可作为穆斯林女装基础款观察
+52,服装,服饰配件,披肩、围巾及头巾,6214,HS4,HS 2022,披肩、围巾、头巾、面纱及类似品,"Shawls, scarves, mufflers, mantillas, veils and similar articles",P3-扩展品类,低：通常不属于清真食品认证核心,后续扩展,穆斯林友好服装市场研究,与穆斯林服饰需求关联较强，但不等同于清真认证
+53,日用品,肥皂及清洁护理,肥皂及盥洗用表面活性制品,3401,HS4,HS 2022,肥皂；作肥皂用的有机表面活性产品及制品,Soap; organic surface-active products and preparations for use as soap,P3-扩展品类,中：关注动物油脂、甘油和香精,后续扩展,个人护理用品研究,与化妆品和日用清洁用品交叉
+54,日用品,洗涤剂及清洁剂,洗涤和清洁制剂,3402,HS4,HS 2022,有机表面活性剂；洗涤剂及清洁制剂,Organic surface-active agents; washing preparations and cleaning preparations,P3-扩展品类,低至中：关注动物源表面活性剂和香精,后续扩展,日用化学品研究,多数产品不是清真认证重点，但成分需核查
+55,日用品,塑料家居用品,塑料餐具及厨房用具,392410,HS6,HS 2022,塑料制餐具及厨房用具,"Tableware and kitchenware, of plastics",P3-扩展品类,低：主要关注是否接触食品及材料合规,后续扩展,家居用品市场研究,食品接触材料要求与清真认证是不同制度
+56,日用品,塑料家居用品,其他塑料家用及卫生用品,392490,HS6,HS 2022,其他塑料制家用物品、卫生或盥洗用品,"Other household articles and hygienic or toilet articles, of plastics",P3-扩展品类,低：主要关注材料和接触用途,后续扩展,家居用品市场研究,可作为日用品扩展编码
+57,日用品,纸品,卫生纸,481810,HS6,HS 2022,卫生纸,Toilet paper,P3-扩展品类,低：通常不属于清真认证核心,后续扩展,日用品市场研究,关注质量标准、渠道和价格
+58,日用品,陶瓷家居用品,陶瓷餐具及厨房用具,691200,HS6,HS 2022,其他陶瓷制餐具、厨房用具及其他家用或盥洗用品,"Ceramic tableware, kitchenware, other household articles and toilet articles, other than of porcelain",P3-扩展品类,低：主要关注食品接触安全和设计,后续扩展,家居用品市场研究,不包括瓷制器具，需与6911区分
+59,日用品,玻璃家居用品,玻璃餐具及厨房用具,7013,HS4,HS 2022,餐桌、厨房、盥洗、办公、室内装饰用玻璃器皿,"Glassware of a kind used for table, kitchen, toilet, office, indoor decoration or similar purposes",P3-扩展品类,低：主要关注食品接触安全和设计,后续扩展,家居用品市场研究,适合与家居消费品出口研究结合
+60,日用品,不锈钢家居用品,不锈钢餐具及厨房用具,732393,HS6,HS 2022,不锈钢制餐具及厨房用具,"Table, kitchen or other household articles, of stainless steel",P3-扩展品类,低：主要关注材质和食品接触安全,后续扩展,家居用品市场研究,需与732391等其他钢铁制品区分
+61,日用品,铝制家居用品,铝制餐具及厨房用具,761510,HS6,HS 2022,铝制餐具及厨房用具,"Table, kitchen or other household articles, of aluminium",P3-扩展品类,低：主要关注材质和食品接触安全,后续扩展,家居用品市场研究,可作为金属家居用品补充样本
+62,日用品,口腔清洁用品,牙刷,960321,HS6,HS 2022,牙刷，包括齿板刷,"Toothbrushes, including denture brushes",P3-扩展品类,低：主要关注刷毛材质和使用性能,后续扩展,日用品市场研究,与牙膏等口腔护理产品联合观察

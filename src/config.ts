@@ -10,7 +10,6 @@ export interface SiteConfig {
   name: string;
   tagline: string;
   cardRenderer: CardRendererId;
-  allowRendererSwitch: boolean;
   globe: {
     textureUrl: string;
     bumpTextureUrl: string | null;
@@ -20,7 +19,6 @@ export interface SiteConfig {
     atmosphereColor: string;
   };
   data: {
-    factsUrl: string;
     marketUrl: string;
   };
 }
@@ -32,19 +30,17 @@ export function publicAsset(path: string): string {
 
 export const siteConfig: SiteConfig = {
   name: 'Global Muslim Markets',
-  tagline: '3D 国家与市场探索器',
-  cardRenderer: 'overview',
-  allowRendererSwitch: true,
+  tagline: 'OIC 57 国市场探索器',
+  cardRenderer: 'market',
   globe: {
     textureUrl: publicAsset('textures/earth-night.jpg'),
     bumpTextureUrl: publicAsset('textures/earth-topology.png'),
-    initialView: { lat: 22, lng: 68, altitude: 2.05 },
+    initialView: { lat: 22, lng: 52, altitude: 2.0 },
     autoRotate: true,
-    autoRotateSpeed: 0.32,
+    autoRotateSpeed: 0.3,
     atmosphereColor: '#5fd6c2',
   },
   data: {
-    factsUrl: publicAsset('data/country-facts.json'),
-    marketUrl: publicAsset('data/market-profiles.json'),
+    marketUrl: publicAsset('data/markets.json'),
   },
 };

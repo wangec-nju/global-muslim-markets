@@ -1,4 +1,4 @@
-import type { CountryDetail } from '../data/types';
+import type { MarketCountry } from '../data/types';
 
 export type CardMode = 'preview' | 'pinned';
 
@@ -13,7 +13,7 @@ export interface CardActions {
  * content needs them — renderers stay independent of globe state and DOM shell.
  */
 export interface CardRenderContext {
-  readonly country: CountryDetail;
+  readonly country: MarketCountry;
   readonly mode: CardMode;
   readonly actions: CardActions;
 }

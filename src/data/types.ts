@@ -1,75 +1,81 @@
-export interface CountryFacts {
-  name?: string;
-  nameZh?: string;
-  iso2?: string;
-  iso3?: string;
-  capital?: string;
-  region?: string;
-  subregion?: string;
-  area?: number;
-  flag?: string;
-  unMember?: boolean;
+export interface MetricValue {
+  value: number;
+  year: string | null;
 }
 
-export interface CountryFactsFile {
-  meta?: {
-    source?: string;
-    generator?: string;
-    count?: number;
-  };
-  countries: Record<string, CountryFacts>;
+export interface MarketMetrics {
+  population: MetricValue | null;
+  populationGrowth: MetricValue | null;
+  urbanShare: MetricValue | null;
+  youthShare: MetricValue | null;
+  workingAgeShare: MetricValue | null;
+  seniorShare: MetricValue | null;
+  gdp: MetricValue | null;
+  gdpPerCapita: MetricValue | null;
+  gniPerCapita: MetricValue | null;
+  householdConsumption: MetricValue | null;
+  householdConsumptionPerCapita: MetricValue | null;
+  internetPenetration: MetricValue | null;
+  goodsExports: MetricValue | null;
+  goodsImports: MetricValue | null;
 }
 
-export interface MarketScores {
-  marketSize?: number;
-  accessibility?: number;
-  growthMomentum?: number;
+export interface MuslimStat {
+  status: 'official' | 'unavailable';
+  share: number | null;
+  population: number | null;
+  year: string | null;
+  source: string | null;
+  note: string | null;
 }
 
-export interface MarketProfile {
-  headline?: string;
-  summary?: string;
-  sectors?: string[];
-  tags?: string[];
-  scores?: MarketScores;
-  updated?: string;
+export interface TradeFlow {
+  year: string;
+  value: number | null;
+  yoy: number | null;
+  shareOfChinaTotal: number | null;
+  cagr2020_2025: number | null;
+}
+
+export interface ProductImport {
+  code: string;
+  name: string;
+  category: string | null;
+  worldImports: number;
+  chinaImports: number | null;
+  chinaShare: number | null;
+}
+
+export interface MarketCountry {
+  id: string;
+  unM49: string;
+  iso3: string;
+  nameZh: string;
+  nameEn: string;
+  flag: string | null;
+  focus: boolean;
+  metrics: MarketMetrics;
+  muslim: MuslimStat;
+  chinaTrade: {
+    year: string;
+    exports: TradeFlow | null;
+    imports: TradeFlow | null;
+  } | null;
+  products: ProductImport[];
 }
 
 export interface MarketMeta {
-  demo: boolean;
-  notice: string | null;
-  updated: string | null;
-  available: boolean;
+  generatedAt: string;
+  dataUpdated: string;
+  scope: string;
+  focusCount: number;
+  marketCount: number;
+  officialMuslimCount: number;
+  notes: string[];
+  sources: Array<{ name: string; note: string }>;
 }
 
-export interface MarketProfileFile {
-  meta?: {
-    demo?: boolean;
-    notice?: string;
-    updated?: string;
-  };
-  countries: Record<string, MarketProfile>;
-}
-
-/**
- * The single view-model handed to card content renderers. Card shells and
- * renderers both depend on this type, never on raw datasets or the globe.
- */
-export interface CountryDetail {
-  id: string;
-  /** English name, when available. */
-  name: string;
-  nameZh: string | null;
-  /** Preferred human-readable label (Chinese when present). */
-  label: string;
-  iso2: string | null;
-  iso3: string | null;
-  capital: string | null;
-  region: string | null;
-  subregion: string | null;
-  area: number | null;
-  flag: string | null;
-  market: MarketProfile | null;
-  marketMeta: MarketMeta;
-  hasFacts: boolean;
+export interface MarketDataset {
+  meta: MarketMeta;
+  countries: MarketCountry[];
 }

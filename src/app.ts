@@ -1,42 +1,65 @@
-import worldTopology from 'world-atlas/countries-110m.json';
+import worldTopology from 'world-atlas/countries-50m.json';
 import { CardController } from './card/CardController';
-import {
-  isCardRendererId,
-  listCardRenderers,
-  resolveCardRenderer,
-  type CardRendererId,
-} from './card/registry';
+import { resolveCardRenderer } from './card/registry';
 import { siteConfig } from './config';
-import { CountryRepository } from './data/CountryRepository';
-import type { CountryDetail } from './data/types';
+import { MarketRepository } from './data/MarketRepository';
+import type { MarketCountry } from './data/types';
 import { buildCountries, type WorldAtlasTopology } from './globe/geo';
 import { GlobeScene } from './globe/GlobeScene';
-import type { CountryShape, GlobeHoverEvent, GlobeCountryEvent } from './globe/types';
+import type { CountryShape, GlobeCountryEvent, GlobeHoverEvent } from './globe/types';
 import type { ScreenPoint } from './shared/coords';
 import { hideLoader, showToast } from './ui/loader';
 import { mountStarfield } from './ui/starfield';
 
-const RENDERER_QUERY_KEY = 'card';
 const PREVIEW_DISMISS_DELAY = 180;
 
 /**
- * Composition root: wires globe events to card behaviour and resolves the
- * country view-model. Neither the scene nor the card shell imports the other.
+ * Composition root. Market data decides which country shapes exist at all:
+ * only the OIC 57-country scope is rendered, highlighted and interactive.
  */
 export async function createApp(): Promise<void> {
   const globeEl = requireElement<HTMLElement>('#globe');
   const cardHost = requireElement<HTMLElement>('#card-layer');
   const starfieldEl = requireElement<HTMLCanvasElement>('#starfield');
-  const countEl = document.querySelector<HTMLElement>('[data-ref="country-count"]');
-
-  const countries = buildCountries(worldTopology as unknown as WorldAtlasTopology);
-  const shapeById = new Map(countries.map((country) => [country.id, country]));
-  const details = new Map<string, CountryDetail>();
-  const repository = new CountryRepository(siteConfig.data);
-
-  if (countEl) countEl.textContent = `${countries.length} 个国家与地区`;
+  const countEl = document.querySelector<HTMLElement>('[data-ref="market-count"]');
+  const focusCountEl = document.querySelector<HTMLElement>('[data-ref="focus-count"]');
+  const otherCountEl = document.querySelector<HTMLElement>('[data-ref="oic-count"]');
 
   const cleanupStarfield = mountStarfield(starfieldEl);
+  const repository = new MarketRepository(siteConfig.data.marketUrl);
+  await repository.load();
+
+  const shapes = buildCountries(worldTopology as unknown as WorldAtlasTopology);
+  const shapeById = new Map<string, CountryShape>();
+  const marketByShapeId = new Map<string, MarketCountry>();
+  const marketShapes = shapes.filter((shape) => {
+    const market = repository.resolve(shape);
+    if (!market) return false;
+    shapeById.set(shape.id, shape);
+    marketByShapeId.set(shape.id, market);
+    return true;
+  });
+
+  if (marketShapes.length === 0) {
+    throw new Error('市场数据没有匹配到任何地图边界');
+  }
+
+  const focusIds = repository.focusIds;
+  const focusCount = focusIds.size;
+  const marketCount = marketShapes.length;
+
+  if (countEl) countEl.textContent = `${marketCount} 个 OIC 市场`;
+  if (focusCountEl) focusCountEl.textContent = `重点样本 ${focusCount}`;
+  if (otherCountEl) otherCountEl.textContent = `OIC 其他 ${marketCount - focusCount}`;
+
+  const missingShapes = repository.list().filter((market) => !shapeById.has(market.id));
+  if (missingShapes.length > 0) {
+    console.warn(
+      '[markets] missing map geometry:',
+      missingShapes.map((market) => `${market.iso3}/${market.nameZh}`).join(', '),
+    );
+    showToast(`${missingShapes.length} 个市场缺少地图边界，未显示在地球上。`);
+  }
 
   let card: CardController | null = null;
   let dismissTimer: number | undefined;
@@ -55,46 +78,6 @@ export async function createApp(): Promise<void> {
     }, delay);
   };
 
-  const detailFor = (shape: CountryShape): CountryDetail => {
-    const cached = details.get(shape.id);
-    if (cached) return cached;
-    const detail = repository.resolve(shape);
-    details.set(shape.id, detail);
-    return detail;
-  };
-
-  const handleHover = (event: GlobeHoverEvent): void => {
-    if (!card) return;
-    if (!event.country) {
-      scheduleDismiss();
-      return;
-    }
-
-    cancelDismiss();
-    if (card.isPinned) return;
-    card.openPreview(detailFor(event.country), event.point);
-  };
-
-  const handleCountryClick = (event: GlobeCountryEvent): void => {
-    if (!card) return;
-    cancelDismiss();
-    lastCountryClickAt = performance.now();
-    card.pin(detailFor(event.country), event.point);
-  };
-
-  const handleBackgroundClick = (): void => {
-    if (!card) return;
-    // Some globe.gl versions still emit onGlobeClick for polygon clicks;
-    // ignore the duplicate that follows a country click.
-    if (performance.now() - lastCountryClickAt < 300) return;
-    if (card.isOpen) card.close('external');
-  };
-
-  const handlePointerMove = (point: ScreenPoint): void => {
-    if (!card?.isPreview) return;
-    card.moveTo(point);
-  };
-
   let resolveSceneReady: () => void = () => undefined;
   const sceneReady = new Promise<void>((resolve) => {
     resolveSceneReady = resolve;
@@ -102,7 +85,8 @@ export async function createApp(): Promise<void> {
 
   const scene = new GlobeScene({
     container: globeEl,
-    countries,
+    countries: marketShapes,
+    focusIds,
     textureUrl: siteConfig.globe.textureUrl,
     bumpTextureUrl: siteConfig.globe.bumpTextureUrl,
     initialView: siteConfig.globe.initialView,
@@ -116,18 +100,11 @@ export async function createApp(): Promise<void> {
     onReady: resolveSceneReady,
   });
 
-  const requestedRenderer = new URLSearchParams(window.location.search).get(
-    RENDERER_QUERY_KEY,
-  );
-  let activeRendererId: CardRendererId = isCardRendererId(requestedRenderer)
-    ? requestedRenderer
-    : siteConfig.cardRenderer;
-
   card = new CardController(cardHost, {
-    renderer: resolveCardRenderer(activeRendererId),
-    onPinned: (country) => {
-      scene.setSelected(country.id);
-      const shape = shapeById.get(country.id);
+    renderer: resolveCardRenderer(siteConfig.cardRenderer),
+    onPinned: (market) => {
+      scene.setSelected(market.id);
+      const shape = shapeById.get(market.id);
       if (shape) scene.focusCountry(shape);
     },
     onClose: () => {
@@ -137,32 +114,49 @@ export async function createApp(): Promise<void> {
     onPointerLeave: () => scheduleDismiss(PREVIEW_DISMISS_DELAY + 60),
   });
 
-  setupRendererSwitch({
-    initialId: activeRendererId,
-    onChange: (id) => {
-      activeRendererId = id;
-      card?.setRenderer(resolveCardRenderer(id));
-      updateRendererQuery(id);
-      syncRendererSwitch(id);
-    },
-  });
-  syncRendererSwitch(activeRendererId);
-
-  const dataPromise = repository.load();
-  const dataReport = await dataPromise;
-  details.clear();
-
-  await Promise.race([sceneReady, delay(9000)]);
-  hideLoader();
-
-  if (dataReport.errors.length > 0) {
-    console.warn('[data]', dataReport.errors.join('\n'));
-    showToast('部分数据未能载入，卡片将显示当前可用内容。');
+  function marketFor(shape: CountryShape): MarketCountry | null {
+    return marketByShapeId.get(shape.id) ?? null;
   }
+
+  function handleHover(event: GlobeHoverEvent): void {
+    if (!card) return;
+    if (!event.country) {
+      scheduleDismiss();
+      return;
+    }
+
+    cancelDismiss();
+    if (card.isPinned) return;
+    const market = marketFor(event.country);
+    if (market) card.openPreview(market, event.point);
+  }
+
+  function handleCountryClick(event: GlobeCountryEvent): void {
+    if (!card) return;
+    const market = marketFor(event.country);
+    if (!market) return;
+    cancelDismiss();
+    lastCountryClickAt = performance.now();
+    card.pin(market, event.point);
+  }
+
+  function handleBackgroundClick(): void {
+    if (!card) return;
+    if (performance.now() - lastCountryClickAt < 300) return;
+    if (card.isOpen) card.close('external');
+  }
+
+  function handlePointerMove(point: ScreenPoint): void {
+    if (!card?.isPreview) return;
+    card.moveTo(point);
+  }
+
+  await Promise.race([sceneReady, delay(5000)]);
+  hideLoader();
 
   if (import.meta.env.DEV) {
     console.info(
-      `[globe] ${countries.length} countries · renderer="${activeRendererId}" · data: facts=${dataReport.factsLoaded} market=${dataReport.marketLoaded}`,
+      `[markets] ${marketCount} OIC markets (${focusCount} focus) · renderer="${siteConfig.cardRenderer}" · data="${repository.meta?.scope ?? 'unknown'}"`,
     );
   }
 
@@ -171,62 +165,6 @@ export async function createApp(): Promise<void> {
     card?.destroy();
     scene.destroy();
   }, { once: true });
-}
-
-interface RendererSwitchOptions {
-  initialId: CardRendererId;
-  onChange: (id: CardRendererId) => void;
-}
-
-function setupRendererSwitch({ initialId, onChange }: RendererSwitchOptions): void {
-  const host = document.getElementById('renderer-switch');
-  if (!host) return;
-
-  if (!siteConfig.allowRendererSwitch) {
-    host.remove();
-    return;
-  }
-
-  for (const { id, label } of listCardRenderers()) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.dataset.renderer = id;
-    button.textContent = label;
-    button.setAttribute('aria-pressed', String(id === initialId));
-    host.append(button);
-  }
-
-  host.addEventListener('click', (event) => {
-    const target = event.target as Element | null;
-    const button = target?.closest<HTMLButtonElement>('button[data-renderer]');
-    if (!button) return;
-    const id = button.dataset.renderer;
-    if (!isCardRendererId(id) || button.getAttribute('aria-pressed') === 'true') return;
-    onChange(id);
-  });
-}
-
-function syncRendererSwitch(id: CardRendererId): void {
-  const buttons = document.querySelectorAll<HTMLButtonElement>(
-    '#renderer-switch button[data-renderer]',
-  );
-  for (const button of buttons) {
-    button.setAttribute('aria-pressed', String(button.dataset.renderer === id));
-  }
-}
-
-function updateRendererQuery(id: CardRendererId): void {
-  try {
-    const url = new URL(window.location.href);
-    if (id === siteConfig.cardRenderer) {
-      url.searchParams.delete(RENDERER_QUERY_KEY);
-    } else {
-      url.searchParams.set(RENDERER_QUERY_KEY, id);
-    }
-    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
-  } catch {
-    // file:// previews and some embedded contexts disallow history updates.
-  }
 }
 
 function delay(ms: number): Promise<void> {

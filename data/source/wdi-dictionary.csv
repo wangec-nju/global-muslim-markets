@@ -1,0 +1,17 @@
+﻿类别,指标代码,指标,单位,元数据URL,注意
+01_人口与结构,SP.POP.TOTL,总人口,人,https://api.worldbank.org/v2/indicator/SP.POP.TOTL?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+01_人口与结构,SP.POP.GROW,人口年增长率,%,https://api.worldbank.org/v2/indicator/SP.POP.GROW?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+01_人口与结构,SP.URB.TOTL.IN.ZS,城镇人口占比,%,https://api.worldbank.org/v2/indicator/SP.URB.TOTL.IN.ZS?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+01_人口与结构,SP.POP.0014.TO.ZS,0至14岁人口占比,%,https://api.worldbank.org/v2/indicator/SP.POP.0014.TO.ZS?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+01_人口与结构,SP.POP.1564.TO.ZS,15至64岁人口占比,%,https://api.worldbank.org/v2/indicator/SP.POP.1564.TO.ZS?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+01_人口与结构,SP.POP.65UP.TO.ZS,65岁及以上人口占比,%,https://api.worldbank.org/v2/indicator/SP.POP.65UP.TO.ZS?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,NY.GDP.MKTP.CD,GDP现价美元,美元,https://api.worldbank.org/v2/indicator/NY.GDP.MKTP.CD?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,NY.GDP.PCAP.CD,人均GDP现价美元,美元/人,https://api.worldbank.org/v2/indicator/NY.GDP.PCAP.CD?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,NY.GNP.PCAP.CD,人均GNI阿特拉斯法,美元/人,https://api.worldbank.org/v2/indicator/NY.GNP.PCAP.CD?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,NE.CON.PRVT.CD,住户和为住户服务的非营利机构最终消费支出,美元,https://api.worldbank.org/v2/indicator/NE.CON.PRVT.CD?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,NE.CON.PRVT.PC.KD,住户和非营利机构人均最终消费支出不变价,2015年不变价美元/人,https://api.worldbank.org/v2/indicator/NE.CON.PRVT.PC.KD?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,SH.XPD.CHEX.PC.CD,人均经常卫生支出,美元/人,https://api.worldbank.org/v2/indicator/SH.XPD.CHEX.PC.CD?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+02_收入与消费,SH.XPD.CHEX.GD.ZS,经常卫生支出占GDP比重,%,https://api.worldbank.org/v2/indicator/SH.XPD.CHEX.GD.ZS?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+03_数字消费基础,IT.NET.USER.ZS,使用互联网的人口占比,%,https://api.worldbank.org/v2/indicator/IT.NET.USER.ZS?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+04_货物贸易宏观,TX.VAL.MRCH.CD.WT,货物出口额,美元,https://api.worldbank.org/v2/indicator/TX.VAL.MRCH.CD.WT?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值
+04_货物贸易宏观,TM.VAL.MRCH.CD.WT,货物进口额,美元,https://api.worldbank.org/v2/indicator/TM.VAL.MRCH.CD.WT?format=json,不得将国家全体统计解释成穆斯林专属；不得前填缺值

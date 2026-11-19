@@ -1,21 +1,16 @@
-import type { CountryDetail } from '../../data/types';
+import type { MarketCountry, MetricValue } from '../../data/types';
 import { el } from '../dom';
 
-/** Shared visual primitives available to any content renderer. */
-export function countryHero(
-  country: CountryDetail,
+/** Shared visual primitives for market content renderers. */
+export function marketHero(
+  market: MarketCountry,
   eyebrow: string,
   trailing?: Node,
 ): HTMLElement {
-  const codes = el('span', { className: 'card-codes' });
-  if (country.iso2) codes.append(el('span', { className: 'chip chip--code', text: country.iso2 }));
-  if (country.iso3) codes.append(el('span', { className: 'chip chip--code', text: country.iso3 }));
-
   const meta = el('div', { className: 'card-ident' });
-  if (country.name && country.name !== country.label) {
-    meta.append(el('span', { className: 'card-ident__name', text: country.name }));
+  if (market.nameEn) {
+    meta.append(el('span', { className: 'card-ident__name', text: market.nameEn }));
   }
-  if (codes.childElementCount > 0) meta.append(codes);
   if (trailing) meta.append(trailing);
 
   return el(
@@ -24,24 +19,32 @@ export function countryHero(
     el(
       'div',
       { className: 'card-flag', attrs: { 'aria-hidden': 'true' } },
-      country.flag ?? country.label.slice(0, 2).toUpperCase(),
+      market.flag ?? market.nameZh.slice(0, 2),
     ),
     el(
       'div',
       { className: 'card-heading' },
       el('p', { className: 'card-eyebrow', text: eyebrow }),
-      el('h2', { className: 'card-title', text: country.label }),
+      el('h2', { className: 'card-title', text: market.nameZh }),
       meta.childElementCount > 0 ? meta : null,
     ),
   );
 }
 
-export function metaItem(label: string, value: string | null | undefined): HTMLElement {
+export function metricCell(
+  label: string,
+  metric: MetricValue | null,
+  formatter: (value: number | null) => string,
+): HTMLElement {
   return el(
     'div',
-    { className: 'card-meta__item' },
-    el('dt', { text: label }),
-    el('dd', { text: value || '—' }),
+    { className: 'market-metric' },
+    el('span', { className: 'market-metric__label', text: label }),
+    el('strong', { className: 'market-metric__value', text: formatter(metric?.value ?? null) }),
+    el('span', {
+      className: 'market-metric__year',
+      text: metric?.year ? `${metric.year}` : '暂无',
+    }),
   );
 }
 
@@ -52,16 +55,14 @@ export function chip(text: string, variant = 'default'): HTMLElement {
   });
 }
 
-export function sourceNote(text: string): HTMLElement {
-  return el('p', { className: 'card-source', text });
+export function sectionLabel(text: string): HTMLElement {
+  return el('p', { className: 'card-section-label', text });
 }
 
-export function emptyState(title: string, body: string): HTMLElement {
-  return el(
-    'div',
-    { className: 'card-empty' },
-    el('span', { className: 'card-empty__glyph', attrs: { 'aria-hidden': 'true' }, text: '◇' }),
-    el('p', { className: 'card-empty__title', text: title }),
-    el('p', { className: 'card-empty__body', text: body }),
-  );
+export function sourceNote(text: string): HTMLElement {
+  return el('p', { className: 'card-source card-source--market', text });
+}
+
+export function marketNote(text: string, className = 'market-hint'): HTMLElement {
+  return el('p', { className, text });
 }

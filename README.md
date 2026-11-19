@@ -1,22 +1,25 @@
-# Global Muslim Markets · 3D 国家与市场探索器
+# Global Muslim Markets · OIC 市场探索器
 
-基于 **globe.gl** 的 3D 地球框架：悬停国家显示悬浮卡片，点击固定卡片并飞向该国。**卡片外壳（位置、悬停、固定、关闭、焦点）与卡片内容渲染完全解耦**，内容层可以在不改动外壳的情况下替换成市场档案、投资笔记、评审清单或任意业务视图。
+基于 **globe.gl** 的 3D 市场探索器：地球只渲染 **OIC 57 个市场**，只有这些国家有高亮边界、可以悬停和点击。卡片不展示首都、面积等国家资料，只展示市场规模、中国贸易、穆斯林人口（仅官方普查）和代表进口品类。
 
-开箱即可部署到 GitHub Pages。
+**卡片外壳（位置、悬停、固定、关闭、焦点）与卡片内容渲染解耦**，内容层可以在不改动外壳的情况下替换成其他市场视图。
 
-![3D 地球与市场卡片预览](docs/preview.png)
+线上地址：**https://wangec-nju.github.io/global-muslim-markets/**
+
+![OIC 市场卡片与高亮边界](docs/preview.png)
 
 ---
 
-## 包含什么
+## 功能
 
-- **3D 地球**：globe.gl + three.js，夜间地球纹理、国家面、大气层、透明星空背景、自动旋转与拖拽/缩放。
-- **国家悬停**：国家高亮 + 跟随指针的预览卡片，靠近视口边缘自动翻转/收敛。
-- **国家点击**：卡片固定，国家选中高亮，镜头按国家范围飞到合适高度；支持 Esc、关闭按钮、点击地球空白处关闭。
-- **卡片内容解耦**：`CardController` 只负责“卡片行为”，`CardContentRenderer` 只负责“卡片里放什么”；内置「国家概览」「市场档案」两个内容渲染器，可一键切换验证。
-- **数据驱动**：国家基础资料由 ISO 数字代码、ISO alpha-2/3 或英文名匹配；市场档案缺失时优雅降级，不会出现空卡片。
-- **桌面 / 移动端**：桌面为跟随指针的浮层；窄屏自动变为底部卡片，预览态不拦截点击，保证一次点按即可固定。
-- **工程化**：Vite + TypeScript strict、19 个单元测试、GitHub Actions 自动部署、`VITE_BASE` 适配项目页子路径。
+- **3D 地球**：globe.gl + three.js，OIC 市场边界使用 50m 世界边界数据，包含巴林、科摩罗、马尔代夫等小岛国。
+- **只渲染 57 个 OIC 市场**：非 OIC 国家没有国家面、没有边界、不可交互，只保留地球底图。
+- **双色高亮**：16 个重点样本用金色边界，其余 41 个 OIC 市场用青绿色边界；悬停/选中时变为更亮的金色。
+- **悬停预览、点击固定**：预览为紧凑卡片；固定后展示完整指标、贸易明细、穆斯林人口和代表品类，镜头飞向该国。
+- **市场数据而非国家概况**：没有首都、面积、区域、ISO 信息；卡片标题仅保留国旗与中英文名称用于识别。
+- **数据缺口显式呈现**：缺失值显示 `—`，不补零、不前填；穆斯林人口仅 6 个有官方普查快照的国家显示，其余明确写“不据此推断”。
+- **响应式**：桌面为跟随指针的浮层；≤700px 为底部卡片，预览态不拦截点击。
+- **工程化**：Vite + TypeScript strict、23 个测试、GitHub Pages 自动部署。
 
 ---
 
@@ -27,200 +30,161 @@
 ```bash
 npm install
 npm run dev        # http://127.0.0.1:5173
-npm test           # 19 个测试
-npm run build      # 类型检查 + 产物输出到 dist/
+npm test           # 23 个测试
+npm run build
 npm run preview
 ```
 
 ---
 
-## 架构：一条单向的数据流
+## 数据
+
+### 来源与结构化
+
+原始数据来自 `数据.zip`。仓库只提交**经过筛选的源表**（`data/source/`，约 330KB），不提交 12MB 的原始压缩包和 PDF。
+
+| 文件 | 用途 |
+| --- | --- |
+| `data/source/scope.csv` | OIC 57 国研究范围、UN M49 代码、16 国重点标记 |
+| `data/source/market-latest.csv` | 各国市场规模指标最新可得值 |
+| `data/source/muslim-official.csv` | 已核实的穆斯林人口/占比官方普查快照 |
+| `data/source/china-trade-yearly.csv` | 2021—2025 中国对各市场进出口、同比、占比 |
+| `data/source/china-trade-cagr.csv` | 2020—2025 五年 CAGR |
+| `data/source/products-idn-mys.csv` | 印度尼西亚、马来西亚代表品类进口（2021—2025） |
+| `data/source/product-meta.csv` | HS 编码的中文名称与品类 |
+| `data/source/wdi-dictionary.csv` | WDI 指标口径与质量说明 |
+
+生成结构化数据：
+
+```bash
+npm run gen:markets
+```
+
+产物是 `public/data/markets.json`，由脚本校验并写入：
+
+- 57 个市场，16 个重点样本；
+- 6 个有官方穆斯林人口普查快照的国家；
+- 2 个有代表品类数据的国家（IDN / MYS）；
+- 每个市场都有 2025 年中国出口与进口流。
+
+### 字段
+
+```ts
+type MarketCountry = {
+  id: string;        // UN M49，三位，与地图边界 id 对齐
+  iso3: string;
+  nameZh: string;
+  nameEn: string;
+  flag: string | null;
+  focus: boolean;
+  metrics: {
+    population, populationGrowth, urbanShare, youthShare,
+    workingAgeShare, seniorShare, gdp, gdpPerCapita,
+    gniPerCapita, householdConsumption,
+    householdConsumptionPerCapita, internetPenetration,
+    goodsExports, goodsImports // MetricValue | null
+  };
+  muslim: {
+    status: 'official' | 'unavailable';
+    share: number | null;
+    population: number | null;
+    year: string | null;
+    source: string | null;
+    note: string | null;
+  };
+  chinaTrade: {
+    year: string;
+    exports: TradeFlow | null; // 中国对该市场出口（X）
+    imports: TradeFlow | null; // 中国从该市场进口（M）
+  };
+  products: ProductImport[]; // 仅 IDN / MYS
+};
+```
+
+每个指标都带自己的年份，因为世界银行不同指标的最新可得年份不同（例如互联网普及率可能停留在 2024，人口/GDP 为 2025）。
+
+### 口径与限制
+
+- **OIC 57 国不等于 57 个穆斯林人口占多数的国家**。研究范围来自 OIC 成员样本；穆斯林人口只按官方普查展示。
+- **国家总体指标不是穆斯林专属口径**：人口、GDP、家庭消费、互联网普及率覆盖全国全部人口与经济。
+- **缺失值不补零、不前填**。苏里南的家庭消费等缺值会显示为 `—`。
+- **穆斯林人口只收录 6 国官方普查快照**：孟加拉国、文莱、印度尼西亚、哈萨克斯坦、马来西亚、巴基斯坦；其余明确标注“未取得已核实的官方宗教统计，不据此推断”。
+- **代表品类是研究筛选口径，不是清真认证目录**。HS 数据仅覆盖印度尼西亚、马来西亚，缺失的中国进口记录不置零。
+- **中国贸易方向**：`exports` 表示中国对目标市场出口，`imports` 表示中国从目标市场进口。
+
+---
+
+## 架构与解耦
 
 ```
-浏览器指针
-   │
-   ▼
-GlobeScene ──► { country, point } ──► app.ts ──► CountryRepository
-（只懂几何与交互）                    （组合根）        │
-   │                                                   ▼
-   │                                          CountryDetail（视图模型）
-   │                                                   │
-   ▼                                                   ▼
-高亮 / 选中 / 镜头                          CardController（卡片外壳）
-                                                       │
-                                                       ▼
-                                             CardContentRenderer（内容渲染器）
-                                                       │
-                                                       ▼
-                                              country / mode / actions
+指针
+ │
+ ▼
+GlobeScene ──► { country, point } ──► app.ts ──► MarketRepository
+（只拿到 57 个形状）                   （组合根）        │
+ │                                                   ▼
+ ▼                                             MarketCountry
+高亮 / 选中 / 镜头                                   │
+                                                     ▼
+                                            CardController（卡片外壳）
+                                                     │
+                                                     ▼
+                                            createMarketRenderer()
 ```
 
-### 三条边界
+三条边界：
 
-1. **`src/globe/` 不知道卡片和数据。**
-   `GlobeScene` 只接收 `CountryShape[]`，发出带视口坐标的高亮/点击事件，并负责选中态、镜头移动和拖拽判定。
+1. **`src/globe/` 不知道市场数据。** 它只接收 57 个 `CountryShape`，发出悬停/点击事件，负责样式、选中和镜头。
+2. **`src/data/MarketRepository.ts` 不碰 DOM。** 它加载并索引 `markets.json`，用 UN M49 / ISO3 / 英文名把地图形状解析成 `MarketCountry`。
+3. **`src/card/CardController.ts` 不知道卡片内容。** 它只处理外壳、位置、预览/固定、Esc、焦点和指针驻留；内容由注入的 `CardContentRenderer` 返回 DOM。
 
-2. **`src/card/CardController.ts` 不知道卡片里有什么。**
-   它创建外壳、计算位置、处理预览/固定状态、Esc/关闭、焦点、指针驻留与可访问性；内容由构造时注入的渲染器返回一个 DOM 节点。
-
-3. **`src/data/` 不碰 DOM。**
-   `CountryRepository` 把地理数据与两份 JSON 合并成 `CountryDetail`，纯函数式的 resolver 可以直接在 Node 里测试。
-
-`src/app.ts` 是唯一的组合根：它把 globe 事件翻译成 repository 查询，再把结果和动作交给卡片外壳。**场景与卡片互不 import。**
+`src/app.ts` 是唯一组合根；只有加载到市场数据的 57 个形状会交给 globe，因此“只显示、只交互 OIC 市场”是由数据层保证的，而不是靠样式隐藏。
 
 ### 目录
 
 ```
+data/source/               # 结构化前的精选 CSV（可复现）
+public/data/markets.json   # 生成的市场数据（唯一运行时数据）
+scripts/build-market-data.mjs
 src/
-├─ app.ts                  # 组合根：事件接线、数据、渲染器切换、启动
-├─ main.ts                 # 入口与启动失败兜底
-├─ config.ts               # 站点配置（纹理、初始视角、默认渲染器、数据地址）
+├─ app.ts                  # 组合根、57 国过滤、悬停/固定接线
+├─ config.ts               # 初始视角、纹理、市场数据地址
 ├─ globe/
-│  ├─ GlobeScene.ts        # globe.gl 场景、交互、选中/高亮、镜头
-│  ├─ geo.ts               # TopoJSON → CountryShape，id/名称规范化（纯函数）
-│  └─ types.ts             # CountryShape、GlobeHoverEvent 等
-├─ card/
-│  ├─ CardController.ts    # 卡片外壳：显示/隐藏、固定、位置、焦点、Esc
-│  ├─ position.ts          # 浮层定位与边界翻转（纯函数）
-│  ├─ registry.ts          # 内容渲染器注册表
-│  ├─ types.ts             # 渲染器契约
-│  ├─ dom.ts               # 安全 DOM 构造小工具
-│  └─ renderers/
-│     ├─ overview.ts       # 内容渲染器 #1：国家概览
-│     ├─ market.ts         # 内容渲染器 #2：市场档案
-│     └─ parts.ts          # 两个渲染器共用的可视零件
+│  ├─ GlobeScene.ts        # 边界样式、focusIds、悬停/点击/镜头
+│  └─ geo.ts               # TopoJSON → CountryShape（50m）
 ├─ data/
-│  ├─ CountryRepository.ts # 加载 + 索引 + 合并 + 降级
-│  ├─ types.ts             # CountryDetail / MarketProfile 契约
-│  └─ labels.ts            # 区域中文化、面积格式化
-├─ shared/coords.ts
-├─ styles/                 # tokens / base / globe / chrome / card / loader
-└─ ui/                     # 图标、加载器、Toast、星空
+│  ├─ MarketRepository.ts  # 加载、索引、resolve(shape)
+│  ├─ types.ts             # MarketCountry / TradeFlow / ...
+│  └─ format.ts            # 人口、美元、百分比、贸易份额格式化
+├─ card/
+│  ├─ CardController.ts    # 卡片外壳
+│  ├─ registry.ts          # 内容渲染器注册表（market）
+│  └─ renderers/market.ts  # 市场卡片内容
+└─ styles/                 # tokens/base/globe/chrome/card/loader
 ```
 
----
+### 新增卡片内容
 
-## 卡片契约
-
-内容渲染器只需要实现下面这个接口：
+内容渲染器只需要返回一个元素：
 
 ```ts
 export interface CardContentRenderer {
-  readonly id: string;
-  readonly label?: string;
-  create(ctx: CardRenderContext): CardContentHandle;
-}
-
-export interface CardRenderContext {
-  readonly country: CountryDetail; // 已合并的视图模型
-  readonly mode: 'preview' | 'pinned';
-  readonly actions: CardActions;   // close() / pin()
-}
-
-export interface CardContentHandle {
-  readonly element: HTMLElement;
-  update?(ctx: CardRenderContext): void; // 可选：原地更新
-  destroy?(): void;                      // 可选：清理监听/定时器
-}
-```
-
-外壳只做三件事：把 `handle.element` 插进 body、在模式或渲染器变化时调用 `update` / 重新 `create`、关闭时调用 `destroy`。它不读 `CountryDetail` 的任何字段。
-
-### 新增一个卡片内容
-
-1. 在 `src/card/renderers/` 新建文件，导出一个工厂：
-
-```ts
-export function createMyRenderer(): CardContentRenderer {
-  return {
-    id: 'my-card',
-    label: '我的卡片',
-    create(ctx) {
-      const root = document.createElement('div');
-      // 只依赖 ctx.country / ctx.mode / ctx.actions
-      return { element: root };
-    },
+  id: string;
+  create(ctx: {
+    country: MarketCountry;
+    mode: 'preview' | 'pinned';
+    actions: { close(): void; pin(): void };
+  }): {
+    element: HTMLElement;
+    update?(ctx): void;
+    destroy?(): void;
   };
 }
 ```
 
-2. 在 `src/card/registry.ts` 注册：
-
-```ts
-export const CARD_RENDERERS = {
-  overview: { label: '国家概览', create: createOverviewRenderer },
-  market: { label: '市场档案', create: createMarketRenderer },
-  mine: { label: '我的卡片', create: createMyRenderer },
-} as const;
-```
-
-3. 完成。顶部切换器自动多一个按钮，URL 支持 `?card=mine`；`CardController` 不需要任何改动。
-
-### 外壳负责的行为
-
-| 行为 | 说明 |
-| --- | --- |
-| 预览 / 固定 | 悬停预览；点击国家升级为固定卡片。固定卡片不会被悬停清掉。 |
-| 指针跟随 | 预览态跟随指针；固定态停在点击位置，窗口 resize 时重新收敛到视口内。 |
-| 边缘翻转 | 优先出现在指针右下；放不下时翻到左侧/上方，最后才 clamp。 |
-| 指针驻留 | 鼠标移入卡片时暂停隐藏（可点击内容），离开后 240ms 再关闭。 |
-| 关闭路径 | × 按钮、Esc、点击地球空白处、点击另一个国家切换。 |
-| 移动端 | ≤700px 变为底部卡片；预览态 `pointer-events: none`，点按会穿透到地球完成固定。 |
-| 可访问性 | 固定时卡片获得焦点；`role="dialog"` + 动态 `aria-label`；Esc 关闭；可见焦点环。 |
-| 遮罩隔离 | 指针在顶部栏/卡片/Toast 上时，globe 的 window 级 raycast 会被过滤，避免在 UI 底下误触发国家卡片。 |
-
----
-
-## 数据层
-
-### 国家基础资料
-
-`public/data/country-facts.json` 由脚本生成，不要手改：
-
-```bash
-npm run gen:facts
-```
-
-- 地理边界：`world-atlas/countries-110m.json`（TopoJSON，构建时打包）。
-- 国家资料：`world-countries`，脚本裁剪成约 69KB（中英文名、ISO2/3、首都、区域、面积、旗帜、联合国成员标记）。
-- 键：ISO 数字代码；无数字代码的地区退回 alpha-3 或英文名。
-- 许可：world-countries 为 **ODbL-1.0**，衍生数据在 `meta` 中保留来源和许可字段。
-
-### 市场档案
-
-`public/data/market-profiles.json` 是**示例数据**，用来展示内容层的结构与降级路径：
-
-```json
-{
-  "meta": {
-    "demo": true,
-    "updated": "2026-11",
-    "notice": "当前为框架演示数据……"
-  },
-  "countries": {
-    "360": {
-      "headline": "东南亚规模领先的清真消费市场",
-      "summary": "……",
-      "sectors": ["清真食品", "穆斯林时尚", "清真旅游"],
-      "tags": ["ASEAN", "OIC"],
-      "scores": {
-        "marketSize": 4.6,
-        "accessibility": 3.9,
-        "growthMomentum": 4.1
-      }
-    }
-  }
-}
-```
-
-- 键可以是 ISO 数字代码（`360`）、ISO alpha-3（`IDN`）或 alpha-2（`ID`）。
-- `meta.demo: true` 时，市场卡片显示「示例数据」徽标与底部署名；**这些分数是占位值**，不构成任何市场结论。替换成真实数据前请移除 `demo` 或保持显著标注。
-- 国家没有档案时显示空状态并提示补充位置，不会渲染半截卡片。
-- 基础资料与市场档案分别加载；任一文件失败只影响对应内容，地球照常可用。
-
-### 换成远程 API
-
-`CountryRepository.load()` 现在是并行 fetch 两个静态 JSON。改成 API 时保留 `resolve(shape): CountryDetail` 的同步出口即可：在 `load()` 里预取，或把 `resolve` 改为异步并在 `app.ts` 中 await 后更新打开的卡片（`CardController.setRenderer` / renderer 的 `update` 已提供原地更新路径）。
+1. 在 `src/card/renderers/` 添加渲染器；
+2. 在 `src/card/registry.ts` 注册；
+3. 在 `src/config.ts` 指向新的 `cardRenderer`。外壳无需改动。
 
 ---
 
@@ -229,94 +193,84 @@ npm run gen:facts
 `src/config.ts`：
 
 ```ts
-export const siteConfig = {
-  cardRenderer: 'overview',        // 默认内容渲染器
-  allowRendererSwitch: true,       // 是否显示顶部切换器
-  globe: {
-    textureUrl: publicAsset('textures/earth-night.jpg'),
-    bumpTextureUrl: publicAsset('textures/earth-topology.png'),
-    initialView: { lat: 22, lng: 68, altitude: 2.05 },
-    autoRotate: true,
-    autoRotateSpeed: 0.32,
-    atmosphereColor: '#5fd6c2',
-  },
-  data: {
-    factsUrl: publicAsset('data/country-facts.json'),
-    marketUrl: publicAsset('data/market-profiles.json'),
-  },
-};
+cardRenderer: 'market',
+globe: {
+  textureUrl: publicAsset('textures/earth-night.jpg'),
+  bumpTextureUrl: publicAsset('textures/earth-topology.png'),
+  initialView: { lat: 22, lng: 52, altitude: 2.0 },
+  autoRotate: true,
+  autoRotateSpeed: 0.3,
+},
+data: {
+  marketUrl: publicAsset('data/markets.json'),
+},
 ```
 
-- 所有 public 资源都经过 `publicAsset()`，自动带上 Vite 的 `BASE_URL`，GitHub Pages 子路径不会 404。
-- URL 参数：`?card=market` 直接打开市场档案内容渲染器。
-- 减少动态效果：遵循 `prefers-reduced-motion`，关闭 globe 入场动画、镜头飞行动画和卡片进入动画。
-- 修改地球纹理只需替换 `public/textures/` 下的文件并更新路径。
+- 资源路径统一经过 `publicAsset()`，自动带 Vite `BASE_URL`。
+- 如需调整重点国家，修改 `data/source/scope.csv` 的 `16国重点样本` 后重新生成；全局计数自动更新。
+- 减少动态效果：遵循 `prefers-reduced-motion`。
 
 ---
 
 ## 部署到 GitHub Pages
 
-仓库已包含 `.github/workflows/deploy.yml`。
+仓库已包含 `.github/workflows/deploy.yml`。推送到 `main` 后：
 
-1. 推送到 GitHub 的 `main` 或 `master`。
-2. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
-3. 等待 `Deploy to GitHub Pages` 工作流完成，访问输出的 URL。
+1. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**（首次一次性）；
+2. Actions 运行 `npm ci` → `npm test` → `npm run build`；
+3. 自动计算项目页 base 为 `/<repo>/`，上传 `dist/`；
+4. 访问 `https://wangec-nju.github.io/global-muslim-markets/`。
 
-工作流会：
+绑定自定义域名时，在仓库 **Settings → Secrets and variables → Actions → Variables** 添加 `VITE_BASE=/`，然后重新运行部署。
 
-- `npm ci` → `npm test` → `npm run build`；
-- 自动计算子路径：项目页用 `/<repo>/`，`<user>.github.io` 用 `/`；
-- 支持用仓库变量 `VITE_BASE` 覆盖（例如绑定自定义域名后设为 `/`）；
-- 上传 `dist/` 并部署，`public/.nojekyll` 一并发布。
-
-本地验证子路径构建：
+本地模拟子路径：
 
 ```bash
 export VITE_BASE=/global-muslim-markets/
 npm run build
 npm run preview
-# 打开 http://127.0.0.1:4173/global-muslim-markets/
+# http://127.0.0.1:4173/global-muslim-markets/
 ```
 
-> 不要用 `file://` 直接打开 `dist/index.html`；ES module 与数据 fetch 需要静态服务器。
+---
+
+## 测试
+
+```bash
+npm test
+```
+
+覆盖：
+
+- 50m 边界解析、无 ISO id 地区的稳定回退；
+- 市场形状按 UN M49 / ISO3 / 英文名解析；
+- 57 个市场、16 个重点样本；
+- 缺失值保持 `null`；
+- 仅 6 个官方穆斯林人口快照；
+- 每个市场都有 2025 中国贸易流；
+- 代表品类仅 IDN / MYS；
+- 卡片定位翻转与渲染器回退。
 
 ---
 
-## 脚本
+## 已知限制
 
-| 命令 | 作用 |
-| --- | --- |
-| `npm run dev` | Vite 开发服务器 |
-| `npm run build` | `tsc --noEmit` + 生产构建 |
-| `npm run preview` | 预览构建产物 |
-| `npm run typecheck` | 仅类型检查 |
-| `npm test` | Vitest 单元测试（geo / repository / position / registry） |
-| `npm run gen:facts` | 从 `world-countries` 重新生成国家资料 |
-
-测试覆盖的重点：
-
-- TopoJSON 解析、176 个国家、ISO id、无 id 地区的稳定回退、质心；
-- 国家资料/市场档案的 ISO 数字、alpha-2/3、英文名匹配与缺失降级；
-- 卡片位置在四个方向的翻转和视口 clamp；
-- 渲染器注册表的未知 id 回退与 URL 值防护。
+- **小岛国**：巴林、科摩罗、马尔代夫等 50m 几何很小，需要放大后点击；没有额外的搜索/列表入口。
+- **年份不统一**：不同指标按各自最新可得年份展示，跨指标比较需看卡片中的年份标签。
+- **穆斯林人口覆盖有限**：只有 6 国官方普查；其余不推断。
+- **代表品类覆盖有限**：仅 IDN / MYS；品类为研究口径，不是清真认证目录。
+- **包体**：主 chunk 约 820KB gzip；地球纹理约 240KB，异步加载，不阻塞地球首帧。
+- **CDN 缓存**：GitHub Pages 首次加载受网络影响；资源带 hash，后续命中缓存。
 
 ---
 
-## 已知边界 / 下一步
+## 数据与素材说明
 
-- **键盘探索**：3D 球面目前是 pointer-only。卡片本身支持 Esc 与焦点管理，但还不能用键盘在国家间移动。下一步可加“国家搜索 + 列表”作为等价入口。
-- **数据是演示级**：市场档案是结构示例，发布前必须替换并核实；评分不是研究结论。
-- **包体**：three.js/globe.gl 让主 chunk 约 620KB gzip；地球纹理已压到约 240KB，且异步加载、不阻塞地球首帧。若首屏预算仍然敏感，可在空闲时动态 `import()` globe 场景。
-- **固定卡片与镜头**：固定卡片锚定在点击时的屏幕位置；旋转地球不会让卡片跟随国土质心（这是浮层方案的有意取舍）。
-- **110m 几何**：小岛与极小的国家边界较粗，部分属地没有独立几何；`country-facts.json` 有 249 条资料，地图只有 176 个 feature，属于预期差异。
-- **i18n**：界面文案目前是中文硬编码；`CountryDetail` 已把中英文名字分开，抽语言包不涉及卡片契约。
-
----
-
-## 素材与许可
-
-- [globe.gl](https://github.com/vasturiano/globe.gl)（MIT）、[three.js](https://threejs.org/)（MIT）。
-- 国界数据：[world-atlas](https://github.com/topojson/world-atlas)（ISC；数据源 Natural Earth，公有领域）。
-- 国家资料：[world-countries](https://github.com/mledoze/countries)（**ODbL-1.0**）；`country-facts.json` 是其衍生数据库，`meta` 中保留来源与许可。
+- 市场规模、人口、消费、互联网：世界银行 WDI（2020—2025 最新可得值）。
+- 中国贸易：中国海关年度数据（2020—2025）。
+- 分品类进口：UN Comtrade（印度尼西亚、马来西亚，2021—2025）。
+- OIC 57 国范围：SESRIC / OIC 研究样本。
+- 穆斯林人口：仅各国官方统计机构已核实的普查快照。
+- 地理边界：[world-atlas](https://github.com/topojson/world-atlas)（ISC，50m；数据源 Natural Earth，公有领域）。
+- 国家英文名/旗帜：[world-countries](https://github.com/mledoze/countries)（ODbL-1.0；仅用于名称与旗帜，不生成国家概况数据）。
 - 地球夜景/地形纹理：来自 [three-globe](https://github.com/vasturiano/three-globe) 示例素材（NASA Earth 影像，公有领域）。
-- `market-profiles.json` 与界面文案为本项目示例内容；发布真实市场数据前请替换并注明来源。

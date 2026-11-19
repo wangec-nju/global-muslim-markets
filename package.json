@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "3D globe explorer for Muslim markets — decoupled card shell and content renderers, ready for GitHub Pages.",
+  "description": "3D OIC market explorer with market-only cards, highlighted OIC borders and GitHub Pages deployment.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "gen:facts": "node scripts/build-country-facts.mjs"
+    "gen:markets": "node scripts/build-market-data.mjs"
   },
   "dependencies": {
     "d3-geo": "^3.1.2",

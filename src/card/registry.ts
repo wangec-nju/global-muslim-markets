@@ -1,13 +1,12 @@
 import type { CardContentRenderer, CardRendererFactory } from './types';
-import { createOverviewRenderer } from './renderers/overview';
 import { createMarketRenderer } from './renderers/market';
 
 /**
- * Content renderer registry. Add a new card type by dropping a renderer in
- * `renderers/` and adding one entry here — the card shell stays untouched.
+ * Content renderer registry. The shell never imports a concrete card; the
+ * composition root resolves the renderer here. Add another market view by
+ * dropping a renderer in `renderers/` and adding one entry.
  */
 export const CARD_RENDERERS = {
-  overview: { label: '国家概览', create: createOverviewRenderer },
   market: { label: '市场档案', create: createMarketRenderer },
 } as const satisfies Record<string, { label: string; create: CardRendererFactory }>;
 
@@ -18,13 +17,6 @@ export function isCardRendererId(value: unknown): value is CardRendererId {
 }
 
 export function resolveCardRenderer(id: string | null | undefined): CardContentRenderer {
-  const key = isCardRendererId(id) ? id : 'overview';
+  const key = isCardRendererId(id) ? id : 'market';
   return CARD_RENDERERS[key].create();
-}
-
-export function listCardRenderers(): Array<{ id: CardRendererId; label: string }> {
-  return (Object.keys(CARD_RENDERERS) as CardRendererId[]).map((id) => ({
-    id,
-    label: CARD_RENDERERS[id].label,
-  }));
 }

@@ -1,4 +1,4 @@
-import type { CountryDetail } from '../data/types';
+import type { MarketCountry } from '../data/types';
 import type { ScreenPoint } from '../shared/coords';
 import { icon } from '../ui/icons';
 import { computeCardPosition } from './position';
@@ -15,7 +15,7 @@ export type CardCloseReason = 'close-button' | 'escape' | 'dismiss' | 'external'
 export interface CardControllerOptions {
   renderer: CardContentRenderer;
   /** Fired whenever a card becomes pinned. The app selects/focuses the country. */
-  onPinned?: (country: CountryDetail) => void;
+  onPinned?: (country: MarketCountry) => void;
   onClose?: (reason: CardCloseReason) => void;
   onPointerEnter?: () => void;
   onPointerLeave?: () => void;
@@ -39,7 +39,7 @@ export class CardController {
 
   private renderer: CardContentRenderer;
   private handle: CardContentHandle | null = null;
-  private country: CountryDetail | null = null;
+  private country: MarketCountry | null = null;
   private mode: CardMode = 'preview';
   private anchor: ScreenPoint = { x: 0, y: 0 };
   private pointerInside = false;
@@ -100,7 +100,7 @@ export class CardController {
   }
 
   /** Show a hover preview, or move an existing one to the pointer. */
-  openPreview(country: CountryDetail, point: ScreenPoint): void {
+  openPreview(country: MarketCountry, point: ScreenPoint): void {
     if (this.isPinned) return;
 
     const sameCountry = this.country?.id === country.id;
@@ -117,7 +117,7 @@ export class CardController {
   }
 
   /** Pin a country card at the click point. Idempotent for the same country. */
-  pin(country: CountryDetail, point: ScreenPoint): void {
+  pin(country: MarketCountry, point: ScreenPoint): void {
     const sameCountry = this.country?.id === country.id;
     this.country = country;
     this.mode = 'pinned';
@@ -258,13 +258,13 @@ export class CardController {
     this.root.dataset.mode = this.mode;
     this.root.setAttribute(
       'aria-label',
-      `${this.country.label}${pinned ? '，已固定的国家卡片' : '，国家预览'}`,
+      `${this.country.nameZh}${pinned ? '，已固定的市场卡片' : '，市场预览'}`,
     );
     this.statusEl.textContent = pinned ? '已固定' : '悬停预览';
     this.hintEl.textContent = pinned
       ? '按 Esc 或点击地球空白处关闭'
       : '点击国家固定卡片';
-    this.closeButton.setAttribute('aria-label', `关闭${this.country.label}卡片`);
+    this.closeButton.setAttribute('aria-label', `关闭${this.country.nameZh}市场卡片`);
   }
 
   private place(point: ScreenPoint): void {

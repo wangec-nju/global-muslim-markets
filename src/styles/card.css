@@ -424,6 +424,205 @@
   font-size: 11px;
 }
 
+/* ------------------------------------------------------------- market data */
+
+.market-section {
+  margin-top: 14px;
+}
+
+.market-section .card-section-label {
+  margin: 0 0 6px;
+}
+
+.market-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.market-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid rgba(147, 205, 191, 0.09);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.022);
+}
+
+.market-metric__label {
+  overflow: hidden;
+  color: var(--faint);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.market-metric__value {
+  overflow: hidden;
+  color: #e6f2ed;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.market-metric__year {
+  color: #526a64;
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.04em;
+}
+
+.trade-list {
+  display: grid;
+  gap: 7px;
+}
+
+.trade-flow {
+  padding: 8px 10px;
+  border: 1px solid rgba(147, 205, 191, 0.1);
+  border-radius: 9px;
+  background: rgba(95, 214, 194, 0.035);
+}
+
+.trade-flow__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.trade-flow__label {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.trade-flow__value {
+  color: var(--gold-bright);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.trade-flow__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 4px;
+  color: var(--faint);
+  font-size: 8.5px;
+}
+
+.trade-flow__change {
+  color: #a9c9c1;
+}
+
+.trade-flow__change.is-negative {
+  color: #e5a9a0;
+}
+
+.trade-flow__share {
+  color: #5d7770;
+}
+
+.muslim-stats {
+  display: flex;
+  gap: 7px;
+}
+
+.muslim-stat {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid rgba(233, 185, 107, 0.16);
+  border-radius: 9px;
+  background: rgba(233, 185, 107, 0.055);
+}
+
+.muslim-stat strong {
+  color: var(--gold-bright);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.muslim-stat__label {
+  color: #8d7c61;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+}
+
+.market-hint {
+  overflow: hidden;
+  margin: 5px 0 0;
+  color: #5d7770;
+  font-size: 8.5px;
+  line-height: 1.55;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.market-missing {
+  margin: 0;
+  color: #6e817b;
+  font-size: 9.5px;
+  line-height: 1.55;
+}
+
+.product-list {
+  display: grid;
+  gap: 5px;
+}
+
+.product-item {
+  padding: 7px 9px;
+  border: 1px solid rgba(147, 205, 191, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.product-item__head,
+.product-item__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.product-item__name {
+  overflow: hidden;
+  color: #d9e8e3;
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-item__code {
+  flex: 0 0 auto;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+}
+
+.product-item__meta {
+  margin-top: 3px;
+  color: #647c75;
+  font-size: 8.5px;
+}
+
+.card-source--market {
+  margin-top: 13px;
+  line-height: 1.6;
+}
+
 @media (max-width: 700px) {
   .country-card {
     top: auto;

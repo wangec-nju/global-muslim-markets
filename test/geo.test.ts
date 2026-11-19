@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { geoContains } from 'd3-geo';
-import worldTopology from 'world-atlas/countries-110m.json';
+import worldTopology from 'world-atlas/countries-50m.json';
 import {
   buildCountries,
   normalizeCountryId,
@@ -13,7 +13,7 @@ describe('buildCountries', () => {
   const countries = buildCountries(worldTopology as unknown as WorldAtlasTopology);
 
   it('parses the world-atlas 110m topology', () => {
-    expect(countries).toHaveLength(176);
+    expect(countries).toHaveLength(240);
     expect(new Set(countries.map((country) => country.id)).size).toBe(countries.length);
   });
 
