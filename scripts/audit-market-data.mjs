@@ -26,6 +26,9 @@ const dataset = JSON.parse(
   readFileSync(path.join(root, 'public', 'data', 'markets.json'), 'utf8'),
 );
 const wikipedia = readCsv(referenceDir, 'oic-wikipedia.csv');
+const wikipediaPageNotes = JSON.parse(
+  readFileSync(path.join(referenceDir, 'oic-wikipedia-page-notes.json'), 'utf8'),
+);
 
 const scope = readCsv(sourceDir, 'scope.csv');
 const latest = indexBy(readCsv(sourceDir, 'market-latest.csv'), (row) => row['国家代码']);
@@ -142,9 +145,10 @@ function checkSourceHashes() {
   }
 
   const referenceHash = hashFile(path.join(referenceDir, 'oic-wikipedia.csv'));
+  const pageNotesHash = hashFile(path.join(referenceDir, 'oic-wikipedia-page-notes.json'));
   info.push({
     label: '源文件',
-    value: `${expectedNames.length} 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 ${referenceHash.slice(0, 12)}…`,
+    value: `${expectedNames.length} 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 ${referenceHash.slice(0, 12)}…，页面核验 SHA-256 ${pageNotesHash.slice(0, 12)}…`,
   });
 }
 
@@ -508,6 +512,39 @@ function checkFormulas() {
 }
 
 function checkWikipedia() {
+  const englishMain = wikipediaPageNotes.englishMainPage;
+  const pageVetting = wikipediaPageNotes;
+  if (englishMain.members !== 57 || englishMain.observers !== 5) {
+    conflicts.push({
+      type: 'wikipedia-page',
+      severity: 'medium',
+      message: `Supplied English OIC page states ${englishMain.members} members / ${englishMain.observers} observers, expected 57 / 5`,
+    });
+  }
+  if (
+    englishMain.leadMuslimMajority != null &&
+    englishMain.membersSectionNonMuslimMajority != null &&
+    englishMain.leadMuslimMajority + englishMain.membersSectionNonMuslimMajority !== englishMain.members
+  ) {
+    conflicts.push({
+      type: 'wikipedia-page',
+      severity: 'low',
+      message: `英文 OIC 主页面内部不一致：导言称 ${englishMain.leadMuslimMajority} 个穆斯林多数国，Members 段列出 ${englishMain.membersSectionNonMuslimMajority} 个非穆斯林多数国（${englishMain.members} 国总数隐含 ${englishMain.members - englishMain.membersSectionNonMuslimMajority} 个）。`,
+      samples: [
+        {
+          lead: englishMain.leadMuslimMajority,
+          membersMinusNonMajority: englishMain.members - englishMain.membersSectionNonMuslimMajority,
+          members: englishMain.members,
+        },
+      ],
+    });
+  } else {
+    info.push({
+      label: 'Wikipedia 页面',
+      value: '英文主页面无比例表；成员/观察员数量与参照一致',
+    });
+  }
+
   const refMembers = wikipedia.filter((row) => row.status === 'member');
   const refObservers = wikipedia.filter((row) => row.status === 'observer');
   const marketIsos = new Set(markets.map((market) => market.iso3));
@@ -572,7 +609,7 @@ function checkWikipedia() {
         conflicts.push({
           type: 'wikipedia-muslim-share',
           severity: 'low',
-          message: `${market.nameZh}: official ${market.muslim.share}% (${market.muslim.year}) vs Wikipedia ${ref.share_display}; difference ${diff}pp`,
+          message: `${market.nameZh}：官方 ${market.muslim.share}%（${market.muslim.year}）vs Wikipedia ${ref.share_display}，相差 ${diff}pp`,
           samples: [
             {
               iso3: market.iso3,
@@ -603,6 +640,7 @@ function checkWikipedia() {
     },
     officialComparisons,
     unavailableWithReference,
+    pageVetting,
     referenceSource: 'Chinese Wikipedia OIC table (image), share column cited to Pew Forum 2013',
     languageVariation: [
       {
@@ -654,7 +692,7 @@ function checkRatios() {
     conflicts.push({
       type: 'gdp-per-capita',
       severity: 'low',
-      message: `${mismatches.length}/${checked} GDP per capita values differ from GDP/population in the same year`,
+      message: `${mismatches.length}/${checked} 个同年人均 GDP 源表值与 GDP/人口 不一致`,
       samples: mismatches.slice(0, 10),
     });
   } else {
@@ -688,6 +726,9 @@ function writeReports(wikipediaComparison) {
       sourceFiles: sourceFiles,
       referenceFiles: {
         'oic-wikipedia.csv': hashFile(path.join(referenceDir, 'oic-wikipedia.csv')),
+        'oic-wikipedia-page-notes.json': hashFile(
+          path.join(referenceDir, 'oic-wikipedia-page-notes.json'),
+        ),
       },
       fieldSources,
       note: 'Every emitted market field is mapped to a source file/column; source files are SHA-256 pinned in markets.json.',
@@ -698,6 +739,7 @@ function writeReports(wikipediaComparison) {
       info,
     },
     wikipediaComparison,
+    wikipediaPageVetting: wikipediaComparison.pageVetting,
     credibility: {
       officialCensus:
         '6 个有官方普查的国家：国家统计机构 + 普查年份，是判断“某一年份穆斯林占比”的更可信来源，网页采用这一口径。',
@@ -706,7 +748,7 @@ function writeReports(wikipediaComparison) {
       marketAndTrade:
         '人口、GDP、消费、互联网与中国贸易，以 WDI / 中国海关 / UN Comtrade 原始表为主；Wikipedia 图片没有可比的市场或贸易表。',
       languageVariation:
-        '同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表），这进一步说明 Wikipedia 百分比不能当作第一手统计。',
+        '同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表）；英文主页面自身还把穆斯林多数国写成 48 个，而其 Members 段列出 8 个非穆斯林多数国（57−8=49）。这些页面级矛盾进一步说明 Wikipedia 百分比不能当作第一手统计。',
     },
   };
 
@@ -771,6 +813,16 @@ function renderMarkdown(quality) {
   }
   lines.push('');
   lines.push('以上源数据矛盾均保留原值，不自动改写；其中人均 GDP 与 GDP/人口的同表差异约 1.6%，可能来自 WDI 修订、人口口径或四舍五入。');
+  lines.push('');
+  lines.push('## Wikipedia 页面核验');
+  lines.push('');
+  const vetting = quality.wikipediaPageVetting;
+  lines.push(`- 用户提供的英文主页面：[${vetting.suppliedUrl}](${vetting.suppliedUrl})`);
+  lines.push(`  - Members 段确认 ${vetting.englishMainPage.members} 个成员国、${vetting.englishMainPage.observers} 个观察员国；`);
+  lines.push('  - **没有**加入年份或穆斯林比例表，只有成员列表，并链接到单独的 Member states 条目；');
+  lines.push(`  - 导言称 ${vetting.englishMainPage.leadMuslimMajority} 个穆斯林多数国，Members 段却列出 ${vetting.englishMainPage.membersSectionNonMuslimMajority} 个非穆斯林多数国，隐含 ${vetting.englishMainPage.impliedMuslimMajority} 个，页面内部不一致。`);
+  lines.push(`- 截图中的加入年份/比例表与[中文 OIC 条目](${vetting.chinesePage.url})匹配，比例列引用 Pew Forum 2013；`);
+  lines.push(`- [英文 Member states 条目](${vetting.englishMemberStatesPage.url})另有比例表，但数值与截图不同（孟加拉国 92%、文莱 84%、哈萨克斯坦 74%）。`);
   lines.push('');
   lines.push('## 穆斯林人口：官方普查与 Wikipedia 参照');
   lines.push('');

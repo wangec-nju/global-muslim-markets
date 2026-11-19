@@ -10,7 +10,7 @@
     "mappedFields": 39,
     "sourceFiles": 9,
     "hardErrors": 0,
-    "conflicts": 2
+    "conflicts": 3
   },
   "provenance": {
     "sourceFiles": {
@@ -25,7 +25,8 @@
       "metric-long.csv": "b586b3496d0197a947b7c0480a90cc57fb2868362ab96094195c2806d52df9c8"
     },
     "referenceFiles": {
-      "oic-wikipedia.csv": "6c85bbcc0ecf0fda0150711a7bf398c9a4a18fc2c726671746267378548813ef"
+      "oic-wikipedia.csv": "6c85bbcc0ecf0fda0150711a7bf398c9a4a18fc2c726671746267378548813ef",
+      "oic-wikipedia-page-notes.json": "561f34df733cab73cde99ee39a04aa1c2ee5ac17dee178cd1a1e4f9b399baaa1"
     },
     "fieldSources": {
       "nameZh": {
@@ -219,7 +220,7 @@
       {
         "type": "gdp-per-capita",
         "severity": "low",
-        "message": "1/52 GDP per capita values differ from GDP/population in the same year",
+        "message": "1/52 个同年人均 GDP 源表值与 GDP/人口 不一致",
         "samples": [
           {
             "iso3": "MAR",
@@ -229,9 +230,21 @@
         ]
       },
       {
+        "type": "wikipedia-page",
+        "severity": "low",
+        "message": "英文 OIC 主页面内部不一致：导言称 48 个穆斯林多数国，Members 段列出 8 个非穆斯林多数国（57 国总数隐含 49 个）。",
+        "samples": [
+          {
+            "lead": 48,
+            "membersMinusNonMajority": 49,
+            "members": 57
+          }
+        ]
+      },
+      {
         "type": "wikipedia-muslim-share",
         "severity": "low",
-        "message": "文莱: official 82.1% (2021) vs Wikipedia 75.10%; difference 7pp",
+        "message": "文莱：官方 82.1%（2021）vs Wikipedia 75.10%，相差 7pp",
         "samples": [
           {
             "iso3": "BRN",
@@ -245,7 +258,7 @@
     "info": [
       {
         "label": "源文件",
-        "value": "9 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 6c85bbcc0ecf…"
+        "value": "9 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 6c85bbcc0ecf…，页面核验 SHA-256 561f34df733c…"
       },
       {
         "label": "市场指标",
@@ -372,6 +385,56 @@
       }
     ],
     "unavailableWithReference": 51,
+    "pageVetting": {
+      "accessed": "2026-11-19",
+      "imageSource": "Chinese Wikipedia OIC table supplied in the conversation",
+      "suppliedUrl": "https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation",
+      "englishMainPage": {
+        "members": 57,
+        "observers": 5,
+        "leadMuslimMajority": 48,
+        "membersSectionNonMuslimMajority": 8,
+        "impliedMuslimMajority": 49,
+        "containsShareTable": false,
+        "containsJoinYears": false,
+        "note": "The supplied English main article has a Members section listing 57 members and 5 observers, but no join-year or Muslim-share table. Its lead says 48 Muslim-majority states (citing Pew Forum 2012/2010 data), while the Members section names 8 non-Muslim-majority states, implying 49. The article links to the separate Member states article for details."
+      },
+      "chinesePage": {
+        "url": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87",
+        "members": 57,
+        "observers": 5,
+        "containsShareTable": true,
+        "containsJoinYears": true,
+        "shareSource": "Pew Forum, Religious Composition by Country (archived 2013)",
+        "note": "The image's join years and share values match this table."
+      },
+      "englishMemberStatesPage": {
+        "url": "https://en.wikipedia.org/wiki/Member_states_of_the_Organisation_of_Islamic_Cooperation",
+        "containsShareTable": true,
+        "differenceExamples": [
+          {
+            "country": "Bangladesh",
+            "chineseTable": "89.80%",
+            "englishMemberStatesTable": "92%",
+            "official": "91.04% (2022, BBS)"
+          },
+          {
+            "country": "Brunei",
+            "chineseTable": "75.10%",
+            "englishMemberStatesTable": "84%",
+            "official": "82.1% (2021, DEPS)"
+          },
+          {
+            "country": "Kazakhstan",
+            "chineseTable": "70.40%",
+            "englishMemberStatesTable": "74%",
+            "official": "69.3% (2021, BNS)"
+          }
+        ],
+        "note": "The English Member states article has a share table but values differ from the image/Chinese table; the supplied main article itself has no share table."
+      },
+      "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+    },
     "referenceSource": "Chinese Wikipedia OIC table (image), share column cited to Pew Forum 2013",
     "languageVariation": [
       {
@@ -394,10 +457,60 @@
       }
     ]
   },
+  "wikipediaPageVetting": {
+    "accessed": "2026-11-19",
+    "imageSource": "Chinese Wikipedia OIC table supplied in the conversation",
+    "suppliedUrl": "https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation",
+    "englishMainPage": {
+      "members": 57,
+      "observers": 5,
+      "leadMuslimMajority": 48,
+      "membersSectionNonMuslimMajority": 8,
+      "impliedMuslimMajority": 49,
+      "containsShareTable": false,
+      "containsJoinYears": false,
+      "note": "The supplied English main article has a Members section listing 57 members and 5 observers, but no join-year or Muslim-share table. Its lead says 48 Muslim-majority states (citing Pew Forum 2012/2010 data), while the Members section names 8 non-Muslim-majority states, implying 49. The article links to the separate Member states article for details."
+    },
+    "chinesePage": {
+      "url": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87",
+      "members": 57,
+      "observers": 5,
+      "containsShareTable": true,
+      "containsJoinYears": true,
+      "shareSource": "Pew Forum, Religious Composition by Country (archived 2013)",
+      "note": "The image's join years and share values match this table."
+    },
+    "englishMemberStatesPage": {
+      "url": "https://en.wikipedia.org/wiki/Member_states_of_the_Organisation_of_Islamic_Cooperation",
+      "containsShareTable": true,
+      "differenceExamples": [
+        {
+          "country": "Bangladesh",
+          "chineseTable": "89.80%",
+          "englishMemberStatesTable": "92%",
+          "official": "91.04% (2022, BBS)"
+        },
+        {
+          "country": "Brunei",
+          "chineseTable": "75.10%",
+          "englishMemberStatesTable": "84%",
+          "official": "82.1% (2021, DEPS)"
+        },
+        {
+          "country": "Kazakhstan",
+          "chineseTable": "70.40%",
+          "englishMemberStatesTable": "74%",
+          "official": "69.3% (2021, BNS)"
+        }
+      ],
+      "note": "The English Member states article has a share table but values differ from the image/Chinese table; the supplied main article itself has no share table."
+    },
+    "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+  },
   "credibility": {
     "officialCensus": "6 个有官方普查的国家：国家统计机构 + 普查年份，是判断“某一年份穆斯林占比”的更可信来源，网页采用这一口径。",
     "wikipedia": "用户提供的中文 Wikipedia 表适合核对 OIC 成员范围，也可作为外部参照；但其穆斯林比例列来自 Pew Forum 2013 的二手汇总，没有逐国普查年份，因此不把 Wikipedia 数值注入为官方数据。",
     "marketAndTrade": "人口、GDP、消费、互联网与中国贸易，以 WDI / 中国海关 / UN Comtrade 原始表为主；Wikipedia 图片没有可比的市场或贸易表。",
-    "languageVariation": "同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表），这进一步说明 Wikipedia 百分比不能当作第一手统计。"
+    "languageVariation": "同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表）；英文主页面自身还把穆斯林多数国写成 48 个，而其 Members 段列出 8 个非穆斯林多数国（57−8=49）。这些页面级矛盾进一步说明 Wikipedia 百分比不能当作第一手统计。"
   }
 }

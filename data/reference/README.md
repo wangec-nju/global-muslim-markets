@@ -31,3 +31,15 @@ npm run audit:markets
 ```
 
 The audit writes `docs/data-quality.md` and `public/data/data-quality.json`; it exits non-zero only for hard provenance/value/hash errors, not for reference differences.
+
+## English page check (2026-11-19)
+
+The supplied URL [Organisation of Islamic Cooperation](https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation) was checked directly:
+
+- Its **Members** section confirms **57 member states** and **5 observer states** (Northern Cyprus, Bosnia and Herzegovina, Central African Republic, Thailand, Russia);
+- It has **no join-year or Muslim-share table**. The section lists members by continent and links to the separate [Member states article](https://en.wikipedia.org/wiki/Member_states_of_the_Organisation_of_Islamic_Cooperation);
+- Its lead says **48** members are Muslim-majority, citing Pew Forum 2012/2010 data, while the Members section names **8** non-Muslim-majority members; 57 − 8 = **49**. The page therefore contradicts itself on this count;
+- It records Syria's suspension in 2012 and restoration in 2025;
+- The image's join-year/share table matches the **Chinese** OIC page (Pew Forum 2013), not a table on the supplied English main page. The English Member states page has yet another set of share values (Bangladesh 92%, Brunei 84%, Kazakhstan 74% vs the image's 89.80%, 75.10%, 70.40%).
+
+The machine-readable page notes are in `oic-wikipedia-page-notes.json`; the audit includes this page-level contradiction in its quality report.

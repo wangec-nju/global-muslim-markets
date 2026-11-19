@@ -1,0 +1,50 @@
+{
+  "accessed": "2026-11-19",
+  "imageSource": "Chinese Wikipedia OIC table supplied in the conversation",
+  "suppliedUrl": "https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation",
+  "englishMainPage": {
+    "members": 57,
+    "observers": 5,
+    "leadMuslimMajority": 48,
+    "membersSectionNonMuslimMajority": 8,
+    "impliedMuslimMajority": 49,
+    "containsShareTable": false,
+    "containsJoinYears": false,
+    "note": "The supplied English main article has a Members section listing 57 members and 5 observers, but no join-year or Muslim-share table. Its lead says 48 Muslim-majority states (citing Pew Forum 2012/2010 data), while the Members section names 8 non-Muslim-majority states, implying 49. The article links to the separate Member states article for details."
+  },
+  "chinesePage": {
+    "url": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87",
+    "members": 57,
+    "observers": 5,
+    "containsShareTable": true,
+    "containsJoinYears": true,
+    "shareSource": "Pew Forum, Religious Composition by Country (archived 2013)",
+    "note": "The image's join years and share values match this table."
+  },
+  "englishMemberStatesPage": {
+    "url": "https://en.wikipedia.org/wiki/Member_states_of_the_Organisation_of_Islamic_Cooperation",
+    "containsShareTable": true,
+    "differenceExamples": [
+      {
+        "country": "Bangladesh",
+        "chineseTable": "89.80%",
+        "englishMemberStatesTable": "92%",
+        "official": "91.04% (2022, BBS)"
+      },
+      {
+        "country": "Brunei",
+        "chineseTable": "75.10%",
+        "englishMemberStatesTable": "84%",
+        "official": "82.1% (2021, DEPS)"
+      },
+      {
+        "country": "Kazakhstan",
+        "chineseTable": "70.40%",
+        "englishMemberStatesTable": "74%",
+        "official": "69.3% (2021, BNS)"
+      }
+    ],
+    "note": "The English Member states article has a share table but values differ from the image/Chinese table; the supplied main article itself has no share table."
+  },
+  "conclusion": "The supplied English main page is useful for confirming 57 members and 5 observers, but the image's share/join-year table is the Chinese Wikipedia table (Pew Forum 2013), not a table in the supplied English main page. Wikipedia's own pages and language versions disagree on shares and even on the number of Muslim-majority members. Official national censuses remain the stronger source for the six countries where available."
+}

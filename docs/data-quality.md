@@ -10,11 +10,11 @@
 - 已映射字段：39
 - 参与哈希校验的源文件：9
 - 硬错误：0
-- 报告冲突：2
+- 报告冲突：3
 
 ## 核验项
 
-- **源文件**：9 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 6c85bbcc0ecf…
+- **源文件**：9 个源 CSV 已计算 SHA-256；Wikipedia 参照 SHA-256 6c85bbcc0ecf…，页面核验 SHA-256 561f34df733c…
 - **市场指标**：798 项（23 项为空）
 - **中国贸易流**：114 条
 - **官方穆斯林快照**：6 个
@@ -32,12 +32,23 @@
 
 ## 源数据矛盾
 
-- `gdp-per-capita`（low）：1/52 GDP per capita values differ from GDP/population in the same year
+- `gdp-per-capita`（low）：1/52 个同年人均 GDP 源表值与 GDP/人口 不一致
   - {"iso3":"MAR","calculated":4745.53,"reported":4672.46826171875}
-- `wikipedia-muslim-share`（low）：文莱: official 82.1% (2021) vs Wikipedia 75.10%; difference 7pp
+- `wikipedia-page`（low）：英文 OIC 主页面内部不一致：导言称 48 个穆斯林多数国，Members 段列出 8 个非穆斯林多数国（57 国总数隐含 49 个）。
+  - {"lead":48,"membersMinusNonMajority":49,"members":57}
+- `wikipedia-muslim-share`（low）：文莱：官方 82.1%（2021）vs Wikipedia 75.10%，相差 7pp
   - {"iso3":"BRN","official":"82.1% (2021)","wikipedia":"75.10%","diff":"7pp"}
 
 以上源数据矛盾均保留原值，不自动改写；其中人均 GDP 与 GDP/人口的同表差异约 1.6%，可能来自 WDI 修订、人口口径或四舍五入。
+
+## Wikipedia 页面核验
+
+- 用户提供的英文主页面：[https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation](https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation)
+  - Members 段确认 57 个成员国、5 个观察员国；
+  - **没有**加入年份或穆斯林比例表，只有成员列表，并链接到单独的 Member states 条目；
+  - 导言称 48 个穆斯林多数国，Members 段却列出 8 个非穆斯林多数国，隐含 49 个，页面内部不一致。
+- 截图中的加入年份/比例表与[中文 OIC 条目](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87)匹配，比例列引用 Pew Forum 2013；
+- [英文 Member states 条目](https://en.wikipedia.org/wiki/Member_states_of_the_Organisation_of_Islamic_Cooperation)另有比例表，但数值与截图不同（孟加拉国 92%、文莱 84%、哈萨克斯坦 74%）。
 
 ## 穆斯林人口：官方普查与 Wikipedia 参照
 
@@ -72,7 +83,7 @@ Wikipedia 表列的穆斯林比例来自 Pew Forum 2013 的二手汇总；官方
 - 6 个有官方普查的国家：国家统计机构 + 普查年份，是判断“某一年份穆斯林占比”的更可信来源，网页采用这一口径。
 - 用户提供的中文 Wikipedia 表适合核对 OIC 成员范围，也可作为外部参照；但其穆斯林比例列来自 Pew Forum 2013 的二手汇总，没有逐国普查年份，因此不把 Wikipedia 数值注入为官方数据。
 - 人口、GDP、消费、互联网与中国贸易，以 WDI / 中国海关 / UN Comtrade 原始表为主；Wikipedia 图片没有可比的市场或贸易表。
-- 同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表），这进一步说明 Wikipedia 百分比不能当作第一手统计。
+- 同一 OIC 主题的中文与英文 Wikipedia 在部分穆斯林比例上并不一致（见下表）；英文主页面自身还把穆斯林多数国写成 48 个，而其 Members 段列出 8 个非穆斯林多数国（57−8=49）。这些页面级矛盾进一步说明 Wikipedia 百分比不能当作第一手统计。
 
 ## 数据来源
 
