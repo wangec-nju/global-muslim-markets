@@ -41,7 +41,6 @@ export async function createApp(): Promise<void> {
   const repository = new MarketRepository(siteConfig.data.marketUrl);
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
   let adminBoundaries: AdminBoundaryDataset | null = null;
-  let seaRoutes: SeaRouteDataset | null = null;
   const [muslimReference] = await Promise.all([
     fetchJson<MuslimReferenceDataset>(siteConfig.data.muslimReferenceUrl),
     repository.load(),
@@ -61,7 +60,6 @@ export async function createApp(): Promise<void> {
         fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
       ]);
       adminBoundaries = admin;
-      seaRoutes = sea;
       for (const market of repository.list()) {
         const route = sea.routes[market.iso3];
         if (route) market.seaRoute = route;
@@ -76,26 +74,6 @@ export async function createApp(): Promise<void> {
     // origins without redrawing hundreds of FatLines on every hover.
     return route.destinations.flatMap((destination) =>
       destination.options[0] ? [{ points: destination.options[0].points }] : [],
-    );
-  }
-
-  function chinaRoutePaths(): Array<{ points: number[][] }> {
-    const top = repository
-      .list()
-      .map((market) => ({
-        market,
-        value:
-          (market.chinaTrade?.exports?.value ?? 0) +
-          (market.chinaTrade?.imports?.value ?? 0),
-      }))
-      .sort((a, b) => b.value - a.value)
-      .slice(0, 8);
-    return top.flatMap(({ market }) =>
-      market.seaRoute
-        ? market.seaRoute.destinations.flatMap((destination) =>
-            destination.options[0] ? [{ points: destination.options[0].points }] : [],
-          )
-        : [],
     );
   }
 
@@ -274,25 +252,15 @@ export async function createApp(): Promise<void> {
     }
 
     if (event.country.id === '156') {
-      const china = profileRepository.china;
-      if (china) {
-        cancelDismiss();
-        cancelOverlayClear();
-        card.close('external');
-        const chinaColor = '#ff8a7f';
-        chinaHover.show(china, repository.list(), seaRoutes?.meta.origins ?? [], event.point);
-        scene.setGeoOverlays(
-          adminBoundaries?.countries.CHN ?? [],
-          chinaRoutePaths(),
-          chinaColor,
-        );
-        scene.setHubs(china.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
-          lat: hub.lat as number,
-          lng: hub.lng as number,
-          type: hub.type,
-          label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
-        })), chinaColor);
-      }
+      // China is hover-only: keep the red highlight, but never open a card or
+      // a detail panel. Hubs/routes are click details for other markets and
+      // China has no click action.
+      cancelDismiss();
+      cancelOverlayClear();
+      card.close('external');
+      chinaHover.close();
+      scene.setHubs([]);
+      scene.clearGeoOverlays();
       return;
     }
 
