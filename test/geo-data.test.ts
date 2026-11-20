@@ -12,17 +12,24 @@ describe('geographic overlays', () => {
     }
   });
 
-  it('has a sea route for every market and sane coordinates', () => {
+  it('has eight Chinese origin routes for every market', () => {
     expect(Object.keys(sea.routes)).toHaveLength(57);
+    expect(sea.meta.origins).toHaveLength(8);
+    let options = 0;
     for (const route of Object.values(sea.routes)) {
-      expect(route.points.length).toBeGreaterThan(1);
-      expect(route.distanceKm).toBeGreaterThan(0);
-      for (const [lat, lng] of route.points) {
-        expect(lat).toBeGreaterThanOrEqual(-90);
-        expect(lat).toBeLessThanOrEqual(90);
-        expect(lng).toBeGreaterThanOrEqual(-180);
-        expect(lng).toBeLessThanOrEqual(180);
+      expect(route.options).toHaveLength(8);
+      for (const option of route.options) {
+        options += 1;
+        expect(option.points.length).toBeGreaterThan(1);
+        expect(option.distanceKm).toBeGreaterThan(0);
+        for (const [lat, lng] of option.points) {
+          expect(lat).toBeGreaterThanOrEqual(-90);
+          expect(lat).toBeLessThanOrEqual(90);
+          expect(lng).toBeGreaterThanOrEqual(-180);
+          expect(lng).toBeLessThanOrEqual(180);
+        }
       }
     }
+    expect(options).toBe(456);
   });
 });

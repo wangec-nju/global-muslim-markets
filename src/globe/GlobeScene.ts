@@ -223,10 +223,10 @@ export class GlobeScene {
   }
 
   /** Replace the navigable sea-route lines (port-to-port, searoute graph). */
-  setSeaRoutes(routes: Array<{ points: number[][] }>): void {
+  setSeaRoutes(routes: Array<{ points: number[][]; color?: string }>): void {
     this.seaRoutes = routes.map((route) => ({
       points: route.points,
-      color: '#ffb45e',
+      color: route.color ?? '#ffb45e',
       width: 0.5,
     }));
     this.refreshPaths();

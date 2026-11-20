@@ -9,6 +9,7 @@ import type {
   AdminBoundaryDataset,
   MarketCountry,
   SeaRouteDataset,
+  SeaRouteInfo,
 } from './data/types';
 import { buildCountries, type WorldAtlasTopology } from './globe/geo';
 import { GlobeScene } from './globe/GlobeScene';
@@ -50,6 +51,35 @@ export async function createApp(): Promise<void> {
     if (profile) market.profile = profile;
     const route = seaRoutes.routes[market.iso3];
     if (route) market.seaRoute = route;
+  }
+
+  const originPalette = ['#ffb45e', '#5fd6c2', '#ff7e5c', '#9bcfff', '#e9b96b', '#b6a4ff', '#7ee2d0', '#ff9fb0'];
+  const originColors = new Map(
+    seaRoutes.meta.origins.map((origin, index) => [
+      origin.id,
+      originPalette[index % originPalette.length],
+    ]),
+  );
+
+  function routePaths(route: SeaRouteInfo): Array<{ points: number[][]; color: string }> {
+    return route.options.map((option) => ({
+      points: option.points,
+      color: originColors.get(option.originId) ?? '#ffb45e',
+    }));
+  }
+
+  function chinaRoutePaths(): Array<{ points: number[][]; color: string }> {
+    const top = repository
+      .list()
+      .map((market) => ({
+        market,
+        value:
+          (market.chinaTrade?.exports?.value ?? 0) +
+          (market.chinaTrade?.imports?.value ?? 0),
+      }))
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 8);
+    return top.flatMap(({ market }) => (market.seaRoute ? routePaths(market.seaRoute) : []));
   }
 
   const shapes = buildCountries(worldTopology as unknown as WorldAtlasTopology);
@@ -188,9 +218,9 @@ export async function createApp(): Promise<void> {
       if (china) {
         cancelDismiss();
         card.close('external');
-        chinaHover.show(china, repository.list(), event.point);
+        chinaHover.show(china, repository.list(), seaRoutes.meta.origins, event.point);
         scene.setAdminPaths(adminBoundaries.countries.CHN ?? []);
-        scene.setSeaRoutes(Object.values(seaRoutes.routes));
+        scene.setSeaRoutes(chinaRoutePaths());
         scene.setHubs(china.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
           lat: hub.lat as number,
           lng: hub.lng as number,
@@ -208,7 +238,7 @@ export async function createApp(): Promise<void> {
     if (market) {
       card.openPreview(market, event.point);
       scene.setAdminPaths(adminBoundaries.countries[market.iso3] ?? []);
-      scene.setSeaRoutes(market.seaRoute ? [market.seaRoute] : []);
+      scene.setSeaRoutes(market.seaRoute ? routePaths(market.seaRoute) : []);
       const profile = market.profile;
       scene.setHubs(profile ? profile.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
         lat: hub.lat as number,

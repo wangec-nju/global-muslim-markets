@@ -163,22 +163,28 @@ export interface AdminBoundaryDataset {
   countries: Record<string, AdminBoundaryPath[]>;
 }
 
-export interface SeaRouteInfo {
-  /** [lat, lng] pairs along the shortest navigable sea route. */
+export interface SeaRouteOption {
+  originId: string;
+  originName: string;
+  /** [lat, lng] pairs along the navigable sea route. */
   points: number[][];
   distanceKm: number | null;
+  fallback?: boolean;
+}
+
+export interface SeaRouteInfo {
   destPort: string;
   destCode: string | null;
   via: string;
+  /** One route per Chinese origin port, sorted shortest first. */
+  options: SeaRouteOption[];
 }
 
 export interface SeaRouteDataset {
   meta: {
     source: string;
-    origin: string;
-    originLng: number;
-    originLat: number;
     note: string;
+    origins: Array<{ id: string; name: string; nameEn: string; lng: number; lat: number }>;
   };
   routes: Record<string, SeaRouteInfo>;
 }

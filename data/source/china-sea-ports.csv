@@ -1,0 +1,9 @@
+id,name_zh,name_en,lng,lat,source
+shanghai,上海,Shanghai,121.5000,31.2167,UN/LOCODE CNSGH
+ningbo,宁波舟山,Ningbo-Zhoushan,121.5500,29.8833,UN/LOCODE CNNGB
+shenzhen,深圳,Shenzhen,113.9000,22.5000,UN/LOCODE CNSZX
+guangzhou,广州,Guangzhou,113.2333,23.1167,UN/LOCODE CNGGZ
+qingdao,青岛,Qingdao,120.2667,36.0333,UN/LOCODE CNQIN
+tianjin,天津,Tianjin,117.8333,38.9667,UN/LOCODE CNTXG
+xiamen,厦门,Xiamen,118.1000,24.4500,UN/LOCODE CNXMN
+dalian,大连,Dalian,121.6667,38.9167,UN/LOCODE CNDAL

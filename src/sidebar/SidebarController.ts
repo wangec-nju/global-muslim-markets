@@ -292,10 +292,8 @@ function shippingSection(market: MarketCountry): HTMLElement | null {
   const section = dossierSection('对华海运联系', 'searoute-py · UN/LOCODE 港口');
   const facts = el('dl', { className: 'dossier-facts' });
   const rows: Array<[string, string]> = [
-    ['起点', '上海'],
     ['目的港', `${route.destPort}${route.destCode ? `（${route.destCode}）` : ''}`],
     ['中转/陆路', route.via || '—'],
-    ['最短可航距离', route.distanceKm ? `${formatKm(route.distanceKm)}` : '—'],
   ];
   for (const [label, value] of rows) {
     facts.append(
@@ -306,6 +304,17 @@ function shippingSection(market: MarketCountry): HTMLElement | null {
     );
   }
   section.append(facts);
+
+  const options = el('div', { className: 'dossier-route-options' });
+  for (const [index, option] of route.options.entries()) {
+    options.append(
+      el('div', { className: `dossier-route-option${index === 0 ? ' is-primary' : ''}` },
+        el('span', { text: option.originName }),
+        el('strong', { text: formatKm(option.distanceKm) }),
+      ),
+    );
+  }
+  section.append(options);
   section.append(
     el('p', {
       className: 'dossier-note',

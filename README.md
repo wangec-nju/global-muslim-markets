@@ -17,7 +17,7 @@
 - **双色高亮**：16 个重点样本用金色边界，其余 41 个 OIC 市场用青绿色边界；悬停/选中时变为更亮的金色。
 - **四种形态**：默认地球；悬停摘要卡（国旗、官方/常用语言、市场概览、行政区与枢纽预览）；点击右侧完整侧栏；全量搜索（国家、城市、语言、行政区、机场/港口/物流枢纽、HS2）。
 - **中国特殊**：红色高亮，**仅悬停**；悬浮面板展示 34 个省级行政区、机场/港口/物流枢纽与对穆斯林市场的贸易联系；不进入点击侧栏和搜索。
-- **行政与海运几何**：Natural Earth 10m 一级行政区边界；searoute-py 计算上海到各港的最短可航路径。路径是算法结果，不是 AIS 实际航迹。
+- **行政与海运几何**：Natural Earth 10m 一级行政区边界；searoute-py 计算 8 个中国起运港到各市场主要港口的最短可航路径。路径是算法结果，不是 AIS 实际航迹。
 - **数据缺口显式呈现**：缺失值显示 `—`，不补零、不前填；HS2 覆盖全部 57 个 OIC 市场 + 中国；其中 46 个为直接申报，11 个为伙伴国出口镜像，阿尔及利亚为 2024 年。
 - **清晰度**：地球夜景纹理升级为 4096×2048；卡片/侧栏为玻璃层，不遮挡地球。
 - **响应式**：桌面为跟随指针的摘要卡 + 右侧档案；≤700px 侧栏全屏，预览态不拦截点击。
@@ -61,9 +61,9 @@ npm run preview
 | `data/source/profiles-factbook.csv` | CIA World Factbook 常用语言 |
 | `data/source/geo/` | GeoNames 一级行政区/城市、OurAirports 机场、WPI 港口、Wikidata 城市中文名 |
 | `data/source/hs2-imports.csv` | UN Comtrade HS2 进口结构（57 个 OIC 市场 + 中国；11 国为镜像口径） |
-| `data/source/china-*.csv` | 中国 34 个省级行政区、城市与枢纽整理 |
+| `data/source/china-*.csv` | 中国 34 个省级行政区、城市与枢纽整理；`china-sea-ports.csv` 为 8 个起运港 |
 | `public/data/admin1-paths.json` | Natural Earth 10m 一级行政区边界线（简化后） |
-| `public/data/sea-routes.json` | searoute-py 上海到 57 个市场港口的可航路径 |
+| `public/data/sea-routes.json` | searoute-py 8 个中国起运港到 57 个市场港口的 456 条可航路径 |
 | `public/flags/` | 58 张本地国旗 PNG（与 `profiles.json` 的 `flagUrl` 对应） |
 
 生成结构化数据：
@@ -323,7 +323,7 @@ npm test
 - **穆斯林人口覆盖有限**：只有 6 国官方普查；其余不推断。
 - **行政/城市/枢纽覆盖**：行政区名称 960/960，并叠加 Natural Earth 10m 一级边界线；城市中文名 338/338；枢纽为筛选样本；物流枢纽采用 UN/LOCODE 铁路/公路终端，不是仓库面。
 - **HS2 覆盖**：57 个 OIC 市场 + 中国；11 国使用伙伴国出口镜像，侧栏标注“镜像”，不与海关申报直接等同。
-- **航线**：searoute-py 的最短可航路径是算法结果，不是 AIS 实际航迹；内陆地终点为最近海港。
+- **航线**：8 个中国起运港 × 57 个市场 = 456 条 searoute 最短可航路径；是算法结果，不是 AIS 实际航迹；内陆国终点为最近海港。
 - **包体**：主 chunk 约 830KB gzip；地球纹理约 493KB，异步加载，不阻塞地球首帧。
 - **CDN 缓存**：GitHub Pages 首次加载受网络影响；资源带 hash，后续命中缓存。
 
@@ -334,7 +334,7 @@ npm test
 - 市场规模、人口、消费、互联网：世界银行 WDI（2020—2025 最新可得值）。
 - 中国贸易：中国海关年度数据（2020—2025）。
 - 分品类进口：UN Comtrade（印度尼西亚、马来西亚，2021—2025）。
-- 国家档案：world-countries（国旗/官方语言/首都/面积/货币/区号）、CIA World Factbook（常用语言）、GeoNames（一级行政区/城市）、Wikidata（行政区/城市中文名）、Natural Earth（一级行政区边界）、OurAirports（机场）、NGA World Port Index（港口）、UN/LOCODE（铁路/公路物流枢纽）、searoute-py（最短可航路径）、UN Comtrade（HS2 2023/2024）。
+- 国家档案：world-countries（国旗/官方语言/首都/面积/货币/区号）、CIA World Factbook（常用语言）、GeoNames（一级行政区/城市）、Wikidata（行政区/城市中文名）、Natural Earth（一级行政区边界）、OurAirports（机场）、NGA World Port Index（港口）、UN/LOCODE（铁路/公路物流枢纽）、searoute-py（8 个中国起运港的最短可航路径）、UN Comtrade（HS2 2023/2024）。
 - 中国省级行政区/城市/枢纽：项目整理；详见 [data/source/profile-sources.md](data/source/profile-sources.md)。
 - OIC 57 国范围：SESRIC / OIC 研究样本。
 - 穆斯林人口：仅各国官方统计机构已核实的普查快照。

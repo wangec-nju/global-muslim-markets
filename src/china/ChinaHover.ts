@@ -1,4 +1,4 @@
-import type { CountryProfile, MarketCountry } from '../data/types';
+import type { CountryProfile, MarketCountry, SeaRouteDataset } from '../data/types';
 import { formatUsd } from '../data/format';
 import { computeCardPosition } from '../card/position';
 import { el } from '../card/dom';
@@ -23,9 +23,14 @@ export class ChinaHover {
     host.append(this.root);
   }
 
-  show(profile: CountryProfile, markets: MarketCountry[], point: ScreenPoint): void {
+  show(
+    profile: CountryProfile,
+    markets: MarketCountry[],
+    origins: SeaRouteDataset['meta']['origins'],
+    point: ScreenPoint,
+  ): void {
     this.open = true;
-    this.render(profile, markets);
+    this.render(profile, markets, origins);
     this.root.hidden = false;
     this.place(point);
   }
@@ -56,7 +61,11 @@ export class ChinaHover {
     this.root.style.transform = `translate3d(${placement.x}px, ${placement.y}px, 0)`;
   }
 
-  private render(profile: CountryProfile, markets: MarketCountry[]): void {
+  private render(
+    profile: CountryProfile,
+    markets: MarketCountry[],
+    origins: SeaRouteDataset['meta']['origins'],
+  ): void {
     const partners = markets
       .map((market) => ({
         market,
@@ -108,6 +117,12 @@ export class ChinaHover {
           el('p', { className: 'china-hover__eyebrow', text: 'CHINA · 仅悬停' }),
           el('h2', { text: '中国' }),
           el('span', { text: `${profile.divisions.length} 个省级行政区 · ${profile.coverage.airports} 个机场样本 · ${profile.coverage.ports} 个港口样本` }),
+        ),
+      ),
+      el('section', { className: 'china-section' },
+        el('h3', { text: '中国起运港' }),
+        el('div', { className: 'china-origins' },
+          ...origins.map((origin) => el('span', { text: origin.name })),
         ),
       ),
       el('section', { className: 'china-section' },

@@ -36,4 +36,4 @@ file with SHA-256.
 ## Geographic overlays
 
 - `public/data/admin1-paths.json`: [Natural Earth 10m admin-1 states/provinces](https://www.naturalearthdata.com/) (public domain), simplified at 0.03° and filtered to the 57 markets + China.
-- `public/data/sea-routes.json`: [searoute-py](https://github.com/genthalili/searoute-py) 1.6.0 over the Eurostat searoute graph; Shanghai to each market's main port (nearest port for landlocked countries). It is a shortest navigable path, **not** AIS tracking or a navigation product.
+- `public/data/sea-routes.json`: [searoute-py](https://github.com/genthalili/searoute-py) 1.6.0 over the Eurostat searoute graph; Eight Chinese ports to each market's main port (nearest port for landlocked countries). It is a shortest navigable path, **not** AIS tracking or a navigation product.
