@@ -138,7 +138,7 @@ export class GlobeScene {
       .pointLng('lng')
       .pointColor('color')
       .pointRadius('radius')
-      .pointAltitude(0.018)
+      .pointAltitude(0.04)
       .pointLabel('label')
       .pointsMerge(false)
       .pointsTransitionDuration(0)
@@ -213,20 +213,20 @@ export class GlobeScene {
   }
 
   /** Replace the administrative-boundary lines for the hovered country. */
-  setAdminPaths(paths: Array<{ name: string; points: number[][] }>): void {
+  setAdminPaths(paths: Array<{ name: string; points: number[][] }>, color = '#e8f6f2'): void {
     this.adminPaths = paths.map((path) => ({
       points: path.points,
-      color: '#e8f6f2',
+      color,
       width: 0.3,
     }));
     this.refreshPaths();
   }
 
   /** Replace the navigable sea-route lines (port-to-port, searoute graph). */
-  setSeaRoutes(routes: Array<{ points: number[][]; color?: string }>): void {
+  setSeaRoutes(routes: Array<{ points: number[][]; color?: string }>, color?: string): void {
     this.seaRoutes = routes.map((route) => ({
       points: route.points,
-      color: route.color ?? '#ffb45e',
+      color: color ?? route.color ?? '#ffb45e',
       width: 0.5,
     }));
     this.refreshPaths();
@@ -243,16 +243,11 @@ export class GlobeScene {
   }
 
   /** Replace the airport/port markers for the hovered country. */
-  setHubs(hubs: GlobeHub[]): void {
+  setHubs(hubs: GlobeHub[], color = '#ffd99a'): void {
     this.globe.pointsData(
       hubs.map((hub) => ({
         ...hub,
-        color:
-          hub.type === 'airport'
-            ? 'rgba(255, 209, 138, 0.95)'
-            : hub.type === 'port'
-              ? 'rgba(95, 214, 194, 0.9)'
-              : 'rgba(255, 145, 110, 0.9)',
+        color,
         radius: hub.type === 'airport' ? 0.22 : hub.type === 'port' ? 0.18 : 0.16,
       })),
     );

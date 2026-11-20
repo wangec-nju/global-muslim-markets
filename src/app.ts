@@ -53,24 +53,13 @@ export async function createApp(): Promise<void> {
     if (route) market.seaRoute = route;
   }
 
-  const originPalette = ['#ffb45e', '#5fd6c2', '#ff7e5c', '#9bcfff', '#e9b96b', '#b6a4ff', '#7ee2d0', '#ff9fb0'];
-  const originColors = new Map(
-    seaRoutes.meta.origins.map((origin, index) => [
-      origin.id,
-      originPalette[index % originPalette.length],
-    ]),
-  );
-
-  function routePaths(route: SeaRouteInfo): Array<{ points: number[][]; color: string }> {
+  function routePaths(route: SeaRouteInfo): Array<{ points: number[][] }> {
     return route.destinations.flatMap((destination) =>
-      destination.options.map((option) => ({
-        points: option.points,
-        color: originColors.get(option.originId) ?? '#ffb45e',
-      })),
+      destination.options.map((option) => ({ points: option.points })),
     );
   }
 
-  function chinaRoutePaths(): Array<{ points: number[][]; color: string }> {
+  function chinaRoutePaths(): Array<{ points: number[][] }> {
     const top = repository
       .list()
       .map((market) => ({
@@ -84,15 +73,14 @@ export async function createApp(): Promise<void> {
     return top.flatMap(({ market }) =>
       market.seaRoute
         ? market.seaRoute.destinations.flatMap((destination) =>
-            destination.options[0]
-              ? [{
-                  points: destination.options[0].points,
-                  color: originColors.get(destination.options[0].originId) ?? '#ffb45e',
-                }]
-              : [],
+            destination.options[0] ? [{ points: destination.options[0].points }] : [],
           )
         : [],
     );
+  }
+
+  function highlightColor(market: MarketCountry): string {
+    return market.focus ? '#ffd99a' : '#5fd6c2';
   }
 
   const shapes = buildCountries(worldTopology as unknown as WorldAtlasTopology);
@@ -130,11 +118,27 @@ export async function createApp(): Promise<void> {
 
   let card: CardController | null = null;
   let dismissTimer: number | undefined;
+  let overlayClearTimer: number | undefined;
   let lastCountryClickAt = 0;
 
   const cancelDismiss = (): void => {
     window.clearTimeout(dismissTimer);
     dismissTimer = undefined;
+  };
+
+  const cancelOverlayClear = (): void => {
+    window.clearTimeout(overlayClearTimer);
+    overlayClearTimer = undefined;
+  };
+
+  const scheduleOverlayClear = (delay = 1200): void => {
+    cancelOverlayClear();
+    overlayClearTimer = window.setTimeout(() => {
+      overlayClearTimer = undefined;
+      if (card?.isOpen || sidebar.isOpen || chinaHover.isOpen) return;
+      scene.setHubs([]);
+      scene.clearGeoOverlays();
+    }, delay);
   };
 
   const scheduleDismiss = (delay = PREVIEW_DISMISS_DELAY): void => {
@@ -173,6 +177,7 @@ export async function createApp(): Promise<void> {
     onClose: () => {
       scene.setSelected(null);
       scene.clearGeoOverlays();
+      scene.setHubs([]);
     },
   });
   const search = new SearchController(overlayHost, {
@@ -186,11 +191,11 @@ export async function createApp(): Promise<void> {
   card = new CardController(cardHost, {
     renderer: resolveCardRenderer(siteConfig.cardRenderer),
     onClose: () => {
-      // Selection is owned by the dossier, not the hover card.
+      // Keep the country overlays briefly: a pointer moving over a hub point
+      // can produce a null polygon hover, and we must not flicker.
       if (!sidebar.isOpen) {
         scene.setSelected(null);
-        scene.clearGeoOverlays();
-        scene.setHubs([]);
+        scheduleOverlayClear();
       }
     },
     onPointerEnter: cancelDismiss,
@@ -203,6 +208,7 @@ export async function createApp(): Promise<void> {
 
   function openDossier(market: MarketCountry): void {
     cancelDismiss();
+    cancelOverlayClear();
     card?.close('external');
     chinaHover.close();
     scene.setHubs([]);
@@ -219,10 +225,7 @@ export async function createApp(): Promise<void> {
     if (!event.country) {
       chinaHover.close();
       scheduleDismiss();
-      if (!card.isOpen) {
-        scene.setHubs([]);
-        scene.clearGeoOverlays();
-      }
+      scheduleOverlayClear();
       return;
     }
 
@@ -230,35 +233,39 @@ export async function createApp(): Promise<void> {
       const china = profileRepository.china;
       if (china) {
         cancelDismiss();
+        cancelOverlayClear();
         card.close('external');
+        const chinaColor = '#ff5c50';
         chinaHover.show(china, repository.list(), seaRoutes.meta.origins, event.point);
-        scene.setAdminPaths(adminBoundaries.countries.CHN ?? []);
-        scene.setSeaRoutes(chinaRoutePaths());
+        scene.setAdminPaths(adminBoundaries.countries.CHN ?? [], chinaColor);
+        scene.setSeaRoutes(chinaRoutePaths(), chinaColor);
         scene.setHubs(china.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
           lat: hub.lat as number,
           lng: hub.lng as number,
           type: hub.type,
           label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
-        })));
+        })), chinaColor);
       }
       return;
     }
 
     cancelDismiss();
+    cancelOverlayClear();
     chinaHover.close();
     if (card.isPinned) return;
     const market = marketFor(event.country);
     if (market) {
+      const color = highlightColor(market);
       card.openPreview(market, event.point);
-      scene.setAdminPaths(adminBoundaries.countries[market.iso3] ?? []);
-      scene.setSeaRoutes(market.seaRoute ? routePaths(market.seaRoute) : []);
+      scene.setAdminPaths(adminBoundaries.countries[market.iso3] ?? [], color);
+      scene.setSeaRoutes(market.seaRoute ? routePaths(market.seaRoute) : [], color);
       const profile = market.profile;
       scene.setHubs(profile ? profile.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
         lat: hub.lat as number,
         lng: hub.lng as number,
         type: hub.type,
         label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
-      })) : []);
+      })) : [], color);
     }
   }
 
@@ -273,6 +280,7 @@ export async function createApp(): Promise<void> {
 
   function handleBackgroundClick(): void {
     if (performance.now() - lastCountryClickAt < 300) return;
+    cancelOverlayClear();
     chinaHover.close();
     card?.close('external');
     sidebar.close();
