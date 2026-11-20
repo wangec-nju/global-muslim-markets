@@ -31,6 +31,24 @@ export interface GlobeHoverEvent {
   point: ScreenPoint;
 }
 
+export interface TradeArc {
+  startLat: number;
+  startLng: number;
+  endLat: number;
+  endLng: number;
+  color: string | string[];
+  width: number;
+  /** Trade value in USD, used only for labels/tooltips. */
+  value?: number;
+}
+
+export interface GlobeHub {
+  lat: number;
+  lng: number;
+  type: 'airport' | 'port';
+  label: string;
+}
+
 export interface GlobeCountryEvent {
   country: CountryShape;
   point: ScreenPoint;

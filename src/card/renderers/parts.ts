@@ -19,7 +19,9 @@ export function marketHero(
     el(
       'div',
       { className: 'card-flag', attrs: { 'aria-hidden': 'true' } },
-      market.flag ?? market.nameZh.slice(0, 2),
+      market.profile?.flagUrl
+        ? el('img', { attrs: { src: market.profile.flagUrl, alt: '' } })
+        : market.flag ?? market.nameZh.slice(0, 2),
     ),
     el(
       'div',

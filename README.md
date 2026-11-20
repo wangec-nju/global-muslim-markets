@@ -1,12 +1,12 @@
 # Global Muslim Markets · OIC 市场探索器
 
-基于 **globe.gl** 的 3D 市场探索器：地球只渲染 **OIC 57 个市场**，只有这些国家有高亮边界、可以悬停和点击。卡片不展示首都、面积等国家资料，只展示市场规模、中国贸易、穆斯林人口（仅官方普查）和代表进口品类。
+基于 **globe.gl** 的 3D 市场探索器：地球渲染 **OIC 57 个市场**与红色中国；OIC 市场可悬停预览、点击打开完整档案；中国仅悬停。页面支持**默认 / 悬停 / 点击侧栏 / 全量搜索**四种形态，并补充语言、行政区、城市、机场/港口、HS2 与对华贸易联系。
 
-**卡片外壳（位置、悬停、固定、关闭、焦点）与卡片内容渲染解耦**，内容层可以在不改动外壳的情况下替换成其他市场视图。
+**卡片、完整侧栏、搜索与地球场景解耦**：卡片只承载悬停摘要；侧栏承载完整国家档案；搜索索引全部档案；地球场景只负责边界、枢纽点与贸易弧线。
 
 线上地址：**https://wangec-nju.github.io/global-muslim-markets/**
 
-![OIC 市场卡片与高亮边界](docs/preview.png)
+![完整国家档案侧栏与 OIC 边界](docs/preview.png)
 
 ---
 
@@ -15,11 +15,13 @@
 - **3D 地球**：globe.gl + three.js，OIC 市场边界使用 50m 世界边界数据，包含巴林、科摩罗、马尔代夫等小岛国。
 - **只渲染 57 个 OIC 市场**：非 OIC 国家没有国家面、没有边界、不可交互，只保留地球底图。
 - **双色高亮**：16 个重点样本用金色边界，其余 41 个 OIC 市场用青绿色边界；悬停/选中时变为更亮的金色。
-- **悬停预览、点击固定**：预览为紧凑卡片；固定后展示完整指标、贸易明细、穆斯林人口和代表品类，镜头飞向该国。
-- **市场数据而非国家概况**：没有首都、面积、区域、ISO 信息；卡片标题仅保留国旗与中英文名称用于识别。
-- **数据缺口显式呈现**：缺失值显示 `—`，不补零、不前填；穆斯林人口仅 6 个有官方普查快照的国家显示，其余明确写“不据此推断”。
-- **响应式**：桌面为跟随指针的浮层；≤700px 为底部卡片，预览态不拦截点击。
-- **工程化**：Vite + TypeScript strict、24 个测试、GitHub Pages 自动部署。
+- **四种形态**：默认地球；悬停摘要卡（国旗、官方/常用语言、市场概览、行政区与枢纽预览）；点击右侧完整侧栏；全量搜索（国家、城市、语言、行政区、机场/港口、HS2）。
+- **中国特殊**：红色高亮，**仅悬停**；悬浮面板展示 34 个省级行政区、机场/港口与对穆斯林市场的贸易联系；不进入点击侧栏和搜索。
+- **连接线**：按 2025 年中国进出口额绘制示意弧线，明确标注“贸易流示意，非实际航道”。
+- **数据缺口显式呈现**：缺失值显示 `—`，不补零、不前填；HS2 仅 45 个 OIC 市场 + 中国有 2023 数据，其余不补。
+- **清晰度**：地球夜景纹理升级为 4096×2048；卡片/侧栏为玻璃层，不遮挡地球。
+- **响应式**：桌面为跟随指针的摘要卡 + 右侧档案；≤700px 侧栏全屏，预览态不拦截点击。
+- **工程化**：Vite + TypeScript strict、29 个测试、GitHub Pages 自动部署。
 
 ---
 
@@ -30,7 +32,8 @@
 ```bash
 npm install
 npm run dev        # http://127.0.0.1:5173
-npm test           # 24 个测试
+npm test           # 29 个测试
+npm run gen:profiles  # 重建国家档案
 npm run build
 npm run preview
 ```
@@ -41,7 +44,7 @@ npm run preview
 
 ### 来源与结构化
 
-原始数据来自 `数据.zip`。仓库只提交**经过筛选的源表**（`data/source/`，约 700KB），不提交 12MB 的原始压缩包和 PDF。
+原始数据来自 `数据.zip`。仓库只提交**经过筛选的源表**（`data/source/`，约 1.3MB），不提交 12MB 的原始压缩包和 PDF。
 
 | 文件 | 用途 |
 | --- | --- |
@@ -55,19 +58,26 @@ npm run preview
 | `data/source/wdi-dictionary.csv` | WDI 指标口径与质量说明 |
 | `data/source/metric-long.csv` | WDI 长表，用于对宽表做逐项交叉核验 |
 | `data/reference/oic-wikipedia.csv` | Wikipedia OIC 成员/观察员、加入年份、穆斯林比例参照（**不注入卡片**） |
+| `data/source/profiles-factbook.csv` | CIA World Factbook 常用语言 |
+| `data/source/geo/` | GeoNames 一级行政区/城市、OurAirports 机场、WPI 港口、Wikidata 城市中文名 |
+| `data/source/hs2-imports.csv` | UN Comtrade 2023 年 HS2 进口结构（45 个 OIC 市场 + 中国） |
+| `data/source/china-*.csv` | 中国 34 个省级行政区、城市与枢纽整理 |
+| `public/flags/` | 58 张本地国旗 PNG（与 `profiles.json` 的 `flagUrl` 对应） |
 
 生成结构化数据：
 
 ```bash
 npm run gen:markets
+npm run gen:profiles
 ```
 
-产物是 `public/data/markets.json`，由脚本校验并写入：
+产物是 `public/data/markets.json` 与 `public/data/profiles.json`，由脚本校验并写入：
 
 - 57 个市场，16 个重点样本；
 - 6 个有官方穆斯林人口普查快照的国家；
 - 2 个有代表品类数据的国家（IDN / MYS）；
-- 每个市场都有 2025 年中国出口与进口流。
+- 每个市场都有 2025 年中国出口与进口流；
+- 58 个国家档案（57 个市场 + 中国），含语言、行政区、城市、机场/港口、HS2 与 Wikipedia 链接。
 
 ### 来源追溯与核验
 
@@ -184,7 +194,7 @@ GlobeScene ──► { country, point } ──► app.ts ──► MarketReposit
 
 1. **`src/globe/` 不知道市场数据。** 它只接收 57 个 `CountryShape`，发出悬停/点击事件，负责样式、选中和镜头。
 2. **`src/data/MarketRepository.ts` 不碰 DOM。** 它加载并索引 `markets.json`，用 UN M49 / ISO3 / 英文名把地图形状解析成 `MarketCountry`。
-3. **`src/card/CardController.ts` 不知道卡片内容。** 它只处理外壳、位置、预览/固定、Esc、焦点和指针驻留；内容由注入的 `CardContentRenderer` 返回 DOM。
+3. **`src/card/CardController.ts` 不知道卡片内容。** 它只处理外壳、位置、悬停预览、Esc、焦点和指针驻留；内容由注入的 `CardContentRenderer` 返回 DOM。
 
 `src/app.ts` 是唯一组合根；只有加载到市场数据的 57 个形状会交给 globe，因此“只显示、只交互 OIC 市场”是由数据层保证的，而不是靠样式隐藏。
 
@@ -195,7 +205,7 @@ data/source/               # 结构化前的精选 CSV（可复现）
 public/data/markets.json   # 生成的市场数据（唯一运行时数据）
 scripts/build-market-data.mjs
 src/
-├─ app.ts                  # 组合根、57 国过滤、悬停/固定接线
+├─ app.ts                  # 组合根、57 国过滤、悬停/侧栏/搜索接线
 ├─ config.ts               # 初始视角、纹理、市场数据地址
 ├─ globe/
 │  ├─ GlobeScene.ts        # 边界样式、focusIds、悬停/点击/镜头
@@ -251,6 +261,7 @@ globe: {
 },
 data: {
   marketUrl: publicAsset('data/markets.json'),
+  profileUrl: publicAsset('data/profiles.json'),
 },
 ```
 
@@ -293,22 +304,24 @@ npm test
 - 50m 边界解析、无 ISO id 地区的稳定回退；
 - 市场形状按 UN M49 / ISO3 / 英文名解析；
 - 57 个市场、16 个重点样本；
-- 缺失值保持 `null`；
-- 仅 6 个官方穆斯林人口快照；
+- 缺失值保持 `null`；仅 6 个官方穆斯林人口快照；
 - 每个市场都有 2025 中国贸易流；
-- 代表品类仅 IDN / MYS；
-- 卡片定位翻转与渲染器回退；
+- 58 个国家档案：57 个市场 + 中国；中国 34 个省级行政区；
+- 城市中文名覆盖率、58 张本地国旗、HS2 不伪造缺失；
+- 卡片定位翻转、侧栏与搜索不依赖地球内部状态；
 - 数据源哈希、39 个字段的来源映射、逐字段与源表一致（`npm run audit:markets`）。
 
 ---
 
 ## 已知限制
 
-- **小岛国**：巴林、科摩罗、马尔代夫等 50m 几何很小，需要放大后点击；没有额外的搜索/列表入口。
-- **年份不统一**：不同指标按各自最新可得年份展示，跨指标比较需看卡片中的年份标签。
+- **小岛国**：巴林、科摩罗、马尔代夫等 50m 几何很小，需要放大后点击；现在可以用搜索直接打开。
+- **年份不统一**：不同指标按各自最新可得年份展示；HS2 为 2023 年，市场指标多为 2025 年。
 - **穆斯林人口覆盖有限**：只有 6 国官方普查；其余不推断。
-- **代表品类覆盖有限**：仅 IDN / MYS；品类为研究口径，不是清真认证目录。
-- **包体**：主 chunk 约 820KB gzip；地球纹理约 240KB，异步加载，不阻塞地球首帧。
+- **行政/城市/枢纽覆盖**：行政区为 GeoNames 一级名称，不含边界几何；城市中文名约 86%，枢纽为筛选样本；物流中心暂未收录。
+- **HS2 覆盖**：45 个 OIC 市场 + 中国有 2023 数据；12 个市场留空。
+- **航线**：UN Comtrade 只有贸易额，弧线是示意，不是实际航道。
+- **包体**：主 chunk 约 830KB gzip；地球纹理约 493KB，异步加载，不阻塞地球首帧。
 - **CDN 缓存**：GitHub Pages 首次加载受网络影响；资源带 hash，后续命中缓存。
 
 ---
@@ -318,9 +331,11 @@ npm test
 - 市场规模、人口、消费、互联网：世界银行 WDI（2020—2025 最新可得值）。
 - 中国贸易：中国海关年度数据（2020—2025）。
 - 分品类进口：UN Comtrade（印度尼西亚、马来西亚，2021—2025）。
+- 国家档案：world-countries（国旗/官方语言/首都/面积/货币/区号）、CIA World Factbook（常用语言）、GeoNames（一级行政区/城市）、Wikidata（城市中文名）、OurAirports（机场）、NGA World Port Index（港口）、UN Comtrade（HS2 2023）。
+- 中国省级行政区/城市/枢纽：项目整理；详见 [data/source/profile-sources.md](data/source/profile-sources.md)。
 - OIC 57 国范围：SESRIC / OIC 研究样本。
 - 穆斯林人口：仅各国官方统计机构已核实的普查快照。
 - Wikipedia 参照：[中文 OIC 条目](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87)（截图 + Pew Forum 2010 年估计，2013 存档）；仅用于核验，不注入卡片。
 - 地理边界：[world-atlas](https://github.com/topojson/world-atlas)（ISC，50m；数据源 Natural Earth，公有领域）。
 - 国家英文名/旗帜：[world-countries](https://github.com/mledoze/countries)（ODbL-1.0；仅用于名称与旗帜，不生成国家概况数据）。
-- 地球夜景/地形纹理：来自 [three-globe](https://github.com/vasturiano/three-globe) 示例素材（NASA Earth 影像，公有领域）。
+- 地球夜景/地形纹理：来自 [three-globe](https://github.com/vasturiano/three-globe) 示例素材（NASA Earth 影像，公有领域）；夜景纹理为 4096×2048。

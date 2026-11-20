@@ -1,0 +1,34 @@
+# Country profile sources
+
+These files power the four-mode country dossier. Raw downloads are not
+committed; filtered extracts live under `data/source/geo/` and
+`data/source/hs2-imports.csv`. `public/data/profiles.json` pins each filtered
+file with SHA-256.
+
+| File | Source | License | Notes |
+| --- | --- | --- | --- |
+| `profiles-factbook.csv` | [CIA World Factbook JSON](https://github.com/factbook/factbook.json) | Public domain | `People and Society > Languages` text, used as “常用语言” |
+| `geo/admin1.csv` | [GeoNames admin1CodesASCII](https://download.geonames.org/export/dump/) | CC BY 4.0 | First-level division names; no boundary geometry |
+| `geo/cities.csv` | [GeoNames cities15000](https://download.geonames.org/export/dump/) | CC BY 4.0 | Top 6 cities by population; English/local/coordinates/population |
+| `geo/city-labels.csv` | [Wikidata](https://query.wikidata.org/) | CC0 | Chinese city labels via GeoNames id (P1566) |
+| `geo/airports.csv` | [OurAirports](https://ourairports.com/data/) | Public domain | Large/medium scheduled airports with IATA |
+| `geo/ports.csv` | [NGA World Port Index](https://msi.nga.mil/Publications) / [FAO mirror](https://data.apps.fao.org/catalog/dataset/158a8b96-6924-48a2-8ae2-d5cc1626915e) | Public domain | Large/medium/small WPI ports with coordinates |
+| `hs2-imports.csv` | [UN Comtrade](https://comtradeplus.un.org/) | Public data | 2023 imports, HS2 chapter totals; 45 OIC markets + China |
+| `china-divisions.csv` | Project curation | CC BY 4.0 | 34 province-level divisions |
+| `china-cities.csv` | Project curation / GeoNames | CC BY 4.0 / CC BY 4.0 | China, Hong Kong and Macau cities |
+| `china-hubs.csv` | Project curation / OurAirports / WPI | CC BY 4.0 / public domain | Selected Chinese airports and ports |
+
+## Caveats
+
+- **Routes**: UN Comtrade provides trade values, not route geometry. The globe
+  draws great-circle arcs weighted by 2025 China trade to indicate trade links;
+  they are explicitly labelled as schematic, not actual shipping lanes.
+- **Administrative divisions** are names only; no admin-1 polygons are rendered.
+- **Hubs** are a screened sample, not a complete airport/port/logistics list.
+- **Logistics centres** are not yet in a public dataset used here; the UI marks
+  the hub section as airports/ports only.
+- **HS2** is a 2-digit chapter aggregate. Twelve OIC markets had no 2023 HS2
+  response and are left empty rather than filled.
+- **Common languages** is the Factbook free-text field; it may mix official,
+  minority and trade languages. It is not a statistical ranking.
+- The 4K night texture is from the three-globe example assets (NASA imagery).

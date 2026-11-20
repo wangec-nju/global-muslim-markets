@@ -258,12 +258,12 @@ export class CardController {
     this.root.dataset.mode = this.mode;
     this.root.setAttribute(
       'aria-label',
-      `${this.country.nameZh}${pinned ? '，已固定的市场卡片' : '，市场预览'}`,
+      `${this.country.nameZh}${pinned ? '，已固定的市场卡片' : '，国家档案预览'}`,
     );
     this.statusEl.textContent = pinned ? '已固定' : '悬停预览';
     this.hintEl.textContent = pinned
       ? '按 Esc 或点击地球空白处关闭'
-      : '点击国家固定卡片';
+      : '点击查看完整档案';
     this.closeButton.setAttribute('aria-label', `关闭${this.country.nameZh}市场卡片`);
   }
 

@@ -20,6 +20,7 @@ export interface SiteConfig {
   };
   data: {
     marketUrl: string;
+    profileUrl: string;
   };
 }
 
@@ -42,5 +43,6 @@ export const siteConfig: SiteConfig = {
   },
   data: {
     marketUrl: publicAsset('data/markets.json'),
+    profileUrl: publicAsset('data/profiles.json'),
   },
 };

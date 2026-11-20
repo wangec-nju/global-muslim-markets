@@ -1,0 +1,35 @@
+code,name_zh,name_en,type
+11,北京,Beijing,municipality
+12,天津,Tianjin,municipality
+13,河北,Hebei,province
+14,山西,Shanxi,province
+15,内蒙古,Inner Mongolia,autonomous region
+21,辽宁,Liaoning,province
+22,吉林,Jilin,province
+23,黑龙江,Heilongjiang,province
+31,上海,Shanghai,municipality
+32,江苏,Jiangsu,province
+33,浙江,Zhejiang,province
+34,安徽,Anhui,province
+35,福建,Fujian,province
+36,江西,Jiangxi,province
+37,山东,Shandong,province
+41,河南,Henan,province
+42,湖北,Hubei,province
+43,湖南,Hunan,province
+44,广东,Guangdong,province
+45,广西,Guangxi,autonomous region
+46,海南,Hainan,province
+50,重庆,Chongqing,municipality
+51,四川,Sichuan,province
+52,贵州,Guizhou,province
+53,云南,Yunnan,province
+54,西藏,Tibet,autonomous region
+61,陕西,Shaanxi,province
+62,甘肃,Gansu,province
+63,青海,Qinghai,province
+64,宁夏,Ningxia,autonomous region
+65,新疆,Xinjiang,autonomous region
+71,香港,Hong Kong,SAR
+82,澳门,Macau,SAR
+71T,台湾,Taiwan,province

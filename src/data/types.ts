@@ -58,6 +58,98 @@ export interface ProductImport {
   chinaShare: number | null;
 }
 
+export interface ProfileLanguage {
+  code: string;
+  name: string;
+}
+
+export interface ProfileCapital {
+  nameEn: string | null;
+  nameZh: string | null;
+}
+
+export interface ProfileDivision {
+  code: string;
+  name: string;
+  nameZh: string | null;
+  type: string | null;
+}
+
+export interface ProfileCity {
+  nameEn: string;
+  nameLocal: string;
+  nameZh: string | null;
+  population: number | null;
+  lat: number | null;
+  lng: number | null;
+  admin1: string | null;
+}
+
+export interface ProfileHub {
+  type: 'airport' | 'port';
+  subtype: string | null;
+  name: string;
+  nameZh: string | null;
+  code: string | null;
+  city: string | null;
+  lat: number | null;
+  lng: number | null;
+}
+
+export interface ProfileHs2 {
+  code: string;
+  name: string;
+  valueUsd: number | null;
+  sharePct: number | null;
+  year: number | null;
+}
+
+export interface CountryProfile {
+  iso3: string;
+  unM49: string;
+  isChina: boolean;
+  nameZh: string;
+  nameEn: string;
+  officialName: string;
+  flag: string | null;
+  flagUrl: string | null;
+  officialLanguages: ProfileLanguage[];
+  commonLanguages: string | null;
+  capital: ProfileCapital;
+  region: string | null;
+  regionZh: string | null;
+  subregion: string | null;
+  areaKm2: number | null;
+  currency: { code: string; name: string; symbol?: string } | null;
+  callingCode: string | null;
+  wikipediaUrl: string;
+  divisions: ProfileDivision[];
+  cities: ProfileCity[];
+  hubs: ProfileHub[];
+  hs2: ProfileHs2[];
+  coverage: {
+    officialLanguages: number;
+    commonLanguages: boolean;
+    divisions: number;
+    cities: number;
+    airports: number;
+    ports: number;
+    hs2: number;
+  };
+  sources: Record<string, string>;
+}
+
+export interface ProfileDataset {
+  meta: {
+    generatedAt: string;
+    profileCount: number;
+    sourceFiles: Record<string, string>;
+    sources: Array<{ name: string; license: string; use: string }>;
+    notes: string[];
+  };
+  profiles: CountryProfile[];
+}
+
 export interface MarketCountry {
   id: string;
   unM49: string;
@@ -76,6 +168,8 @@ export interface MarketCountry {
   products: ProductImport[];
   /** Human-readable source row locators for this record. */
   sourceRow: Record<string, string>;
+  /** Wikipedia-style dossier attached from profiles.json at runtime. */
+  profile?: CountryProfile;
 }
 
 export interface MarketMeta {

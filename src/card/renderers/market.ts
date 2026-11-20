@@ -1,4 +1,4 @@
-import type { MarketCountry, TradeFlow } from '../../data/types';
+import type { MarketCountry, ProfileHub, TradeFlow } from '../../data/types';
 import {
   formatPercent,
   formatPopulation,
@@ -35,6 +35,8 @@ export function createMarketRenderer(): CardContentRenderer {
         ];
 
         nodes.push(metricGrid(market, compact));
+        nodes.push(profileBasics(market));
+        nodes.push(geographySection(market, compact));
         nodes.push(tradeSection(market, compact));
         if (market.muslim.status === 'official') {
           nodes.push(muslimSection(market));
@@ -47,6 +49,8 @@ export function createMarketRenderer(): CardContentRenderer {
               '数据：世界银行 WDI · 中国海关 · UN Comtrade · 各国官方统计；穆斯林人口仅在有官方普查时展示，缺失值不补零。',
             ),
           );
+        } else {
+          nodes.push(marketNote('点击查看行政区划、城市、枢纽与 HS 品类全量档案。', 'market-hint'));
         }
 
         root.replaceChildren(...nodes);
@@ -56,6 +60,112 @@ export function createMarketRenderer(): CardContentRenderer {
       return { element: root, update: render };
     },
   };
+}
+
+function profileBasics(market: MarketCountry): HTMLElement {
+  const profile = market.profile;
+  const section = el('section', { className: 'market-section profile-basics' });
+  section.append(sectionLabel('国家概况', 'world-countries · CIA World Factbook'));
+
+  if (!profile) {
+    section.append(marketNote('国家档案尚未载入。', 'market-hint'));
+    return section;
+  }
+
+  const rows: Array<[string, string]> = [];
+  rows.push(['官方语言', formatLanguages(profile.officialLanguages)]);
+  if (profile.commonLanguages) {
+    rows.push(['常用语言', truncate(profile.commonLanguages, 150)]);
+  }
+  rows.push([
+    '首都',
+    profile.capital.nameZh ?? profile.capital.nameEn ?? '—',
+  ]);
+  rows.push(['地区', [profile.regionZh, profile.subregion].filter(Boolean).join(' · ') || '—']);
+
+  const grid = el('dl', { className: 'profile-facts' });
+  for (const [label, value] of rows) {
+    grid.append(
+      el('div', { className: 'profile-fact' },
+        el('dt', { text: label }),
+        el('dd', { text: value, attrs: { title: value } }),
+      ),
+    );
+  }
+  section.append(grid);
+  return section;
+}
+
+function geographySection(market: MarketCountry, compact: boolean): HTMLElement {
+  const profile = market.profile;
+  const section = el('section', { className: 'market-section' });
+  section.append(sectionLabel('地理与通道', 'GeoNames · OurAirports · NGA World Port Index'));
+
+  if (!profile) {
+    section.append(marketNote('地理档案尚未载入。', 'market-hint'));
+    return section;
+  }
+
+  const divisions = profile.divisions.slice(0, compact ? 5 : 8);
+  const divisionRow = el('div', { className: 'profile-line' });
+  divisionRow.append(
+    el('span', { className: 'profile-line__label', text: `一级行政区 ${profile.coverage.divisions}` }),
+    el('span', {
+      className: 'profile-line__value',
+      text: divisions.length
+        ? divisions.map((division) => division.nameZh ?? division.name).join(' · ')
+        : '暂未收录',
+    }),
+  );
+  section.append(divisionRow);
+
+  const hubs = profile.hubs.slice(0, compact ? 3 : 6);
+  const hubRow = el('div', { className: 'profile-line' });
+  hubRow.append(
+    el('span', { className: 'profile-line__label', text: '机场 / 港口' }),
+    el('span', {
+      className: 'profile-line__value',
+      text: hubs.length
+        ? hubs.map(formatHub).join(' · ')
+        : '暂未收录',
+    }),
+  );
+  section.append(hubRow);
+
+  const trade = market.chinaTrade;
+  if (trade) {
+    section.append(
+      marketNote(
+        `对华贸易 ${trade.year}：出口 ${formatUsd(trade.exports?.value ?? null)} · 进口 ${formatUsd(trade.imports?.value ?? null)}；弧线为贸易流示意，非实际航道。`,
+        'market-hint',
+      ),
+    );
+  }
+
+  return section;
+}
+
+function formatLanguages(languages: Array<{ code: string; name: string }>): string {
+  if (!languages.length) return '—';
+  const display = (() => {
+    try {
+      return new Intl.DisplayNames(['zh-CN'], { type: 'language' });
+    } catch {
+      return null;
+    }
+  })();
+  return languages
+    .map((language) => display?.of(language.code) ?? language.name)
+    .join(' / ');
+}
+
+function formatHub(hub: ProfileHub): string {
+  const label = hub.nameZh ?? hub.name;
+  return hub.code ? `${label}（${hub.code}）` : label;
+}
+
+function truncate(text: string, limit: number): string {
+  return text.length > limit ? `${text.slice(0, limit)}…` : text;
 }
 
 function metricGrid(market: MarketCountry, compact: boolean): HTMLElement {

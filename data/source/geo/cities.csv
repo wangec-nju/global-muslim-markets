@@ -1,0 +1,332 @@
+iso3,name_en,name_local,name_zh,population,lat,lng,admin1_code,admin1_name,geonameid
+AFG,Kabul,Kabul,喀布尔,4434550,34.52813,69.17233,13,Kabul,1138958
+AFG,Herat,Herāt,赫拉特,574300,34.34817,62.19967,11,Herat,1140026
+AFG,Mazar-e Sharif,Mazār-e Sharīf,马扎里沙里夫,523300,36.70904,67.11087,30,Balkh,1133616
+AFG,Kandahar,Kandahār,坎大哈,523300,31.61332,65.71013,23,Kandahar,1138336
+AFG,Jalalabad,Jalālābād,贾拉拉巴德,271900,34.42647,70.45153,18,Nangarhar,1139715
+AFG,Kunduz,Kunduz,昆都士,161902,36.72895,68.857,24,Kunduz,1135689
+ALB,Tirana,Tirana,地拉那,418495,41.32744,19.81866,50,Tirana,3183875
+ALB,Durres,Durrës,都拉斯,195920,41.32355,19.45469,42,Durrës County,3185728
+ALB,Vlore,Vlorë,发罗拉,115261,40.4696,19.48379,51,Vlorë County,3183719
+ALB,Elbasan,Elbasan,爱尔巴桑,100903,41.11138,20.08224,43,Elbasan County,783263
+ALB,Shkoder,Shkodër,斯库台,95553,42.06828,19.51258,49,Shkodër County,3184081
+ALB,Lushnje,Lushnjë,卢什涅,63135,40.94194,19.705,44,Fier County,3184862
+DZA,Algiers,Algiers,阿尔及尔,2364230,36.73225,3.08746,01,Algiers,2507480
+DZA,Oran,Oran,瓦赫兰,803329,35.69906,-0.63588,09,Oran,2485926
+DZA,Constantine,Constantine,基尔塔,448028,36.365,6.61472,04,Constantine,2501152
+DZA,Annaba,Annaba,安纳巴,342703,36.9,7.76667,37,Annaba,2506999
+DZA,Blida,Blida,卜利达,331779,36.47004,2.8277,20,Blida,2503769
+DZA,Batna,Batna,巴特纳,289504,35.55597,6.17414,03,Batna,2505572
+AZE,Baku,Baku,巴库,2351300,40.37767,49.89201,09,Baki,587084
+AZE,Sumgayit,Sumgayit,苏姆盖特,427000,40.58972,49.66861,54,Sumqayit,584923
+AZE,Ganja,Ganja,占贾,330663,40.68157,46.36134,20,Gǝncǝ,586523
+AZE,Khirdalan,Khirdalan,黑尔达兰,196200,40.44808,49.75502,01,Abşeron,585915
+AZE,Yevlakh,Yevlakh,葉夫拉赫,127400,40.61832,47.15014,68,Yevlax City,584649
+AZE,Mingachevir,Mingachevir,明盖恰乌尔,106048,40.76422,47.06227,33,Mingacevir City,585514
+BHR,Al Muharraq,Al Muharraq,穆哈拉格,176583,26.25722,50.61194,15,Muharraq,290332
+BHR,Manama,Manama,麦纳麦,147074,26.22787,50.58565,16,Manama,290340
+BHR,Madinat Hamad,Madīnat Ḩamad,哈马德镇,133550,26.11528,50.50694,19,Northern,290247
+BHR,Ar Rifa',Ar Rifā‘,里法,115495,26.13,50.555,17,Southern Governorate,385038
+BHR,Sitrah,Sitrah,锡特拉,72601,26.15472,50.62056,16,Manama,290104
+BHR,Jidd Hafs,Jidd Ḩafş,,66588,26.21861,50.54778,16,Manama,290215
+BGD,Dhaka,Dhaka,达卡,10356500,23.7104,90.40744,81,Dhaka Division,1185241
+BGD,Chattogram,Chattogram,吉大港,3920222,22.3384,91.83168,84,Chittagong,1205733
+BGD,Gazipur,Gazipur,,2674697,23.99844,90.42234,81,Dhaka Division,1200109
+BGD,Khulna,Khulna,库尔纳,1500689,22.80979,89.56439,82,Khulna Division,1336135
+BGD,Rangpur,Rangpur,朗布尔,1031388,25.74664,89.25166,87,Rangpur Division,1185188
+BGD,Rajshahi,Rajshahi,拉杰沙希,763580,24.374,88.60114,83,Rajshahi Division,1185128
+BEN,Cotonou,Cotonou,科托努,679012,6.36536,2.41833,14,Littoral,2394819
+BEN,Abomey-Calavi,Abomey-Calavi,阿波美卡拉维,385755,6.44852,2.35566,09,Atlantique,2395914
+BEN,Porto-Novo,Porto-Novo,波多诺伏,264320,6.49646,2.60359,16,Ouémé,2392087
+BEN,Parakou,Parakou,帕拉库,255478,9.33716,2.63031,10,Borgou,2392204
+BEN,Godome,Godomè,戈多梅,253262,6.38948,2.34581,09,Atlantique,2394092
+BEN,Abomey,Abomey,阿波美,117824,7.18286,1.99119,18,Zou,2395915
+BRN,Bandar Seri Begawan,Bandar Seri Begawan,斯里巴加湾,64409,4.89035,114.94006,02,Brunei-Muara District,1820906
+BRN,Sengkurong,Sengkurong,,40972,4.88333,114.83333,02,Brunei-Muara District,1820575
+BRN,Mentiri,Mentiri,,39324,4.97058,115.02078,02,Brunei-Muara District,1820635
+BRN,Kuala Belait,Kuala Belait,马来奕,31178,4.58361,114.2312,01,Belait,1820491
+BRN,Tutong,Tutong,北干都东,19151,4.80278,114.64917,04,Tutong,1820071
+BRN,Serasa,Serasa,,18569,5.01761,115.05798,02,Brunei-Muara District,1820574
+BFA,Ouagadougou,Ouagadougou,瓦加杜古,2415266,12.36566,-1.53388,03,Centre,2357048
+BFA,Bobo-Dioulasso,Bobo-Dioulasso,博博迪乌拉索,904920,11.18064,-4.29489,09,Hauts-Bassins,2362344
+BFA,Koudougou,Koudougou,库杜古,160239,12.25188,-2.36694,06,Centre-Ouest,2358946
+BFA,Saaba,Saaba,,136011,12.37136,-1.41468,03,Centre,2356157
+BFA,Ouahigouya,Ouahigouya,瓦希古亞,124587,13.5769,-2.41786,10,Nord,2357043
+BFA,Kaya,Kaya,卡亞,121970,13.0883,-1.08368,05,Centre-Nord,2359608
+CMR,Douala,Douala,杜阿拉,1338082,4.04827,9.70428,05,Littoral,2232593
+CMR,Yaounde,Yaoundé,雅温得,1299369,3.86667,11.51667,11,Centre,2220957
+CMR,Bamenda,Bamenda,巴门达,420445,5.9597,10.14597,07,North-West,2234974
+CMR,Bafoussam,Bafoussam,巴富薩姆,373268,5.47775,10.41759,08,West,2235189
+CMR,Maroua,Maroua,马鲁阿,314122,10.59095,14.31593,12,Far North,2228373
+CMR,Ngaoundere,Ngaoundéré,恩冈代雷,238196,7.32765,13.58472,10,Adamaoua,2224827
+TCD,N'Djamena,N'Djamena,恩贾梅纳,1359526,12.10672,15.0444,21,N’Djaména,2427123
+TCD,Moundou,Moundou,蒙杜,196124,8.57437,16.07722,08,Logone Occidental,2427455
+TCD,Abeche,Abéché,阿贝歇,139983,13.82916,20.8324,12,Ouadaï,245785
+TCD,Sarh,Sarh,萨尔,138928,9.14555,18.38331,17,Moyen-Chari,2425791
+TCD,Kelo,Kelo,凯洛,82677,9.30859,15.80658,14,Tandjilé,2430506
+TCD,Am Timan,Am Timan,安提曼,74691,11.0433,20.28342,13,Salamat,245338
+COM,Moroni,Moroni,莫洛尼,74749,-11.70216,43.25506,02,Grande Comore,921772
+COM,Moutsamoudou,Moutsamoudou,穆察穆杜,26313,-12.16672,44.39944,01,Anjouan,921753
+COM,Fomboni,Fomboni,丰博尼,17291,-12.28759,43.74344,03,Mohéli,921889
+CIV,Abidjan,Abidjan,阿比让,6321017,5.35444,-4.00167,93,Abidjan Autonomous District,2293538
+CIV,Abobo,Abobo,阿波波,1340083,5.41613,-4.0159,93,Abidjan Autonomous District,2293521
+CIV,Bouake,Bouaké,布瓦凯,832371,7.69385,-5.03031,90,Vallée du Bandama District,2290956
+CIV,Korhogo,Korhogo,科霍戈,440926,9.45803,-5.62961,87,Savanes District,2286304
+CIV,Daloa,Daloa,达洛亚,421871,6.87735,-6.45022,96,Sassandra-Marahoue,2290486
+CIV,Koumassi,Koumassi,,412282,5.29716,-3.96753,93,Abidjan Autonomous District,2285853
+DJI,Djibouti,Djibouti,吉布地,626512,11.58901,43.14503,07,Djibouti,223817
+DJI,Balbala,Balbala,,554350,11.56194,43.10666,07,Djibouti,7648070
+DJI,Ali Sabih,Ali Sabih,阿里萨比耶,50006,11.15583,42.7125,01,Ali Sabieh,225284
+DJI,Dikhil,Dikhil,迪基勒,32801,11.10454,42.36971,06,Dikhil,223890
+DJI,Tadjoura,Tadjoura,塔朱拉,19533,11.78778,42.88222,05,Tadjourah,220782
+DJI,Arta,Arta,阿爾塔 (吉布提),17477,11.52639,42.85194,08,Arta,225037
+EGY,Cairo,Cairo,开罗,9606916,30.06263,31.24967,11,Cairo,360630
+EGY,Alexandria,Alexandria,亚历山大,5263542,31.20176,29.91582,06,Alexandria,361058
+EGY,Giza,Giza,吉萨,4367343,30.00944,31.20861,08,Giza,360995
+EGY,Shubra al Khaymah,Shubrā al Khaymah,舒卜拉海迈,1240289,30.12511,31.25053,12,Qalyubia,349076
+EGY,Port Said,Port Said,塞得港,780515,31.26531,32.3019,19,Port Said,358619
+EGY,Suez,Suez,苏伊士,699541,29.97371,32.52627,15,Suez,359796
+GAB,Libreville,Libreville,利伯维尔,846090,0.39241,9.45356,01,Estuaire,2399697
+GAB,Port-Gentil,Port-Gentil,让蒂尔港,164018,-0.71933,8.78151,08,Ogooué-Maritime,2396518
+GAB,Franceville,Franceville,弗朗斯维尔,132895,-1.63333,13.58357,02,Haut-Ogooué,2400555
+GAB,Owendo,Owendo,,95313,0.29123,9.50465,01,Estuaire,2396657
+GAB,Oyem,Oyem,奥耶姆,72939,1.5995,11.57933,09,Woleu-Ntem,2396646
+GAB,Moanda,Moanda,莫安达,71099,-1.56652,13.1987,02,Haut-Ogooué,2398269
+GMB,Serekunda,Serekunda,萨拉昆达,340000,13.43833,-16.67806,01,Banjul,2411989
+GMB,Brikama,Brikama,布里卡马,97233,13.27136,-16.64944,05,Western,2413753
+GMB,Bununka Kunda,Bununka Kunda,,66449,13.42722,-16.68528,01,Banjul,2413709
+GMB,Sukuta,Sukuta,苏库塔,56472,13.41033,-16.70815,05,Western,2411880
+GMB,Talinding,Talinding,,48687,13.42558,-16.67261,01,Banjul,12640502
+GMB,Faji Kunda,Faji Kunda,,45757,13.41778,-16.66667,05,Western,2413525
+GIN,Conakry,Conakry,科纳克里,1928389,9.53795,-13.67729,04,Conakry,2422465
+GIN,Camayenne,Camayenne,,1871242,9.535,-13.68778,04,Conakry,2422488
+GIN,Nzerekore,Nzérékoré,恩泽雷科雷,226426,7.75624,-8.8179,N,Nzérékoré Region,2416969
+GIN,Kankan,Kankan,康康,221428,10.38542,-9.30568,K,Kankan Region,2419992
+GIN,Maneah,Manéah,,194297,9.73333,-13.41667,D,Kindia,2417786
+GIN,Dixinn,Dixinn,狄辛区,186553,9.55111,-13.67306,04,Conakry,2421820
+GNB,Bissau,Bissau,比绍,439704,11.86357,-15.59767,11,Bissau,2374775
+GNB,Bairro Militar,Bairro Militar,,65274,11.8746,-15.6158,11,Bissau,13645741
+GNB,Gabu,Gabú,加布,49371,12.28,-14.22222,10,Gabú,2372532
+GNB,Contumo,Contumo,,45482,11.85,-15.61667,11,Bissau,2373235
+GNB,Reino de Bandim,Reino de Bandim,,44718,11.85,-15.6,11,Bissau,2370317
+GNB,Missira,Missira,,38838,11.86145,-15.60679,11,Bissau,13645745
+GUY,Georgetown,Georgetown,乔治敦,235017,6.80448,-58.15527,12,Demerara-Mahaica,3378644
+GUY,Linden,Linden,林登,44690,6.00815,-58.30724,18,Upper Demerara-Berbice,3377408
+GUY,New Amsterdam,New Amsterdam,新阿姆斯特丹,35039,6.24924,-57.51578,13,East Berbice-Corentyne,3376762
+IDN,Jakarta,Jakarta,雅加达,8540121,-6.21462,106.84513,04,Jakarta,1642911
+IDN,Surabaya,Surabaya,泗水,3018022,-7.24917,112.75083,08,East Java,1625822
+IDN,Bekasi,Bekasi,勿加泗,2648272,-6.2349,106.9896,30,West Java,1649378
+IDN,Bandung,Bandung,萬隆,2528163,-6.92222,107.60694,30,West Java,1650357
+IDN,Medan,Medan,棉兰,2486283,3.58333,98.66667,26,North Sumatra,1214520
+IDN,Depok,Depok,德博,2163635,-6.4,106.81861,30,West Java,1645524
+IRN,Tehran,Tehran,德黑兰,7153309,35.69439,51.42151,26,Tehran,112931
+IRN,Mashhad,Mashhad,马什哈德,2307177,36.29807,59.60567,42,Razavi Khorasan,124665
+IRN,Isfahan,Isfahan,伊斯法罕,1547164,32.65246,51.67462,28,Isfahan,418863
+IRN,Karaj,Karaj,卡拉季,1448075,35.83266,50.99155,44,Alborz Province,128747
+IRN,Tabriz,Tabriz,大不里士,1424641,38.08,46.2919,33,East Azerbaijan,113646
+IRN,Shiraz,Shiraz,设拉子,1249942,29.61031,52.53113,07,Fars,115019
+IRQ,Baghdad,Baghdad,巴格达,7216000,33.34058,44.40088,07,Baghdad,98182
+IRQ,Al Mawsil al Jadidah,Al Mawşil al Jadīdah,,2065597,36.33271,43.10555,15,Nineveh,99071
+IRQ,Mosul,Mosul,摩苏尔,1683000,36.335,43.11889,15,Nineveh,99072
+IRQ,Erbil,Erbil,埃尔比勒,1612700,36.19117,44.00943,11,Erbil,95446
+IRQ,Basrah,Basrah,巴士拉,1326564,30.50852,47.7804,02,Basra,99532
+IRQ,Karbala,Karbala,卡尔巴拉,1218732,32.61603,44.02488,12,Karbala,94824
+JOR,Amman,Amman,安曼,1275857,31.95522,35.94503,16,Amman,250441
+JOR,Zarqa,Zarqa,扎尔卡,792665,32.07275,36.08796,17,Zarqa,250090
+JOR,Irbid,Irbid,伊尔比德,569068,32.55556,35.85,18,Irbid,248946
+JOR,Russeifa,Russeifa,鲁赛法,268237,32.01778,36.04639,17,Zarqa,7838895
+JOR,Hayy Khilda,Ḩayy Khildā,,251000,31.99202,35.84002,16,Amman,248583
+JOR,Khuraybat as Suq,Khuraybat as Sūq,,186158,31.87913,35.92098,16,Amman,248460
+KAZ,Almaty,Almaty,阿拉木图,1977011,43.25249,76.9115,02,Almaty,1526384
+KAZ,Astana,Astana,阿斯塔纳,1544142,51.1801,71.44598,05,Astana,1526273
+KAZ,Shymkent,Shymkent,希姆肯特,1200000,42.30988,69.60042,1537272,Shymkent,1518980
+KAZ,Aktobe,Aktobe,阿克托别,500757,50.27969,57.20718,04,Aktobe,610611
+KAZ,Karagandy,Karagandy,卡拉干达,497777,49.80187,73.10211,12,Karaganda,609655
+KAZ,Taraz,Taraz,塔拉兹,358153,42.89799,71.37334,17,Zhambyl,1516905
+KWT,Al Ahmadi,Al Aḩmadī,艾哈迈迪,637411,29.07694,48.08389,04,Al Aḩmadī,285839
+KWT,Hawalli,Ḩawallī,哈瓦利,164212,29.33278,48.02861,08,Hawalli,285629
+KWT,As Salimiyah,As Sālimīyah,,147649,29.33389,48.07611,08,Hawalli,285704
+KWT,Sabah as Salim,Şabāḩ as Sālim,,139163,29.25722,48.05722,09,Mubārak al Kabīr,412800
+KWT,Al Farwaniyah,Al Farwānīyah,费尔瓦尼耶,86525,29.2775,47.95861,07,Al Farwaniyah,285815
+KWT,Al Fahahil,Al Faḩāḩīl,,68290,29.0825,48.13028,04,Al Aḩmadī,285811
+KGZ,Bishkek,Bishkek,比什凯克,900000,42.87,74.59,01,Bishkek,1528675
+KGZ,Osh,Osh,奥什,322164,40.52828,72.7985,08,Osh Region,1527534
+KGZ,Manas,Manas,贾拉拉巴德,123239,40.94498,72.99313,03,Jalal-Abad Region,1528249
+KGZ,Karakol,Karakol,卡拉科尔,84351,42.49047,78.39197,07,Issyk-Kul,1528121
+KGZ,Tokmok,Tokmok,托克马克,71443,42.84194,75.30149,02,Chuy Region,1527199
+KGZ,Uzgen,Uzgen,乌兹根,49410,40.76994,73.30068,08,Osh Region,1527513
+LBN,Beirut,Beirut,贝鲁特,1916100,33.89332,35.50157,04,Beirut,276781
+LBN,Ra's Bayrut,Ra’s Bayrūt,拉斯贝鲁特,1251739,33.9,35.48333,04,Beirut,268743
+LBN,Tripoli,Tripoli,的黎波里,229398,34.43352,35.84415,09,North Lebanon,266826
+LBN,Sidon,Sidon,赛达,163554,33.55751,35.37148,06,South Governorate,268064
+LBN,Tyre,Tyre,苏尔,135204,33.27333,35.19389,06,South Governorate,267008
+LBN,Aley,Aley,阿莱,130000,33.80528,35.6,05,Mount Lebanon,280425
+LBY,Tripoli,Tripoli,的黎波里,1302947,32.88743,13.18733,77,Tripoli,2210247
+LBY,Benghazi,Benghazi,班加西,757490,32.11486,20.06859,69,Banghazi,88319
+LBY,Misratah,Misratah,米苏拉塔,355657,32.37535,15.09254,72,Misratah,2214846
+LBY,Zliten,Zliten,兹利坦,203790,32.46739,14.56874,72,Misratah,2208485
+LBY,Al Khums,Al Khums,胡姆斯,201943,32.64861,14.26191,82,Al Marqab,2219905
+LBY,Az Zawiyah,Az Zāwīyah,,200000,32.7571,12.72764,68,Az Zawiyah,2218970
+MYS,Kuala Lumpur,Kuala Lumpur,吉隆坡,1453975,3.1412,101.68653,14,Kuala Lumpur,1735161
+MYS,Johor Bahru,Johor Bahru,新山,858118,1.4655,103.7578,01,Johor,1732752
+MYS,Kampung Baru Subang,Kampung Baru Subang,,833571,3.15,101.53333,12,Selangor,1771023
+MYS,Petaling Jaya,Petaling Jaya,八打灵再也,807879,3.10726,101.60671,12,Selangor,1735158
+MYS,Ipoh,Ipoh,怡保,759952,4.5841,101.0829,07,Perak,1734634
+MYS,Shah Alam,Shah Alam,莎阿南,740750,3.08507,101.53281,12,Selangor,1732903
+MDV,Male,Male,马累,103693,4.17521,73.50916,38,Kaafu Atoll,1282027
+MLI,Bamako,Bamako,巴馬科,4227569,12.60915,-7.97522,01,Bamako,2460596
+MLI,Sikasso,Sikasso,锡卡索,349324,11.31755,-5.66654,06,Sikasso,2451185
+MLI,Koutiala,Koutiala,庫佳拉,218031,12.38723,-5.46507,06,Sikasso,2454268
+MLI,Segou,Ségou,塞古,205787,13.44032,-6.25947,05,Ségou,2451478
+MLI,Kayes,Kayes,卡伊,194716,14.44776,-11.44393,03,Kayes,2455518
+MLI,Mopti,Mopti,莫普提,186187,14.4843,-4.18296,04,Mopti,2453348
+MRT,Nouakchott,Nouakchott,努瓦克肖特,1184530,18.08581,-15.9785,,,2377450
+MRT,Nouadhibou,Nouadhibou,努瓦迪布,146048,20.94188,-17.03842,08,Dakhlet Nouadhibou,2377457
+MRT,Kiffa,Kiffa,基法,62051,16.62073,-11.40208,03,Assaba,2378538
+MRT,Dar Naim,Dar Naim,,61089,18.10808,-15.92666,14,Nouakchott North,11496397
+MRT,Nema,Néma,内马,60000,16.61702,-7.25649,01,Hodh Ech Chargi,2377539
+MRT,Mbera,Mbera,,58985,15.85615,-5.79067,01,Hodh Ech Chargi,12718654
+MAR,Casablanca,Casablanca,卡萨布兰卡,3665954,33.58831,-7.61138,06,Casablanca-Settat,2553604
+MAR,Rabat,Rabat,拉巴特,1655753,34.01325,-6.83255,04,Rabat-Salé-Kénitra,2538475
+MAR,Fes,Fes,非斯,1191905,34.03313,-5.00028,03,Fes-Meknes,2548885
+MAR,Tangier,Tangier,坦幾亞,1035141,35.76727,-5.79975,01,Tanger-Tetouan-Al Hoceima,2530335
+MAR,Marrakesh,Marrakesh,马拉喀什,995871,31.63416,-7.99994,07,Marrakesh-Safi,2542997
+MAR,Sale,Salé,塞拉,972299,34.0531,-6.79846,04,Rabat-Salé-Kénitra,2537763
+MOZ,Maputo,Maputo,马普托,1254837,-25.96553,32.58322,11,Maputo City,1040652
+MOZ,Matola,Matola,,1198988,-25.96222,32.45889,04,Maputo Province,1039854
+MOZ,Nampula,Nampula,楠普拉,770379,-15.11646,39.2666,06,Nampula,1033356
+MOZ,Beira,Beira,贝拉,687764,-19.84361,34.83889,05,Sofala,1052373
+MOZ,Chimoio,Chimoio,希莫尤,422046,-19.11639,33.48333,10,Manica,1049261
+MOZ,Tete,Tete,太特,357000,-16.15639,33.58667,08,Tete,1026014
+NER,Niamey,Niamey,尼亚美,1323691,13.51366,2.1098,08,Niamey,2440485
+NER,Maradi,Maradi,马拉迪,361702,13.5,7.10174,04,Maradi Region,2441291
+NER,Zinder,Zinder,津德尔,318874,13.80716,8.9881,07,Zinder Region,2437798
+NER,Tahoua,Tahoua,塔瓦,159468,14.8888,5.2692,06,Tahoua Region,2439376
+NER,Agadez,Agadez,阿加德兹,149549,16.97333,7.99111,01,Agadez,2448085
+NER,Arlit,Arlit,阿爾利特,106448,18.73694,7.38528,01,Agadez,2447513
+NGA,Lagos,Lagos,拉各斯,15388000,6.45407,3.39467,05,Lagos,2332459
+NGA,Kano,Kano,卡诺,4910000,12.00012,8.51672,29,Kano State,2335204
+NGA,Ibadan,Ibadan,伊巴丹,3649000,7.37756,3.90591,32,Oyo State,2339354
+NGA,Abuja,Abuja,阿布贾,2690000,9.05785,7.49508,11,FCT,2352778
+NGA,Port Harcourt,Port Harcourt,哈科特港,2120000,4.77742,7.0134,50,Rivers State,2324774
+NGA,Kaduna,Kaduna,卡杜纳,1850000,10.52641,7.43879,23,Kaduna State,2335727
+OMN,Muscat,Muscat,马斯喀特,797000,23.58413,58.40778,06,Muscat,287286
+OMN,Seeb,Seeb,锡卜,470878,23.67027,58.18911,06,Muscat,288967
+OMN,Bawshar,Bawshar,包舍爾,383257,23.57769,58.39982,06,Muscat,288764
+OMN,'Ibri,‘Ibrī,伊比利,163473,23.22573,56.51572,09,Ad Dhahirah,287830
+OMN,Salalah,Şalālah,塞拉莱,163140,17.01505,54.09237,08,Dhofar,286621
+OMN,Saham,Şaḩam,萨马,140000,24.17222,56.88861,11,Al Batinah North,286647
+PAK,Lahore,Lahore,拉合尔,13004135,31.558,74.35071,04,Punjab,1172451
+PAK,Karachi,Karachi,卡拉奇,11624219,24.8608,67.0104,05,Sindh,1174872
+PAK,Peshawar,Peshawar,白沙瓦,4758762,34.008,71.57849,03,Khyber Pakhtunkhwa,1168197
+PAK,Faisalabad,Faisalabad,费萨拉巴德,3800193,31.41554,73.08969,04,Punjab,1179400
+PAK,Rawalpindi,Rawalpindi,拉瓦尔品第,3357612,33.59733,73.0479,04,Punjab,1166993
+PAK,Gujranwala,Gujranwala,古吉兰瓦拉,2511118,32.15567,74.18705,04,Punjab,1177662
+PSE,East Jerusalem,East Jerusalem,东耶路撒冷,428304,31.78336,35.23388,WE,West Bank,7303419
+PSE,Gaza,Gaza,加沙,410000,31.50161,34.46672,GZ,Gaza Strip,281133
+PSE,Khan Yunis,Khān Yūnis,汗尤尼斯,173183,31.34018,34.30627,GZ,Gaza Strip,281124
+PSE,Jabalya,Jabālyā,賈巴利亞,168568,31.5272,34.48347,GZ,Gaza Strip,281129
+PSE,Hebron,Hebron,希伯伦,160470,31.52935,35.0938,WE,West Bank,285066
+PSE,Nablus,Nablus,纳布卢斯,130326,32.22111,35.25444,WE,West Bank,282615
+QAT,Doha,Doha,多哈,344939,25.28545,51.53096,01,Baladiyat ad Dawhah,290030
+QAT,Ar Rayyan,Ar Rayyān,赖扬,272465,25.29194,51.42444,06,Baladiyat ar Rayyan,289888
+QAT,Lusail,Lusail,,198600,25.4175,51.5075,13,Al Daayen,13512674
+QAT,Al Matar al 'Atiq,Al Maţār al ‘Atīq,,76774,25.25138,51.55569,01,Baladiyat ad Dawhah,12242643
+QAT,Al Mansurah,Al Manşūrah,,65493,25.26807,51.53219,01,Baladiyat ad Dawhah,411759
+QAT,Az Za'ayin,Az̧ Z̧a‘āyin,,54339,25.57744,51.48306,13,Al Daayen,289847
+SAU,Jeddah,Jeddah,吉达,4697000,21.49012,39.18624,14,Mecca Region,105343
+SAU,Riyadh,Riyadh,利雅得,4205961,24.68773,46.72185,10,Riyadh Region,108410
+SAU,Makkah,Makkah,麦加,1578722,21.42664,39.82563,14,Mecca Region,104515
+SAU,Madinah,Madinah,麦地那,1300000,24.46861,39.61417,05,Medina Region,109223
+SAU,Dammam,Dammam,达曼,1252523,26.43442,50.10326,06,Eastern Province,110336
+SAU,Sultanah,Sulţānah,,946697,24.49258,39.58572,05,Medina Region,101760
+SEN,Dakar,Dakar,达喀尔,2646503,14.6937,-17.44406,01,Dakar,2253354
+SEN,Pikine,Pikine,皮金,1170791,14.76457,-17.39071,01,Dakar,2246678
+SEN,Touba,Touba,圖巴,1120824,14.86229,-15.87532,03,Diourbel Region,2244322
+SEN,Guediawaye,Guédiawaye,古蒂阿瓦耶,329659,14.77446,-17.40212,01,Dakar,2595778
+SEN,Thies,Thiès,,317763,14.78944,-16.92602,07,Thies,2244802
+SEN,Kaolack,Kaolack,考拉克,298904,14.15197,-16.07259,10,Kaolack,2250805
+SLE,Freetown,Freetown,弗里敦,802639,8.48714,-13.2356,04,Western Area,2409306
+SLE,Kenema,Kenema,凯内马,255110,7.87687,-11.19025,01,Eastern Province,2407790
+SLE,Bo,Bo,博城,233684,7.96472,-11.73833,03,Southern Province,2410048
+SLE,Koidu,Koidu,科伊杜,128030,8.64387,-10.9714,01,Eastern Province,2407656
+SLE,Makeni,Makeni,馬卡尼,85116,8.88605,-12.04417,02,Northern Province,2406407
+SLE,Waterloo,Waterloo,滑铁卢，塞拉利昂,55000,8.3389,-13.07091,04,Western Area,2403094
+SOM,Mogadishu,Mogadishu,摩加迪休,2587183,2.03711,45.34375,02,Banaadir,53654
+SOM,Borama,Borama,博拉马,597842,9.93611,43.18278,21,Awdal,64021
+SOM,Hargeysa,Hargeysa,哈尔格萨,477876,9.56,44.065,20,Woqooyi Galbeed,57289
+SOM,Berbera,Berbera,柏培拉,242344,10.43959,45.01432,20,Woqooyi Galbeed,64435
+SOM,Kismayo,Kismayo,基斯马尤,234852,-0.35817,42.54536,09,Lower Juba,55671
+SOM,Marka,Marka,木鲁旰,230100,1.71594,44.77166,14,Lower Shabeelle,54225
+SDN,Khartoum,Khartoum,喀土穆,1974647,15.55177,32.53241,29,Khartoum,379252
+SDN,Omdurman,Omdurman,恩图曼,1849659,15.64453,32.47773,29,Khartoum,365137
+SDN,Khartoum North,Khartoum North,北喀土穆,1012211,15.64925,32.53458,29,Khartoum,379251
+SDN,Nyala,Nyala,尼亚拉,565734,12.04888,24.88069,49,Southern Darfur,369004
+SDN,Port Sudan,Port Sudan,苏丹港,489725,19.61745,37.21644,36,Red Sea,377039
+SDN,Kassala,Kassala,卡薩拉,401477,15.45099,36.39998,52,Kassala,372753
+SUR,Paramaribo,Paramaribo,帕拉马里博,223757,5.86638,-55.16682,16,Paramaribo District,3383330
+SUR,Blauwgrond,Blauwgrond,,31483,5.84342,-55.11929,16,Paramaribo District,3384562
+SUR,Latour,Latour,,29526,5.79668,-55.20858,16,Paramaribo District,13607831
+SUR,Pontbuiten,Pontbuiten,,23211,5.78808,-55.20895,19,Wanica District,13607830
+SUR,Rainville,Rainville,,22747,5.83436,-55.13769,16,Paramaribo District,3383188
+SUR,Flora,Flora,,19538,5.8,-55.2,16,Paramaribo District,3384242
+SYR,Aleppo,Aleppo,阿勒颇,2098210,36.20124,37.16117,09,Aleppo,170063
+SYR,Damascus,Damascus,大马士革,1569394,33.5102,36.29128,13,Damascus Governorate,170654
+SYR,Homs,Homs,霍姆斯,775404,34.72405,36.72559,11,Homs,169577
+SYR,Latakia,Latakia,拉塔基亚,709000,35.53125,35.79088,02,Latakia,173576
+SYR,Ar Raqqah,Ar Raqqah,拉卡,531952,35.95283,39.00788,04,Raqqa,172955
+SYR,Hamah,Ḩamāh,哈马,460602,35.13179,36.75783,10,Hama,170017
+TJK,Dushanbe,Dushanbe,杜尚别,679400,38.53575,68.77905,04,Dushanbe,1221874
+TJK,Isfara,Isfara,伊斯法拉,274000,40.12649,70.62526,03,Sughd,1514896
+TJK,Istaravshan,Istaravshan,伊斯塔拉夫尚,273500,39.9142,69.00328,03,Sughd,1220253
+TJK,Kulob,Kŭlob,库洛布,214700,37.91459,69.78454,02,Khatlon Province,1221194
+TJK,Konibodom,Konibodom,科尼博多姆,211100,40.29414,70.43122,03,Sughd,1514891
+TJK,Khujand,Khujand,苦盏,191000,40.28256,69.62216,03,Sughd,1514879
+TGO,Lome,Lomé,洛美,2188376,6.12874,1.22154,24,Maritime,2365267
+TGO,Sokode,Sokodé,索科德,117811,8.98333,1.13333,22,Centrale,2364104
+TGO,Kara,Kara,,104207,9.55111,1.18611,23,Kara,2366152
+TGO,Atakpame,Atakpamé,阿塔帕梅,80683,7.53333,1.13333,25,Plateaux,2367886
+TGO,Kpalime,Kpalimé,帕利梅,75084,6.9,0.63333,25,Plateaux,2365560
+TGO,Bassar,Bassar,巴萨,61845,9.25025,0.78213,23,Kara,2367568
+TUN,Tunis,Tunis,突尼斯,693210,36.81897,10.16579,36,Tunis Governorate,2464470
+TUN,Sfax,Sfax,斯法克斯,280566,34.74056,10.76028,32,Sfax Governorate,2467454
+TUN,Sousse,Sousse,苏塞,221715,35.82539,10.63699,23,Sousse Governorate,2464915
+TUN,Sukrah,Sukrah,,159862,36.87744,10.2468,38,Ariana Governorate,2464960
+TUN,Kairouan,Kairouan,凯鲁万,139070,35.6781,10.09633,03,Kairouan,2473449
+TUN,Bizerte,Bizerte,比塞大,138430,37.27442,9.87391,18,Bizerte Governorate,2472706
+TUR,Istanbul,Istanbul,伊斯坦布尔,15701602,41.01384,28.94966,34,Istanbul,745044
+TUR,Ankara,Ankara,安卡拉,3517182,39.91987,32.85427,68,Ankara,323786
+TUR,Bursa,Bursa,布尔萨,3101833,40.19559,29.06013,16,Bursa Province,750269
+TUR,Izmir,İzmir,伊兹密尔,2938292,38.41273,27.13838,35,İzmir Province,311046
+TUR,Gaziantep,Gaziantep,加济安泰普,2222415,37.05944,37.3825,83,Gaziantep,314830
+TUR,Diyarbakir,Diyarbakır,迪亚巴克尔,1833684,37.91363,40.21721,21,Diyarbakır Province,316541
+TKM,Ashgabat,Ashgabat,阿什哈巴德,1030063,37.95,58.38333,S,Ashgabat,162183
+TKM,Tuerkmenabat,Türkmenabat,土库曼纳巴德,230861,39.07328,63.57861,04,Lebap,1219649
+TKM,Dasoguz,Daşoguz,达沙古兹,201142,41.83625,59.96661,03,Dasoguz,601734
+TKM,Mary,Mary,马雷,167027,37.59378,61.83031,05,Mary,1218667
+TKM,Tuerkmenbasy,Türkmenbaşy,土库曼巴希,91745,40.02216,52.95517,02,Balkan,601594
+TKM,Balkanabat,Balkanabat,巴尔坎纳巴德,87822,39.51075,54.36713,02,Balkan,161616
+UGA,Kampala,Kampala,坎帕拉,1680600,0.31628,32.58219,C,Central Region,232422
+UGA,Nansana,Nansana,,532800,0.36389,32.52861,C,Central Region,10943053
+UGA,Kira,Kira,基拉镇,462900,0.4,32.63333,C,Central Region,231165
+UGA,Bunamwaya,Bunamwaya,,413400,0.25344,32.55723,C,Central Region,234179
+UGA,Kyengera,Kyengera,,285400,0.29517,32.50159,C,Central Region,10858926
+UGA,Kasangati,Kasangati,,277685,0.43803,32.60246,C,Central Region,232110
+ARE,Dubai,Dubai,迪拜,3790000,25.07725,55.30927,03,Dubai,292223
+ARE,Abu Dhabi,Abu Dhabi,阿布扎比,1807000,24.45118,54.39696,01,Abu Dhabi,292968
+ARE,Sharjah,Sharjah,沙迦,1800000,25.3342,55.41221,06,Sharjah,292672
+ARE,Al Ain City,Al Ain City,艾因,846747,24.19167,55.76056,01,Abu Dhabi,292913
+ARE,Ajman,Ajman,阿治曼,490035,25.40177,55.47878,02,Ajman,292932
+ARE,Dayrah,Dayrah,代拉,400000,25.27143,55.30207,03,Dubai,292261
+UZB,Tashkent,Tashkent,塔什干,1978028,41.26465,69.21627,13,Tashkent,1512569
+UZB,Andijon,Andijon,安集延,747800,40.78338,72.35067,01,Andijan Region,1514588
+UZB,Namangan,Namangan,纳曼干,713220,40.9983,71.67257,06,Namangan,1513157
+UZB,Samarkand,Samarkand,撒马尔罕,595200,39.65456,66.96445,10,Samarqand Region,1216265
+UZB,Yunusobod,Yunusobod,,352000,41.37139,69.27944,13,Tashkent,1512296
+UZB,Nukus,Nukus,努库斯,332500,42.45861,59.60576,09,Karakalpakstan,601294
+YEM,Sanaa,Sanaa,萨那,1937451,15.35452,44.20646,26,Amanat Alasimah,71137
+YEM,Aden,Aden,亚丁,1079670,12.77957,45.03852,02,Aden,415189
+YEM,Taiz,Taiz,塔伊兹,940600,13.57952,44.02091,25,Ta‘izz,70225
+YEM,Ibb,Ibb,伊卜,771514,13.96667,44.18333,23,Ibb Governorate,74477
+YEM,Al Hudaydah,Al Ḩudaydah,荷台达,734699,14.79781,42.95452,08,Al Hudaydah,79415
+YEM,Mukalla,Mukalla,穆卡拉,594951,14.54248,49.12424,04,Muhafazat Hadramaout,78754

@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#030a0e" />
     <meta
       name="description"
-      content="基于 globe.gl 的 3D 穆斯林市场探索器：仅 OIC 57 国可交互，悬停预览市场卡片，点击固定。"
+      content="基于 globe.gl 的 3D 穆斯林市场探索器：仅 OIC 57 国可交互，悬停预览，点击打开完整国家档案，支持全量搜索。"
     />
     <meta property="og:title" content="Global Muslim Markets · OIC 市场探索器" />
     <meta
       property="og:description"
-      content="3D 地球、OIC 市场高亮、悬浮市场卡片。人口、GDP、家庭消费、互联网与中国贸易数据。"
+      content="3D 地球、OIC 市场高亮、悬浮档案卡与完整侧栏。人口、语言、行政区、城市、枢纽、贸易与 HS 数据。"
     />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <title>Global Muslim Markets · OIC 市场探索器</title>
@@ -23,7 +23,7 @@
       <div
         id="globe"
         class="globe-stage"
-        aria-label="可交互的 3D 地球，仅 OIC 57 个市场有高亮边界。悬停查看市场预览，点击固定卡片。"
+        aria-label="可交互的 3D 地球，仅 OIC 57 个市场有高亮边界；中国红色高亮且仅悬停。悬停预览，点击打开完整档案。"
       ></div>
       <div class="vignette" aria-hidden="true"></div>
 
@@ -49,6 +49,15 @@
           </div>
         </div>
 
+        <button class="search-trigger" type="button" data-ref="search-open" aria-label="搜索全部国家数据">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.4" stroke="currentColor" stroke-width="1.4" />
+            <path d="m15.6 15.6 4.2 4.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+          <span>搜索全部数据</span>
+          <kbd>⌘K</kbd>
+        </button>
+
         <div class="map-legend" aria-label="地图图例">
           <span class="map-legend__item">
             <i class="legend-dot legend-dot--focus" aria-hidden="true"></i>
@@ -58,19 +67,25 @@
             <i class="legend-dot legend-dot--oic" aria-hidden="true"></i>
             <span data-ref="oic-count">OIC 其他 41</span>
           </span>
+          <span class="map-legend__item">
+            <i class="legend-dot legend-dot--china" aria-hidden="true"></i>
+            <span>中国 · 仅悬停</span>
+          </span>
         </div>
       </header>
 
       <div class="hints" aria-hidden="true">
         <span><b>拖拽</b>旋转</span>
         <span><b>滚轮</b>缩放</span>
-        <span><b>悬停</b>预览</span>
-        <span><b>点击</b>固定</span>
+        <span><b>悬停</b>档案预览</span>
+        <span><b>点击</b>完整档案</span>
+        <span><b>搜索</b>全部数据</span>
       </div>
       <p class="sr-only">
-        操作提示：拖拽旋转地球，滚轮缩放；只有高亮边界的 OIC 市场可以悬停和点击；点击固定卡片，按 Esc 或点击地球空白处关闭卡片。
+        操作提示：拖拽旋转地球，滚轮缩放；OIC 市场悬停显示档案卡，点击打开完整侧栏；中国为红色且仅悬停；按 Esc 或点击地球空白处关闭。
       </p>
 
+      <div id="overlay-layer" class="overlay-layer"></div>
       <div id="card-layer" class="card-layer"></div>
 
       <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>

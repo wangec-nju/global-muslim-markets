@@ -1,0 +1,174 @@
+.china-hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 35;
+  width: min(380px, calc(100vw - 24px));
+  pointer-events: none;
+}
+
+.china-hover[hidden] { display: none; }
+
+.china-hover__surface {
+  max-height: min(72vh, 620px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 92, 80, 0.42);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(214, 55, 48, 0.17), transparent 45%),
+    rgba(6, 16, 20, 0.97);
+  box-shadow: 0 24px 70px -22px rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(16px);
+  animation: china-in 0.2s var(--ease-out) both;
+}
+
+@keyframes china-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.988); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.china-hover__head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 15px 15px 12px;
+  border-bottom: 1px solid rgba(255, 92, 80, 0.18);
+}
+
+.china-hover__flag {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 92, 80, 0.34);
+  border-radius: 10px;
+  background: rgba(255, 92, 80, 0.08);
+  font-size: 23px;
+}
+
+.china-hover__eyebrow {
+  margin: 0 0 3px;
+  color: #ff8a7f;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+
+.china-hover__head h2 {
+  margin: 0;
+  color: #fff3ef;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.china-hover__head span {
+  display: block;
+  margin-top: 4px;
+  color: #9d7e78;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.china-section {
+  padding: 11px 15px;
+  border-bottom: 1px solid rgba(255, 92, 80, 0.1);
+}
+
+.china-section:last-child { border-bottom: 0; }
+
+.china-section h3 {
+  margin: 0 0 8px;
+  color: #ffb5a9;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.china-provinces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
+.china-provinces span {
+  padding: 2px 5px;
+  border: 1px solid rgba(255, 150, 135, 0.14);
+  border-radius: 4px;
+  color: #d9c3bd;
+  font-size: 8px;
+}
+
+.china-hubs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 8px;
+}
+
+.china-hub {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 0;
+  font-size: 8.5px;
+  color: #d9c3bd;
+}
+
+.china-hub b {
+  color: #ff8a7f;
+  font-size: 7px;
+  font-weight: 500;
+}
+
+.china-hub span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.china-hub em {
+  color: #8c6a64;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-style: normal;
+}
+
+.china-partners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+}
+
+.china-partner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed rgba(255, 150, 135, 0.1);
+  color: #cbb4ae;
+  font-size: 8.5px;
+}
+
+.china-partner strong {
+  color: #ffd0b8;
+  font-size: 8.5px;
+  font-weight: 500;
+}
+
+.china-note {
+  margin: 7px 0 0;
+  color: #7f625c;
+  font-size: 7.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .china-hover { display: none; }
+}
+
+.china-hover__flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+}

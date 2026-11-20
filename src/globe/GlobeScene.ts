@@ -1,12 +1,21 @@
 import Globe from 'globe.gl';
 import type { GlobeInstance } from 'globe.gl';
-import type { CountryFeature, CountryShape, GlobeCountryEvent, GlobeHoverEvent } from './types';
+import type {
+  CountryFeature,
+  CountryShape,
+  GlobeCountryEvent,
+  GlobeHoverEvent,
+  GlobeHub,
+  TradeArc,
+} from './types';
 import type { InitialView } from '../config';
 import type { ScreenPoint } from '../shared/coords';
 
 export interface GlobeSceneOptions {
   container: HTMLElement;
   countries: CountryShape[];
+  /** China is rendered separately, red and hover-only. */
+  china?: CountryShape | null;
   /** Market ids that should use the stronger focus-sample styling. */
   focusIds?: ReadonlySet<string>;
   textureUrl: string;
@@ -33,6 +42,9 @@ const MARKET_STROKE = 'rgba(126, 226, 208, 0.62)';
 const FOCUS_STROKE = 'rgba(255, 214, 138, 0.86)';
 const ACTIVE_STROKE = 'rgba(255, 224, 166, 0.98)';
 const SIDE_COLOR = 'rgba(3, 17, 22, 0.78)';
+const CHINA_CAP = 'rgba(214, 55, 48, 0.26)';
+const CHINA_STROKE = 'rgba(255, 92, 80, 0.95)';
+const CHINA_HOVER_CAP = 'rgba(255, 92, 80, 0.52)';
 
 /**
  * Owns the 3D globe and raw pointer interaction. It emits normalized country
@@ -68,7 +80,10 @@ export class GlobeScene {
       window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ??
       false;
 
-    for (const country of options.countries) {
+    const allShapes = options.china
+      ? [...options.countries, options.china]
+      : options.countries;
+    for (const country of allShapes) {
       this.shapeByFeature.set(country.feature, country);
       this.shapeById.set(country.id, country);
       this.shapeByFeatureName.set(country.name, country);
@@ -93,7 +108,7 @@ export class GlobeScene {
       .showAtmosphere(true)
       .atmosphereColor(options.atmosphereColor ?? '#5fd6c2')
       .atmosphereAltitude(0.16)
-      .polygonsData(options.countries.map((country) => country.feature))
+      .polygonsData(allShapes.map((country) => country.feature))
       .polygonsTransitionDuration(180)
       .polygonLabel(() => '')
       .polygonAltitude((datum) => this.altitudeFor(datum))
@@ -103,7 +118,27 @@ export class GlobeScene {
       .onPolygonHover((datum) => this.handlePolygonHover(datum))
       .onPolygonClick((datum, event) => this.handlePolygonClick(datum, event))
       .onGlobeClick(() => this.handleGlobeClick())
-      .onGlobeReady(() => this.handleReady());
+      .onGlobeReady(() => this.handleReady())
+      .arcsData([])
+      .arcStartLat('startLat')
+      .arcStartLng('startLng')
+      .arcEndLat('endLat')
+      .arcEndLng('endLng')
+      .arcColor('color')
+      .arcStroke('width')
+      .arcDashLength(0.42)
+      .arcDashGap(0.24)
+      .arcDashAnimateTime(2600)
+      .arcsTransitionDuration(0)
+      .pointsData([])
+      .pointLat('lat')
+      .pointLng('lng')
+      .pointColor('color')
+      .pointRadius('radius')
+      .pointAltitude(0.018)
+      .pointLabel('label')
+      .pointsMerge(false)
+      .pointsTransitionDuration(0);
 
     if (options.bumpTextureUrl) {
       this.globe.bumpImageUrl(options.bumpTextureUrl);
@@ -157,6 +192,22 @@ export class GlobeScene {
     if (this.selectedId === id) return;
     this.selectedId = id;
     this.scheduleStyleRefresh();
+  }
+
+  /** Replace the trade-flow arc layer. */
+  setArcs(arcs: TradeArc[]): void {
+    this.globe.arcsData(arcs);
+  }
+
+  /** Replace the airport/port markers for the hovered country. */
+  setHubs(hubs: GlobeHub[]): void {
+    this.globe.pointsData(
+      hubs.map((hub) => ({
+        ...hub,
+        color: hub.type === 'airport' ? 'rgba(255, 209, 138, 0.95)' : 'rgba(95, 214, 194, 0.9)',
+        radius: hub.type === 'airport' ? 0.22 : 0.18,
+      })),
+    );
   }
 
   /** Fly the camera to a country, with a zoom level based on its extent. */
@@ -273,6 +324,7 @@ export class GlobeScene {
   private altitudeFor(datum: object): number {
     const country = this.lookupShape(datum);
     if (!country) return 0.008;
+    if (country.id === '156') return this.hovered?.id === country.id ? 0.026 : 0.012;
     if (this.hovered?.id === country.id) return 0.022;
     if (this.selectedId === country.id) return 0.014;
     return this.focusIds.has(country.id) ? 0.01 : 0.007;
@@ -281,6 +333,7 @@ export class GlobeScene {
   private capColorFor(datum: object): string {
     const country = this.lookupShape(datum);
     if (!country) return MARKET_CAP;
+    if (country.id === '156') return this.hovered?.id === country.id ? CHINA_HOVER_CAP : CHINA_CAP;
     const hovered = this.hovered?.id === country.id;
     const selected = this.selectedId === country.id;
     if (hovered && selected) return SELECTED_HOVER_CAP;
@@ -292,6 +345,7 @@ export class GlobeScene {
   private strokeColorFor(datum: object): string {
     const country = this.lookupShape(datum);
     if (!country) return MARKET_STROKE;
+    if (country.id === '156') return CHINA_STROKE;
     if (this.hovered?.id === country.id || this.selectedId === country.id) {
       return ACTIVE_STROKE;
     }

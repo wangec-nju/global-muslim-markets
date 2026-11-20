@@ -23,3 +23,5 @@ These CSVs are the curated inputs for `npm run gen:markets`. They were extracted
 - Representative product imports are limited to Indonesia and Malaysia and are a research screening scope, not a halal certification list.
 
 Run `npm run audit:markets` to verify every generated value against these tables, check the formulas, and compare the six official Muslim snapshots with the Wikipedia reference in `data/reference/`.
+
+Country-profile data sources and caveats: see [profile-sources.md](profile-sources.md).

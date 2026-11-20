@@ -1,0 +1,14 @@
+iso3,type,name,name_zh,code,city,lat,lng,source
+CHN,airport,Beijing Capital International Airport,北京首都国际机场,PEK,Beijing,40.077349,116.596702,OurAirports
+CHN,airport,Beijing Daxing International Airport,北京大兴国际机场,PKX,Beijing,39.501289,116.413967,OurAirports
+CHN,airport,Shanghai Pudong International Airport,上海浦东国际机场,PVG,Shanghai,31.1434,121.805,OurAirports
+CHN,airport,Guangzhou Baiyun International Airport,广州白云国际机场,CAN,Guangzhou,23.392401,113.299004,OurAirports
+CHN,airport,Shenzhen Bao'an International Airport,深圳宝安国际机场,SZX,Shenzhen,22.639474,113.803262,OurAirports
+CHN,airport,Chengdu Shuangliu International Airport,成都双流国际机场,CTU,Chengdu,30.558257,103.945966,OurAirports
+CHN,airport,Hong Kong International Airport,香港国际机场,HKG,Hong Kong,22.3080,113.9185,OurAirports
+CHN,port,Shanghai,上海港,CNSGH,,31.216667,121.5,World Port Index
+CHN,port,Ningbo-Zhoushan,宁波舟山港,CNNGB,,29.883333,121.55,World Port Index
+CHN,port,Qingdao,青岛港,CNQIN,,36.033333,120.266667,World Port Index
+CHN,port,Tianjin,天津港,CNTXG,,38.966667,117.833333,World Port Index
+CHN,port,Guangzhou,广州港,CNGGZ,,23.116667,113.233333,World Port Index
+CHN,port,Shenzhen,深圳港,CNSZX,,22.5,113.9,World Port Index
