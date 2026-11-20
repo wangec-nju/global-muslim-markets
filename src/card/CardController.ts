@@ -111,6 +111,7 @@ export class CardController {
 
     if (!sameCountry || !this.handle) {
       this.mountContent();
+      this.playReveal();
     }
     this.syncChrome();
     this.place(point);
@@ -200,6 +201,20 @@ export class CardController {
     window.removeEventListener('resize', this.onResize);
     this.resizeObserver?.disconnect();
     this.root.remove();
+  }
+
+  private playReveal(): void {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    this.surface.animate(
+      [
+        { opacity: 0, transform: 'translateY(7px) scale(0.988)' },
+        { opacity: 1, transform: 'translateY(0) scale(1)' },
+      ],
+      {
+        duration: 200,
+        easing: 'cubic-bezier(0.16, 0.84, 0.32, 1)',
+      },
+    );
   }
 
   private mountContent(): void {

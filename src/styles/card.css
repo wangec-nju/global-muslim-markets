@@ -47,20 +47,6 @@
   pointer-events: none;
 }
 
-.country-card:not([hidden]) .country-card__surface {
-  animation: card-in 0.24s var(--ease-out) both;
-}
-
-@keyframes card-in {
-  from {
-    opacity: 0;
-    transform: translateY(7px) scale(0.988);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 
 .country-card__bar {
   display: flex;
@@ -652,20 +638,6 @@
     font-size: 19px;
   }
 
-  .country-card:not([hidden]) .country-card__surface {
-    animation-name: card-in-mobile;
-  }
-
-  @keyframes card-in-mobile {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 }
 
 /* ------------------------------------------------------- profile sections */

@@ -333,8 +333,10 @@ export class GlobeScene {
 
   private handlePolygonHover(datum: object | null): void {
     // globe.gl raycasts pointer movement at window level, so it can report a
-    // country underneath the header or the floating card. Ignore those.
-    if (!this.pointerOnStage) {
+    // country underneath the header or the floating card. Check the actual
+    // element under the pointer instead of relying on a flag that can go stale
+    // after the page loads or after an overlay closes.
+    if (!this.pointerIsOverStage()) {
       this.setHovered(null);
       return;
     }
@@ -345,7 +347,7 @@ export class GlobeScene {
   }
 
   private handlePolygonClick(datum: object, event: MouseEvent): void {
-    if (!this.pointerOnStage || this.dragged || event.defaultPrevented) return;
+    if (!this.pointerIsOverStage() || this.dragged || event.defaultPrevented) return;
     const country = this.lookupShape(datum);
     if (!country) return;
     event.stopPropagation();
@@ -353,7 +355,7 @@ export class GlobeScene {
   }
 
   private handleGlobeClick(): void {
-    if (!this.pointerOnStage || this.dragged) return;
+    if (!this.pointerIsOverStage() || this.dragged) return;
     this.options.onBackgroundClick?.();
   }
 
@@ -365,6 +367,11 @@ export class GlobeScene {
     // Re-applying the current size forces an initial render.
     this.queueResize();
     this.options.onReady?.();
+  }
+
+  private pointerIsOverStage(): boolean {
+    const element = document.elementFromPoint(this.pointer.x, this.pointer.y);
+    return element != null && this.options.container.contains(element);
   }
 
   private setHovered(country: CountryShape | null): void {

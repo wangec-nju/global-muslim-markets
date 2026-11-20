@@ -41,32 +41,28 @@ export async function createApp(): Promise<void> {
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
   let adminBoundaries: AdminBoundaryDataset | null = null;
   let seaRoutes: SeaRouteDataset | null = null;
-  const geoPromise = Promise.all([
-    fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
-    fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
-  ])
-    .then(([admin, sea]) => {
-      adminBoundaries = admin;
-      seaRoutes = sea;
-    })
-    .catch((error) => {
-      console.error('[geo] failed to load overlays', error);
-    });
-
-
   await Promise.all([repository.load(), profileRepository.load()]);
   for (const market of repository.list()) {
     const profile = profileRepository.get(market.iso3);
     if (profile) market.profile = profile;
   }
 
-  void geoPromise.then(() => {
-    if (!seaRoutes) return;
-    for (const market of repository.list()) {
-      const route = seaRoutes.routes[market.iso3];
-      if (route) market.seaRoute = route;
+  async function loadGeoData(): Promise<void> {
+    try {
+      const [admin, sea] = await Promise.all([
+        fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
+        fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
+      ]);
+      adminBoundaries = admin;
+      seaRoutes = sea;
+      for (const market of repository.list()) {
+        const route = sea.routes[market.iso3];
+        if (route) market.seaRoute = route;
+      }
+    } catch (error) {
+      console.error('[geo] failed to load overlays', error);
     }
-  });
+  }
 
   function routePaths(route: SeaRouteInfo): Array<{ points: number[][] }> {
     // Map shows the shortest origin per destination; the sidebar lists all 8
@@ -319,6 +315,11 @@ export async function createApp(): Promise<void> {
 
   await Promise.race([sceneReady, delay(5000)]);
   hideLoader();
+  // Do not compete with the globe's first paint. Hover cards/hubs remain
+  // usable immediately; boundaries and routes arrive on the next idle turn.
+  window.setTimeout(() => {
+    void loadGeoData();
+  }, 120);
 
   if (import.meta.env.DEV) {
     console.info(
