@@ -136,7 +136,15 @@ function geographySection(market: MarketCountry, compact: boolean): HTMLElement 
   if (trade) {
     section.append(
       marketNote(
-        `对华贸易 ${trade.year}：出口 ${formatUsd(trade.exports?.value ?? null)} · 进口 ${formatUsd(trade.imports?.value ?? null)}；弧线为贸易流示意，非实际航道。`,
+        `对华贸易 ${trade.year}：出口 ${formatUsd(trade.exports?.value ?? null)} · 进口 ${formatUsd(trade.imports?.value ?? null)}。`,
+        'market-hint',
+      ),
+    );
+  }
+  if (market.seaRoute) {
+    section.append(
+      marketNote(
+        `海运：上海 → ${market.seaRoute.destPort}${market.seaRoute.via ? `（${market.seaRoute.via}）` : ''} · 约 ${formatKm(market.seaRoute.distanceKm)}；searoute 最短可航路径，非 AIS 实际航迹。`,
         'market-hint',
       ),
     );
@@ -177,6 +185,11 @@ function formatHub(hub: ProfileHub): string {
   const label = hub.nameZh ?? hub.name;
   const tag = hub.type === 'airport' ? '空' : hub.type === 'port' ? '港' : '物';
   return `${tag} ${hub.code ? `${label}（${hub.code}）` : label}`;
+}
+
+function formatKm(value: number | null): string {
+  if (value == null || !Number.isFinite(value)) return '—';
+  return `${new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 0 }).format(value)} km`;
 }
 
 function truncate(text: string, limit: number): string {

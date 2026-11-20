@@ -5,10 +5,14 @@ import { ChinaHover } from './china/ChinaHover';
 import { siteConfig } from './config';
 import { MarketRepository } from './data/MarketRepository';
 import { ProfileRepository } from './data/ProfileRepository';
-import type { MarketCountry } from './data/types';
+import type {
+  AdminBoundaryDataset,
+  MarketCountry,
+  SeaRouteDataset,
+} from './data/types';
 import { buildCountries, type WorldAtlasTopology } from './globe/geo';
 import { GlobeScene } from './globe/GlobeScene';
-import type { CountryShape, GlobeCountryEvent, GlobeHoverEvent, TradeArc } from './globe/types';
+import type { CountryShape, GlobeCountryEvent, GlobeHoverEvent } from './globe/types';
 import { SearchController } from './search/SearchController';
 import { SidebarController } from './sidebar/SidebarController';
 import type { ScreenPoint } from './shared/coords';
@@ -34,11 +38,18 @@ export async function createApp(): Promise<void> {
   const cleanupStarfield = mountStarfield(starfieldEl);
   const repository = new MarketRepository(siteConfig.data.marketUrl);
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
-  await Promise.all([repository.load(), profileRepository.load()]);
+  const [adminBoundaries, seaRoutes] = await Promise.all([
+    repository.load().then(() => profileRepository.load()).then(() =>
+      fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
+    ),
+    fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
+  ]);
 
   for (const market of repository.list()) {
     const profile = profileRepository.get(market.iso3);
     if (profile) market.profile = profile;
+    const route = seaRoutes.routes[market.iso3];
+    if (route) market.seaRoute = route;
   }
 
   const shapes = buildCountries(worldTopology as unknown as WorldAtlasTopology);
@@ -118,7 +129,7 @@ export async function createApp(): Promise<void> {
   const sidebar = new SidebarController(overlayHost, {
     onClose: () => {
       scene.setSelected(null);
-      scene.setArcs([]);
+      scene.clearGeoOverlays();
     },
   });
   const search = new SearchController(overlayHost, {
@@ -133,7 +144,11 @@ export async function createApp(): Promise<void> {
     renderer: resolveCardRenderer(siteConfig.cardRenderer),
     onClose: () => {
       // Selection is owned by the dossier, not the hover card.
-      if (!sidebar.isOpen) scene.setSelected(null);
+      if (!sidebar.isOpen) {
+        scene.setSelected(null);
+        scene.clearGeoOverlays();
+        scene.setHubs([]);
+      }
     },
     onPointerEnter: cancelDismiss,
     onPointerLeave: () => scheduleDismiss(PREVIEW_DISMISS_DELAY + 60),
@@ -143,67 +158,16 @@ export async function createApp(): Promise<void> {
     return marketByShapeId.get(shape.id) ?? null;
   }
 
-  function pointForMarket(market: MarketCountry): { lat: number; lng: number } | null {
-    const profile = market.profile;
-    const port = profile?.hubs.find(
-      (hub) => hub.type === 'port' && hub.lat != null && hub.lng != null,
-    );
-    if (port?.lat != null && port.lng != null) return { lat: port.lat, lng: port.lng };
-    const city = profile?.cities[0];
-    if (city?.lat != null && city.lng != null) return { lat: city.lat, lng: city.lng };
-    const shape = shapeById.get(market.id);
-    return shape?.centroid ?? null;
-  }
-
-  function arcForMarket(market: MarketCountry): TradeArc | null {
-    const point = pointForMarket(market);
-    const value =
-      (market.chinaTrade?.exports?.value ?? 0) + (market.chinaTrade?.imports?.value ?? 0);
-    if (!point || value <= 0) return null;
-    return {
-      startLat: 31.2,
-      startLng: 121.5,
-      endLat: point.lat,
-      endLng: point.lng,
-      color: ['rgba(255, 209, 138, 0.72)', 'rgba(255, 126, 92, 0.28)'],
-      width: 0.35,
-      value,
-    };
-  }
-
-  function chinaArcs(): TradeArc[] {
-    return repository
-      .list()
-      .map((market): TradeArc | null => {
-        const point = pointForMarket(market);
-        const value =
-          (market.chinaTrade?.exports?.value ?? 0) +
-          (market.chinaTrade?.imports?.value ?? 0);
-        if (!point || value <= 0) return null;
-        return {
-          startLat: 31.2,
-          startLng: 121.5,
-          endLat: point.lat,
-          endLng: point.lng,
-          color: ['rgba(255, 102, 90, 0.34)', 'rgba(255, 184, 120, 0.04)'],
-          width: 0.08 + Math.min(0.32, Math.log10(value) / 45),
-          value,
-        } satisfies TradeArc;
-      })
-      .filter((arc): arc is TradeArc => arc != null);
-  }
-
   function openDossier(market: MarketCountry): void {
     cancelDismiss();
     card?.close('external');
     chinaHover.close();
     scene.setHubs([]);
+    scene.clearGeoOverlays();
     sidebar.open(market);
     scene.setSelected(market.id);
     const shape = shapeById.get(market.id);
     if (shape) scene.focusCountry(shape);
-    const arc = arcForMarket(market);
-    scene.setArcs(arc ? [arc] : []);
     search.close();
   }
 
@@ -211,9 +175,11 @@ export async function createApp(): Promise<void> {
     if (!card || sidebar.isOpen) return;
     if (!event.country) {
       chinaHover.close();
-      scene.setHubs([]);
       scheduleDismiss();
-      if (!sidebar.isOpen) scene.setArcs([]);
+      if (!card.isOpen) {
+        scene.setHubs([]);
+        scene.clearGeoOverlays();
+      }
       return;
     }
 
@@ -223,12 +189,13 @@ export async function createApp(): Promise<void> {
         cancelDismiss();
         card.close('external');
         chinaHover.show(china, repository.list(), event.point);
-        scene.setArcs(chinaArcs());
+        scene.setAdminPaths(adminBoundaries.countries.CHN ?? []);
+        scene.setSeaRoutes(Object.values(seaRoutes.routes));
         scene.setHubs(china.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
           lat: hub.lat as number,
           lng: hub.lng as number,
           type: hub.type,
-          label: `${hub.type === 'airport' ? '机场' : '港口'} · ${hub.nameZh ?? hub.name}`,
+          label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
         })));
       }
       return;
@@ -240,14 +207,14 @@ export async function createApp(): Promise<void> {
     const market = marketFor(event.country);
     if (market) {
       card.openPreview(market, event.point);
-      const arc = arcForMarket(market);
-      scene.setArcs(arc ? [arc] : []);
+      scene.setAdminPaths(adminBoundaries.countries[market.iso3] ?? []);
+      scene.setSeaRoutes(market.seaRoute ? [market.seaRoute] : []);
       const profile = market.profile;
       scene.setHubs(profile ? profile.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
         lat: hub.lat as number,
         lng: hub.lng as number,
         type: hub.type,
-        label: `${hub.type === 'airport' ? '机场' : '港口'} · ${hub.nameZh ?? hub.name}`,
+        label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
       })) : []);
     }
   }
@@ -267,7 +234,7 @@ export async function createApp(): Promise<void> {
     card?.close('external');
     sidebar.close();
     scene.setSelected(null);
-    scene.setArcs([]);
+    scene.clearGeoOverlays();
     scene.setHubs([]);
   }
 
@@ -296,6 +263,12 @@ export async function createApp(): Promise<void> {
 
 function delay(ms: number): Promise<void> {
   return new Promise((resolve) => window.setTimeout(resolve, ms));
+}
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Failed to load ${url}: ${response.status}`);
+  return (await response.json()) as T;
 }
 
 function requireElement<T extends Element>(selector: string): T {

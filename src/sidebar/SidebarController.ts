@@ -120,13 +120,16 @@ export class SidebarController {
     }
 
     this.body.replaceChildren(
-      overviewSection(profile),
-      marketSection(market),
-      divisionsSection(profile),
-      citiesSection(profile),
-      hubsSection(profile),
-      hs2Section(profile),
-      sourcesSection(profile),
+      ...[
+        overviewSection(profile),
+        marketSection(market),
+        divisionsSection(profile),
+        citiesSection(profile),
+        hubsSection(profile),
+        shippingSection(market),
+        hs2Section(profile),
+        sourcesSection(profile),
+      ].filter((section): section is HTMLElement => section != null),
     );
   }
 }
@@ -281,6 +284,40 @@ function hubRow(hub: ProfileHub): HTMLElement {
       el('span', { text: [hub.code, hub.city].filter(Boolean).join(' · ') || '—' }),
     ),
   );
+}
+
+function shippingSection(market: MarketCountry): HTMLElement | null {
+  const route = market.seaRoute;
+  if (!route) return null;
+  const section = dossierSection('对华海运联系', 'searoute-py · UN/LOCODE 港口');
+  const facts = el('dl', { className: 'dossier-facts' });
+  const rows: Array<[string, string]> = [
+    ['起点', '上海'],
+    ['目的港', `${route.destPort}${route.destCode ? `（${route.destCode}）` : ''}`],
+    ['中转/陆路', route.via || '—'],
+    ['最短可航距离', route.distanceKm ? `${formatKm(route.distanceKm)}` : '—'],
+  ];
+  for (const [label, value] of rows) {
+    facts.append(
+      el('div', { className: 'dossier-fact' },
+        el('dt', { text: label }),
+        el('dd', { text: value }),
+      ),
+    );
+  }
+  section.append(facts);
+  section.append(
+    el('p', {
+      className: 'dossier-note',
+      text: 'searoute-py 基于全球可航网络计算的最短路径，不是 AIS 实际航迹；内陆国线路终点为最近海港。',
+    }),
+  );
+  return section;
+}
+
+function formatKm(value: number | null): string {
+  if (value == null || !Number.isFinite(value)) return '—';
+  return `${new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 0 }).format(value)} km`;
 }
 
 function hs2Section(profile: CountryProfile): HTMLElement {

@@ -121,7 +121,7 @@ export class ChinaHover {
       el('section', { className: 'china-section' },
         el('h3', { text: '与穆斯林市场的贸易联系' }),
         partnersEl,
-        el('p', { className: 'china-note', text: '按 2025 年中国进出口额排序；地球上的弧线为贸易流示意，不是实际航道。' }),
+        el('p', { className: 'china-note', text: '按 2025 年中国进出口额排序；地球上的线为上海至各港的 searoute 最短可航路径，不是 AIS 实际航迹。' }),
       ),
     );
   }

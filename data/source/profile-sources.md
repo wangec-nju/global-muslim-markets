@@ -32,3 +32,8 @@ file with SHA-256.
 - **Common languages** is the Factbook free-text field; it may mix official,
   minority and trade languages. It is not a statistical ranking.
 - The 4K night texture is from the three-globe example assets (NASA imagery).
+
+## Geographic overlays
+
+- `public/data/admin1-paths.json`: [Natural Earth 10m admin-1 states/provinces](https://www.naturalearthdata.com/) (public domain), simplified at 0.03° and filtered to the 57 markets + China.
+- `public/data/sea-routes.json`: [searoute-py](https://github.com/genthalili/searoute-py) 1.6.0 over the Eurostat searoute graph; Shanghai to each market's main port (nearest port for landlocked countries). It is a shortest navigable path, **not** AIS tracking or a navigation product.

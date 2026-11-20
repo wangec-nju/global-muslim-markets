@@ -21,6 +21,8 @@ export interface SiteConfig {
   data: {
     marketUrl: string;
     profileUrl: string;
+    adminBoundaryUrl: string;
+    seaRouteUrl: string;
   };
 }
 
@@ -44,5 +46,7 @@ export const siteConfig: SiteConfig = {
   data: {
     marketUrl: publicAsset('data/markets.json'),
     profileUrl: publicAsset('data/profiles.json'),
+    adminBoundaryUrl: publicAsset('data/admin1-paths.json'),
+    seaRouteUrl: publicAsset('data/sea-routes.json'),
   },
 };

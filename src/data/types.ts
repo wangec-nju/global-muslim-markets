@@ -152,6 +152,37 @@ export interface ProfileDataset {
   profiles: CountryProfile[];
 }
 
+export interface AdminBoundaryPath {
+  name: string;
+  /** [lat, lng] pairs. */
+  points: number[][];
+}
+
+export interface AdminBoundaryDataset {
+  meta: { source: string; tolerance: number };
+  countries: Record<string, AdminBoundaryPath[]>;
+}
+
+export interface SeaRouteInfo {
+  /** [lat, lng] pairs along the shortest navigable sea route. */
+  points: number[][];
+  distanceKm: number | null;
+  destPort: string;
+  destCode: string | null;
+  via: string;
+}
+
+export interface SeaRouteDataset {
+  meta: {
+    source: string;
+    origin: string;
+    originLng: number;
+    originLat: number;
+    note: string;
+  };
+  routes: Record<string, SeaRouteInfo>;
+}
+
 export interface MarketCountry {
   id: string;
   unM49: string;
@@ -172,6 +203,8 @@ export interface MarketCountry {
   sourceRow: Record<string, string>;
   /** Wikipedia-style dossier attached from profiles.json at runtime. */
   profile?: CountryProfile;
+  /** Shortest navigable sea route from Shanghai, attached at runtime. */
+  seaRoute?: SeaRouteInfo;
 }
 
 export interface MarketMeta {

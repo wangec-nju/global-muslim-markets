@@ -6,6 +6,7 @@ import type {
   GlobeCountryEvent,
   GlobeHoverEvent,
   GlobeHub,
+  GlobePath,
   TradeArc,
 } from './types';
 import type { InitialView } from '../config';
@@ -57,6 +58,8 @@ export class GlobeScene {
   private readonly shapeById = new Map<string, CountryShape>();
   private readonly shapeByFeatureName = new Map<string, CountryShape>();
   private readonly focusIds: ReadonlySet<string>;
+  private adminPaths: GlobePath[] = [];
+  private seaRoutes: GlobePath[] = [];
 
   private hovered: CountryShape | null = null;
   private selectedId: string | null = null;
@@ -138,7 +141,16 @@ export class GlobeScene {
       .pointAltitude(0.018)
       .pointLabel('label')
       .pointsMerge(false)
-      .pointsTransitionDuration(0);
+      .pointsTransitionDuration(0)
+      .pathsData([])
+      .pathPoints('points')
+      .pathPointAlt(0.03)
+      .pathColor('color')
+      .pathStroke(0.35)
+      .pathDashLength(1)
+      .pathDashGap(0)
+      .pathDashAnimateTime(0)
+      .pathTransitionDuration(0);
 
     if (options.bumpTextureUrl) {
       this.globe.bumpImageUrl(options.bumpTextureUrl);
@@ -158,6 +170,7 @@ export class GlobeScene {
     }
 
     this.globe.pointOfView(options.initialView, 0);
+    
 
     // With waitForGlobeReady disabled, onGlobeReady may fire during the
     // constructor, before the callback below is attached. Resolve readiness
@@ -197,6 +210,36 @@ export class GlobeScene {
   /** Replace the trade-flow arc layer. */
   setArcs(arcs: TradeArc[]): void {
     this.globe.arcsData(arcs);
+  }
+
+  /** Replace the administrative-boundary lines for the hovered country. */
+  setAdminPaths(paths: Array<{ name: string; points: number[][] }>): void {
+    this.adminPaths = paths.map((path) => ({
+      points: path.points,
+      color: '#e8f6f2',
+      width: 0.3,
+    }));
+    this.refreshPaths();
+  }
+
+  /** Replace the navigable sea-route lines (port-to-port, searoute graph). */
+  setSeaRoutes(routes: Array<{ points: number[][] }>): void {
+    this.seaRoutes = routes.map((route) => ({
+      points: route.points,
+      color: '#ffb45e',
+      width: 0.5,
+    }));
+    this.refreshPaths();
+  }
+
+  clearGeoOverlays(): void {
+    this.adminPaths = [];
+    this.seaRoutes = [];
+    this.refreshPaths();
+  }
+
+  private refreshPaths(): void {
+    this.globe.pathsData([...this.adminPaths, ...this.seaRoutes]);
   }
 
   /** Replace the airport/port markers for the hovered country. */

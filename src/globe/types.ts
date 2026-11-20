@@ -42,6 +42,13 @@ export interface TradeArc {
   value?: number;
 }
 
+export interface GlobePath {
+  /** [lat, lng] pairs. */
+  points: number[][];
+  color: string;
+  width: number;
+}
+
 export interface GlobeHub {
   lat: number;
   lng: number;
