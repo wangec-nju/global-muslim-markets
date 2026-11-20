@@ -497,6 +497,10 @@ export class GlobeScene {
 
     if (event.buttons === 0) {
       this.pointerDownAt = null;
+      // A drag must not disable hover until the next pointerdown. Reset it on
+      // the first released move; the click that follows pointerup is still
+      // suppressed by onPointerUp's deferred reset.
+      this.dragged = false;
     } else if (this.pointerDownAt && !this.dragged) {
       const dx = event.clientX - this.pointerDownAt.x;
       const dy = event.clientY - this.pointerDownAt.y;
@@ -513,6 +517,13 @@ export class GlobeScene {
 
   private readonly onPointerUp = (): void => {
     this.pointerDownAt = null;
+    if (this.dragged) {
+      // Keep `dragged` true for the click event that follows pointerup, then
+      // release it so the next hover works without a click.
+      window.setTimeout(() => {
+        this.dragged = false;
+      }, 0);
+    }
   };
 
   private readonly onPointerLeave = (): void => {
