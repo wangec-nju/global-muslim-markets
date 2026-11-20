@@ -36,12 +36,15 @@ export interface GlobeSceneOptions {
 const MARKET_CAP = 'rgba(95, 214, 194, 0.11)';
 const FOCUS_CAP = 'rgba(233, 185, 107, 0.15)';
 const HOVER_CAP = 'rgba(246, 193, 104, 0.55)';
+const MARKET_HOVER_CAP = 'rgba(95, 214, 194, 0.5)';
 const SELECTED_CAP = 'rgba(235, 169, 81, 0.42)';
+const MARKET_SELECTED_CAP = 'rgba(95, 214, 194, 0.4)';
 const SELECTED_HOVER_CAP = 'rgba(255, 216, 146, 0.72)';
 
 const MARKET_STROKE = 'rgba(126, 226, 208, 0.62)';
 const FOCUS_STROKE = 'rgba(255, 214, 138, 0.86)';
-const ACTIVE_STROKE = 'rgba(255, 224, 166, 0.98)';
+const MARKET_ACTIVE_STROKE = 'rgba(140, 255, 235, 0.98)';
+const FOCUS_ACTIVE_STROKE = 'rgba(255, 224, 166, 0.98)';
 const SIDE_COLOR = 'rgba(3, 17, 22, 0.78)';
 const CHINA_CAP = 'rgba(214, 55, 48, 0.26)';
 const CHINA_STROKE = 'rgba(255, 92, 80, 0.95)';
@@ -248,7 +251,7 @@ export class GlobeScene {
       hubs.map((hub) => ({
         ...hub,
         color,
-        radius: hub.type === 'airport' ? 0.22 : hub.type === 'port' ? 0.18 : 0.16,
+        radius: hub.type === 'airport' ? 0.28 : hub.type === 'port' ? 0.24 : 0.2,
       })),
     );
   }
@@ -379,10 +382,11 @@ export class GlobeScene {
     if (country.id === '156') return this.hovered?.id === country.id ? CHINA_HOVER_CAP : CHINA_CAP;
     const hovered = this.hovered?.id === country.id;
     const selected = this.selectedId === country.id;
-    if (hovered && selected) return SELECTED_HOVER_CAP;
-    if (hovered) return HOVER_CAP;
-    if (selected) return SELECTED_CAP;
-    return this.focusIds.has(country.id) ? FOCUS_CAP : MARKET_CAP;
+    const focus = this.focusIds.has(country.id);
+    if (hovered && selected) return focus ? SELECTED_HOVER_CAP : MARKET_HOVER_CAP;
+    if (hovered) return focus ? HOVER_CAP : MARKET_HOVER_CAP;
+    if (selected) return focus ? SELECTED_CAP : MARKET_SELECTED_CAP;
+    return focus ? FOCUS_CAP : MARKET_CAP;
   }
 
   private strokeColorFor(datum: object): string {
@@ -390,7 +394,7 @@ export class GlobeScene {
     if (!country) return MARKET_STROKE;
     if (country.id === '156') return CHINA_STROKE;
     if (this.hovered?.id === country.id || this.selectedId === country.id) {
-      return ACTIVE_STROKE;
+      return this.focusIds.has(country.id) ? FOCUS_ACTIVE_STROKE : MARKET_ACTIVE_STROKE;
     }
     return this.focusIds.has(country.id) ? FOCUS_STROKE : MARKET_STROKE;
   }

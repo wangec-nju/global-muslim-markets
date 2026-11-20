@@ -80,7 +80,7 @@ export async function createApp(): Promise<void> {
   }
 
   function highlightColor(market: MarketCountry): string {
-    return market.focus ? '#ffd99a' : '#5fd6c2';
+    return market.focus ? '#ffe2a8' : '#8ffff0';
   }
 
   const shapes = buildCountries(worldTopology as unknown as WorldAtlasTopology);
@@ -235,7 +235,7 @@ export async function createApp(): Promise<void> {
         cancelDismiss();
         cancelOverlayClear();
         card.close('external');
-        const chinaColor = '#ff5c50';
+        const chinaColor = '#ff8a7f';
         chinaHover.show(china, repository.list(), seaRoutes.meta.origins, event.point);
         scene.setAdminPaths(adminBoundaries.countries.CHN ?? [], chinaColor);
         scene.setSeaRoutes(chinaRoutePaths(), chinaColor);
