@@ -4,9 +4,9 @@
     "profileCount": 58,
     "sourceFiles": {
       "scope.csv": "af4a3c032afb4bb732dfab43d66488354d7c65daa2df71984ff3be5dd012e403",
-      "profiles-factbook.csv": "3d74fee9fee4f7b934578d094e2190210941a02432d5d065fe6054ed4c4e918c",
+      "profiles-factbook.csv": "f1e54a03d32a20e5f15b45008adbaa255cd65c6ae25b7cfd3997d2046672927e",
       "geo/admin1.csv": "dc3c7458a9dd8adb1cb1fc26a6988696252d4f36a0d4ad9d860fe781db7d12c6",
-      "geo/cities.csv": "4c204601cfcc73ff35bbb77a1bded05aaa1b994a3a9b0771f3144cfb9fcc9c45",
+      "geo/cities.csv": "e4b8b505aa3555d27b51dff23fede9df2386859b36c24a48a80e48578c597a92",
       "geo/airports.csv": "9d7e9b9df56c337a0fb9538214804ea2955082262e0c33a476e806298fa39b43",
       "geo/ports.csv": "31ff304decd6f955c244d2711536a692347b4b5e934b5f7d68600e4aeed79e7f",
       "geo/city-labels.csv": "f128551c2f1b239205470b5e37b5a737734c82c52a2adcecbd3257647f3dfd9d",
@@ -569,13 +569,13 @@
           "admin1": "Shkodër County"
         },
         {
-          "nameEn": "Lushnje",
-          "nameLocal": "Lushnjë",
-          "nameZh": "卢什涅",
-          "population": 63135,
-          "lat": 40.94194,
-          "lng": 19.705,
-          "admin1": "Fier County"
+          "nameEn": "Berat",
+          "nameLocal": "Berat",
+          "nameZh": "培拉特",
+          "population": 62232,
+          "lat": 40.70583,
+          "lng": 19.95222,
+          "admin1": "Berat County"
         }
       ],
       "hubs": [
@@ -1848,15 +1848,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Al Muharraq",
-          "nameLocal": "Al Muharraq",
-          "nameZh": "穆哈拉格",
-          "population": 176583,
-          "lat": 26.25722,
-          "lng": 50.61194,
-          "admin1": "Muharraq"
-        },
-        {
           "nameEn": "Manama",
           "nameLocal": "Manama",
           "nameZh": "麦纳麦",
@@ -1864,6 +1855,15 @@
           "lat": 26.22787,
           "lng": 50.58565,
           "admin1": "Manama"
+        },
+        {
+          "nameEn": "Al Muharraq",
+          "nameLocal": "Al Muharraq",
+          "nameZh": "穆哈拉格",
+          "population": 176583,
+          "lat": 26.25722,
+          "lng": 50.61194,
+          "admin1": "Muharraq"
         },
         {
           "nameEn": "Madinat Hamad",
@@ -2100,15 +2100,6 @@
           "admin1": "Chittagong"
         },
         {
-          "nameEn": "Gazipur",
-          "nameLocal": "Gazipur",
-          "nameZh": null,
-          "population": 2674697,
-          "lat": 23.99844,
-          "lng": 90.42234,
-          "admin1": "Dhaka Division"
-        },
-        {
           "nameEn": "Khulna",
           "nameLocal": "Khulna",
           "nameZh": "库尔纳",
@@ -2134,6 +2125,15 @@
           "lat": 24.374,
           "lng": 88.60114,
           "admin1": "Rajshahi Division"
+        },
+        {
+          "nameEn": "Sylhet",
+          "nameLocal": "Sylhet",
+          "nameZh": "錫爾赫特",
+          "population": 237000,
+          "lat": 24.89904,
+          "lng": 91.87198,
+          "admin1": "Sylhet Division"
         }
       ],
       "hubs": [
@@ -2314,24 +2314,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Cotonou",
-          "nameLocal": "Cotonou",
-          "nameZh": "科托努",
-          "population": 679012,
-          "lat": 6.36536,
-          "lng": 2.41833,
-          "admin1": "Littoral"
-        },
-        {
-          "nameEn": "Abomey-Calavi",
-          "nameLocal": "Abomey-Calavi",
-          "nameZh": "阿波美卡拉维",
-          "population": 385755,
-          "lat": 6.44852,
-          "lng": 2.35566,
-          "admin1": "Atlantique"
-        },
-        {
           "nameEn": "Porto-Novo",
           "nameLocal": "Porto-Novo",
           "nameZh": "波多诺伏",
@@ -2350,15 +2332,6 @@
           "admin1": "Borgou"
         },
         {
-          "nameEn": "Godome",
-          "nameLocal": "Godomè",
-          "nameZh": "戈多梅",
-          "population": 253262,
-          "lat": 6.38948,
-          "lng": 2.34581,
-          "admin1": "Atlantique"
-        },
-        {
           "nameEn": "Abomey",
           "nameLocal": "Abomey",
           "nameZh": "阿波美",
@@ -2366,6 +2339,33 @@
           "lat": 7.18286,
           "lng": 1.99119,
           "admin1": "Zou"
+        },
+        {
+          "nameEn": "Djougou",
+          "nameLocal": "Djougou",
+          "nameZh": null,
+          "population": 94773,
+          "lat": 9.70853,
+          "lng": 1.66598,
+          "admin1": "Donga"
+        },
+        {
+          "nameEn": "Kandi",
+          "nameLocal": "Kandi",
+          "nameZh": "康迪",
+          "population": 56043,
+          "lat": 11.13417,
+          "lng": 2.93861,
+          "admin1": "Alibori"
+        },
+        {
+          "nameEn": "Natitingou",
+          "nameLocal": "Natitingou",
+          "nameZh": null,
+          "population": 53284,
+          "lat": 10.30416,
+          "lng": 1.37962,
+          "admin1": "Atakora"
         }
       ],
       "hubs": [
@@ -2513,24 +2513,6 @@
           "admin1": "Brunei-Muara District"
         },
         {
-          "nameEn": "Sengkurong",
-          "nameLocal": "Sengkurong",
-          "nameZh": null,
-          "population": 40972,
-          "lat": 4.88333,
-          "lng": 114.83333,
-          "admin1": "Brunei-Muara District"
-        },
-        {
-          "nameEn": "Mentiri",
-          "nameLocal": "Mentiri",
-          "nameZh": null,
-          "population": 39324,
-          "lat": 4.97058,
-          "lng": 115.02078,
-          "admin1": "Brunei-Muara District"
-        },
-        {
           "nameEn": "Kuala Belait",
           "nameLocal": "Kuala Belait",
           "nameZh": "马来奕",
@@ -2547,6 +2529,24 @@
           "lat": 4.80278,
           "lng": 114.64917,
           "admin1": "Tutong"
+        },
+        {
+          "nameEn": "Sengkurong",
+          "nameLocal": "Sengkurong",
+          "nameZh": null,
+          "population": 40972,
+          "lat": 4.88333,
+          "lng": 114.83333,
+          "admin1": "Brunei-Muara District"
+        },
+        {
+          "nameEn": "Mentiri",
+          "nameLocal": "Mentiri",
+          "nameZh": null,
+          "population": 39324,
+          "lat": 4.97058,
+          "lng": 115.02078,
+          "admin1": "Brunei-Muara District"
         },
         {
           "nameEn": "Serasa",
@@ -2785,15 +2785,6 @@
           "admin1": "Centre-Ouest"
         },
         {
-          "nameEn": "Saaba",
-          "nameLocal": "Saaba",
-          "nameZh": null,
-          "population": 136011,
-          "lat": 12.37136,
-          "lng": -1.41468,
-          "admin1": "Centre"
-        },
-        {
           "nameEn": "Ouahigouya",
           "nameLocal": "Ouahigouya",
           "nameZh": "瓦希古亞",
@@ -2810,6 +2801,15 @@
           "lat": 13.0883,
           "lng": -1.08368,
           "admin1": "Centre-Nord"
+        },
+        {
+          "nameEn": "Banfora",
+          "nameLocal": "Banfora",
+          "nameZh": "邦福拉",
+          "population": 117452,
+          "lat": 10.64064,
+          "lng": -4.75285,
+          "admin1": "Cascades Region"
         }
       ],
       "hubs": [
@@ -2988,15 +2988,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Douala",
-          "nameLocal": "Douala",
-          "nameZh": "杜阿拉",
-          "population": 1338082,
-          "lat": 4.04827,
-          "lng": 9.70428,
-          "admin1": "Littoral"
-        },
-        {
           "nameEn": "Yaounde",
           "nameLocal": "Yaoundé",
           "nameZh": "雅温得",
@@ -3004,6 +2995,15 @@
           "lat": 3.86667,
           "lng": 11.51667,
           "admin1": "Centre"
+        },
+        {
+          "nameEn": "Douala",
+          "nameLocal": "Douala",
+          "nameZh": "杜阿拉",
+          "population": 1338082,
+          "lat": 4.04827,
+          "lng": 9.70428,
+          "admin1": "Littoral"
         },
         {
           "nameEn": "Bamenda",
@@ -3352,15 +3352,6 @@
           "admin1": "Moyen-Chari"
         },
         {
-          "nameEn": "Kelo",
-          "nameLocal": "Kelo",
-          "nameZh": "凯洛",
-          "population": 82677,
-          "lat": 9.30859,
-          "lng": 15.80658,
-          "admin1": "Tandjilé"
-        },
-        {
           "nameEn": "Am Timan",
           "nameLocal": "Am Timan",
           "nameZh": "安提曼",
@@ -3368,6 +3359,15 @@
           "lat": 11.0433,
           "lng": 20.28342,
           "admin1": "Salamat"
+        },
+        {
+          "nameEn": "Doba",
+          "nameLocal": "Doba",
+          "nameZh": null,
+          "population": 70942,
+          "lat": 8.66389,
+          "lng": 16.85324,
+          "admin1": "Logone Oriental"
         }
       ],
       "hubs": [
@@ -3584,7 +3584,7 @@
       "commonLanguages": "French (official), 60 native dialects of which Dioula is the most widely spoken",
       "capital": {
         "nameEn": "Yamoussoukro",
-        "nameZh": null
+        "nameZh": "雅穆蘇克雷"
       },
       "region": "Africa",
       "regionZh": "非洲",
@@ -3685,21 +3685,21 @@
       ],
       "cities": [
         {
+          "nameEn": "Yamoussoukro",
+          "nameLocal": "Yamoussoukro",
+          "nameZh": "雅穆蘇克雷",
+          "population": 275686,
+          "lat": 6.82055,
+          "lng": -5.27674,
+          "admin1": "Lacs District"
+        },
+        {
           "nameEn": "Abidjan",
           "nameLocal": "Abidjan",
           "nameZh": "阿比让",
           "population": 6321017,
           "lat": 5.35444,
           "lng": -4.00167,
-          "admin1": "Abidjan Autonomous District"
-        },
-        {
-          "nameEn": "Abobo",
-          "nameLocal": "Abobo",
-          "nameZh": "阿波波",
-          "population": 1340083,
-          "lat": 5.41613,
-          "lng": -4.0159,
           "admin1": "Abidjan Autonomous District"
         },
         {
@@ -3730,13 +3730,13 @@
           "admin1": "Sassandra-Marahoue"
         },
         {
-          "nameEn": "Koumassi",
-          "nameLocal": "Koumassi",
-          "nameZh": null,
-          "population": 412282,
-          "lat": 5.29716,
-          "lng": -3.96753,
-          "admin1": "Abidjan Autonomous District"
+          "nameEn": "San-Pedro",
+          "nameLocal": "San-Pédro",
+          "nameZh": "聖佩德羅",
+          "population": 390654,
+          "lat": 4.74851,
+          "lng": -6.6363,
+          "admin1": "Bas-Sassandra District"
         }
       ],
       "hubs": [
@@ -3920,15 +3920,6 @@
           "admin1": "Djibouti"
         },
         {
-          "nameEn": "Balbala",
-          "nameLocal": "Balbala",
-          "nameZh": null,
-          "population": 554350,
-          "lat": 11.56194,
-          "lng": 43.10666,
-          "admin1": "Djibouti"
-        },
-        {
           "nameEn": "Ali Sabih",
           "nameLocal": "Ali Sabih",
           "nameZh": "阿里萨比耶",
@@ -3963,6 +3954,15 @@
           "lat": 11.52639,
           "lng": 42.85194,
           "admin1": "Arta"
+        },
+        {
+          "nameEn": "Obock",
+          "nameLocal": "Obock",
+          "nameZh": "奧博克",
+          "population": 15429,
+          "lat": 11.96693,
+          "lng": 43.28835,
+          "admin1": "Obock"
         }
       ],
       "hubs": [
@@ -4276,15 +4276,6 @@
           "admin1": "Giza"
         },
         {
-          "nameEn": "Shubra al Khaymah",
-          "nameLocal": "Shubrā al Khaymah",
-          "nameZh": "舒卜拉海迈",
-          "population": 1240289,
-          "lat": 30.12511,
-          "lng": 31.25053,
-          "admin1": "Qalyubia"
-        },
-        {
           "nameEn": "Port Said",
           "nameLocal": "Port Said",
           "nameZh": "塞得港",
@@ -4301,6 +4292,15 @@
           "lat": 29.97371,
           "lng": 32.52627,
           "admin1": "Suez"
+        },
+        {
+          "nameEn": "Al Mansurah",
+          "nameLocal": "Al Mansurah",
+          "nameZh": null,
+          "population": 621953,
+          "lat": 31.03637,
+          "lng": 31.38069,
+          "admin1": "Dakahlia"
         }
       ],
       "hubs": [
@@ -4536,15 +4536,6 @@
           "admin1": "Haut-Ogooué"
         },
         {
-          "nameEn": "Owendo",
-          "nameLocal": "Owendo",
-          "nameZh": null,
-          "population": 95313,
-          "lat": 0.29123,
-          "lng": 9.50465,
-          "admin1": "Estuaire"
-        },
-        {
           "nameEn": "Oyem",
           "nameLocal": "Oyem",
           "nameZh": "奥耶姆",
@@ -4554,13 +4545,22 @@
           "admin1": "Woleu-Ntem"
         },
         {
-          "nameEn": "Moanda",
-          "nameLocal": "Moanda",
-          "nameZh": "莫安达",
-          "population": 71099,
-          "lat": -1.56652,
-          "lng": 13.1987,
-          "admin1": "Haut-Ogooué"
+          "nameEn": "Lambarene",
+          "nameLocal": "Lambaréné",
+          "nameZh": "兰巴雷内",
+          "population": 46605,
+          "lat": -0.7001,
+          "lng": 10.24055,
+          "admin1": "Moyen-Ogooué"
+        },
+        {
+          "nameEn": "Mouila",
+          "nameLocal": "Mouila",
+          "nameZh": null,
+          "population": 43342,
+          "lat": -1.86846,
+          "lng": 11.05594,
+          "admin1": "Ngouni"
         }
       ],
       "hubs": [
@@ -4698,7 +4698,7 @@
       "commonLanguages": "English (official), Mandinka, Wolof, Fula, other indigenous vernaculars",
       "capital": {
         "nameEn": "Banjul",
-        "nameZh": null
+        "nameZh": "班竹"
       },
       "region": "Africa",
       "regionZh": "非洲",
@@ -4751,12 +4751,12 @@
       ],
       "cities": [
         {
-          "nameEn": "Serekunda",
-          "nameLocal": "Serekunda",
-          "nameZh": "萨拉昆达",
-          "population": 340000,
-          "lat": 13.43833,
-          "lng": -16.67806,
+          "nameEn": "Banjul",
+          "nameLocal": "Banjul",
+          "nameZh": "班竹",
+          "population": 37274,
+          "lat": 13.45274,
+          "lng": -16.57803,
           "admin1": "Banjul"
         },
         {
@@ -4769,12 +4769,12 @@
           "admin1": "Western"
         },
         {
-          "nameEn": "Bununka Kunda",
-          "nameLocal": "Bununka Kunda",
-          "nameZh": null,
-          "population": 66449,
-          "lat": 13.42722,
-          "lng": -16.68528,
+          "nameEn": "Serekunda",
+          "nameLocal": "Serekunda",
+          "nameZh": "萨拉昆达",
+          "population": 340000,
+          "lat": 13.43833,
+          "lng": -16.67806,
           "admin1": "Banjul"
         },
         {
@@ -4964,15 +4964,6 @@
           "admin1": "Conakry"
         },
         {
-          "nameEn": "Camayenne",
-          "nameLocal": "Camayenne",
-          "nameZh": null,
-          "population": 1871242,
-          "lat": 9.535,
-          "lng": -13.68778,
-          "admin1": "Conakry"
-        },
-        {
           "nameEn": "Nzerekore",
           "nameLocal": "Nzérékoré",
           "nameZh": "恩泽雷科雷",
@@ -4991,22 +4982,31 @@
           "admin1": "Kankan Region"
         },
         {
-          "nameEn": "Maneah",
-          "nameLocal": "Manéah",
+          "nameEn": "Kindia",
+          "nameLocal": "Kindia",
           "nameZh": null,
-          "population": 194297,
-          "lat": 9.73333,
-          "lng": -13.41667,
+          "population": 161024,
+          "lat": 10.05692,
+          "lng": -12.86576,
           "admin1": "Kindia"
         },
         {
-          "nameEn": "Dixinn",
-          "nameLocal": "Dixinn",
-          "nameZh": "狄辛区",
-          "population": 186553,
-          "lat": 9.55111,
-          "lng": -13.67306,
-          "admin1": "Conakry"
+          "nameEn": "Mamou",
+          "nameLocal": "Mamou",
+          "nameZh": null,
+          "population": 79109,
+          "lat": 10.37546,
+          "lng": -12.09148,
+          "admin1": "Mamou Region"
+        },
+        {
+          "nameEn": "Faranah",
+          "nameLocal": "Faranah",
+          "nameZh": null,
+          "population": 70181,
+          "lat": 10.04036,
+          "lng": -10.74343,
+          "admin1": "Faranah"
         }
       ],
       "hubs": [
@@ -5152,15 +5152,6 @@
           "admin1": "Bissau"
         },
         {
-          "nameEn": "Bairro Militar",
-          "nameLocal": "Bairro Militar",
-          "nameZh": null,
-          "population": 65274,
-          "lat": 11.8746,
-          "lng": -15.6158,
-          "admin1": "Bissau"
-        },
-        {
           "nameEn": "Gabu",
           "nameLocal": "Gabú",
           "nameZh": "加布",
@@ -5168,6 +5159,15 @@
           "lat": 12.28,
           "lng": -14.22222,
           "admin1": "Gabú"
+        },
+        {
+          "nameEn": "Bafata",
+          "nameLocal": "Bafatá",
+          "nameZh": null,
+          "population": 33502,
+          "lat": 12.16583,
+          "lng": -14.66167,
+          "admin1": "Bafatá"
         },
         {
           "nameEn": "Contumo",
@@ -5188,12 +5188,12 @@
           "admin1": "Bissau"
         },
         {
-          "nameEn": "Missira",
-          "nameLocal": "Missira",
+          "nameEn": "Reino de Antula",
+          "nameLocal": "Reino de Antula",
           "nameZh": null,
-          "population": 38838,
-          "lat": 11.86145,
-          "lng": -15.60679,
+          "population": 30778,
+          "lat": 11.9,
+          "lng": -15.58333,
           "admin1": "Bissau"
         }
       ],
@@ -5728,15 +5728,6 @@
           "admin1": "East Java"
         },
         {
-          "nameEn": "Bekasi",
-          "nameLocal": "Bekasi",
-          "nameZh": "勿加泗",
-          "population": 2648272,
-          "lat": -6.2349,
-          "lng": 106.9896,
-          "admin1": "West Java"
-        },
-        {
           "nameEn": "Bandung",
           "nameLocal": "Bandung",
           "nameZh": "萬隆",
@@ -5755,13 +5746,22 @@
           "admin1": "North Sumatra"
         },
         {
-          "nameEn": "Depok",
-          "nameLocal": "Depok",
-          "nameZh": "德博",
-          "population": 2163635,
-          "lat": -6.4,
-          "lng": 106.81861,
-          "admin1": "West Java"
+          "nameEn": "Palembang",
+          "nameLocal": "Palembang",
+          "nameZh": "旧港",
+          "population": 1801367,
+          "lat": -2.91673,
+          "lng": 104.7458,
+          "admin1": "South Sumatra"
+        },
+        {
+          "nameEn": "Semarang",
+          "nameLocal": "Semarang",
+          "nameZh": "三寶瓏",
+          "population": 1694740,
+          "lat": -6.99306,
+          "lng": 110.42083,
+          "admin1": "Central Java"
         }
       ],
       "hubs": [
@@ -5787,13 +5787,13 @@
         },
         {
           "type": "airport",
-          "subtype": "large",
-          "name": "Juanda International Airport",
+          "subtype": "medium",
+          "name": "Husein Sastranegara International Airport",
           "nameZh": null,
-          "code": "SUB",
-          "city": "Surabaya",
-          "lat": -7.37983,
-          "lng": 112.787003
+          "code": "BDO",
+          "city": "Bandung",
+          "lat": -6.90063,
+          "lng": 107.575996
         },
         {
           "type": "port",
@@ -6439,15 +6439,6 @@
           "admin1": "Baghdad"
         },
         {
-          "nameEn": "Al Mawsil al Jadidah",
-          "nameLocal": "Al Mawşil al Jadīdah",
-          "nameZh": null,
-          "population": 2065597,
-          "lat": 36.33271,
-          "lng": 43.10555,
-          "admin1": "Nineveh"
-        },
-        {
           "nameEn": "Mosul",
           "nameLocal": "Mosul",
           "nameZh": "摩苏尔",
@@ -6482,6 +6473,15 @@
           "lat": 32.61603,
           "lng": 44.02488,
           "admin1": "Karbala"
+        },
+        {
+          "nameEn": "Kirkuk",
+          "nameLocal": "Kirkuk",
+          "nameZh": "基爾庫克",
+          "population": 1031000,
+          "lat": 35.46806,
+          "lng": 44.39222,
+          "admin1": "Kirkuk"
         }
       ],
       "hubs": [
@@ -6725,31 +6725,31 @@
           "admin1": "Irbid"
         },
         {
-          "nameEn": "Russeifa",
-          "nameLocal": "Russeifa",
-          "nameZh": "鲁赛法",
-          "population": 268237,
-          "lat": 32.01778,
-          "lng": 36.04639,
-          "admin1": "Zarqa"
+          "nameEn": "'Ajlun",
+          "nameLocal": "‘Ajlūn",
+          "nameZh": null,
+          "population": 125557,
+          "lat": 32.33326,
+          "lng": 35.75279,
+          "admin1": "Ajloun"
         },
         {
-          "nameEn": "Hayy Khilda",
-          "nameLocal": "Ḩayy Khildā",
+          "nameEn": "As Salt",
+          "nameLocal": "As Salţ",
           "nameZh": null,
-          "population": 251000,
-          "lat": 31.99202,
-          "lng": 35.84002,
-          "admin1": "Amman"
+          "population": 107874,
+          "lat": 32.03917,
+          "lng": 35.72722,
+          "admin1": "Balqa"
         },
         {
-          "nameEn": "Khuraybat as Suq",
-          "nameLocal": "Khuraybat as Sūq",
-          "nameZh": null,
-          "population": 186158,
-          "lat": 31.87913,
-          "lng": 35.92098,
-          "admin1": "Amman"
+          "nameEn": "Aqaba",
+          "nameLocal": "Aqaba",
+          "nameZh": "亞喀巴",
+          "population": 95048,
+          "lat": 29.52667,
+          "lng": 35.00778,
+          "admin1": "Aqaba"
         }
       ],
       "hubs": [
@@ -7004,15 +7004,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Almaty",
-          "nameLocal": "Almaty",
-          "nameZh": "阿拉木图",
-          "population": 1977011,
-          "lat": 43.25249,
-          "lng": 76.9115,
-          "admin1": "Almaty"
-        },
-        {
           "nameEn": "Astana",
           "nameLocal": "Astana",
           "nameZh": "阿斯塔纳",
@@ -7020,6 +7011,15 @@
           "lat": 51.1801,
           "lng": 71.44598,
           "admin1": "Astana"
+        },
+        {
+          "nameEn": "Almaty",
+          "nameLocal": "Almaty",
+          "nameZh": "阿拉木图",
+          "population": 1977011,
+          "lat": 43.25249,
+          "lng": 76.9115,
+          "admin1": "Almaty"
         },
         {
           "nameEn": "Shymkent",
@@ -7163,7 +7163,7 @@
       "commonLanguages": "Arabic (official), English widely spoken",
       "capital": {
         "nameEn": "Kuwait City",
-        "nameZh": null
+        "nameZh": "科威特"
       },
       "region": "Asia",
       "regionZh": "亚洲",
@@ -7216,6 +7216,15 @@
       ],
       "cities": [
         {
+          "nameEn": "Kuwait City",
+          "nameLocal": "Kuwait City",
+          "nameZh": "科威特",
+          "population": 60064,
+          "lat": 29.367,
+          "lng": 47.97429,
+          "admin1": "Al Asimah"
+        },
+        {
           "nameEn": "Al Ahmadi",
           "nameLocal": "Al Aḩmadī",
           "nameZh": "艾哈迈迪",
@@ -7234,24 +7243,6 @@
           "admin1": "Hawalli"
         },
         {
-          "nameEn": "As Salimiyah",
-          "nameLocal": "As Sālimīyah",
-          "nameZh": null,
-          "population": 147649,
-          "lat": 29.33389,
-          "lng": 48.07611,
-          "admin1": "Hawalli"
-        },
-        {
-          "nameEn": "Sabah as Salim",
-          "nameLocal": "Şabāḩ as Sālim",
-          "nameZh": null,
-          "population": 139163,
-          "lat": 29.25722,
-          "lng": 48.05722,
-          "admin1": "Mubārak al Kabīr"
-        },
-        {
           "nameEn": "Al Farwaniyah",
           "nameLocal": "Al Farwānīyah",
           "nameZh": "费尔瓦尼耶",
@@ -7261,13 +7252,22 @@
           "admin1": "Al Farwaniyah"
         },
         {
-          "nameEn": "Al Fahahil",
-          "nameLocal": "Al Faḩāḩīl",
+          "nameEn": "Al Jahra'",
+          "nameLocal": "Al Jahrā’",
           "nameZh": null,
-          "population": 68290,
-          "lat": 29.0825,
-          "lng": 48.13028,
-          "admin1": "Al Aḩmadī"
+          "population": 24281,
+          "lat": 29.3375,
+          "lng": 47.65806,
+          "admin1": "Al Jahra Governorate"
+        },
+        {
+          "nameEn": "Sabah as Salim",
+          "nameLocal": "Şabāḩ as Sālim",
+          "nameZh": null,
+          "population": 139163,
+          "lat": 29.25722,
+          "lng": 48.05722,
+          "admin1": "Mubārak al Kabīr"
         }
       ],
       "hubs": [
@@ -7496,22 +7496,22 @@
           "admin1": "Issyk-Kul"
         },
         {
-          "nameEn": "Tokmok",
-          "nameLocal": "Tokmok",
-          "nameZh": "托克马克",
-          "population": 71443,
-          "lat": 42.84194,
-          "lng": 75.30149,
-          "admin1": "Chuy Region"
+          "nameEn": "Naryn",
+          "nameLocal": "Naryn",
+          "nameZh": null,
+          "population": 41178,
+          "lat": 41.4283,
+          "lng": 75.9957,
+          "admin1": "Naryn Region"
         },
         {
-          "nameEn": "Uzgen",
-          "nameLocal": "Uzgen",
-          "nameZh": "乌兹根",
-          "population": 49410,
-          "lat": 40.76994,
-          "lng": 73.30068,
-          "admin1": "Osh Region"
+          "nameEn": "Talas",
+          "nameLocal": "Talas",
+          "nameZh": null,
+          "population": 40308,
+          "lat": 42.52256,
+          "lng": 72.2417,
+          "admin1": "Talas Region"
         }
       ],
       "hubs": [
@@ -7697,15 +7697,6 @@
           "admin1": "Beirut"
         },
         {
-          "nameEn": "Ra's Bayrut",
-          "nameLocal": "Ra’s Bayrūt",
-          "nameZh": "拉斯贝鲁特",
-          "population": 1251739,
-          "lat": 33.9,
-          "lng": 35.48333,
-          "admin1": "Beirut"
-        },
-        {
           "nameEn": "Tripoli",
           "nameLocal": "Tripoli",
           "nameZh": "的黎波里",
@@ -7724,22 +7715,31 @@
           "admin1": "South Governorate"
         },
         {
-          "nameEn": "Tyre",
-          "nameLocal": "Tyre",
-          "nameZh": "苏尔",
-          "population": 135204,
-          "lat": 33.27333,
-          "lng": 35.19389,
-          "admin1": "South Governorate"
+          "nameEn": "Nabatiye et Tahta",
+          "nameLocal": "Nabatîyé et Tahta",
+          "nameZh": null,
+          "population": 120000,
+          "lat": 33.37889,
+          "lng": 35.48389,
+          "admin1": "Nabatieh"
         },
         {
-          "nameEn": "Aley",
-          "nameLocal": "Aley",
-          "nameZh": "阿莱",
-          "population": 130000,
-          "lat": 33.80528,
-          "lng": 35.6,
-          "admin1": "Mount Lebanon"
+          "nameEn": "Zahle",
+          "nameLocal": "Zahlé",
+          "nameZh": "扎赫勒",
+          "population": 78145,
+          "lat": 33.84675,
+          "lng": 35.90203,
+          "admin1": "Bekaa"
+        },
+        {
+          "nameEn": "Baalbek",
+          "nameLocal": "Baalbek",
+          "nameZh": "巴勒贝克",
+          "population": 30916,
+          "lat": 34.00583,
+          "lng": 36.21806,
+          "admin1": "Baalbek-Hermel Governorate"
         }
       ],
       "hubs": [
@@ -8023,15 +8023,6 @@
           "admin1": "Misratah"
         },
         {
-          "nameEn": "Zliten",
-          "nameLocal": "Zliten",
-          "nameZh": "兹利坦",
-          "population": 203790,
-          "lat": 32.46739,
-          "lng": 14.56874,
-          "admin1": "Misratah"
-        },
-        {
           "nameEn": "Al Khums",
           "nameLocal": "Al Khums",
           "nameZh": "胡姆斯",
@@ -8048,6 +8039,15 @@
           "lat": 32.7571,
           "lng": 12.72764,
           "admin1": "Az Zawiyah"
+        },
+        {
+          "nameEn": "Sabha",
+          "nameLocal": "Sabha",
+          "nameZh": "塞卜哈",
+          "population": 149329,
+          "lat": 27.03766,
+          "lng": 14.42832,
+          "admin1": "Sabha District"
         }
       ],
       "hubs": [
@@ -8284,24 +8284,6 @@
           "admin1": "Johor"
         },
         {
-          "nameEn": "Kampung Baru Subang",
-          "nameLocal": "Kampung Baru Subang",
-          "nameZh": null,
-          "population": 833571,
-          "lat": 3.15,
-          "lng": 101.53333,
-          "admin1": "Selangor"
-        },
-        {
-          "nameEn": "Petaling Jaya",
-          "nameLocal": "Petaling Jaya",
-          "nameZh": "八打灵再也",
-          "population": 807879,
-          "lat": 3.10726,
-          "lng": 101.60671,
-          "admin1": "Selangor"
-        },
-        {
           "nameEn": "Ipoh",
           "nameLocal": "Ipoh",
           "nameZh": "怡保",
@@ -8311,13 +8293,31 @@
           "admin1": "Perak"
         },
         {
-          "nameEn": "Shah Alam",
-          "nameLocal": "Shah Alam",
-          "nameZh": "莎阿南",
-          "population": 740750,
-          "lat": 3.08507,
-          "lng": 101.53281,
-          "admin1": "Selangor"
+          "nameEn": "Malacca",
+          "nameLocal": "Malacca",
+          "nameZh": "马六甲",
+          "population": 579000,
+          "lat": 2.196,
+          "lng": 102.2405,
+          "admin1": "Melaka"
+        },
+        {
+          "nameEn": "Kota Bharu",
+          "nameLocal": "Kota Bharu",
+          "nameZh": "哥打巴鲁",
+          "population": 568900,
+          "lat": 6.12361,
+          "lng": 102.24333,
+          "admin1": "Kelantan"
+        },
+        {
+          "nameEn": "Kuantan",
+          "nameLocal": "Kuantan",
+          "nameZh": "关丹",
+          "population": 548014,
+          "lat": 3.8077,
+          "lng": 103.326,
+          "admin1": "Pahang"
         }
       ],
       "hubs": [
@@ -8344,12 +8344,12 @@
         {
           "type": "airport",
           "subtype": "large",
-          "name": "Kota Kinabalu International Airport",
+          "name": "Sultan Azlan Shah Airport",
           "nameZh": null,
-          "code": "BKI",
-          "city": "Kota Kinabalu",
-          "lat": 5.932743,
-          "lng": 116.049324
+          "code": "IPH",
+          "city": "Ipoh",
+          "lat": 4.56733,
+          "lng": 101.091643
         },
         {
           "type": "port",
@@ -8813,15 +8813,6 @@
           "admin1": "Sikasso"
         },
         {
-          "nameEn": "Koutiala",
-          "nameLocal": "Koutiala",
-          "nameZh": "庫佳拉",
-          "population": 218031,
-          "lat": 12.38723,
-          "lng": -5.46507,
-          "admin1": "Sikasso"
-        },
-        {
           "nameEn": "Segou",
           "nameLocal": "Ségou",
           "nameZh": "塞古",
@@ -8847,6 +8838,15 @@
           "lat": 14.4843,
           "lng": -4.18296,
           "admin1": "Mopti"
+        },
+        {
+          "nameEn": "Gao",
+          "nameLocal": "Gao",
+          "nameZh": "加奥",
+          "population": 133110,
+          "lat": 16.27167,
+          "lng": -0.04472,
+          "admin1": "Gao"
         }
       ],
       "hubs": [
@@ -9106,13 +9106,13 @@
           "admin1": "Hodh Ech Chargi"
         },
         {
-          "nameEn": "Mbera",
-          "nameLocal": "Mbera",
-          "nameZh": null,
-          "population": 58985,
-          "lat": 15.85615,
-          "lng": -5.79067,
-          "admin1": "Hodh Ech Chargi"
+          "nameEn": "Kaedi",
+          "nameLocal": "Kaédi",
+          "nameZh": "卡埃迪",
+          "population": 56283,
+          "lat": 16.15071,
+          "lng": -13.50582,
+          "admin1": "Gorgol"
         }
       ],
       "hubs": [
@@ -9333,15 +9333,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Casablanca",
-          "nameLocal": "Casablanca",
-          "nameZh": "卡萨布兰卡",
-          "population": 3665954,
-          "lat": 33.58831,
-          "lng": -7.61138,
-          "admin1": "Casablanca-Settat"
-        },
-        {
           "nameEn": "Rabat",
           "nameLocal": "Rabat",
           "nameZh": "拉巴特",
@@ -9349,6 +9340,15 @@
           "lat": 34.01325,
           "lng": -6.83255,
           "admin1": "Rabat-Salé-Kénitra"
+        },
+        {
+          "nameEn": "Casablanca",
+          "nameLocal": "Casablanca",
+          "nameZh": "卡萨布兰卡",
+          "population": 3665954,
+          "lat": 33.58831,
+          "lng": -7.61138,
+          "admin1": "Casablanca-Settat"
         },
         {
           "nameEn": "Fes",
@@ -9378,13 +9378,13 @@
           "admin1": "Marrakesh-Safi"
         },
         {
-          "nameEn": "Sale",
-          "nameLocal": "Salé",
-          "nameZh": "塞拉",
-          "population": 972299,
-          "lat": 34.0531,
-          "lng": -6.79846,
-          "admin1": "Rabat-Salé-Kénitra"
+          "nameEn": "Agadir",
+          "nameLocal": "Agadir",
+          "nameZh": "阿加迪尔",
+          "population": 698310,
+          "lat": 30.42018,
+          "lng": -9.59815,
+          "admin1": "Souss-Massa"
         }
       ],
       "hubs": [
@@ -9904,13 +9904,13 @@
           "admin1": "Agadez"
         },
         {
-          "nameEn": "Arlit",
-          "nameLocal": "Arlit",
-          "nameZh": "阿爾利特",
-          "population": 106448,
-          "lat": 18.73694,
-          "lng": 7.38528,
-          "admin1": "Agadez"
+          "nameEn": "Dosso",
+          "nameLocal": "Dosso",
+          "nameZh": null,
+          "population": 79406,
+          "lat": 13.049,
+          "lng": 3.1937,
+          "admin1": "Dosso Region"
         }
       ],
       "hubs": [
@@ -10247,13 +10247,13 @@
       ],
       "cities": [
         {
-          "nameEn": "Lagos",
-          "nameLocal": "Lagos",
-          "nameZh": "拉各斯",
-          "population": 15388000,
-          "lat": 6.45407,
-          "lng": 3.39467,
-          "admin1": "Lagos"
+          "nameEn": "Abuja",
+          "nameLocal": "Abuja",
+          "nameZh": "阿布贾",
+          "population": 2690000,
+          "lat": 9.05785,
+          "lng": 7.49508,
+          "admin1": "FCT"
         },
         {
           "nameEn": "Kano",
@@ -10274,15 +10274,6 @@
           "admin1": "Oyo State"
         },
         {
-          "nameEn": "Abuja",
-          "nameLocal": "Abuja",
-          "nameZh": "阿布贾",
-          "population": 2690000,
-          "lat": 9.05785,
-          "lng": 7.49508,
-          "admin1": "FCT"
-        },
-        {
           "nameEn": "Port Harcourt",
           "nameLocal": "Port Harcourt",
           "nameZh": "哈科特港",
@@ -10299,6 +10290,15 @@
           "lat": 10.52641,
           "lng": 7.43879,
           "admin1": "Kaduna State"
+        },
+        {
+          "nameEn": "Benin City",
+          "nameLocal": "Benin City",
+          "nameZh": "贝宁城",
+          "population": 1782000,
+          "lat": 6.33815,
+          "lng": 5.62575,
+          "admin1": "Edo State"
         }
       ],
       "hubs": [
@@ -10528,33 +10528,6 @@
           "admin1": "Muscat"
         },
         {
-          "nameEn": "Seeb",
-          "nameLocal": "Seeb",
-          "nameZh": "锡卜",
-          "population": 470878,
-          "lat": 23.67027,
-          "lng": 58.18911,
-          "admin1": "Muscat"
-        },
-        {
-          "nameEn": "Bawshar",
-          "nameLocal": "Bawshar",
-          "nameZh": "包舍爾",
-          "population": 383257,
-          "lat": 23.57769,
-          "lng": 58.39982,
-          "admin1": "Muscat"
-        },
-        {
-          "nameEn": "'Ibri",
-          "nameLocal": "‘Ibrī",
-          "nameZh": "伊比利",
-          "population": 163473,
-          "lat": 23.22573,
-          "lng": 56.51572,
-          "admin1": "Ad Dhahirah"
-        },
-        {
           "nameEn": "Salalah",
           "nameLocal": "Şalālah",
           "nameZh": "塞拉莱",
@@ -10564,13 +10537,40 @@
           "admin1": "Dhofar"
         },
         {
-          "nameEn": "Saham",
-          "nameLocal": "Şaḩam",
-          "nameZh": "萨马",
-          "population": 140000,
-          "lat": 24.17222,
-          "lng": 56.88861,
+          "nameEn": "Sohar",
+          "nameLocal": "Sohar",
+          "nameZh": "苏哈尔",
+          "population": 108274,
+          "lat": 24.34745,
+          "lng": 56.70937,
           "admin1": "Al Batinah North"
+        },
+        {
+          "nameEn": "Al Buraymi",
+          "nameLocal": "Al Buraymī",
+          "nameZh": null,
+          "population": 73670,
+          "lat": 24.25088,
+          "lng": 55.79312,
+          "admin1": "Al Buraimi"
+        },
+        {
+          "nameEn": "Nizwa",
+          "nameLocal": "Nizwá",
+          "nameZh": null,
+          "population": 72076,
+          "lat": 22.93333,
+          "lng": 57.53333,
+          "admin1": "Ad Dakhiliyah"
+        },
+        {
+          "nameEn": "Sur",
+          "nameLocal": "Sur",
+          "nameZh": "苏尔",
+          "population": 71152,
+          "lat": 22.56667,
+          "lng": 59.52889,
+          "admin1": "Southeastern Governorate"
         }
       ],
       "hubs": [
@@ -10587,22 +10587,22 @@
         {
           "type": "airport",
           "subtype": "large",
-          "name": "Duqm International Airport",
-          "nameZh": null,
-          "code": "DQM",
-          "city": "Duqm",
-          "lat": 19.501944,
-          "lng": 57.634167
-        },
-        {
-          "type": "airport",
-          "subtype": "large",
           "name": "Salalah International Airport",
           "nameZh": null,
           "code": "SLL",
           "city": "Salalah",
           "lat": 17.0387,
           "lng": 54.091301
+        },
+        {
+          "type": "airport",
+          "subtype": "large",
+          "name": "Duqm International Airport",
+          "nameZh": null,
+          "code": "DQM",
+          "city": "Duqm",
+          "lat": 19.501944,
+          "lng": 57.634167
         },
         {
           "type": "port",
@@ -10712,7 +10712,7 @@
       "commonLanguages": "Punjabi 38.8%, Pashto (alternate name, Pashtu) 18.2%, Sindhi 14.6%, Saraiki (a Punjabi variant) 12.2%, Urdu 7.1%, Balochi 3%, Hindko 2.4%, Brahui 1.2%, other 2.4%",
       "capital": {
         "nameEn": "Islamabad",
-        "nameZh": null
+        "nameZh": "伊斯蘭堡"
       },
       "region": "Asia",
       "regionZh": "亚洲",
@@ -10771,6 +10771,15 @@
       ],
       "cities": [
         {
+          "nameEn": "Islamabad",
+          "nameLocal": "Islamabad",
+          "nameZh": "伊斯蘭堡",
+          "population": 601600,
+          "lat": 33.72148,
+          "lng": 73.04329,
+          "admin1": "Islamabad"
+        },
+        {
           "nameEn": "Lahore",
           "nameLocal": "Lahore",
           "nameZh": "拉合尔",
@@ -10798,31 +10807,22 @@
           "admin1": "Khyber Pakhtunkhwa"
         },
         {
-          "nameEn": "Faisalabad",
-          "nameLocal": "Faisalabad",
-          "nameZh": "费萨拉巴德",
-          "population": 3800193,
-          "lat": 31.41554,
-          "lng": 73.08969,
-          "admin1": "Punjab"
+          "nameEn": "Quetta",
+          "nameLocal": "Quetta",
+          "nameZh": "奎達",
+          "population": 1565546,
+          "lat": 30.18414,
+          "lng": 67.00141,
+          "admin1": "Balochistan"
         },
         {
-          "nameEn": "Rawalpindi",
-          "nameLocal": "Rawalpindi",
-          "nameZh": "拉瓦尔品第",
-          "population": 3357612,
-          "lat": 33.59733,
-          "lng": 73.0479,
-          "admin1": "Punjab"
-        },
-        {
-          "nameEn": "Gujranwala",
-          "nameLocal": "Gujranwala",
-          "nameZh": "古吉兰瓦拉",
-          "population": 2511118,
-          "lat": 32.15567,
-          "lng": 74.18705,
-          "admin1": "Punjab"
+          "nameEn": "Muzaffarabad",
+          "nameLocal": "Muzaffarābād",
+          "nameZh": null,
+          "population": 725000,
+          "lat": 34.37002,
+          "lng": 73.47082,
+          "admin1": "Azad Kashmir"
         }
       ],
       "hubs": [
@@ -10849,12 +10849,12 @@
         {
           "type": "airport",
           "subtype": "large",
-          "name": "Bacha Khan International Airport",
+          "name": "Jinnah International Airport",
           "nameZh": null,
-          "code": "PEW",
-          "city": "Peshawar",
-          "lat": 33.9939,
-          "lng": 71.514603
+          "code": "KHI",
+          "city": "Karachi",
+          "lat": 24.9065,
+          "lng": 67.160797
         },
         {
           "type": "port",
@@ -10989,15 +10989,6 @@
       ],
       "cities": [
         {
-          "nameEn": "East Jerusalem",
-          "nameLocal": "East Jerusalem",
-          "nameZh": "东耶路撒冷",
-          "population": 428304,
-          "lat": 31.78336,
-          "lng": 35.23388,
-          "admin1": "West Bank"
-        },
-        {
           "nameEn": "Gaza",
           "nameLocal": "Gaza",
           "nameZh": "加沙",
@@ -11007,21 +10998,21 @@
           "admin1": "Gaza Strip"
         },
         {
+          "nameEn": "Jericho",
+          "nameLocal": "Jericho",
+          "nameZh": "杰里科",
+          "population": 19783,
+          "lat": 31.86667,
+          "lng": 35.45,
+          "admin1": "West Bank"
+        },
+        {
           "nameEn": "Khan Yunis",
           "nameLocal": "Khān Yūnis",
           "nameZh": "汗尤尼斯",
           "population": 173183,
           "lat": 31.34018,
           "lng": 34.30627,
-          "admin1": "Gaza Strip"
-        },
-        {
-          "nameEn": "Jabalya",
-          "nameLocal": "Jabālyā",
-          "nameZh": "賈巴利亞",
-          "population": 168568,
-          "lat": 31.5272,
-          "lng": 34.48347,
           "admin1": "Gaza Strip"
         },
         {
@@ -11041,6 +11032,15 @@
           "lat": 32.22111,
           "lng": 35.25444,
           "admin1": "West Bank"
+        },
+        {
+          "nameEn": "Rafah",
+          "nameLocal": "Rafaḩ",
+          "nameZh": "拉法",
+          "population": 126305,
+          "lat": 31.29722,
+          "lng": 34.24357,
+          "admin1": "Gaza Strip"
         }
       ],
       "hubs": [],
@@ -11200,39 +11200,39 @@
           "admin1": "Baladiyat ar Rayyan"
         },
         {
-          "nameEn": "Lusail",
-          "nameLocal": "Lusail",
-          "nameZh": null,
-          "population": 198600,
-          "lat": 25.4175,
-          "lng": 51.5075,
-          "admin1": "Al Daayen"
-        },
-        {
-          "nameEn": "Al Matar al 'Atiq",
-          "nameLocal": "Al Maţār al ‘Atīq",
-          "nameZh": null,
-          "population": 76774,
-          "lat": 25.25138,
-          "lng": 51.55569,
-          "admin1": "Baladiyat ad Dawhah"
-        },
-        {
-          "nameEn": "Al Mansurah",
-          "nameLocal": "Al Manşūrah",
-          "nameZh": null,
-          "population": 65493,
-          "lat": 25.26807,
-          "lng": 51.53219,
-          "admin1": "Baladiyat ad Dawhah"
-        },
-        {
           "nameEn": "Az Za'ayin",
           "nameLocal": "Az̧ Z̧a‘āyin",
           "nameZh": null,
           "population": 54339,
           "lat": 25.57744,
           "lng": 51.48306,
+          "admin1": "Al Daayen"
+        },
+        {
+          "nameEn": "Al Wakrah",
+          "nameLocal": "Al Wakrah",
+          "nameZh": null,
+          "population": 26436,
+          "lat": 25.17151,
+          "lng": 51.60337,
+          "admin1": "Al Wakrah"
+        },
+        {
+          "nameEn": "Al Khawr",
+          "nameLocal": "Al Khawr",
+          "nameZh": null,
+          "population": 18923,
+          "lat": 25.68389,
+          "lng": 51.50583,
+          "admin1": "Al Khor"
+        },
+        {
+          "nameEn": "Lusail",
+          "nameLocal": "Lusail",
+          "nameZh": null,
+          "population": 198600,
+          "lat": 25.4175,
+          "lng": 51.5075,
           "admin1": "Al Daayen"
         }
       ],
@@ -11446,15 +11446,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Jeddah",
-          "nameLocal": "Jeddah",
-          "nameZh": "吉达",
-          "population": 4697000,
-          "lat": 21.49012,
-          "lng": 39.18624,
-          "admin1": "Mecca Region"
-        },
-        {
           "nameEn": "Riyadh",
           "nameLocal": "Riyadh",
           "nameZh": "利雅得",
@@ -11491,13 +11482,22 @@
           "admin1": "Eastern Province"
         },
         {
-          "nameEn": "Sultanah",
-          "nameLocal": "Sulţānah",
+          "nameEn": "Buraydah",
+          "nameLocal": "Buraydah",
           "nameZh": null,
-          "population": 946697,
-          "lat": 24.49258,
-          "lng": 39.58572,
-          "admin1": "Medina Region"
+          "population": 745353,
+          "lat": 26.32599,
+          "lng": 43.97497,
+          "admin1": "Al-Qassim Region"
+        },
+        {
+          "nameEn": "Tabuk",
+          "nameLocal": "Tabuk",
+          "nameZh": "塔布克",
+          "population": 667000,
+          "lat": 28.3998,
+          "lng": 36.57151,
+          "admin1": "Tabuk Region"
         }
       ],
       "hubs": [
@@ -11514,22 +11514,22 @@
         {
           "type": "airport",
           "subtype": "large",
-          "name": "King Abdulaziz International Airport",
-          "nameZh": null,
-          "code": "JED",
-          "city": "Jeddah",
-          "lat": 21.680241,
-          "lng": 39.157436
-        },
-        {
-          "type": "airport",
-          "subtype": "large",
           "name": "Abha International Airport",
           "nameZh": null,
           "code": "AHB",
           "city": "Abha",
           "lat": 18.2404,
           "lng": 42.656601
+        },
+        {
+          "type": "airport",
+          "subtype": "large",
+          "name": "Al-Ahsa International Airport",
+          "nameZh": null,
+          "code": "HOF",
+          "city": "Hofuf",
+          "lat": 25.285299,
+          "lng": 49.485199
         },
         {
           "type": "port",
@@ -11745,42 +11745,6 @@
           "admin1": "Dakar"
         },
         {
-          "nameEn": "Pikine",
-          "nameLocal": "Pikine",
-          "nameZh": "皮金",
-          "population": 1170791,
-          "lat": 14.76457,
-          "lng": -17.39071,
-          "admin1": "Dakar"
-        },
-        {
-          "nameEn": "Touba",
-          "nameLocal": "Touba",
-          "nameZh": "圖巴",
-          "population": 1120824,
-          "lat": 14.86229,
-          "lng": -15.87532,
-          "admin1": "Diourbel Region"
-        },
-        {
-          "nameEn": "Guediawaye",
-          "nameLocal": "Guédiawaye",
-          "nameZh": "古蒂阿瓦耶",
-          "population": 329659,
-          "lat": 14.77446,
-          "lng": -17.40212,
-          "admin1": "Dakar"
-        },
-        {
-          "nameEn": "Thies",
-          "nameLocal": "Thiès",
-          "nameZh": null,
-          "population": 317763,
-          "lat": 14.78944,
-          "lng": -16.92602,
-          "admin1": "Thies"
-        },
-        {
           "nameEn": "Kaolack",
           "nameLocal": "Kaolack",
           "nameZh": "考拉克",
@@ -11788,6 +11752,42 @@
           "lat": 14.15197,
           "lng": -16.07259,
           "admin1": "Kaolack"
+        },
+        {
+          "nameEn": "Saint-Louis",
+          "nameLocal": "Saint-Louis",
+          "nameZh": "圣路易",
+          "population": 254171,
+          "lat": 16.01793,
+          "lng": -16.48962,
+          "admin1": "Saint-Louis"
+        },
+        {
+          "nameEn": "Ziguinchor",
+          "nameLocal": "Ziguinchor",
+          "nameZh": "济金绍尔",
+          "population": 214874,
+          "lat": 12.56801,
+          "lng": -16.27326,
+          "admin1": "Ziguinchor"
+        },
+        {
+          "nameEn": "Diourbel",
+          "nameLocal": "Diourbel",
+          "nameZh": "久爾貝勒",
+          "population": 157554,
+          "lat": 14.64792,
+          "lng": -16.24363,
+          "admin1": "Diourbel Region"
+        },
+        {
+          "nameEn": "Tambacounda",
+          "nameLocal": "Tambacounda",
+          "nameZh": "坦巴昆達",
+          "population": 149071,
+          "lat": 13.77073,
+          "lng": -13.66734,
+          "admin1": "Tambacounda"
         }
       ],
       "hubs": [
@@ -11989,15 +11989,6 @@
           "admin1": "Southern Province"
         },
         {
-          "nameEn": "Koidu",
-          "nameLocal": "Koidu",
-          "nameZh": "科伊杜",
-          "population": 128030,
-          "lat": 8.64387,
-          "lng": -10.9714,
-          "admin1": "Eastern Province"
-        },
-        {
           "nameEn": "Makeni",
           "nameLocal": "Makeni",
           "nameZh": "馬卡尼",
@@ -12007,13 +11998,22 @@
           "admin1": "Northern Province"
         },
         {
-          "nameEn": "Waterloo",
-          "nameLocal": "Waterloo",
-          "nameZh": "滑铁卢，塞拉利昂",
-          "population": 55000,
-          "lat": 8.3389,
-          "lng": -13.07091,
-          "admin1": "Western Area"
+          "nameEn": "Port Loko",
+          "nameLocal": "Port Loko",
+          "nameZh": null,
+          "population": 44900,
+          "lat": 8.76609,
+          "lng": -12.78696,
+          "admin1": "North West"
+        },
+        {
+          "nameEn": "Koidu",
+          "nameLocal": "Koidu",
+          "nameZh": "科伊杜",
+          "population": 128030,
+          "lat": 8.64387,
+          "lng": -10.9714,
+          "admin1": "Eastern Province"
         }
       ],
       "hubs": [
@@ -12213,30 +12213,12 @@
           "admin1": "Banaadir"
         },
         {
-          "nameEn": "Borama",
-          "nameLocal": "Borama",
-          "nameZh": "博拉马",
-          "population": 597842,
-          "lat": 9.93611,
-          "lng": 43.18278,
-          "admin1": "Awdal"
-        },
-        {
           "nameEn": "Hargeysa",
           "nameLocal": "Hargeysa",
           "nameZh": "哈尔格萨",
           "population": 477876,
           "lat": 9.56,
           "lng": 44.065,
-          "admin1": "Woqooyi Galbeed"
-        },
-        {
-          "nameEn": "Berbera",
-          "nameLocal": "Berbera",
-          "nameZh": "柏培拉",
-          "population": 242344,
-          "lat": 10.43959,
-          "lng": 45.01432,
           "admin1": "Woqooyi Galbeed"
         },
         {
@@ -12256,6 +12238,24 @@
           "lat": 1.71594,
           "lng": 44.77166,
           "admin1": "Lower Shabeelle"
+        },
+        {
+          "nameEn": "Baidoa",
+          "nameLocal": "Baidoa",
+          "nameZh": "日本語",
+          "population": 129839,
+          "lat": 3.11383,
+          "lng": 43.6498,
+          "admin1": "Bay"
+        },
+        {
+          "nameEn": "Burao",
+          "nameLocal": "Burao",
+          "nameZh": "布拉奧",
+          "population": 99270,
+          "lat": 9.52213,
+          "lng": 45.53363,
+          "admin1": "Togdheer"
         }
       ],
       "hubs": [
@@ -12495,24 +12495,6 @@
           "admin1": "Khartoum"
         },
         {
-          "nameEn": "Omdurman",
-          "nameLocal": "Omdurman",
-          "nameZh": "恩图曼",
-          "population": 1849659,
-          "lat": 15.64453,
-          "lng": 32.47773,
-          "admin1": "Khartoum"
-        },
-        {
-          "nameEn": "Khartoum North",
-          "nameLocal": "Khartoum North",
-          "nameZh": "北喀土穆",
-          "population": 1012211,
-          "lat": 15.64925,
-          "lng": 32.53458,
-          "admin1": "Khartoum"
-        },
-        {
           "nameEn": "Nyala",
           "nameLocal": "Nyala",
           "nameZh": "尼亚拉",
@@ -12538,6 +12520,24 @@
           "lat": 15.45099,
           "lng": 36.39998,
           "admin1": "Kassala"
+        },
+        {
+          "nameEn": "El Obeid",
+          "nameLocal": "El Obeid",
+          "nameZh": null,
+          "population": 393311,
+          "lat": 13.18421,
+          "lng": 30.21669,
+          "admin1": "North Kordofan"
+        },
+        {
+          "nameEn": "Al Qadarif",
+          "nameLocal": "Al Qadarif",
+          "nameZh": "加达里夫",
+          "population": 363945,
+          "lat": 14.03493,
+          "lng": 35.38344,
+          "admin1": "Al Qaḑārif"
         }
       ],
       "hubs": [
@@ -12553,6 +12553,16 @@
         },
         {
           "type": "airport",
+          "subtype": "medium",
+          "name": "Nyala Airport",
+          "nameZh": null,
+          "code": "UYL",
+          "city": "Nyala",
+          "lat": 12.0535,
+          "lng": 24.9562
+        },
+        {
+          "type": "airport",
           "subtype": "large",
           "name": "Port Sudan New International Airport",
           "nameZh": null,
@@ -12560,16 +12570,6 @@
           "city": "Port Sudan",
           "lat": 19.434558,
           "lng": 37.234125
-        },
-        {
-          "type": "airport",
-          "subtype": "medium",
-          "name": "Dongola Airport",
-          "nameZh": null,
-          "code": "DOG",
-          "city": "Dongola",
-          "lat": 19.153666,
-          "lng": 30.430069
         },
         {
           "type": "port",
@@ -12725,49 +12725,13 @@
           "admin1": "Paramaribo District"
         },
         {
-          "nameEn": "Blauwgrond",
-          "nameLocal": "Blauwgrond",
+          "nameEn": "Lelydorp",
+          "nameLocal": "Lelydorp",
           "nameZh": null,
-          "population": 31483,
-          "lat": 5.84342,
-          "lng": -55.11929,
-          "admin1": "Paramaribo District"
-        },
-        {
-          "nameEn": "Latour",
-          "nameLocal": "Latour",
-          "nameZh": null,
-          "population": 29526,
-          "lat": 5.79668,
-          "lng": -55.20858,
-          "admin1": "Paramaribo District"
-        },
-        {
-          "nameEn": "Pontbuiten",
-          "nameLocal": "Pontbuiten",
-          "nameZh": null,
-          "population": 23211,
-          "lat": 5.78808,
-          "lng": -55.20895,
+          "population": 18223,
+          "lat": 5.7,
+          "lng": -55.23333,
           "admin1": "Wanica District"
-        },
-        {
-          "nameEn": "Rainville",
-          "nameLocal": "Rainville",
-          "nameZh": null,
-          "population": 22747,
-          "lat": 5.83436,
-          "lng": -55.13769,
-          "admin1": "Paramaribo District"
-        },
-        {
-          "nameEn": "Flora",
-          "nameLocal": "Flora",
-          "nameZh": null,
-          "population": 19538,
-          "lat": 5.8,
-          "lng": -55.2,
-          "admin1": "Paramaribo District"
         }
       ],
       "hubs": [
@@ -12833,7 +12797,7 @@
         "officialLanguages": 1,
         "commonLanguages": true,
         "divisions": 10,
-        "cities": 6,
+        "cities": 2,
         "airports": 1,
         "ports": 1,
         "hs2": 5
@@ -12966,15 +12930,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Aleppo",
-          "nameLocal": "Aleppo",
-          "nameZh": "阿勒颇",
-          "population": 2098210,
-          "lat": 36.20124,
-          "lng": 37.16117,
-          "admin1": "Aleppo"
-        },
-        {
           "nameEn": "Damascus",
           "nameLocal": "Damascus",
           "nameZh": "大马士革",
@@ -12982,6 +12937,15 @@
           "lat": 33.5102,
           "lng": 36.29128,
           "admin1": "Damascus Governorate"
+        },
+        {
+          "nameEn": "Aleppo",
+          "nameLocal": "Aleppo",
+          "nameZh": "阿勒颇",
+          "population": 2098210,
+          "lat": 36.20124,
+          "lng": 37.16117,
+          "admin1": "Aleppo"
         },
         {
           "nameEn": "Homs",
@@ -13179,6 +13143,33 @@
           "admin1": "Dushanbe"
         },
         {
+          "nameEn": "Khujand",
+          "nameLocal": "Khujand",
+          "nameZh": "苦盏",
+          "population": 191000,
+          "lat": 40.28256,
+          "lng": 69.62216,
+          "admin1": "Sughd"
+        },
+        {
+          "nameEn": "Bokhtar",
+          "nameLocal": "Bokhtar",
+          "nameZh": null,
+          "population": 110800,
+          "lat": 37.83654,
+          "lng": 68.77762,
+          "admin1": "Khatlon Province"
+        },
+        {
+          "nameEn": "Khorugh",
+          "nameLocal": "Khorugh",
+          "nameZh": null,
+          "population": 30500,
+          "lat": 37.49039,
+          "lng": 71.55337,
+          "admin1": "Gorno-Badakhshan"
+        },
+        {
           "nameEn": "Isfara",
           "nameLocal": "Isfara",
           "nameZh": "伊斯法拉",
@@ -13194,33 +13185,6 @@
           "population": 273500,
           "lat": 39.9142,
           "lng": 69.00328,
-          "admin1": "Sughd"
-        },
-        {
-          "nameEn": "Kulob",
-          "nameLocal": "Kŭlob",
-          "nameZh": "库洛布",
-          "population": 214700,
-          "lat": 37.91459,
-          "lng": 69.78454,
-          "admin1": "Khatlon Province"
-        },
-        {
-          "nameEn": "Konibodom",
-          "nameLocal": "Konibodom",
-          "nameZh": "科尼博多姆",
-          "population": 211100,
-          "lat": 40.29414,
-          "lng": 70.43122,
-          "admin1": "Sughd"
-        },
-        {
-          "nameEn": "Khujand",
-          "nameLocal": "Khujand",
-          "nameZh": "苦盏",
-          "population": 191000,
-          "lat": 40.28256,
-          "lng": 69.62216,
           "admin1": "Sughd"
         }
       ],
@@ -13412,22 +13376,22 @@
           "admin1": "Plateaux"
         },
         {
-          "nameEn": "Kpalime",
-          "nameLocal": "Kpalimé",
-          "nameZh": "帕利梅",
-          "population": 75084,
-          "lat": 6.9,
-          "lng": 0.63333,
-          "admin1": "Plateaux"
+          "nameEn": "Dapaong",
+          "nameLocal": "Dapaong",
+          "nameZh": "达庞",
+          "population": 58071,
+          "lat": 10.86225,
+          "lng": 0.20762,
+          "admin1": "Savanes"
         },
         {
-          "nameEn": "Bassar",
-          "nameLocal": "Bassar",
-          "nameZh": "巴萨",
-          "population": 61845,
-          "lat": 9.25025,
-          "lng": 0.78213,
-          "admin1": "Kara"
+          "nameEn": "Tsevie",
+          "nameLocal": "Tsévié",
+          "nameZh": "策维埃",
+          "population": 55775,
+          "lat": 6.42611,
+          "lng": 1.21333,
+          "admin1": "Maritime"
         }
       ],
       "hubs": [
@@ -13713,15 +13677,6 @@
           "admin1": "Sousse Governorate"
         },
         {
-          "nameEn": "Sukrah",
-          "nameLocal": "Sukrah",
-          "nameZh": null,
-          "population": 159862,
-          "lat": 36.87744,
-          "lng": 10.2468,
-          "admin1": "Ariana Governorate"
-        },
-        {
           "nameEn": "Kairouan",
           "nameLocal": "Kairouan",
           "nameZh": "凯鲁万",
@@ -13738,6 +13693,15 @@
           "lat": 37.27442,
           "lng": 9.87391,
           "admin1": "Bizerte Governorate"
+        },
+        {
+          "nameEn": "Aryanah",
+          "nameLocal": "Aryanah",
+          "nameZh": "艾尔亚奈",
+          "population": 114486,
+          "lat": 36.86012,
+          "lng": 10.19337,
+          "admin1": "Ariana Governorate"
         }
       ],
       "hubs": [
@@ -14378,15 +14342,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Istanbul",
-          "nameLocal": "Istanbul",
-          "nameZh": "伊斯坦布尔",
-          "population": 15701602,
-          "lat": 41.01384,
-          "lng": 28.94966,
-          "admin1": "Istanbul"
-        },
-        {
           "nameEn": "Ankara",
           "nameLocal": "Ankara",
           "nameZh": "安卡拉",
@@ -14394,6 +14349,15 @@
           "lat": 39.91987,
           "lng": 32.85427,
           "admin1": "Ankara"
+        },
+        {
+          "nameEn": "Istanbul",
+          "nameLocal": "Istanbul",
+          "nameZh": "伊斯坦布尔",
+          "population": 15701602,
+          "lat": 41.01384,
+          "lng": 28.94966,
+          "admin1": "Istanbul"
         },
         {
           "nameEn": "Bursa",
@@ -14660,15 +14624,6 @@
           "admin1": "Mary"
         },
         {
-          "nameEn": "Tuerkmenbasy",
-          "nameLocal": "Türkmenbaşy",
-          "nameZh": "土库曼巴希",
-          "population": 91745,
-          "lat": 40.02216,
-          "lng": 52.95517,
-          "admin1": "Balkan"
-        },
-        {
           "nameEn": "Balkanabat",
           "nameLocal": "Balkanabat",
           "nameZh": "巴尔坎纳巴德",
@@ -14676,6 +14631,15 @@
           "lat": 39.51075,
           "lng": 54.36713,
           "admin1": "Balkan"
+        },
+        {
+          "nameEn": "AEnew",
+          "nameLocal": "Änew",
+          "nameZh": null,
+          "population": 28653,
+          "lat": 37.88754,
+          "lng": 58.51596,
+          "admin1": "Ahal"
         }
       ],
       "hubs": [
@@ -14801,52 +14765,62 @@
           "admin1": "Central Region"
         },
         {
-          "nameEn": "Nansana",
-          "nameLocal": "Nansana",
+          "nameEn": "Mbarara",
+          "nameLocal": "Mbarara",
           "nameZh": null,
-          "population": 532800,
-          "lat": 0.36389,
-          "lng": 32.52861,
+          "population": 221300,
+          "lat": -0.60467,
+          "lng": 30.64851,
+          "admin1": "Western Region"
+        },
+        {
+          "nameEn": "Gulu",
+          "nameLocal": "Gulu",
+          "nameZh": "古盧",
+          "population": 177400,
+          "lat": 2.77457,
+          "lng": 32.29899,
+          "admin1": "Northern Region"
+        },
+        {
+          "nameEn": "Jinja",
+          "nameLocal": "Jinja",
+          "nameZh": "金賈",
+          "population": 93061,
+          "lat": 0.43902,
+          "lng": 33.20317,
+          "admin1": "Eastern Region"
+        },
+        {
+          "nameEn": "Mukono",
+          "nameLocal": "Mukono",
+          "nameZh": null,
+          "population": 191300,
+          "lat": 0.35333,
+          "lng": 32.75528,
           "admin1": "Central Region"
         },
         {
-          "nameEn": "Kira",
-          "nameLocal": "Kira",
-          "nameZh": "基拉镇",
-          "population": 462900,
-          "lat": 0.4,
-          "lng": 32.63333,
-          "admin1": "Central Region"
-        },
-        {
-          "nameEn": "Bunamwaya",
-          "nameLocal": "Bunamwaya",
+          "nameEn": "Hoima",
+          "nameLocal": "Hoima",
           "nameZh": null,
-          "population": 413400,
-          "lat": 0.25344,
-          "lng": 32.55723,
-          "admin1": "Central Region"
-        },
-        {
-          "nameEn": "Kyengera",
-          "nameLocal": "Kyengera",
-          "nameZh": null,
-          "population": 285400,
-          "lat": 0.29517,
-          "lng": 32.50159,
-          "admin1": "Central Region"
-        },
-        {
-          "nameEn": "Kasangati",
-          "nameLocal": "Kasangati",
-          "nameZh": null,
-          "population": 277685,
-          "lat": 0.43803,
-          "lng": 32.60246,
-          "admin1": "Central Region"
+          "population": 122700,
+          "lat": 1.43314,
+          "lng": 31.35241,
+          "admin1": "Western Region"
         }
       ],
       "hubs": [
+        {
+          "type": "airport",
+          "subtype": "medium",
+          "name": "Gulu Airport",
+          "nameZh": null,
+          "code": "ULU",
+          "city": "Gulu",
+          "lat": 2.8055601119995117,
+          "lng": 32.27180099487305
+        },
         {
           "type": "airport",
           "subtype": "large",
@@ -14866,16 +14840,6 @@
           "city": "Arua",
           "lat": 3.049152,
           "lng": 30.911714
-        },
-        {
-          "type": "airport",
-          "subtype": "medium",
-          "name": "Gulu Airport",
-          "nameZh": null,
-          "code": "ULU",
-          "city": "Gulu",
-          "lat": 2.8055601119995117,
-          "lng": 32.27180099487305
         }
       ],
       "hs2": [
@@ -14948,7 +14912,7 @@
           "name": "Arabic"
         }
       ],
-      "commonLanguages": null,
+      "commonLanguages": "Arabic (official), English, Hindi, Malayalam, Urdu, Pashto, Tagalog, Persian",
       "capital": {
         "nameEn": "Abu Dhabi",
         "nameZh": "阿布扎比"
@@ -15010,15 +14974,6 @@
       ],
       "cities": [
         {
-          "nameEn": "Dubai",
-          "nameLocal": "Dubai",
-          "nameZh": "迪拜",
-          "population": 3790000,
-          "lat": 25.07725,
-          "lng": 55.30927,
-          "admin1": "Dubai"
-        },
-        {
           "nameEn": "Abu Dhabi",
           "nameLocal": "Abu Dhabi",
           "nameZh": "阿布扎比",
@@ -15026,6 +14981,15 @@
           "lat": 24.45118,
           "lng": 54.39696,
           "admin1": "Abu Dhabi"
+        },
+        {
+          "nameEn": "Dubai",
+          "nameLocal": "Dubai",
+          "nameZh": "迪拜",
+          "population": 3790000,
+          "lat": 25.07725,
+          "lng": 55.30927,
+          "admin1": "Dubai"
         },
         {
           "nameEn": "Sharjah",
@@ -15037,15 +15001,6 @@
           "admin1": "Sharjah"
         },
         {
-          "nameEn": "Al Ain City",
-          "nameLocal": "Al Ain City",
-          "nameZh": "艾因",
-          "population": 846747,
-          "lat": 24.19167,
-          "lng": 55.76056,
-          "admin1": "Abu Dhabi"
-        },
-        {
           "nameEn": "Ajman",
           "nameLocal": "Ajman",
           "nameZh": "阿治曼",
@@ -15055,13 +15010,22 @@
           "admin1": "Ajman"
         },
         {
-          "nameEn": "Dayrah",
-          "nameLocal": "Dayrah",
-          "nameZh": "代拉",
-          "population": 400000,
-          "lat": 25.27143,
-          "lng": 55.30207,
-          "admin1": "Dubai"
+          "nameEn": "Ras Al Khaimah",
+          "nameLocal": "Ras Al Khaimah",
+          "nameZh": null,
+          "population": 351943,
+          "lat": 25.78953,
+          "lng": 55.9432,
+          "admin1": "Ras Al Khaimah"
+        },
+        {
+          "nameEn": "Fujairah",
+          "nameLocal": "Fujairah",
+          "nameZh": "富吉拉",
+          "population": 118933,
+          "lat": 25.11641,
+          "lng": 56.34141,
+          "admin1": "Fujairah"
         }
       ],
       "hubs": [
@@ -15165,7 +15129,7 @@
       ],
       "coverage": {
         "officialLanguages": 1,
-        "commonLanguages": false,
+        "commonLanguages": true,
         "divisions": 7,
         "cities": 6,
         "airports": 3,
@@ -15340,15 +15304,6 @@
           "admin1": "Samarqand Region"
         },
         {
-          "nameEn": "Yunusobod",
-          "nameLocal": "Yunusobod",
-          "nameZh": null,
-          "population": 352000,
-          "lat": 41.37139,
-          "lng": 69.27944,
-          "admin1": "Tashkent"
-        },
-        {
           "nameEn": "Nukus",
           "nameLocal": "Nukus",
           "nameZh": "努库斯",
@@ -15356,6 +15311,15 @@
           "lat": 42.45861,
           "lng": 59.60576,
           "admin1": "Karakalpakstan"
+        },
+        {
+          "nameEn": "Fergana",
+          "nameLocal": "Fergana",
+          "nameZh": "费尔干纳",
+          "population": 299200,
+          "lat": 40.38421,
+          "lng": 71.78432,
+          "admin1": "Fergana"
         }
       ],
       "hubs": [

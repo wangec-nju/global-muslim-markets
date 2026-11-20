@@ -276,7 +276,7 @@ data: {
 仓库已包含 `.github/workflows/deploy.yml`。推送到 `main` 后：
 
 1. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**（首次一次性）；
-2. Actions 运行 `npm ci` → `npm test` → `npm run build`；
+2. Actions 运行 `npm ci` → `npm test` → `npm run audit:markets` → `npm run build`；
 3. 自动计算项目页 base 为 `/<repo>/`，上传 `dist/`；
 4. 访问 `https://wangec-nju.github.io/global-muslim-markets/`。
 
