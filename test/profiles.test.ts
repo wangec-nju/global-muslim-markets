@@ -21,10 +21,13 @@ describe('country profiles', () => {
     expect(china?.cities.some((city) => city.nameZh === '台北')).toBe(true);
   });
 
-  it('does not fabricate missing cities or HS2 data', () => {
-    const withHs2 = profiles.profiles.filter((profile) => profile.hs2.length > 0);
-    expect(withHs2.length).toBeGreaterThanOrEqual(45);
-    for (const profile of withHs2) {
+  it('covers HS2 for every profile and labels mirror data', () => {
+    expect(profiles.profiles.every((profile) => profile.hs2.length > 0)).toBe(true);
+    const mirror = profiles.profiles.filter((profile) =>
+      profile.hs2.some((row) => row.method === 'mirror'),
+    );
+    expect(mirror).toHaveLength(11);
+    for (const profile of profiles.profiles) {
       expect(profile.hs2.every((row) => (row.valueUsd ?? 0) > 0)).toBe(true);
       expect(profile.hs2.length).toBeLessThanOrEqual(5);
     }

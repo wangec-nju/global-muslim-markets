@@ -117,6 +117,7 @@ function buildProfile(iso3, nameZh, unM49, isChina) {
       valueUsd: toNumber(row.value_usd),
       sharePct: toNumber(row.share_pct),
       year: Number(row.year) || null,
+      method: row.method === 'mirror' ? 'mirror' : 'reported',
     }))
     .filter((row) => row.valueUsd != null)
     .sort((a, b) => b.valueUsd - a.valueUsd)

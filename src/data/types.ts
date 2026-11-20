@@ -102,6 +102,7 @@ export interface ProfileHs2 {
   valueUsd: number | null;
   sharePct: number | null;
   year: number | null;
+  method: 'reported' | 'mirror';
 }
 
 export interface CountryProfile {

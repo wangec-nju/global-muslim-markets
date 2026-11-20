@@ -11,7 +11,7 @@
       "geo/ports.csv": "31ff304decd6f955c244d2711536a692347b4b5e934b5f7d68600e4aeed79e7f",
       "geo/logistics.csv": "28f50239cc3cd088e07a99cfaf93338f5da13bb1bce6df25e8c5aaa1f377c952",
       "geo/city-labels.csv": "d617c0eda2966fd9a1952f78283995bb3e44363c2869f4d1334dd22c7c3b7cdd",
-      "hs2-imports.csv": "119a23b7f356074db83f0d702140def28b756b188539a886584a5f1ed2bb13af",
+      "hs2-imports.csv": "8aab6685328f6f7a7ab502ec8635aea4f1c879b18a7d42906a294a20d9756632",
       "china-divisions.csv": "2fbd343bdde3faac8654b11af237eee9a5212848281e6b9b937d3dad44e17da4",
       "china-cities.csv": "a3ca481b52177998d701449ed78c7386aacce13afe0dd03182b3442173396cf3",
       "china-hubs.csv": "da0f54a92999250d4e1e78887551790c0a6c1e0914dd339b9bf5a5f5a6c3d0fa"
@@ -419,7 +419,48 @@
           "lng": 69.25
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "27",
+          "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
+          "valueUsd": 430477671.42,
+          "sharePct": 9.0499,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "15",
+          "name": "Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",
+          "valueUsd": 393915709.79,
+          "sharePct": 8.2812,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "11",
+          "name": "Products of the milling industry; malt, starches, inulin, wheat gluten",
+          "valueUsd": 383856820.79,
+          "sharePct": 8.0697,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "10",
+          "name": "Cereals",
+          "valueUsd": 329768546.08,
+          "sharePct": 6.9327,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "99",
+          "name": "Commodities not specified according to kind",
+          "valueUsd": 310086517.77,
+          "sharePct": 6.5189,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 3,
         "commonLanguages": true,
@@ -428,7 +469,7 @@
         "airports": 3,
         "ports": 0,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -658,35 +699,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 947422081.58,
           "sharePct": 10.9289,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 762056455.14,
           "sharePct": 8.7907,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 683412565.04,
           "sharePct": 7.8835,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 628644765.03,
           "sharePct": 7.2517,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 505371558.41,
           "sharePct": 5.8297,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -1233,35 +1279,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 6636041768,
           "sharePct": 14.0072,
-          "year": 2024
+          "year": 2024,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 4594832435,
           "sharePct": 9.6987,
-          "year": 2024
+          "year": 2024,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 3161587546,
           "sharePct": 6.6734,
-          "year": 2024
+          "year": 2024,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 3106475074,
           "sharePct": 6.5571,
-          "year": 2024
+          "year": 2024,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 2951455791,
           "sharePct": 6.2299,
-          "year": 2024
+          "year": 2024,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -1860,35 +1911,40 @@
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 2066932853.21,
           "sharePct": 11.9626,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 1985674932.68,
           "sharePct": 11.4923,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1912590765.97,
           "sharePct": 11.0694,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 1551317005.93,
           "sharePct": 8.9784,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "99",
           "name": "Commodities not specified according to kind",
           "valueUsd": 660781675.4,
           "sharePct": 3.8244,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -2091,35 +2147,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1809881927.82,
           "sharePct": 11.7874,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "26",
           "name": "Ores, slag and ash",
           "valueUsd": 1607399128.83,
           "sharePct": 10.4687,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "28",
           "name": "Inorganic chemicals; organic and inorganic compounds of precious metals; of rare earth metals, of radio-active elements and of isotopes",
           "valueUsd": 1357968837.27,
           "sharePct": 8.8442,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 1238931241.18,
           "sharePct": 8.0689,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 1234999579.59,
           "sharePct": 8.0433,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -2350,7 +2411,48 @@
           "lng": 91.4
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "27",
+          "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
+          "valueUsd": 3059577268.1,
+          "sharePct": 13.8046,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "52",
+          "name": "Cotton",
+          "valueUsd": 2431381907.35,
+          "sharePct": 10.9703,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "60",
+          "name": "Fabrics; knitted or crocheted",
+          "valueUsd": 1559058956.5,
+          "sharePct": 7.0344,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "55",
+          "name": "Man-made staple fibres",
+          "valueUsd": 1281328188.64,
+          "sharePct": 5.7813,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "54",
+          "name": "Man-made filaments; strip and the like of man-made textile materials",
+          "valueUsd": 1272628708.16,
+          "sharePct": 5.742,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 1,
         "commonLanguages": true,
@@ -2359,7 +2461,7 @@
         "airports": 3,
         "ports": 2,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -2579,35 +2681,40 @@
           "name": "Cereals",
           "valueUsd": 691573846.25,
           "sharePct": 17.7104,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 665713148.04,
           "sharePct": 17.0482,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 272960894.57,
           "sharePct": 6.9902,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 251379511.34,
           "sharePct": 6.4375,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 212343707.5,
           "sharePct": 5.4379,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -2800,35 +2907,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 4773597144.39,
           "sharePct": 63.78,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 419106038.81,
           "sharePct": 5.5997,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "30",
           "name": "Pharmaceutical products",
           "valueUsd": 226912610.94,
           "sharePct": 3.0318,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 214392612.26,
           "sharePct": 2.8645,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 183591754.62,
           "sharePct": 2.453,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -3065,35 +3177,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 2327573897.77,
           "sharePct": 39.5828,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 403862753.83,
           "sharePct": 6.8681,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 342129830.05,
           "sharePct": 5.8183,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 301930710.41,
           "sharePct": 5.1346,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "25",
           "name": "Salt; sulphur; earths, stone; plastering materials, lime and cement",
           "valueUsd": 249391871.41,
           "sharePct": 4.2412,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -3336,35 +3453,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 2006234564.79,
           "sharePct": 24.1806,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 701703916.33,
           "sharePct": 8.4574,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 644393767.02,
           "sharePct": 7.7667,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 545773415.3,
           "sharePct": 6.5781,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 388496187.51,
           "sharePct": 4.6824,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -3649,7 +3771,48 @@
           "lng": 22.833333333333332
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 140868144.62,
+          "sharePct": 21.5273,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 86765042.18,
+          "sharePct": 13.2594,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "30",
+          "name": "Pharmaceutical products",
+          "valueUsd": 56561856.31,
+          "sharePct": 8.6437,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "87",
+          "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
+          "valueUsd": 39907001.89,
+          "sharePct": 6.0986,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "73",
+          "name": "Iron or steel articles",
+          "valueUsd": 37338784.32,
+          "sharePct": 5.7061,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 2,
         "commonLanguages": true,
@@ -3658,7 +3821,7 @@
         "airports": 1,
         "ports": 0,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -3805,35 +3968,40 @@
           "name": "Cereals",
           "valueUsd": 39304298.54,
           "sharePct": 14.3897,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 27937641.11,
           "sharePct": 10.2283,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 24269244.07,
           "sharePct": 8.8852,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "02",
           "name": "Meat and edible meat offal",
           "valueUsd": 22514544.28,
           "sharePct": 8.2428,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "25",
           "name": "Salt; sulphur; earths, stone; plastering materials, lime and cement",
           "valueUsd": 19804392.42,
           "sharePct": 7.2506,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -4096,35 +4264,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 4802881748.47,
           "sharePct": 25.5001,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1575160756.87,
           "sharePct": 8.363,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "89",
           "name": "Ships, boats and floating structures",
           "valueUsd": 1471804005.66,
           "sharePct": 7.8143,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 1212639383.16,
           "sharePct": 6.4383,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 999828819.5,
           "sharePct": 5.3084,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -4333,35 +4506,40 @@
           "name": "Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",
           "valueUsd": 856233213.45,
           "sharePct": 16.1708,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 776593862.89,
           "sharePct": 14.6667,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 566503915.32,
           "sharePct": 10.699,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "17",
           "name": "Sugars and sugar confectionery",
           "valueUsd": 433847893.01,
           "sharePct": 8.1936,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 418613174.98,
           "sharePct": 7.9059,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -4722,35 +4900,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 12619166938.27,
           "sharePct": 14.984,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 7098603149.67,
           "sharePct": 8.4289,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 6427925183.59,
           "sharePct": 7.6325,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 5240682306.39,
           "sharePct": 6.2228,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 4290847278.46,
           "sharePct": 5.095,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -5003,35 +5186,40 @@
           "name": "Ships, boats and floating structures",
           "valueUsd": 982116519.39,
           "sharePct": 23.2891,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 577119292.85,
           "sharePct": 13.6853,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 290653830.65,
           "sharePct": 6.8923,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 235340827.92,
           "sharePct": 5.5807,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 232134513.4,
           "sharePct": 5.5046,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -5216,35 +5404,40 @@
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 1661159623.87,
           "sharePct": 67.8616,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 261526528.88,
           "sharePct": 10.6839,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 73114564.17,
           "sharePct": 2.9869,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "31",
           "name": "Fertilizers",
           "valueUsd": 47397721.94,
           "sharePct": 1.9363,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 45801711.55,
           "sharePct": 1.8711,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -5445,7 +5638,48 @@
           "lng": -12.083333333333334
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 483071275.43,
+          "sharePct": 12.6259,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "87",
+          "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
+          "valueUsd": 355067199.46,
+          "sharePct": 9.2803,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 348838743.28,
+          "sharePct": 9.1175,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "27",
+          "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
+          "valueUsd": 305822246.5,
+          "sharePct": 7.9932,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "73",
+          "name": "Iron or steel articles",
+          "valueUsd": 188149772.15,
+          "sharePct": 4.9176,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 1,
         "commonLanguages": true,
@@ -5454,7 +5688,7 @@
         "airports": 1,
         "ports": 1,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -5644,7 +5878,48 @@
           "lng": -15.466666666666667
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "10",
+          "name": "Cereals",
+          "valueUsd": 43361924.73,
+          "sharePct": 24.6581,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "39",
+          "name": "Plastics and articles thereof",
+          "valueUsd": 16782632.18,
+          "sharePct": 9.5436,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 12609349.81,
+          "sharePct": 7.1704,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 11960222.41,
+          "sharePct": 6.8013,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "11",
+          "name": "Products of the milling industry; malt, starches, inulin, wheat gluten",
+          "valueUsd": 8448111.14,
+          "sharePct": 4.8041,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 2,
         "commonLanguages": true,
@@ -5653,7 +5928,7 @@
         "airports": 1,
         "ports": 0,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -5854,35 +6129,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 1021892764.64,
           "sharePct": 19.5388,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 911586402.21,
           "sharePct": 17.4297,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 439901389.38,
           "sharePct": 8.411,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 326590549.06,
           "sharePct": 6.2445,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "89",
           "name": "Ships, boats and floating structures",
           "valueUsd": 320924047.43,
           "sharePct": 6.1361,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -6309,35 +6589,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 40121643953,
           "sharePct": 17.9831,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 32642746661,
           "sharePct": 14.631,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 25943600461,
           "sharePct": 11.6283,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 11406151031,
           "sharePct": 5.1124,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 10205964540,
           "sharePct": 4.5745,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -6722,35 +7007,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 9700197052,
           "sharePct": 14.7969,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 7641746619,
           "sharePct": 11.6569,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 7556607691,
           "sharePct": 11.527,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "99",
           "name": "Commodities not specified according to kind",
           "valueUsd": 5242034929,
           "sharePct": 7.9963,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 2772790788,
           "sharePct": 4.2297,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -7061,35 +7351,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 4340482553,
           "sharePct": 17.6293,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 3217303977,
           "sharePct": 13.0674,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 2859642209,
           "sharePct": 11.6147,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "30",
           "name": "Pharmaceutical products",
           "valueUsd": 1809228494,
           "sharePct": 7.3484,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 1530777134,
           "sharePct": 6.2174,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -7330,35 +7625,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 3434779483.74,
           "sharePct": 13.3608,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 2326435303.54,
           "sharePct": 9.0495,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 1741003942.64,
           "sharePct": 6.7723,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1581305776.17,
           "sharePct": 6.1511,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 1338730118.76,
           "sharePct": 5.2075,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -7657,35 +7957,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 9637566848.08,
           "sharePct": 15.7578,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 7763273615.38,
           "sharePct": 12.6933,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 5854855447.7,
           "sharePct": 9.5729,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 2673256104.41,
           "sharePct": 4.3709,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 2087259841.34,
           "sharePct": 3.4128,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -7900,35 +8205,40 @@
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 5952986799.09,
           "sharePct": 15.879,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 3543738727.02,
           "sharePct": 9.4526,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 3380391680.32,
           "sharePct": 9.0169,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 2150155676.35,
           "sharePct": 5.7353,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "30",
           "name": "Pharmaceutical products",
           "valueUsd": 1881029378,
           "sharePct": 5.0175,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -8155,35 +8465,40 @@
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 3208560678,
           "sharePct": 25.635,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 2589429953,
           "sharePct": 20.6884,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 934911939,
           "sharePct": 7.4695,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 654341403,
           "sharePct": 5.2279,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "60",
           "name": "Fabrics; knitted or crocheted",
           "valueUsd": 429931620,
           "sharePct": 3.435,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -8404,35 +8719,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 4919655012,
           "sharePct": 27.1468,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 2523488039,
           "sharePct": 13.9247,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 1173375986,
           "sharePct": 6.4747,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 897887751,
           "sharePct": 4.9546,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 834548162,
           "sharePct": 4.6051,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -8757,7 +9077,48 @@
           "lng": 15.083333333333334
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 822968325.96,
+          "sharePct": 13.3471,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 603252775.79,
+          "sharePct": 9.7837,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "27",
+          "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
+          "valueUsd": 387168754.31,
+          "sharePct": 6.2792,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "26",
+          "name": "Ores, slag and ash",
+          "valueUsd": 324964914.41,
+          "sharePct": 5.2704,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "87",
+          "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
+          "valueUsd": 301838745.84,
+          "sharePct": 4.8953,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 1,
         "commonLanguages": true,
@@ -8766,7 +9127,7 @@
         "airports": 3,
         "ports": 3,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -9054,35 +9415,40 @@
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 72803707902.42,
           "sharePct": 27.4071,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 50773154872.29,
           "sharePct": 19.1137,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 25268090803.48,
           "sharePct": 9.5122,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 8479950265.52,
           "sharePct": 3.1923,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 8246774688.31,
           "sharePct": 3.1045,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -9332,35 +9698,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 760391271.38,
           "sharePct": 21.7939,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 334088069.6,
           "sharePct": 9.5755,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 273369738.11,
           "sharePct": 7.8352,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "25",
           "name": "Salt; sulphur; earths, stone; plastering materials, lime and cement",
           "valueUsd": 151342669.55,
           "sharePct": 4.3377,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 111927012.24,
           "sharePct": 3.208,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -9595,35 +9966,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 2326868268.39,
           "sharePct": 36.263,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 465235794.72,
           "sharePct": 7.2505,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 426568344.64,
           "sharePct": 6.6478,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 341435694.47,
           "sharePct": 5.3211,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "25",
           "name": "Salt; sulphur; earths, stone; plastering materials, lime and cement",
           "valueUsd": 334567591.94,
           "sharePct": 5.2141,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -9902,35 +10278,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 1733934800.46,
           "sharePct": 35.9912,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 452130465.77,
           "sharePct": 9.3849,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "15",
           "name": "Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",
           "valueUsd": 338018425.12,
           "sharePct": 7.0162,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "17",
           "name": "Sugars and sugar confectionery",
           "valueUsd": 303275564.55,
           "sharePct": 6.2951,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 247223397.71,
           "sharePct": 5.1316,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -10205,35 +10586,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 12043877856.09,
           "sharePct": 17.0485,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 7281689252.93,
           "sharePct": 10.3074,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 6524348718.86,
           "sharePct": 9.2354,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 6342139241.09,
           "sharePct": 8.9775,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 2995749287.08,
           "sharePct": 4.2406,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -10498,35 +10884,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 2152725000,
           "sharePct": 21.3313,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1143102000,
           "sharePct": 11.327,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 740008000,
           "sharePct": 7.3327,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 692080000,
           "sharePct": 6.8578,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 650490000,
           "sharePct": 6.4457,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -10733,35 +11124,40 @@
           "name": "Aircraft, spacecraft, and parts thereof",
           "valueUsd": 627722070.46,
           "sharePct": 19.9314,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 413244674.59,
           "sharePct": 13.1213,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 310814796.01,
           "sharePct": 9.869,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 262718249.17,
           "sharePct": 8.3418,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 241939611.01,
           "sharePct": 7.6821,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -11182,35 +11578,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 21752856577.88,
           "sharePct": 33.4413,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 13421459667.23,
           "sharePct": 20.6332,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 6109495407.1,
           "sharePct": 9.3923,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 3111630428.53,
           "sharePct": 4.7836,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 2190851134.37,
           "sharePct": 3.3681,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -11475,35 +11876,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 9283556536.84,
           "sharePct": 23.9419,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 3621246956.62,
           "sharePct": 9.339,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 3218820967.65,
           "sharePct": 8.3012,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 2300442217.47,
           "sharePct": 5.9327,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 1633308996.14,
           "sharePct": 4.2122,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -11748,35 +12154,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 16717827190.84,
           "sharePct": 33.4294,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 3548954467.57,
           "sharePct": 7.0966,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "15",
           "name": "Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",
           "valueUsd": 3278789339.8,
           "sharePct": 6.5563,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 2759745822.51,
           "sharePct": 5.5185,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 2652416852.07,
           "sharePct": 5.3038,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -11927,35 +12338,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 1752761704.53,
           "sharePct": 21.1928,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 436940606.03,
           "sharePct": 5.2831,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 412791706.74,
           "sharePct": 4.9911,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "23",
           "name": "Food industries, residues and wastes thereof; prepared animal fodder",
           "valueUsd": 396539008.11,
           "sharePct": 4.7946,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 327564924.75,
           "sharePct": 3.9606,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -12182,35 +12598,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 6088917949.09,
           "sharePct": 19.3722,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 2795131376.09,
           "sharePct": 8.8929,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 1895544794.61,
           "sharePct": 6.0308,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 1850751545.98,
           "sharePct": 5.8883,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "88",
           "name": "Aircraft, spacecraft, and parts thereof",
           "valueUsd": 1322208956.11,
           "sharePct": 4.2067,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -12487,35 +12908,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 26176183807.99,
           "sharePct": 12.6492,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 25428194824.03,
           "sharePct": 12.2877,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 19668521321.35,
           "sharePct": 9.5045,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 15255838341.27,
           "sharePct": 7.3721,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 8970050215.48,
           "sharePct": 4.3346,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -12788,35 +13214,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 3525791583.4,
           "sharePct": 29.6799,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1002860508.45,
           "sharePct": 8.442,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 946780672.82,
           "sharePct": 7.9699,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 739573230.64,
           "sharePct": 6.2257,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 647119359.62,
           "sharePct": 5.4474,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -12999,7 +13430,48 @@
           "lng": -13.183333333333334
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 95793718.98,
+          "sharePct": 11.7055,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 84222150.92,
+          "sharePct": 10.2915,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "73",
+          "name": "Iron or steel articles",
+          "valueUsd": 55702185.3,
+          "sharePct": 6.8065,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "30",
+          "name": "Pharmaceutical products",
+          "valueUsd": 41702138.4,
+          "sharePct": 5.0958,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "39",
+          "name": "Plastics and articles thereof",
+          "valueUsd": 40397314.82,
+          "sharePct": 4.9363,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 1,
         "commonLanguages": true,
@@ -13008,7 +13480,7 @@
         "airports": 1,
         "ports": 1,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -13302,7 +13774,48 @@
           "lng": 42.083333333333336
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "17",
+          "name": "Sugars and sugar confectionery",
+          "valueUsd": 179268561.79,
+          "sharePct": 10.0967,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "55",
+          "name": "Man-made staple fibres",
+          "valueUsd": 147240690.56,
+          "sharePct": 8.2928,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "15",
+          "name": "Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",
+          "valueUsd": 135668702.6,
+          "sharePct": 7.6411,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 120804776.92,
+          "sharePct": 6.8039,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "72",
+          "name": "Iron and steel",
+          "valueUsd": 87008729.45,
+          "sharePct": 4.9005,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 2,
         "commonLanguages": true,
@@ -13311,7 +13824,7 @@
         "airports": 3,
         "ports": 3,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -13605,7 +14118,48 @@
           "lng": 32.8
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 214275807.69,
+          "sharePct": 12.6217,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 154603940.7,
+          "sharePct": 9.1068,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "30",
+          "name": "Pharmaceutical products",
+          "valueUsd": 134646999.66,
+          "sharePct": 7.9312,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "87",
+          "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
+          "valueUsd": 104746052.66,
+          "sharePct": 6.1699,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "73",
+          "name": "Iron or steel articles",
+          "valueUsd": 65800618.25,
+          "sharePct": 3.8759,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 2,
         "commonLanguages": true,
@@ -13614,7 +14168,7 @@
         "airports": 3,
         "ports": 3,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -13786,35 +14340,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 309889322.68,
           "sharePct": 18.2593,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 202973037.69,
           "sharePct": 11.9596,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 146229768.76,
           "sharePct": 8.6162,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "73",
           "name": "Iron or steel articles",
           "valueUsd": 113287426.83,
           "sharePct": 6.6751,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 93587109.55,
           "sharePct": 5.5144,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -14091,7 +14650,48 @@
           "lng": 35.78333333333333
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "39",
+          "name": "Plastics and articles thereof",
+          "valueUsd": 56731717.52,
+          "sharePct": 6.7244,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "15",
+          "name": "Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",
+          "valueUsd": 53867724.43,
+          "sharePct": 6.385,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "30",
+          "name": "Pharmaceutical products",
+          "valueUsd": 49671049,
+          "sharePct": 5.8875,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "08",
+          "name": "Fruit and nuts, edible; peel of citrus fruit or melons",
+          "valueUsd": 48277771.56,
+          "sharePct": 5.7224,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 47889262.3,
+          "sharePct": 5.6763,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 1,
         "commonLanguages": true,
@@ -14100,7 +14700,7 @@
         "airports": 3,
         "ports": 3,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -14292,35 +14892,40 @@
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 724614513.31,
           "sharePct": 17.0504,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 434158766,
           "sharePct": 10.2159,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 331803686,
           "sharePct": 7.8075,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 226254764,
           "sharePct": 5.3239,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 216245837,
           "sharePct": 5.0883,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -14509,35 +15114,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 437572496.29,
           "sharePct": 14.3518,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 317181403.57,
           "sharePct": 10.4032,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 236181827.45,
           "sharePct": 7.7465,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 199352074.43,
           "sharePct": 6.5385,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 168682267.73,
           "sharePct": 5.5326,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -14880,35 +15490,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 4653599755.22,
           "sharePct": 17.9464,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 3202673201.81,
           "sharePct": 12.351,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 1990972486.38,
           "sharePct": 7.6781,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 1634547109.89,
           "sharePct": 6.3036,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "10",
           "name": "Cereals",
           "valueUsd": 1579292333.52,
           "sharePct": 6.0905,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -15593,35 +16208,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 69113810547,
           "sharePct": 19.094,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 40967491074,
           "sharePct": 11.318,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 33912165164,
           "sharePct": 9.3689,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 32260862251,
           "sharePct": 8.9127,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 27947644328,
           "sharePct": 7.721,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -15824,7 +16444,48 @@
           "lng": 54.35
         }
       ],
-      "hs2": [],
+      "hs2": [
+        {
+          "code": "84",
+          "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
+          "valueUsd": 326235353.29,
+          "sharePct": 16.0368,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "73",
+          "name": "Iron or steel articles",
+          "valueUsd": 200150565.79,
+          "sharePct": 9.8389,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "10",
+          "name": "Cereals",
+          "valueUsd": 177314387.88,
+          "sharePct": 8.7163,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "87",
+          "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
+          "valueUsd": 153305465.06,
+          "sharePct": 7.5361,
+          "year": 2023,
+          "method": "mirror"
+        },
+        {
+          "code": "85",
+          "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
+          "valueUsd": 127436935.71,
+          "sharePct": 6.2644,
+          "year": 2023,
+          "method": "mirror"
+        }
+      ],
       "coverage": {
         "officialLanguages": 2,
         "commonLanguages": true,
@@ -15833,7 +16494,7 @@
         "airports": 3,
         "ports": 0,
         "logistics": 2,
-        "hs2": 0
+        "hs2": 5
       },
       "sources": {
         "identity": "world-countries",
@@ -16019,35 +16680,40 @@
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 2116965669.22,
           "sharePct": 17.9707,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 1904608516.67,
           "sharePct": 16.168,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 914730823.8,
           "sharePct": 7.765,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 844072831.63,
           "sharePct": 7.1652,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 558420672.92,
           "sharePct": 4.7404,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -16288,35 +16954,40 @@
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 114875892578.28,
           "sharePct": 24.4138,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "99",
           "name": "Commodities not specified according to kind",
           "valueUsd": 78712301073.37,
           "sharePct": 16.7282,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 63051480332.63,
           "sharePct": 13.3999,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 40842683644.82,
           "sharePct": 8.68,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 33665512732.1,
           "sharePct": 7.1547,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -16573,35 +17244,40 @@
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 6360877943.78,
           "sharePct": 17.3508,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 4883501268.85,
           "sharePct": 13.3209,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "85",
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 3300912057.55,
           "sharePct": 9.004,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 2685970763.91,
           "sharePct": 7.3266,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "72",
           "name": "Iron and steel",
           "valueUsd": 2038554446.64,
           "sharePct": 5.5607,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -16932,35 +17608,40 @@
           "name": "Cereals",
           "valueUsd": 302384212.76,
           "sharePct": 16.2054,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 255414930.79,
           "sharePct": 13.6882,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "87",
           "name": "Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",
           "valueUsd": 138848704.91,
           "sharePct": 7.4412,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "39",
           "name": "Plastics and articles thereof",
           "valueUsd": 95969902.76,
           "sharePct": 5.1432,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "02",
           "name": "Meat and edible meat offal",
           "valueUsd": 82396373.88,
           "sharePct": 4.4158,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {
@@ -17508,35 +18189,40 @@
           "name": "Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",
           "valueUsd": 548706963322,
           "sharePct": 21.461,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "27",
           "name": "Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",
           "valueUsd": 515914205157,
           "sharePct": 20.1784,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "26",
           "name": "Ores, slag and ash",
           "valueUsd": 237830552040,
           "sharePct": 9.302,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "84",
           "name": "Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",
           "valueUsd": 197209721997,
           "sharePct": 7.7133,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         },
         {
           "code": "71",
           "name": "Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",
           "valueUsd": 114006111418,
           "sharePct": 4.459,
-          "year": 2023
+          "year": 2023,
+          "method": "reported"
         }
       ],
       "coverage": {

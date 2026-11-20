@@ -285,7 +285,11 @@ function hubRow(hub: ProfileHub): HTMLElement {
 
 function hs2Section(profile: CountryProfile): HTMLElement {
   const years = [...new Set(profile.hs2.map((product) => product.year).filter(Boolean))];
-  const section = dossierSection(`HS2 进口结构 · ${years.join('/') || '—'}`, 'UN Comtrade');
+  const mirror = profile.hs2.some((product) => product.method === 'mirror');
+  const section = dossierSection(
+    `HS2 进口结构 · ${years.join('/') || '—'}${mirror ? '（镜像）' : ''}`,
+    mirror ? 'UN Comtrade 伙伴国出口镜像' : 'UN Comtrade',
+  );
   if (!profile.hs2.length) {
     section.append(el('p', { className: 'dossier__empty', text: '该国 2023 年 HS2 数据暂不可得。' }));
     return section;
@@ -301,6 +305,14 @@ function hs2Section(profile: CountryProfile): HTMLElement {
     );
   }
   section.append(list);
+  if (mirror) {
+    section.append(
+      el('p', {
+        className: 'dossier-note',
+        text: '镜像口径：由伙伴国申报的对目标国出口汇总，不等于目标国海关进口申报；仅用于结构参考。',
+      }),
+    );
+  }
   return section;
 }
 
