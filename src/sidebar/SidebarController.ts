@@ -29,13 +29,9 @@ export class SidebarController {
 
   constructor(host: HTMLElement, private readonly options: SidebarOptions = {}) {
     this.root = el('div', { className: 'dossier-layer', attrs: { hidden: true } });
-    this.root.addEventListener('pointerdown', (event) => {
-      if (event.target === this.root) this.close();
-    });
-
     this.panel = el('aside', {
       className: 'dossier',
-      attrs: { role: 'dialog', 'aria-modal': 'true', 'aria-label': '国家完整档案' },
+      attrs: { role: 'dialog', 'aria-modal': 'false', 'aria-label': '国家完整档案' },
     });
 
     this.flag = el('div', { className: 'dossier__flag', attrs: { 'aria-hidden': 'true' } });

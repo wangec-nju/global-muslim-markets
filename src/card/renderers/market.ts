@@ -1,4 +1,4 @@
-import type { MarketCountry, ProfileHub, TradeFlow } from '../../data/types';
+import type { MarketCountry, TradeFlow } from '../../data/types';
 import {
   formatPercent,
   formatPopulation,
@@ -99,7 +99,7 @@ function profileBasics(market: MarketCountry): HTMLElement {
 function geographySection(market: MarketCountry, compact: boolean): HTMLElement {
   const profile = market.profile;
   const section = el('section', { className: 'market-section' });
-  section.append(sectionLabel('地理与通道', 'GeoNames · OurAirports · NGA World Port Index'));
+  section.append(sectionLabel('地理与通道', 'GeoNames · 点击查看枢纽与航线'));
 
   if (!profile) {
     section.append(marketNote('地理档案尚未载入。', 'market-hint'));
@@ -118,40 +118,9 @@ function geographySection(market: MarketCountry, compact: boolean): HTMLElement 
     }),
   );
   section.append(divisionRow);
-
-  const hubs = selectHubs(profile.hubs, compact ? 3 : 6);
-  const hubRow = el('div', { className: 'profile-line' });
-  hubRow.append(
-    el('span', { className: 'profile-line__label', text: '机场 / 港口' }),
-    el('span', {
-      className: 'profile-line__value',
-      text: hubs.length
-        ? hubs.map(formatHub).join(' · ')
-        : '暂未收录',
-    }),
+  section.append(
+    marketNote('点击查看机场/港口/物流枢纽、8 个中国起运港与 HS2 品类。', 'market-hint'),
   );
-  section.append(hubRow);
-
-  const trade = market.chinaTrade;
-  if (trade) {
-    section.append(
-      marketNote(
-        `对华贸易 ${trade.year}：出口 ${formatUsd(trade.exports?.value ?? null)} · 进口 ${formatUsd(trade.imports?.value ?? null)}。`,
-        'market-hint',
-      ),
-    );
-  }
-  if (market.seaRoute) {
-    const destination = market.seaRoute.destinations[0];
-    const primary = destination?.options[0];
-    section.append(
-      marketNote(
-        `海运：${primary?.originName ?? '中国'} → ${destination?.port ?? '—'}${destination?.via ? `（${destination.via}）` : ''} · 约 ${formatKm(primary?.distanceKm ?? null)}；${market.seaRoute.destinations.length} 个目的港 × 8 个中国起运港可选。`,
-        'market-hint',
-      ),
-    );
-  }
-
   return section;
 }
 
@@ -167,31 +136,6 @@ function formatLanguages(languages: Array<{ code: string; name: string }>): stri
   return languages
     .map((language) => display?.of(language.code) ?? language.name)
     .join(' / ');
-}
-
-function selectHubs(hubs: ProfileHub[], limit: number): ProfileHub[] {
-  const groups: Array<ProfileHub['type']> = ['airport', 'port', 'logistics'];
-  const picked: ProfileHub[] = [];
-  for (const type of groups) {
-    const first = hubs.find((hub) => hub.type === type);
-    if (first) picked.push(first);
-  }
-  for (const hub of hubs) {
-    if (picked.length >= limit) break;
-    if (!picked.includes(hub)) picked.push(hub);
-  }
-  return picked.slice(0, limit);
-}
-
-function formatHub(hub: ProfileHub): string {
-  const label = hub.nameZh ?? hub.name;
-  const tag = hub.type === 'airport' ? '空' : hub.type === 'port' ? '港' : '物';
-  return `${tag} ${hub.code ? `${label}（${hub.code}）` : label}`;
-}
-
-function formatKm(value: number | null): string {
-  if (value == null || !Number.isFinite(value)) return '—';
-  return `${new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 0 }).format(value)} km`;
 }
 
 function truncate(text: string, limit: number): string {

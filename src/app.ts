@@ -231,17 +231,41 @@ export async function createApp(): Promise<void> {
     cancelOverlayClear();
     card?.close('external');
     chinaHover.close();
-    scene.setHubs([]);
-    scene.clearGeoOverlays();
     sidebar.open(market);
     scene.setSelected(market.id);
     const shape = shapeById.get(market.id);
     if (shape) scene.focusCountry(shape);
     search.close();
+
+    // Detail layers belong to the clicked/selected market and stay visible
+    // while the non-modal sidebar is open.
+    const color = highlightColor(market);
+    scene.setGeoOverlays(
+      adminBoundaries?.countries[market.iso3] ?? [],
+      market.seaRoute ? routePaths(market.seaRoute) : [],
+      color,
+    );
+    const profile = market.profile;
+    scene.setHubs(
+      profile
+        ? profile.hubs
+            .filter((hub) => hub.lat != null && hub.lng != null)
+            .map((hub) => ({
+              lat: hub.lat as number,
+              lng: hub.lng as number,
+              type: hub.type,
+              label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
+            }))
+        : [],
+      color,
+    );
   }
 
   function handleHover(event: GlobeHoverEvent): void {
-    if (!card || sidebar.isOpen) return;
+    if (!card) return;
+    // Sidebar keeps the selected market's detail layers; hovering other
+    // countries must not replace them. The globe still pans/zooms/clicks.
+    if (sidebar.isOpen) return;
     if (!event.country) {
       chinaHover.close();
       scheduleDismiss();
@@ -280,18 +304,14 @@ export async function createApp(): Promise<void> {
     if (market) {
       const color = highlightColor(market);
       card.openPreview(market, event.point);
+      // Hover only previews the country outline/administrative edges.
+      // Hubs and sea routes are detail layers, shown after a click.
       scene.setGeoOverlays(
         adminBoundaries?.countries[market.iso3] ?? [],
-        market.seaRoute ? routePaths(market.seaRoute) : [],
+        [],
         color,
       );
-      const profile = market.profile;
-      scene.setHubs(profile ? profile.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
-        lat: hub.lat as number,
-        lng: hub.lng as number,
-        type: hub.type,
-        label: `${hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流'} · ${hub.nameZh ?? hub.name}`,
-      })) : [], color);
+      scene.setHubs([]);
     }
   }
 
@@ -306,10 +326,12 @@ export async function createApp(): Promise<void> {
 
   function handleBackgroundClick(): void {
     if (performance.now() - lastCountryClickAt < 300) return;
+    // The sidebar is intentionally non-modal: clicking the globe must not
+    // dismiss it. Use its close button or Esc.
+    if (sidebar.isOpen) return;
     cancelOverlayClear();
     chinaHover.close();
     card?.close('external');
-    sidebar.close();
     scene.setSelected(null);
     scene.clearGeoOverlays();
     scene.setHubs([]);
