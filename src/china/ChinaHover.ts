@@ -74,7 +74,10 @@ export class ChinaHover {
     }
 
     const hubs = el('div', { className: 'china-hubs' });
-    for (const hub of profile.hubs.slice(0, 8)) {
+    const shownHubs = ['airport', 'port', 'logistics'].flatMap((type) =>
+      profile.hubs.filter((hub) => hub.type === type).slice(0, 3),
+    );
+    for (const hub of shownHubs) {
       hubs.append(
         el('span', { className: 'china-hub' },
           el('b', { text: hub.type === 'airport' ? '空' : hub.type === 'port' ? '港' : '物' }),

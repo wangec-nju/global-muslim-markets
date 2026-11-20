@@ -119,7 +119,7 @@ function geographySection(market: MarketCountry, compact: boolean): HTMLElement 
   );
   section.append(divisionRow);
 
-  const hubs = profile.hubs.slice(0, compact ? 3 : 6);
+  const hubs = selectHubs(profile.hubs, compact ? 3 : 6);
   const hubRow = el('div', { className: 'profile-line' });
   hubRow.append(
     el('span', { className: 'profile-line__label', text: '机场 / 港口' }),
@@ -159,9 +159,24 @@ function formatLanguages(languages: Array<{ code: string; name: string }>): stri
     .join(' / ');
 }
 
+function selectHubs(hubs: ProfileHub[], limit: number): ProfileHub[] {
+  const groups: Array<ProfileHub['type']> = ['airport', 'port', 'logistics'];
+  const picked: ProfileHub[] = [];
+  for (const type of groups) {
+    const first = hubs.find((hub) => hub.type === type);
+    if (first) picked.push(first);
+  }
+  for (const hub of hubs) {
+    if (picked.length >= limit) break;
+    if (!picked.includes(hub)) picked.push(hub);
+  }
+  return picked.slice(0, limit);
+}
+
 function formatHub(hub: ProfileHub): string {
   const label = hub.nameZh ?? hub.name;
-  return hub.code ? `${label}（${hub.code}）` : label;
+  const tag = hub.type === 'airport' ? '空' : hub.type === 'port' ? '港' : '物';
+  return `${tag} ${hub.code ? `${label}（${hub.code}）` : label}`;
 }
 
 function truncate(text: string, limit: number): string {
