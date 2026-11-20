@@ -39,23 +39,40 @@ export async function createApp(): Promise<void> {
   const cleanupStarfield = mountStarfield(starfieldEl);
   const repository = new MarketRepository(siteConfig.data.marketUrl);
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
-  const [adminBoundaries, seaRoutes] = await Promise.all([
-    repository.load().then(() => profileRepository.load()).then(() =>
-      fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
-    ),
+  let adminBoundaries: AdminBoundaryDataset | null = null;
+  let seaRoutes: SeaRouteDataset | null = null;
+  const geoPromise = Promise.all([
+    fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
     fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
-  ]);
+  ])
+    .then(([admin, sea]) => {
+      adminBoundaries = admin;
+      seaRoutes = sea;
+    })
+    .catch((error) => {
+      console.error('[geo] failed to load overlays', error);
+    });
 
+
+  await Promise.all([repository.load(), profileRepository.load()]);
   for (const market of repository.list()) {
     const profile = profileRepository.get(market.iso3);
     if (profile) market.profile = profile;
-    const route = seaRoutes.routes[market.iso3];
-    if (route) market.seaRoute = route;
   }
 
+  void geoPromise.then(() => {
+    if (!seaRoutes) return;
+    for (const market of repository.list()) {
+      const route = seaRoutes.routes[market.iso3];
+      if (route) market.seaRoute = route;
+    }
+  });
+
   function routePaths(route: SeaRouteInfo): Array<{ points: number[][] }> {
+    // Map shows the shortest origin per destination; the sidebar lists all 8
+    // origins without redrawing hundreds of FatLines on every hover.
     return route.destinations.flatMap((destination) =>
-      destination.options.map((option) => ({ points: option.points })),
+      destination.options[0] ? [{ points: destination.options[0].points }] : [],
     );
   }
 
@@ -236,9 +253,12 @@ export async function createApp(): Promise<void> {
         cancelOverlayClear();
         card.close('external');
         const chinaColor = '#ff8a7f';
-        chinaHover.show(china, repository.list(), seaRoutes.meta.origins, event.point);
-        scene.setAdminPaths(adminBoundaries.countries.CHN ?? [], chinaColor);
-        scene.setSeaRoutes(chinaRoutePaths(), chinaColor);
+        chinaHover.show(china, repository.list(), seaRoutes?.meta.origins ?? [], event.point);
+        scene.setGeoOverlays(
+          adminBoundaries?.countries.CHN ?? [],
+          chinaRoutePaths(),
+          chinaColor,
+        );
         scene.setHubs(china.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
           lat: hub.lat as number,
           lng: hub.lng as number,
@@ -257,8 +277,11 @@ export async function createApp(): Promise<void> {
     if (market) {
       const color = highlightColor(market);
       card.openPreview(market, event.point);
-      scene.setAdminPaths(adminBoundaries.countries[market.iso3] ?? [], color);
-      scene.setSeaRoutes(market.seaRoute ? routePaths(market.seaRoute) : [], color);
+      scene.setGeoOverlays(
+        adminBoundaries?.countries[market.iso3] ?? [],
+        market.seaRoute ? routePaths(market.seaRoute) : [],
+        color,
+      );
       const profile = market.profile;
       scene.setHubs(profile ? profile.hubs.filter((hub) => hub.lat != null && hub.lng != null).map((hub) => ({
         lat: hub.lat as number,

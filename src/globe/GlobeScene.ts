@@ -149,7 +149,7 @@ export class GlobeScene {
       .pathPoints('points')
       .pathPointAlt(0.03)
       .pathColor('color')
-      .pathStroke(0.35)
+      .pathStroke(null)
       .pathDashLength(1)
       .pathDashGap(0)
       .pathDashAnimateTime(0)
@@ -213,6 +213,25 @@ export class GlobeScene {
   /** Replace the trade-flow arc layer. */
   setArcs(arcs: TradeArc[]): void {
     this.globe.arcsData(arcs);
+  }
+
+  /** Update admin boundaries and sea routes in one paths-layer pass. */
+  setGeoOverlays(
+    adminPaths: Array<{ name: string; points: number[][] }>,
+    seaRoutes: Array<{ points: number[][]; color?: string }>,
+    color = '#e8f6f2',
+  ): void {
+    this.adminPaths = adminPaths.map((path) => ({
+      points: path.points,
+      color,
+      width: 0.3,
+    }));
+    this.seaRoutes = seaRoutes.map((route) => ({
+      points: route.points,
+      color: color ?? route.color ?? '#ffb45e',
+      width: 0.5,
+    }));
+    this.refreshPaths();
   }
 
   /** Replace the administrative-boundary lines for the hovered country. */
