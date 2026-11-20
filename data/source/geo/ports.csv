@@ -1,97 +1,145 @@
-iso3,name,locode,lat,lng,size,type
-ALB,Porto Romano,ALROM,41.38333333,19.41666667,Medium,Coastal (Breakwater)
-ALB,Durres,AL DRZ,41.316667,19.45,Small,Coastal (Breakwater)
-DZA,Alger,DZ ALG,36.766667,3.066667,Large,Coastal (Breakwater)
-DZA,Oran,DZ ORN,35.7,-0.633333,Large,Coastal (Breakwater)
-DZA,Annaba,DZ AAE,36.916667,7.766667,Medium,Coastal (Breakwater)
-BHR,Sitrah,BH SIT,26.166667,50.666667,Medium,Open Roadstead
-BHR,Mina Salman,BH MIN,26.2,50.633333,Medium,Coastal (Natural)
-BHR,Khalifa Bin Salman,BH KBS,26.25,50.75,Medium,Coastal (Breakwater)
-BGD,Chittagong,BD CGP,22.316667,91.816667,Medium,River (Natural)
-BGD,Mongla,BD MGL,22.466667,89.6,Small,River (Natural)
-BEN,Cotonou,BJ COO,6.35,2.433333,Medium,Coastal (Breakwater)
-BRN,Muara Harbor,BN MUA,5.033333,115.066667,Small,Coastal (Natural)
-BRN,Bandar Seri Begawan,BN BWN,4.883333,114.883333,Small,River (Natural)
-CMR,Douala,CM DLA,4.05,9.683333,Medium,River (Natural)
-CIV,Abidjan,CI ABJ,5.25,-4.016667,Large,Canal or Lake
-DJI,Djibouti,DJ JIB,11.6,43.133333,Small,Coastal (Natural)
-DJI,Doraleh,DJ DCT,11.60277778,43.08861111,Small,Coastal (Natural)
-EGY,Bur Sa'id,EG PSD,31.266667,32.3,Large,Canal or Lake
-EGY,Damietta,EG DAM,31.483333,31.75,Large,Coastal (Breakwater)
-EGY,Al Iskandariyh (Alexandria),EG ALY,31.166667,29.833333,Large,Coastal (Breakwater)
-GAB,Libreville,GA LBV,0.383333,9.45,Medium,Open Roadstead
-GAB,Port Gentil,GA POG,-0.7,8.8,Medium,Coastal (Natural)
-GAB,Port Owendo,GA OWE,0.283333,9.5,Small,Open Roadstead
-GIN,Conakry,GN CKY,9.516667,-13.716667,Medium,Coastal (Breakwater)
-GUY,Georgetown,GYGEO,6.833333,-58.166667,Medium,River (Natural)
-IDN,Jakarta,ID JKT,-6.1,106.883333,Large,Coastal (Breakwater)
-IDN,Cilacap,ID CXP,-7.733333,109,Large,Coastal (Natural)
-IDN,Kasim Terminal,ID KAS,-1.3,131.016667,Large,Open Roadstead
-IRN,Khorramshahr,IR KHO,30.433333,48.183333,Medium,River (Natural)
-IRN,Abadan,IR ABD,30.333333,48.283333,Medium,River (Natural)
-IRN,Bushehr,IR BUZ,28.983333,50.833333,Medium,Coastal (Natural)
-IRQ,Al Basrah,IQ BSR,30.516667,47.833333,Medium,River (Natural)
-IRQ,Umm Qasr,IQ UQR,30.016667,47.95,Small,River (Natural)
-KWT,Mina Ash Shuaybah,KW SAA,29.033333,48.166667,Medium,Open Roadstead
-KWT,Mina Al Ahmadi,KW MEA,29.066667,48.166667,Medium,Open Roadstead
-KWT,Mina Abd Allah,KW MIB,29.016667,48.166667,Small,Open Roadstead
-LBN,Bayrut,LB BEY,33.9,35.5,Large,Coastal (Breakwater)
-LBN,Tarabulus,LBKYE,34.45,35.833333,Medium,Coastal (Breakwater)
-LBY,Banghazi,LY BEN,32.116667,20.05,Medium,Coastal (Breakwater)
-LBY,Mina Tarabulus (Tripoli),LY TIP,32.9,13.183333,Medium,Coastal (Breakwater)
-LBY,Mersa Tobruq,LY TOB,32.083333,23.983333,Small,Coastal (Breakwater)
-MYS,Port Klang,MY PKG,3,101.4,Large,Coastal (Natural)
-MYS,Johor,MYJHB,1.433333,103.9,Large,River (Natural)
-MYS,Tapis Marine Terminal A,MY TAT,5.516667,105.016667,Large,Open Roadstead
-MRT,Nouadhibou,MR NDB,20.916667,-17.05,Medium,Coastal (Natural)
-MRT,Nouakchott,MR NKC,18.033333,-16.033333,Small,Open Roadstead
-MAR,Tangier-Mediterranean,MA PTM,35.9,-5.516667,Large,Coastal (Breakwater)
-MAR,Casablanca,MA CAS,33.6,-7.616667,Large,Coastal (Breakwater)
-MAR,Agadir,MA AGA,30.433333,-9.633333,Large,Coastal (Breakwater)
-MOZ,Maputo,MZ MPM,-25.96277778,32.54472222,Medium,Canal or Lake
-MOZ,Beira,MZ BEW,-19.833333,34.833333,Medium,Coastal (Natural)
-MOZ,Inhambane,MZ INH,-23.916667,35.4,Small,River (Natural)
-NGA,Lagos,NG LOS,6.4,3.4,Large,River (Natural)
-NGA,Pennington Oil Terminal,NG PEN,4.25,5.616667,Large,Open Roadstead
-NGA,Bonny,NG BON,4.45,7.166667,Medium,River (Natural)
-OMN,Duqm,OM DQM,19.67325258,57.71690892,Medium,Coastal (Breakwater)
-OMN,Mina Raysut,OM SLL,16.95111111,54.02916667,Small,Coastal (Breakwater)
-OMN,Mina Al Fahl,OM MFH,23.633333,58.516667,Small,Open Roadstead
-PAK,Gwadar,PK GWD,25.133333,62.3,Medium,Coastal (Natural)
-PAK,Karachi,PK KHI,24.783333,66.983333,Medium,Coastal (Natural)
-PAK,Muhamamad Bin Qasim,PK BQM,24.766667,67.35,Small,Coastal (Natural)
-QAT,Ras Laffan,QA RLF,25.916667,51.583333,Medium,Coastal (Breakwater)
-QAT,Umm Said,QA UMS,24.916667,51.566667,Small,Open Roadstead
-QAT,Hamad,,25.01666667,51.6,Small,Coastal (Breakwater)
-SAU,Ras  Tannurah,SA RTA,26.633333,50.166667,Medium,Open Roadstead
-SAU,Duba,SA DHU,27.566667,35.533333,Small,Open Roadstead
-SAU,Jiddah,SA JED,21.483333,39.183333,Small,Coastal (Breakwater)
-SEN,Dakar,SN DKR,14.683333,-17.433333,Medium,Coastal (Breakwater)
-SEN,St Louis,SN XLS,16.016667,-16.516667,Small,River (Natural)
-SLE,Freetown,SL FNA,8.5,-13.233333,Small,Coastal (Natural)
-SOM,Muqdisho,SO MGQ,2.033333,45.35,Large,Coastal (Breakwater)
-SOM,Berbera,SO BBO,10.45,45.016667,Small,Coastal (Breakwater)
-SOM,Boosaaso,SO BSA,11.283333,49.183333,Small,Coastal (Breakwater)
-SDN,Port Sudan,SD PZU,19.6,37.233333,Medium,Coastal (Breakwater)
-SDN,Beshayer Oil Terminal,,19.4,37.316667,Medium,Open Roadstead
-SDN,Al Khair Oil Terminal,,19.583333,37.25,Small,Coastal (Natural)
-SUR,Paramaribo,SR PBM,5.833333,-55.166667,Small,River (Natural)
-SYR,Baniyas,SY BAN,35.18833333,35.94333333,Large,Coastal (Breakwater)
-SYR,Al Ladhiqiyah,SY ALD,35.533333,35.766667,Medium,Coastal (Breakwater)
-SYR,Tartus,SY TTS,34.9,35.866667,Small,Coastal (Breakwater)
-TGO,Lome,TG LFW,6.133333,1.283333,Medium,Coastal (Breakwater)
-TUN,La Goulette,TN LGN,36.8,10.3,Medium,Coastal (Breakwater)
-TUN,Tunis,TN TUN,36.8,10.25,Medium,Canal or Lake
-TUN,Tazerka Oil Terminal,TN TAT,36.6,11.683333,Medium,Open Roadstead
-TUR,Istanbul,TR IST,41.016667,28.966667,Large,Canal or Lake
-TUR,Samsun,TR SSX,41.3,36.35,Large,Coastal (Breakwater)
-TUR,Izmir,TR IZM,38.433333,27.133333,Large,Coastal (Natural)
-ARE,Mina Jabal Ali,AE JEA,25.016667,55.05,Large,Coastal (Breakwater)
-ARE,Khawr Fakkan,AE KLF,25.36277778,56.36888889,Medium,Coastal (Natural)
-ARE,Zirkuh,AE ZUR,25.016667,53,Medium,Open Roadstead
-YEM,Ras Isa Marine Terminal,YE RAI,15.133333,42.6,Large, 
-YEM,Al Mukha,YE MOK,13.316667,43.25,Medium,Coastal (Natural)
-YEM,Aden,YE ADE,12.783333,44.95,Medium,Coastal (Natural)
-CHN,Lon Shui Terminal,,20.833333,115.683333,Large,Open Roadstead
-CHN,Shanghai,CNSGH,31.216667,121.5,Large,River (Natural)
-CHN,Qingdao Gang,CN QIN,36.033333,120.266667,Large,Open Roadstead
+iso3,name,locode,lat,lng,size,type,source
+ALB,Durres,AL DRZ,41.316667,19.45,Small,Coastal (Breakwater),NGA World Port Index
+ALB,Porto Romano,ALROM,41.38333333,19.41666667,Medium,Coastal (Breakwater),NGA World Port Index
+ALB,Butrint,ALBUT,39.75,20.016666666666666,Medium,UN/LOCODE port,UN/LOCODE
+DZA,Alger,DZ ALG,36.766667,3.066667,Large,Coastal (Breakwater),NGA World Port Index
+DZA,Annaba,DZ AAE,36.916667,7.766667,Medium,Coastal (Breakwater),NGA World Port Index
+DZA,Oran,DZ ORN,35.7,-0.633333,Large,Coastal (Breakwater),NGA World Port Index
+BHR,Khalifa Bin Salman,BH KBS,26.25,50.75,Medium,Coastal (Breakwater),NGA World Port Index
+BHR,Mina Salman,BH MIN,26.2,50.633333,Medium,Coastal (Natural),NGA World Port Index
+BHR,Sitrah,BH SIT,26.166667,50.666667,Medium,Open Roadstead,NGA World Port Index
+BGD,Chittagong,BD CGP,22.316667,91.816667,Medium,River (Natural),NGA World Port Index
+BGD,Mongla,BD MGL,22.466667,89.6,Small,River (Natural),NGA World Port Index
+BGD,Ashuganj,BDASJ,24.033333333333335,91.01666666666667,Medium,UN/LOCODE port,UN/LOCODE
+BEN,Cotonou,BJ COO,6.35,2.433333,Medium,Coastal (Breakwater),NGA World Port Index
+BEN,Porto-Novo,BJPTN,6.483333333333333,2.6166666666666667,Medium,UN/LOCODE port,UN/LOCODE
+BRN,Bandar Seri Begawan,BN BWN,4.883333,114.883333,Small,River (Natural),NGA World Port Index
+BRN,Muara Harbor,BN MUA,5.033333,115.066667,Small,Coastal (Natural),NGA World Port Index
+BRN,Bandar Seri Begawan,BNBWN,4.883333333333333,114.93333333333334,Medium,UN/LOCODE port,UN/LOCODE
+CMR,Douala,CM DLA,4.05,9.683333,Medium,River (Natural),NGA World Port Index
+CMR,Garoua,CMGOU,9.3,13.4,Medium,UN/LOCODE port,UN/LOCODE
+CMR,Kumba,CMKUM,4.633333333333333,9.433333333333334,Medium,UN/LOCODE port,UN/LOCODE
+CIV,Abidjan,CI ABJ,5.25,-4.016667,Large,Canal or Lake,NGA World Port Index
+CIV,Abidjan,CIABJ,5.333333333333333,-4.016666666666667,Medium,UN/LOCODE port,UN/LOCODE
+CIV,Assinie-Mafia,CIASS,5.116666666666666,-3.283333333333333,Medium,UN/LOCODE port,UN/LOCODE
+DJI,Djibouti,DJ JIB,11.6,43.133333,Small,Coastal (Natural),NGA World Port Index
+DJI,Doraleh,DJ DCT,11.60277778,43.08861111,Small,Coastal (Natural),NGA World Port Index
+DJI,Doraleh Container Terminal,DJDCT,11.6,44.6,Medium,UN/LOCODE port,UN/LOCODE
+EGY,Al Iskandariyh (Alexandria),EG ALY,31.166667,29.833333,Large,Coastal (Breakwater),NGA World Port Index
+EGY,Bur Sa'id,EG PSD,31.266667,32.3,Large,Canal or Lake,NGA World Port Index
+EGY,Damietta,EG DAM,31.483333,31.75,Large,Coastal (Breakwater),NGA World Port Index
+GAB,Libreville,GA LBV,0.383333,9.45,Medium,Open Roadstead,NGA World Port Index
+GAB,Port Gentil,GA POG,-0.7,8.8,Medium,Coastal (Natural),NGA World Port Index
+GAB,Port Owendo,GA OWE,0.283333,9.5,Small,Open Roadstead,NGA World Port Index
+GIN,Conakry,GN CKY,9.516667,-13.716667,Medium,Coastal (Breakwater),NGA World Port Index
+GIN,Bel-Air,GNBEL,10.233333333333333,-14.466666666666667,Medium,UN/LOCODE port,UN/LOCODE
+GIN,Boffa,GNBFA,10.183333333333334,-14.033333333333333,Medium,UN/LOCODE port,UN/LOCODE
+GUY,Georgetown,GYGEO,6.833333,-58.166667,Medium,River (Natural),NGA World Port Index
+GUY,Adventure,GYANT,7.083333333333333,-58.483333333333334,Medium,UN/LOCODE port,UN/LOCODE
+GUY,Everton,GYEVR,6.916666666666667,-58.333333333333336,Medium,UN/LOCODE port,UN/LOCODE
+IDN,Cilacap,ID CXP,-7.733333,109,Large,Coastal (Natural),NGA World Port Index
+IDN,Jakarta,ID JKT,-6.1,106.883333,Large,Coastal (Breakwater),NGA World Port Index
+IDN,Kasim Terminal,ID KAS,-1.3,131.016667,Large,Open Roadstead,NGA World Port Index
+IRN,Abadan,IR ABD,30.333333,48.283333,Medium,River (Natural),NGA World Port Index
+IRN,Bushehr,IR BUZ,28.983333,50.833333,Medium,Coastal (Natural),NGA World Port Index
+IRN,Khorramshahr,IR KHO,30.433333,48.183333,Medium,River (Natural),NGA World Port Index
+IRQ,Al Basrah,IQ BSR,30.516667,47.833333,Medium,River (Natural),NGA World Port Index
+IRQ,Umm Qasr,IQ UQR,30.016667,47.95,Small,River (Natural),NGA World Port Index
+IRQ,Al Asad,IQASD,33.78333333333333,42.43333333333333,Medium,UN/LOCODE port,UN/LOCODE
+KWT,Mina Abd Allah,KW MIB,29.016667,48.166667,Small,Open Roadstead,NGA World Port Index
+KWT,Mina Al Ahmadi,KW MEA,29.066667,48.166667,Medium,Open Roadstead,NGA World Port Index
+KWT,Mina Ash Shuaybah,KW SAA,29.033333,48.166667,Medium,Open Roadstead,NGA World Port Index
+LBN,Bayrut,LB BEY,33.9,35.5,Large,Coastal (Breakwater),NGA World Port Index
+LBN,Tarabulus,LBKYE,34.45,35.833333,Medium,Coastal (Breakwater),NGA World Port Index
+LBN,Amchit,LBACT,34.15,35.63333333333333,Medium,UN/LOCODE port,UN/LOCODE
+LBY,Banghazi,LY BEN,32.116667,20.05,Medium,Coastal (Breakwater),NGA World Port Index
+LBY,Mersa Tobruq,LY TOB,32.083333,23.983333,Small,Coastal (Breakwater),NGA World Port Index
+LBY,Mina Tarabulus (Tripoli),LY TIP,32.9,13.183333,Medium,Coastal (Breakwater),NGA World Port Index
+MYS,Johor,MYJHB,1.433333,103.9,Large,River (Natural),NGA World Port Index
+MYS,Port Klang,MY PKG,3,101.4,Large,Coastal (Natural),NGA World Port Index
+MYS,Tapis Marine Terminal A,MY TAT,5.516667,105.016667,Large,Open Roadstead,NGA World Port Index
+MRT,Nouadhibou,MR NDB,20.916667,-17.05,Medium,Coastal (Natural),NGA World Port Index
+MRT,Nouakchott,MR NKC,18.033333,-16.033333,Small,Open Roadstead,NGA World Port Index
+MRT,Rosso,MRROS,16.5,-15.916666666666666,Medium,UN/LOCODE port,UN/LOCODE
+MAR,Agadir,MA AGA,30.433333,-9.633333,Large,Coastal (Breakwater),NGA World Port Index
+MAR,Casablanca,MA CAS,33.6,-7.616667,Large,Coastal (Breakwater),NGA World Port Index
+MAR,Tangier-Mediterranean,MA PTM,35.9,-5.516667,Large,Coastal (Breakwater),NGA World Port Index
+MOZ,Beira,MZ BEW,-19.833333,34.833333,Medium,Coastal (Natural),NGA World Port Index
+MOZ,Inhambane,MZ INH,-23.916667,35.4,Small,River (Natural),NGA World Port Index
+MOZ,Maputo,MZ MPM,-25.96277778,32.54472222,Medium,Canal or Lake,NGA World Port Index
+NGA,Bonny,NG BON,4.45,7.166667,Medium,River (Natural),NGA World Port Index
+NGA,Lagos,NG LOS,6.4,3.4,Large,River (Natural),NGA World Port Index
+NGA,Pennington Oil Terminal,NG PEN,4.25,5.616667,Large,Open Roadstead,NGA World Port Index
+OMN,Duqm,OM DQM,19.67325258,57.71690892,Medium,Coastal (Breakwater),NGA World Port Index
+OMN,Mina Al Fahl,OM MFH,23.633333,58.516667,Small,Open Roadstead,NGA World Port Index
+OMN,Mina Raysut,OM SLL,16.95111111,54.02916667,Small,Coastal (Breakwater),NGA World Port Index
+PAK,Gwadar,PK GWD,25.133333,62.3,Medium,Coastal (Natural),NGA World Port Index
+PAK,Karachi,PK KHI,24.783333,66.983333,Medium,Coastal (Natural),NGA World Port Index
+PAK,Muhamamad Bin Qasim,PK BQM,24.766667,67.35,Small,Coastal (Natural),NGA World Port Index
+QAT,Hamad,,25.01666667,51.6,Small,Coastal (Breakwater),NGA World Port Index
+QAT,Ras Laffan,QA RLF,25.916667,51.583333,Medium,Coastal (Breakwater),NGA World Port Index
+QAT,Umm Said,QA UMS,24.916667,51.566667,Small,Open Roadstead,NGA World Port Index
+SAU,Duba,SA DHU,27.566667,35.533333,Small,Open Roadstead,NGA World Port Index
+SAU,Jiddah,SA JED,21.483333,39.183333,Small,Coastal (Breakwater),NGA World Port Index
+SAU,Ras  Tannurah,SA RTA,26.633333,50.166667,Medium,Open Roadstead,NGA World Port Index
+SEN,Dakar,SN DKR,14.683333,-17.433333,Medium,Coastal (Breakwater),NGA World Port Index
+SEN,St Louis,SN XLS,16.016667,-16.516667,Small,River (Natural),NGA World Port Index
+SEN,Saint Louis,SNXLS,16.033333333333335,-16.5,Medium,UN/LOCODE port,UN/LOCODE
+SLE,Freetown,SL FNA,8.5,-13.233333,Small,Coastal (Natural),NGA World Port Index
+SLE,Kissy,SLKSY,8.466666666666667,-13.183333333333334,Medium,UN/LOCODE port,UN/LOCODE
+SOM,Berbera,SO BBO,10.45,45.016667,Small,Coastal (Breakwater),NGA World Port Index
+SOM,Boosaaso,SO BSA,11.283333,49.183333,Small,Coastal (Breakwater),NGA World Port Index
+SOM,Muqdisho,SO MGQ,2.033333,45.35,Large,Coastal (Breakwater),NGA World Port Index
+SDN,Al Khair Oil Terminal,,19.583333,37.25,Small,Coastal (Natural),NGA World Port Index
+SDN,Beshayer Oil Terminal,,19.4,37.316667,Medium,Open Roadstead,NGA World Port Index
+SDN,Port Sudan,SD PZU,19.6,37.233333,Medium,Coastal (Breakwater),NGA World Port Index
+SUR,Paramaribo,SR PBM,5.833333,-55.166667,Small,River (Natural),NGA World Port Index
+SUR,Lelydorp,SRLLW,5.7,-55.233333333333334,Medium,UN/LOCODE port,UN/LOCODE
+SYR,Al Ladhiqiyah,SY ALD,35.533333,35.766667,Medium,Coastal (Breakwater),NGA World Port Index
+SYR,Baniyas,SY BAN,35.18833333,35.94333333,Large,Coastal (Breakwater),NGA World Port Index
+SYR,Tartus,SY TTS,34.9,35.866667,Small,Coastal (Breakwater),NGA World Port Index
+TGO,Lome,TG LFW,6.133333,1.283333,Medium,Coastal (Breakwater),NGA World Port Index
+TGO,Aného,TGANE,6.233333333333333,1.6,Medium,UN/LOCODE port,UN/LOCODE
+TUN,La Goulette,TN LGN,36.8,10.3,Medium,Coastal (Breakwater),NGA World Port Index
+TUN,Tazerka Oil Terminal,TN TAT,36.6,11.683333,Medium,Open Roadstead,NGA World Port Index
+TUN,Tunis,TN TUN,36.8,10.25,Medium,Canal or Lake,NGA World Port Index
+TUR,Istanbul,TR IST,41.016667,28.966667,Large,Canal or Lake,NGA World Port Index
+TUR,Izmir,TR IZM,38.433333,27.133333,Large,Coastal (Natural),NGA World Port Index
+TUR,Samsun,TR SSX,41.3,36.35,Large,Coastal (Breakwater),NGA World Port Index
+ARE,Khawr Fakkan,AE KLF,25.36277778,56.36888889,Medium,Coastal (Natural),NGA World Port Index
+ARE,Mina Jabal Ali,AE JEA,25.016667,55.05,Large,Coastal (Breakwater),NGA World Port Index
+ARE,Zirkuh,AE ZUR,25.016667,53,Medium,Open Roadstead,NGA World Port Index
+YEM,Aden,YE ADE,12.783333,44.95,Medium,Coastal (Natural),NGA World Port Index
+YEM,Al Mukha,YE MOK,13.316667,43.25,Medium,Coastal (Natural),NGA World Port Index
+YEM,Ras Isa Marine Terminal,YE RAI,15.133333,42.6,Large, ,NGA World Port Index
+CHN,Lon Shui Terminal,,20.833333,115.683333,Large,Open Roadstead,NGA World Port Index
+CHN,Qingdao Gang,CN QIN,36.033333,120.266667,Large,Open Roadstead,NGA World Port Index
+CHN,Shanghai,CNSGH,31.216667,121.5,Large,River (Natural),NGA World Port Index
+AFG,Dehdadi,AFDHD,36.65,66.98333333333333,Medium,UN/LOCODE port,UN/LOCODE
+AFG,Qalat,AFQLT,32.1,66.88333333333334,Medium,UN/LOCODE port,UN/LOCODE
+AFG,Torkham,AFRKH,34.88333333333333,71.91666666666667,Medium,UN/LOCODE port,UN/LOCODE
+AZE,Alat,AZALA,39.95,49.4,Medium,UN/LOCODE port,UN/LOCODE
+AZE,Khachmaz,AZKMZ,41.983333333333334,47.583333333333336,Medium,UN/LOCODE port,UN/LOCODE
+AZE,Qaradag,AZQDG,40.25,49.6,Medium,UN/LOCODE port,UN/LOCODE
+BFA,Ziniaré,BFOB2,12.583333333333334,-1.3,Medium,UN/LOCODE port,UN/LOCODE
+GMB,Sukuta,GMSUK,13.4,-16.7,Medium,UN/LOCODE port,UN/LOCODE
+GNB,Binta,GWBNT,12.416666666666666,-15.316666666666666,Medium,UN/LOCODE port,UN/LOCODE
+GNB,Bolama,GWBOL,11.583333333333334,-15.466666666666667,Medium,UN/LOCODE port,UN/LOCODE
+GNB,Bubaque,GWBQE,11.283333333333333,-15.833333333333334,Medium,UN/LOCODE port,UN/LOCODE
+JOR,'Aqaba,JOAQB,29.516666666666666,35.0,Medium,UN/LOCODE port,UN/LOCODE
+JOR,Abu Alandah,JODAH,31.9,35.96666666666667,Medium,UN/LOCODE port,UN/LOCODE
+JOR,Al 'Aqabah,JOAQJ,29.533333333333335,35.0,Medium,UN/LOCODE port,UN/LOCODE
+COM,Anjouan Apt,KMAJN,-12.25,44.416666666666664,Medium,UN/LOCODE port,UN/LOCODE
+COM,"Mutsamudu, Anjouan",KMMUT,-12.15,44.38333333333333,Medium,UN/LOCODE port,UN/LOCODE
+KAZ,Aktau,KZAAU,43.65,51.15,Medium,UN/LOCODE port,UN/LOCODE
+KAZ,Bautino,KZBTN,44.53333333333333,50.25,Medium,UN/LOCODE port,UN/LOCODE
+KAZ,Temirtau,KZTAU,50.05,72.95,Medium,UN/LOCODE port,UN/LOCODE
+MDV,Baa Atoll,MVBAL,5.133333333333334,72.95,Medium,UN/LOCODE port,UN/LOCODE
+MDV,Coastline Private Port,MVCPP,4.166666666666667,73.45,Medium,UN/LOCODE port,UN/LOCODE
+MDV,Hulhulé Island,MVHHE,4.183333333333334,73.51666666666667,Medium,UN/LOCODE port,UN/LOCODE
+TKM,Altyn Asyr,TMALT,37.88333333333333,58.36666666666667,Medium,UN/LOCODE port,UN/LOCODE
+TKM,Cheleken,TMCHE,39.4,53.13333333333333,Medium,UN/LOCODE port,UN/LOCODE
+TKM,Halach,TMHAL,38.06666666666667,64.88333333333334,Medium,UN/LOCODE port,UN/LOCODE
+UGA,Galiraya,UGMKN,1.3,32.86666666666667,Medium,UN/LOCODE port,UN/LOCODE
+UZB,Akaltyn,UZAKT,41.43333333333333,61.06666666666667,Medium,UN/LOCODE port,UN/LOCODE
+UZB,Asaka,UZASA,40.63333333333333,72.23333333333333,Medium,UN/LOCODE port,UN/LOCODE

@@ -172,12 +172,19 @@ export interface SeaRouteOption {
   fallback?: boolean;
 }
 
-export interface SeaRouteInfo {
-  destPort: string;
-  destCode: string | null;
+export interface SeaRouteDestination {
+  port: string;
+  code: string | null;
+  iso3: string;
+  domestic: boolean;
   via: string;
   /** One route per Chinese origin port, sorted shortest first. */
   options: SeaRouteOption[];
+}
+
+export interface SeaRouteInfo {
+  /** Destination ports, shortest route first. */
+  destinations: SeaRouteDestination[];
 }
 
 export interface SeaRouteDataset {

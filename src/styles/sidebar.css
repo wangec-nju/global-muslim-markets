@@ -398,3 +398,28 @@ body.is-dossier-open .hints { opacity: 0; pointer-events: none; }
   color: inherit;
   font-weight: 500;
 }
+
+.dossier-route-group {
+  margin-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(147, 205, 191, 0.1);
+}
+
+.dossier-route-dest {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.dossier-route-dest strong {
+  color: #e7f2ed;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.dossier-route-dest span {
+  color: var(--faint);
+  font-size: 8px;
+}

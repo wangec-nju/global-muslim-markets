@@ -8,7 +8,7 @@
       "geo/admin1.csv": "92beac0e3d2c430c469cc3431d1aa19d81ab5b8d34aa14146d8138175ea9f445",
       "geo/cities.csv": "2ce4e7f175fd303cf1192d1bc9c4c2ff2defd79cc62c53f1d6248b5540aca888",
       "geo/airports.csv": "9d7e9b9df56c337a0fb9538214804ea2955082262e0c33a476e806298fa39b43",
-      "geo/ports.csv": "31ff304decd6f955c244d2711536a692347b4b5e934b5f7d68600e4aeed79e7f",
+      "geo/ports.csv": "027a224aac2ca578758e1ec2c9062fbf7838af3036379dcba82d07993e43edb6",
       "geo/logistics.csv": "28f50239cc3cd088e07a99cfaf93338f5da13bb1bce6df25e8c5aaa1f377c952",
       "geo/city-labels.csv": "d617c0eda2966fd9a1952f78283995bb3e44363c2869f4d1334dd22c7c3b7cdd",
       "hs2-imports.csv": "8aab6685328f6f7a7ab502ec8635aea4f1c879b18a7d42906a294a20d9756632",
@@ -399,6 +399,36 @@
           "lng": 62.228298
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Dehdadi",
+          "nameZh": null,
+          "code": "AFDHD",
+          "city": null,
+          "lat": 36.65,
+          "lng": 66.98333333333333
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Qalat",
+          "nameZh": null,
+          "code": "AFQLT",
+          "city": null,
+          "lat": 32.1,
+          "lng": 66.88333333333334
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Torkham",
+          "nameZh": null,
+          "code": "AFRKH",
+          "city": null,
+          "lat": 34.88333333333333,
+          "lng": 71.91666666666667
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Ali Shirzayi",
@@ -467,7 +497,7 @@
         "divisions": 34,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -654,6 +684,16 @@
         },
         {
           "type": "port",
+          "subtype": "Small",
+          "name": "Durres",
+          "nameZh": null,
+          "code": "AL DRZ",
+          "city": null,
+          "lat": 41.316667,
+          "lng": 19.45
+        },
+        {
+          "type": "port",
           "subtype": "Medium",
           "name": "Porto Romano",
           "nameZh": null,
@@ -664,13 +704,13 @@
         },
         {
           "type": "port",
-          "subtype": "Small",
-          "name": "Durres",
+          "subtype": "Medium",
+          "name": "Butrint",
           "nameZh": null,
-          "code": "AL DRZ",
+          "code": "ALBUT",
           "city": null,
-          "lat": 41.316667,
-          "lng": 19.45
+          "lat": 39.75,
+          "lng": 20.016666666666666
         },
         {
           "type": "logistics",
@@ -741,7 +781,7 @@
         "divisions": 12,
         "cities": 6,
         "airports": 1,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -1234,16 +1274,6 @@
         },
         {
           "type": "port",
-          "subtype": "Large",
-          "name": "Oran",
-          "nameZh": null,
-          "code": "DZ ORN",
-          "city": null,
-          "lat": 35.7,
-          "lng": -0.633333
-        },
-        {
-          "type": "port",
           "subtype": "Medium",
           "name": "Annaba",
           "nameZh": null,
@@ -1251,6 +1281,16 @@
           "city": null,
           "lat": 36.916667,
           "lng": 7.766667
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Oran",
+          "nameZh": null,
+          "code": "DZ ORN",
+          "city": null,
+          "lat": 35.7,
+          "lng": -0.633333
         },
         {
           "type": "logistics",
@@ -1885,6 +1925,36 @@
           "lng": 47.725389
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Alat",
+          "nameZh": null,
+          "code": "AZALA",
+          "city": null,
+          "lat": 39.95,
+          "lng": 49.4
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Khachmaz",
+          "nameZh": null,
+          "code": "AZKMZ",
+          "city": null,
+          "lat": 41.983333333333334,
+          "lng": 47.583333333333336
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Qaradag",
+          "nameZh": null,
+          "code": "AZQDG",
+          "city": null,
+          "lat": 40.25,
+          "lng": 49.6
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Agcabadi",
@@ -1953,7 +2023,7 @@
         "divisions": 71,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -2093,12 +2163,12 @@
         {
           "type": "port",
           "subtype": "Medium",
-          "name": "Sitrah",
+          "name": "Khalifa Bin Salman",
           "nameZh": null,
-          "code": "BH SIT",
+          "code": "BH KBS",
           "city": null,
-          "lat": 26.166667,
-          "lng": 50.666667
+          "lat": 26.25,
+          "lng": 50.75
         },
         {
           "type": "port",
@@ -2113,12 +2183,12 @@
         {
           "type": "port",
           "subtype": "Medium",
-          "name": "Khalifa Bin Salman",
+          "name": "Sitrah",
           "nameZh": null,
-          "code": "BH KBS",
+          "code": "BH SIT",
           "city": null,
-          "lat": 26.25,
-          "lng": 50.75
+          "lat": 26.166667,
+          "lng": 50.666667
         },
         {
           "type": "logistics",
@@ -2391,6 +2461,16 @@
           "lng": 89.6
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Ashuganj",
+          "nameZh": null,
+          "code": "BDASJ",
+          "city": null,
+          "lat": 24.033333333333335,
+          "lng": 91.01666666666667
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Bhola",
@@ -2459,7 +2539,7 @@
         "divisions": 8,
         "cities": 6,
         "airports": 3,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -2655,6 +2735,16 @@
           "lng": 2.433333
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Porto-Novo",
+          "nameZh": null,
+          "code": "BJPTN",
+          "city": null,
+          "lat": 6.483333333333333,
+          "lng": 2.6166666666666667
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Abomey-Calavi",
@@ -2723,7 +2813,7 @@
         "divisions": 12,
         "cities": 6,
         "airports": 1,
-        "ports": 1,
+        "ports": 2,
         "logistics": 2,
         "hs2": 5
       },
@@ -2863,6 +2953,16 @@
         {
           "type": "port",
           "subtype": "Small",
+          "name": "Bandar Seri Begawan",
+          "nameZh": null,
+          "code": "BN BWN",
+          "city": null,
+          "lat": 4.883333,
+          "lng": 114.883333
+        },
+        {
+          "type": "port",
+          "subtype": "Small",
           "name": "Muara Harbor",
           "nameZh": null,
           "code": "BN MUA",
@@ -2872,13 +2972,13 @@
         },
         {
           "type": "port",
-          "subtype": "Small",
+          "subtype": "Medium",
           "name": "Bandar Seri Begawan",
           "nameZh": null,
-          "code": "BN BWN",
+          "code": "BNBWN",
           "city": null,
-          "lat": 4.883333,
-          "lng": 114.883333
+          "lat": 4.883333333333333,
+          "lng": 114.93333333333334
         },
         {
           "type": "logistics",
@@ -2949,7 +3049,7 @@
         "divisions": 4,
         "cities": 6,
         "airports": 1,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -3151,6 +3251,16 @@
           "lng": -4.33097
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Ziniaré",
+          "nameZh": null,
+          "code": "BFOB2",
+          "city": null,
+          "lat": 12.583333333333334,
+          "lng": -1.3
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Koudougou",
@@ -3219,7 +3329,7 @@
         "divisions": 13,
         "cities": 6,
         "airports": 2,
-        "ports": 0,
+        "ports": 1,
         "logistics": 2,
         "hs2": 5
       },
@@ -3427,6 +3537,26 @@
           "lng": 9.683333
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Garoua",
+          "nameZh": null,
+          "code": "CMGOU",
+          "city": null,
+          "lat": 9.3,
+          "lng": 13.4
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Kumba",
+          "nameZh": null,
+          "code": "CMKUM",
+          "city": null,
+          "lat": 4.633333333333333,
+          "lng": 9.433333333333334
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Bonabéri",
@@ -3495,7 +3625,7 @@
         "divisions": 10,
         "cities": 6,
         "airports": 3,
-        "ports": 1,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -3942,6 +4072,26 @@
           "lng": 44.430044
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Anjouan Apt",
+          "nameZh": null,
+          "code": "KMAJN",
+          "city": null,
+          "lat": -12.25,
+          "lng": 44.416666666666664
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Mutsamudu, Anjouan",
+          "nameZh": null,
+          "code": "KMMUT",
+          "city": null,
+          "lat": -12.15,
+          "lng": 44.38333333333333
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Anjouan Apt",
@@ -4010,7 +4160,7 @@
         "divisions": 3,
         "cities": 3,
         "airports": 2,
-        "ports": 0,
+        "ports": 2,
         "logistics": 2,
         "hs2": 5
       },
@@ -4238,6 +4388,26 @@
           "lng": -4.016667
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Abidjan",
+          "nameZh": null,
+          "code": "CIABJ",
+          "city": null,
+          "lat": 5.333333333333333,
+          "lng": -4.016666666666667
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Assinie-Mafia",
+          "nameZh": null,
+          "code": "CIASS",
+          "city": null,
+          "lat": 5.116666666666666,
+          "lng": -3.283333333333333
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Adzopé",
@@ -4306,7 +4476,7 @@
         "divisions": 14,
         "cities": 6,
         "airports": 3,
-        "ports": 1,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -4480,6 +4650,16 @@
           "lng": 43.08861111
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Doraleh Container Terminal",
+          "nameZh": null,
+          "code": "DJDCT",
+          "city": null,
+          "lat": 11.6,
+          "lng": 44.6
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Djibouti",
@@ -4548,7 +4728,7 @@
         "divisions": 6,
         "cities": 6,
         "airports": 1,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -4846,6 +5026,16 @@
         {
           "type": "port",
           "subtype": "Large",
+          "name": "Al Iskandariyh (Alexandria)",
+          "nameZh": null,
+          "code": "EG ALY",
+          "city": null,
+          "lat": 31.166667,
+          "lng": 29.833333
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
           "name": "Bur Sa'id",
           "nameZh": null,
           "code": "EG PSD",
@@ -4862,16 +5052,6 @@
           "city": null,
           "lat": 31.483333,
           "lng": 31.75
-        },
-        {
-          "type": "port",
-          "subtype": "Large",
-          "name": "Al Iskandariyh (Alexandria)",
-          "nameZh": null,
-          "code": "EG ALY",
-          "city": null,
-          "lat": 31.166667,
-          "lng": 29.833333
         },
         {
           "type": "logistics",
@@ -5378,6 +5558,16 @@
           "lng": -16.652201
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Sukuta",
+          "nameZh": null,
+          "code": "GMSUK",
+          "city": null,
+          "lat": 13.4,
+          "lng": -16.7
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Faji Kunda",
@@ -5446,7 +5636,7 @@
         "divisions": 6,
         "cities": 6,
         "airports": 1,
-        "ports": 0,
+        "ports": 1,
         "logistics": 2,
         "hs2": 5
       },
@@ -5618,6 +5808,26 @@
           "lng": -13.716667
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Bel-Air",
+          "nameZh": null,
+          "code": "GNBEL",
+          "city": null,
+          "lat": 10.233333333333333,
+          "lng": -14.466666666666667
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Boffa",
+          "nameZh": null,
+          "code": "GNBFA",
+          "city": null,
+          "lat": 10.183333333333334,
+          "lng": -14.033333333333333
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Kindia",
@@ -5686,7 +5896,7 @@
         "divisions": 8,
         "cities": 6,
         "airports": 1,
-        "ports": 1,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -5858,6 +6068,36 @@
           "lng": -15.653596
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Binta",
+          "nameZh": null,
+          "code": "GWBNT",
+          "city": null,
+          "lat": 12.416666666666666,
+          "lng": -15.316666666666666
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Bolama",
+          "nameZh": null,
+          "code": "GWBOL",
+          "city": null,
+          "lat": 11.583333333333334,
+          "lng": -15.466666666666667
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Bubaque",
+          "nameZh": null,
+          "code": "GWBQE",
+          "city": null,
+          "lat": 11.283333333333333,
+          "lng": -15.833333333333334
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Bissau",
@@ -5926,7 +6166,7 @@
         "divisions": 9,
         "cities": 6,
         "airports": 1,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -6103,6 +6343,26 @@
           "lng": -58.166667
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Adventure",
+          "nameZh": null,
+          "code": "GYANT",
+          "city": null,
+          "lat": 7.083333333333333,
+          "lng": -58.483333333333334
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Everton",
+          "nameZh": null,
+          "code": "GYEVR",
+          "city": null,
+          "lat": 6.916666666666667,
+          "lng": -58.333333333333336
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Bourda",
@@ -6171,7 +6431,7 @@
         "divisions": 10,
         "cities": 3,
         "airports": 3,
-        "ports": 1,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -6535,22 +6795,22 @@
         {
           "type": "port",
           "subtype": "Large",
-          "name": "Jakarta",
-          "nameZh": null,
-          "code": "ID JKT",
-          "city": null,
-          "lat": -6.1,
-          "lng": 106.883333
-        },
-        {
-          "type": "port",
-          "subtype": "Large",
           "name": "Cilacap",
           "nameZh": null,
           "code": "ID CXP",
           "city": null,
           "lat": -7.733333,
           "lng": 109
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Jakarta",
+          "nameZh": null,
+          "code": "ID JKT",
+          "city": null,
+          "lat": -6.1,
+          "lng": 106.883333
         },
         {
           "type": "port",
@@ -6953,16 +7213,6 @@
         {
           "type": "port",
           "subtype": "Medium",
-          "name": "Khorramshahr",
-          "nameZh": null,
-          "code": "IR KHO",
-          "city": null,
-          "lat": 30.433333,
-          "lng": 48.183333
-        },
-        {
-          "type": "port",
-          "subtype": "Medium",
           "name": "Abadan",
           "nameZh": null,
           "code": "IR ABD",
@@ -6979,6 +7229,16 @@
           "city": null,
           "lat": 28.983333,
           "lng": 50.833333
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Khorramshahr",
+          "nameZh": null,
+          "code": "IR KHO",
+          "city": null,
+          "lat": 30.433333,
+          "lng": 48.183333
         },
         {
           "type": "logistics",
@@ -7325,6 +7585,16 @@
           "lng": 47.95
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Al Asad",
+          "nameZh": null,
+          "code": "IQASD",
+          "city": null,
+          "lat": 33.78333333333333,
+          "lng": 42.43333333333333
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Erbil International Apt",
@@ -7393,7 +7663,7 @@
         "divisions": 19,
         "cities": 6,
         "airports": 3,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -7599,6 +7869,36 @@
           "lng": 35.018101
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "'Aqaba",
+          "nameZh": null,
+          "code": "JOAQB",
+          "city": null,
+          "lat": 29.516666666666666,
+          "lng": 35
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Abu Alandah",
+          "nameZh": null,
+          "code": "JODAH",
+          "city": null,
+          "lat": 31.9,
+          "lng": 35.96666666666667
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Al 'Aqabah",
+          "nameZh": null,
+          "code": "JOAQJ",
+          "city": null,
+          "lat": 29.533333333333335,
+          "lng": 35
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "'Aqaba",
@@ -7667,7 +7967,7 @@
         "divisions": 12,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -7931,6 +8231,36 @@
           "lng": 69.47564
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Aktau",
+          "nameZh": null,
+          "code": "KZAAU",
+          "city": null,
+          "lat": 43.65,
+          "lng": 51.15
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Bautino",
+          "nameZh": null,
+          "code": "KZBTN",
+          "city": null,
+          "lat": 44.53333333333333,
+          "lng": 50.25
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Temirtau",
+          "nameZh": null,
+          "code": "KZTAU",
+          "city": null,
+          "lat": 50.05,
+          "lng": 72.95
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Almaty",
@@ -7999,7 +8329,7 @@
         "divisions": 21,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -8150,12 +8480,12 @@
         },
         {
           "type": "port",
-          "subtype": "Medium",
-          "name": "Mina Ash Shuaybah",
+          "subtype": "Small",
+          "name": "Mina Abd Allah",
           "nameZh": null,
-          "code": "KW SAA",
+          "code": "KW MIB",
           "city": null,
-          "lat": 29.033333,
+          "lat": 29.016667,
           "lng": 48.166667
         },
         {
@@ -8170,12 +8500,12 @@
         },
         {
           "type": "port",
-          "subtype": "Small",
-          "name": "Mina Abd Allah",
+          "subtype": "Medium",
+          "name": "Mina Ash Shuaybah",
           "nameZh": null,
-          "code": "KW MIB",
+          "code": "KW SAA",
           "city": null,
-          "lat": 29.016667,
+          "lat": 29.033333,
           "lng": 48.166667
         },
         {
@@ -8693,6 +9023,16 @@
           "lng": 35.833333
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Amchit",
+          "nameZh": null,
+          "code": "LBACT",
+          "city": null,
+          "lat": 34.15,
+          "lng": 35.63333333333333
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Beirut Free Zone",
@@ -8761,7 +9101,7 @@
         "divisions": 8,
         "cities": 6,
         "airports": 1,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -9038,16 +9378,6 @@
         },
         {
           "type": "port",
-          "subtype": "Medium",
-          "name": "Mina Tarabulus (Tripoli)",
-          "nameZh": null,
-          "code": "LY TIP",
-          "city": null,
-          "lat": 32.9,
-          "lng": 13.183333
-        },
-        {
-          "type": "port",
           "subtype": "Small",
           "name": "Mersa Tobruq",
           "nameZh": null,
@@ -9055,6 +9385,16 @@
           "city": null,
           "lat": 32.083333,
           "lng": 23.983333
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Mina Tarabulus (Tripoli)",
+          "nameZh": null,
+          "code": "LY TIP",
+          "city": null,
+          "lat": 32.9,
+          "lng": 13.183333
         },
         {
           "type": "logistics",
@@ -9361,22 +9701,22 @@
         {
           "type": "port",
           "subtype": "Large",
-          "name": "Port Klang",
-          "nameZh": null,
-          "code": "MY PKG",
-          "city": null,
-          "lat": 3,
-          "lng": 101.4
-        },
-        {
-          "type": "port",
-          "subtype": "Large",
           "name": "Johor",
           "nameZh": null,
           "code": "MYJHB",
           "city": null,
           "lat": 1.433333,
           "lng": 103.9
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Port Klang",
+          "nameZh": null,
+          "code": "MY PKG",
+          "city": null,
+          "lat": 3,
+          "lng": 101.4
         },
         {
           "type": "port",
@@ -9672,6 +10012,36 @@
           "lng": 73.167072
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Baa Atoll",
+          "nameZh": null,
+          "code": "MVBAL",
+          "city": null,
+          "lat": 5.133333333333334,
+          "lng": 72.95
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Coastline Private Port",
+          "nameZh": null,
+          "code": "MVCPP",
+          "city": null,
+          "lat": 4.166666666666667,
+          "lng": 73.45
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Hulhulé Island",
+          "nameZh": null,
+          "code": "MVHHE",
+          "city": null,
+          "lat": 4.183333333333334,
+          "lng": 73.51666666666667
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Hulhumale",
@@ -9740,7 +10110,7 @@
         "divisions": 21,
         "cities": 1,
         "airports": 3,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -10252,6 +10622,16 @@
           "lng": -16.033333
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Rosso",
+          "nameZh": null,
+          "code": "MRROS",
+          "city": null,
+          "lat": 16.5,
+          "lng": -15.916666666666666
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Bassiknou",
@@ -10320,7 +10700,7 @@
         "divisions": 15,
         "cities": 6,
         "airports": 3,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -10532,12 +10912,12 @@
         {
           "type": "port",
           "subtype": "Large",
-          "name": "Tangier-Mediterranean",
+          "name": "Agadir",
           "nameZh": null,
-          "code": "MA PTM",
+          "code": "MA AGA",
           "city": null,
-          "lat": 35.9,
-          "lng": -5.516667
+          "lat": 30.433333,
+          "lng": -9.633333
         },
         {
           "type": "port",
@@ -10552,12 +10932,12 @@
         {
           "type": "port",
           "subtype": "Large",
-          "name": "Agadir",
+          "name": "Tangier-Mediterranean",
           "nameZh": null,
-          "code": "MA AGA",
+          "code": "MA PTM",
           "city": null,
-          "lat": 30.433333,
-          "lng": -9.633333
+          "lat": 35.9,
+          "lng": -5.516667
         },
         {
           "type": "logistics",
@@ -10830,16 +11210,6 @@
         {
           "type": "port",
           "subtype": "Medium",
-          "name": "Maputo",
-          "nameZh": null,
-          "code": "MZ MPM",
-          "city": null,
-          "lat": -25.96277778,
-          "lng": 32.54472222
-        },
-        {
-          "type": "port",
-          "subtype": "Medium",
           "name": "Beira",
           "nameZh": null,
           "code": "MZ BEW",
@@ -10856,6 +11226,16 @@
           "city": null,
           "lat": -23.916667,
           "lng": 35.4
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Maputo",
+          "nameZh": null,
+          "code": "MZ MPM",
+          "city": null,
+          "lat": -25.96277778,
+          "lng": 32.54472222
         },
         {
           "type": "logistics",
@@ -11523,6 +11903,16 @@
         },
         {
           "type": "port",
+          "subtype": "Medium",
+          "name": "Bonny",
+          "nameZh": null,
+          "code": "NG BON",
+          "city": null,
+          "lat": 4.45,
+          "lng": 7.166667
+        },
+        {
+          "type": "port",
           "subtype": "Large",
           "name": "Lagos",
           "nameZh": null,
@@ -11540,16 +11930,6 @@
           "city": null,
           "lat": 4.25,
           "lng": 5.616667
-        },
-        {
-          "type": "port",
-          "subtype": "Medium",
-          "name": "Bonny",
-          "nameZh": null,
-          "code": "NG BON",
-          "city": null,
-          "lat": 4.45,
-          "lng": 7.166667
         },
         {
           "type": "logistics",
@@ -11832,22 +12212,22 @@
         {
           "type": "port",
           "subtype": "Small",
-          "name": "Mina Raysut",
-          "nameZh": null,
-          "code": "OM SLL",
-          "city": null,
-          "lat": 16.95111111,
-          "lng": 54.02916667
-        },
-        {
-          "type": "port",
-          "subtype": "Small",
           "name": "Mina Al Fahl",
           "nameZh": null,
           "code": "OM MFH",
           "city": null,
           "lat": 23.633333,
           "lng": 58.516667
+        },
+        {
+          "type": "port",
+          "subtype": "Small",
+          "name": "Mina Raysut",
+          "nameZh": null,
+          "code": "OM SLL",
+          "city": null,
+          "lat": 16.95111111,
+          "lng": 54.02916667
         },
         {
           "type": "logistics",
@@ -12543,6 +12923,16 @@
         },
         {
           "type": "port",
+          "subtype": "Small",
+          "name": "Hamad",
+          "nameZh": null,
+          "code": null,
+          "city": null,
+          "lat": 25.01666667,
+          "lng": 51.6
+        },
+        {
+          "type": "port",
           "subtype": "Medium",
           "name": "Ras Laffan",
           "nameZh": null,
@@ -12560,16 +12950,6 @@
           "city": null,
           "lat": 24.916667,
           "lng": 51.566667
-        },
-        {
-          "type": "port",
-          "subtype": "Small",
-          "name": "Hamad",
-          "nameZh": null,
-          "code": null,
-          "city": null,
-          "lat": 25.01666667,
-          "lng": 51.6
         },
         {
           "type": "logistics",
@@ -12853,16 +13233,6 @@
         },
         {
           "type": "port",
-          "subtype": "Medium",
-          "name": "Ras  Tannurah",
-          "nameZh": null,
-          "code": "SA RTA",
-          "city": null,
-          "lat": 26.633333,
-          "lng": 50.166667
-        },
-        {
-          "type": "port",
           "subtype": "Small",
           "name": "Duba",
           "nameZh": null,
@@ -12880,6 +13250,16 @@
           "city": null,
           "lat": 21.483333,
           "lng": 39.183333
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Ras  Tannurah",
+          "nameZh": null,
+          "code": "SA RTA",
+          "city": null,
+          "lat": 26.633333,
+          "lng": 50.166667
         },
         {
           "type": "logistics",
@@ -13188,6 +13568,16 @@
           "lng": -16.516667
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Saint Louis",
+          "nameZh": null,
+          "code": "SNXLS",
+          "city": null,
+          "lat": 16.033333333333335,
+          "lng": -16.5
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Diourbel",
@@ -13256,7 +13646,7 @@
         "divisions": 14,
         "cities": 6,
         "airports": 3,
-        "ports": 2,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -13410,6 +13800,16 @@
           "lng": -13.233333
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Kissy",
+          "nameZh": null,
+          "code": "SLKSY",
+          "city": null,
+          "lat": 8.466666666666667,
+          "lng": -13.183333333333334
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Hastings Apt/Freetown",
@@ -13478,7 +13878,7 @@
         "divisions": 5,
         "cities": 6,
         "airports": 1,
-        "ports": 1,
+        "ports": 2,
         "logistics": 2,
         "hs2": 5
       },
@@ -13725,16 +14125,6 @@
         },
         {
           "type": "port",
-          "subtype": "Large",
-          "name": "Muqdisho",
-          "nameZh": null,
-          "code": "SO MGQ",
-          "city": null,
-          "lat": 2.033333,
-          "lng": 45.35
-        },
-        {
-          "type": "port",
           "subtype": "Small",
           "name": "Berbera",
           "nameZh": null,
@@ -13752,6 +14142,16 @@
           "city": null,
           "lat": 11.283333,
           "lng": 49.183333
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Muqdisho",
+          "nameZh": null,
+          "code": "SO MGQ",
+          "city": null,
+          "lat": 2.033333,
+          "lng": 45.35
         },
         {
           "type": "logistics",
@@ -14069,13 +14469,13 @@
         },
         {
           "type": "port",
-          "subtype": "Medium",
-          "name": "Port Sudan",
+          "subtype": "Small",
+          "name": "Al Khair Oil Terminal",
           "nameZh": null,
-          "code": "SD PZU",
+          "code": null,
           "city": null,
-          "lat": 19.6,
-          "lng": 37.233333
+          "lat": 19.583333,
+          "lng": 37.25
         },
         {
           "type": "port",
@@ -14089,13 +14489,13 @@
         },
         {
           "type": "port",
-          "subtype": "Small",
-          "name": "Al Khair Oil Terminal",
+          "subtype": "Medium",
+          "name": "Port Sudan",
           "nameZh": null,
-          "code": null,
+          "code": "SD PZU",
           "city": null,
-          "lat": 19.583333,
-          "lng": 37.25
+          "lat": 19.6,
+          "lng": 37.233333
         },
         {
           "type": "logistics",
@@ -14314,6 +14714,16 @@
           "lng": -55.166667
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Lelydorp",
+          "nameZh": null,
+          "code": "SRLLW",
+          "city": null,
+          "lat": 5.7,
+          "lng": -55.233333333333334
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Lelydorp",
@@ -14382,7 +14792,7 @@
         "divisions": 10,
         "cities": 2,
         "airports": 1,
-        "ports": 1,
+        "ports": 2,
         "logistics": 2,
         "hs2": 5
       },
@@ -14601,16 +15011,6 @@
         },
         {
           "type": "port",
-          "subtype": "Large",
-          "name": "Baniyas",
-          "nameZh": null,
-          "code": "SY BAN",
-          "city": null,
-          "lat": 35.18833333,
-          "lng": 35.94333333
-        },
-        {
-          "type": "port",
           "subtype": "Medium",
           "name": "Al Ladhiqiyah",
           "nameZh": null,
@@ -14618,6 +15018,16 @@
           "city": null,
           "lat": 35.533333,
           "lng": 35.766667
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Baniyas",
+          "nameZh": null,
+          "code": "SY BAN",
+          "city": null,
+          "lat": 35.18833333,
+          "lng": 35.94333333
         },
         {
           "type": "port",
@@ -15088,6 +15498,16 @@
           "lng": 1.283333
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Aného",
+          "nameZh": null,
+          "code": "TGANE",
+          "city": null,
+          "lat": 6.233333333333333,
+          "lng": 1.6
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Dapaong",
@@ -15156,7 +15576,7 @@
         "divisions": 5,
         "cities": 6,
         "airports": 1,
-        "ports": 1,
+        "ports": 2,
         "logistics": 2,
         "hs2": 5
       },
@@ -15446,22 +15866,22 @@
         {
           "type": "port",
           "subtype": "Medium",
-          "name": "Tunis",
-          "nameZh": null,
-          "code": "TN TUN",
-          "city": null,
-          "lat": 36.8,
-          "lng": 10.25
-        },
-        {
-          "type": "port",
-          "subtype": "Medium",
           "name": "Tazerka Oil Terminal",
           "nameZh": null,
           "code": "TN TAT",
           "city": null,
           "lat": 36.6,
           "lng": 11.683333
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Tunis",
+          "nameZh": null,
+          "code": "TN TUN",
+          "city": null,
+          "lat": 36.8,
+          "lng": 10.25
         },
         {
           "type": "logistics",
@@ -16164,22 +16584,22 @@
         {
           "type": "port",
           "subtype": "Large",
-          "name": "Samsun",
-          "nameZh": null,
-          "code": "TR SSX",
-          "city": null,
-          "lat": 41.3,
-          "lng": 36.35
-        },
-        {
-          "type": "port",
-          "subtype": "Large",
           "name": "Izmir",
           "nameZh": null,
           "code": "TR IZM",
           "city": null,
           "lat": 38.433333,
           "lng": 27.133333
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Samsun",
+          "nameZh": null,
+          "code": "TR SSX",
+          "city": null,
+          "lat": 41.3,
+          "lng": 36.35
         },
         {
           "type": "logistics",
@@ -16424,6 +16844,36 @@
           "lng": 59.836149
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Altyn Asyr",
+          "nameZh": null,
+          "code": "TMALT",
+          "city": null,
+          "lat": 37.88333333333333,
+          "lng": 58.36666666666667
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Cheleken",
+          "nameZh": null,
+          "code": "TMCHE",
+          "city": null,
+          "lat": 39.4,
+          "lng": 53.13333333333333
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Halach",
+          "nameZh": null,
+          "code": "TMHAL",
+          "city": null,
+          "lat": 38.06666666666667,
+          "lng": 64.88333333333334
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Ashgabat",
@@ -16492,7 +16942,7 @@
         "divisions": 6,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 3,
         "logistics": 2,
         "hs2": 5
       },
@@ -16654,6 +17104,16 @@
           "lng": 30.911714
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Galiraya",
+          "nameZh": null,
+          "code": "UGMKN",
+          "city": null,
+          "lat": 1.3,
+          "lng": 32.86666666666667
+        },
+        {
           "type": "logistics",
           "subtype": "rail",
           "name": "Mukono",
@@ -16722,7 +17182,7 @@
         "divisions": 4,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 1,
         "logistics": 2,
         "hs2": 5
       },
@@ -16899,16 +17359,6 @@
         },
         {
           "type": "port",
-          "subtype": "Large",
-          "name": "Mina Jabal Ali",
-          "nameZh": null,
-          "code": "AE JEA",
-          "city": null,
-          "lat": 25.016667,
-          "lng": 55.05
-        },
-        {
-          "type": "port",
           "subtype": "Medium",
           "name": "Khawr Fakkan",
           "nameZh": null,
@@ -16916,6 +17366,16 @@
           "city": null,
           "lat": 25.36277778,
           "lng": 56.36888889
+        },
+        {
+          "type": "port",
+          "subtype": "Large",
+          "name": "Mina Jabal Ali",
+          "nameZh": null,
+          "code": "AE JEA",
+          "city": null,
+          "lat": 25.016667,
+          "lng": 55.05
         },
         {
           "type": "port",
@@ -17218,6 +17678,26 @@
           "lng": 71.5578
         },
         {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Akaltyn",
+          "nameZh": null,
+          "code": "UZAKT",
+          "city": null,
+          "lat": 41.43333333333333,
+          "lng": 61.06666666666667
+        },
+        {
+          "type": "port",
+          "subtype": "Medium",
+          "name": "Asaka",
+          "nameZh": null,
+          "code": "UZASA",
+          "city": null,
+          "lat": 40.63333333333333,
+          "lng": 72.23333333333333
+        },
+        {
           "type": "logistics",
           "subtype": "road",
           "name": "Akaltyn",
@@ -17286,7 +17766,7 @@
         "divisions": 14,
         "cities": 6,
         "airports": 3,
-        "ports": 0,
+        "ports": 2,
         "logistics": 2,
         "hs2": 5
       },
@@ -17553,13 +18033,13 @@
         },
         {
           "type": "port",
-          "subtype": "Large",
-          "name": "Ras Isa Marine Terminal",
+          "subtype": "Medium",
+          "name": "Aden",
           "nameZh": null,
-          "code": "YE RAI",
+          "code": "YE ADE",
           "city": null,
-          "lat": 15.133333,
-          "lng": 42.6
+          "lat": 12.783333,
+          "lng": 44.95
         },
         {
           "type": "port",
@@ -17573,13 +18053,13 @@
         },
         {
           "type": "port",
-          "subtype": "Medium",
-          "name": "Aden",
+          "subtype": "Large",
+          "name": "Ras Isa Marine Terminal",
           "nameZh": null,
-          "code": "YE ADE",
+          "code": "YE RAI",
           "city": null,
-          "lat": 12.783333,
-          "lng": 44.95
+          "lat": 15.133333,
+          "lng": 42.6
         },
         {
           "type": "logistics",

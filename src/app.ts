@@ -62,10 +62,12 @@ export async function createApp(): Promise<void> {
   );
 
   function routePaths(route: SeaRouteInfo): Array<{ points: number[][]; color: string }> {
-    return route.options.map((option) => ({
-      points: option.points,
-      color: originColors.get(option.originId) ?? '#ffb45e',
-    }));
+    return route.destinations.flatMap((destination) =>
+      destination.options.map((option) => ({
+        points: option.points,
+        color: originColors.get(option.originId) ?? '#ffb45e',
+      })),
+    );
   }
 
   function chinaRoutePaths(): Array<{ points: number[][]; color: string }> {
@@ -79,7 +81,18 @@ export async function createApp(): Promise<void> {
       }))
       .sort((a, b) => b.value - a.value)
       .slice(0, 8);
-    return top.flatMap(({ market }) => (market.seaRoute ? routePaths(market.seaRoute) : []));
+    return top.flatMap(({ market }) =>
+      market.seaRoute
+        ? market.seaRoute.destinations.flatMap((destination) =>
+            destination.options[0]
+              ? [{
+                  points: destination.options[0].points,
+                  color: originColors.get(destination.options[0].originId) ?? '#ffb45e',
+                }]
+              : [],
+          )
+        : [],
+    );
   }
 
   const shapes = buildCountries(worldTopology as unknown as WorldAtlasTopology);

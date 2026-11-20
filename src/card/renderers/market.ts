@@ -142,10 +142,11 @@ function geographySection(market: MarketCountry, compact: boolean): HTMLElement 
     );
   }
   if (market.seaRoute) {
-    const primary = market.seaRoute.options[0];
+    const destination = market.seaRoute.destinations[0];
+    const primary = destination?.options[0];
     section.append(
       marketNote(
-        `海运：${primary?.originName ?? '中国'} → ${market.seaRoute.destPort}${market.seaRoute.via ? `（${market.seaRoute.via}）` : ''} · 约 ${formatKm(primary?.distanceKm ?? null)}；另有 ${Math.max(0, market.seaRoute.options.length - 1)} 个中国起运港可选。`,
+        `海运：${primary?.originName ?? '中国'} → ${destination?.port ?? '—'}${destination?.via ? `（${destination.via}）` : ''} · 约 ${formatKm(primary?.distanceKm ?? null)}；${market.seaRoute.destinations.length} 个目的港 × 8 个中国起运港可选。`,
         'market-hint',
       ),
     );

@@ -288,37 +288,43 @@ function hubRow(hub: ProfileHub): HTMLElement {
 
 function shippingSection(market: MarketCountry): HTMLElement | null {
   const route = market.seaRoute;
-  if (!route) return null;
+  if (!route || !route.destinations.length) return null;
+  const destinations = route.destinations;
   const section = dossierSection('对华海运联系', 'searoute-py · UN/LOCODE 港口');
-  const facts = el('dl', { className: 'dossier-facts' });
-  const rows: Array<[string, string]> = [
-    ['目的港', `${route.destPort}${route.destCode ? `（${route.destCode}）` : ''}`],
-    ['中转/陆路', route.via || '—'],
-  ];
-  for (const [label, value] of rows) {
-    facts.append(
-      el('div', { className: 'dossier-fact' },
-        el('dt', { text: label }),
-        el('dd', { text: value }),
-      ),
-    );
-  }
-  section.append(facts);
-
-  const options = el('div', { className: 'dossier-route-options' });
-  for (const [index, option] of route.options.entries()) {
-    options.append(
-      el('div', { className: `dossier-route-option${index === 0 ? ' is-primary' : ''}` },
-        el('span', { text: option.originName }),
-        el('strong', { text: formatKm(option.distanceKm) }),
-      ),
-    );
-  }
-  section.append(options);
   section.append(
     el('p', {
       className: 'dossier-note',
-      text: 'searoute-py 基于全球可航网络计算的最短路径，不是 AIS 实际航迹；内陆国线路终点为最近海港。',
+      text: `${destinations.length} 个目的港 × 8 个中国起运港；每组按距离排序，首行为最短路径。`,
+    }),
+  );
+  for (const destination of destinations) {
+    const group = el('div', { className: 'dossier-route-group' });
+    group.append(
+      el('div', { className: 'dossier-route-dest' },
+        el('strong', { text: `${destination.port}${destination.code ? `（${destination.code}）` : ''}` }),
+        el('span', {
+          text: destination.domestic
+            ? destination.iso3
+            : `${destination.iso3} · ${destination.via || '替代港'}`,
+        }),
+      ),
+    );
+    const options = el('div', { className: 'dossier-route-options' });
+    for (const [index, option] of destination.options.entries()) {
+      options.append(
+        el('div', { className: `dossier-route-option${index === 0 ? ' is-primary' : ''}` },
+          el('span', { text: option.originName }),
+          el('strong', { text: formatKm(option.distanceKm) }),
+        ),
+      );
+    }
+    group.append(options);
+    section.append(group);
+  }
+  section.append(
+    el('p', {
+      className: 'dossier-note',
+      text: 'searoute-py 基于全球可航网络计算的最短路径，不是 AIS 实际航迹；非本国港口标注为替代港。',
     }),
   );
   return section;
