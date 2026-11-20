@@ -86,7 +86,7 @@ export interface ProfileCity {
 }
 
 export interface ProfileHub {
-  type: 'airport' | 'port';
+  type: 'airport' | 'port' | 'logistics';
   subtype: string | null;
   name: string;
   nameZh: string | null;
@@ -134,6 +134,7 @@ export interface CountryProfile {
     cities: number;
     airports: number;
     ports: number;
+    logistics: number;
     hs2: number;
   };
   sources: Record<string, string>;

@@ -204,8 +204,13 @@ export class GlobeScene {
     this.globe.pointsData(
       hubs.map((hub) => ({
         ...hub,
-        color: hub.type === 'airport' ? 'rgba(255, 209, 138, 0.95)' : 'rgba(95, 214, 194, 0.9)',
-        radius: hub.type === 'airport' ? 0.22 : 0.18,
+        color:
+          hub.type === 'airport'
+            ? 'rgba(255, 209, 138, 0.95)'
+            : hub.type === 'port'
+              ? 'rgba(95, 214, 194, 0.9)'
+              : 'rgba(255, 145, 110, 0.9)',
+        radius: hub.type === 'airport' ? 0.22 : hub.type === 'port' ? 0.18 : 0.16,
       })),
     );
   }

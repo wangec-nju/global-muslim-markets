@@ -12,3 +12,10 @@ CHN,port,Qingdao,青岛港,CNQIN,,36.033333,120.266667,World Port Index
 CHN,port,Tianjin,天津港,CNTXG,,38.966667,117.833333,World Port Index
 CHN,port,Guangzhou,广州港,CNGGZ,,23.116667,113.233333,World Port Index
 CHN,port,Shenzhen,深圳港,CNSZX,,22.5,113.9,World Port Index
+CHN,logistics,上海外高桥/洋山,上海外高桥/洋山,CNSHA,上海,31.2304,121.4737,UN/LOCODE / project curated
+CHN,logistics,深圳盐田,深圳盐田,CNSZX,深圳,22.5800,114.2400,UN/LOCODE / project curated
+CHN,logistics,宁波北仑,宁波北仑,CNNGB,宁波,29.9000,121.8500,UN/LOCODE / project curated
+CHN,logistics,广州南沙,广州南沙,CNGZG,广州,22.7500,113.6000,UN/LOCODE / project curated
+CHN,logistics,郑州航空港,郑州航空港,CNCGO,郑州,34.5000,113.8000,UN/LOCODE / project curated
+CHN,logistics,成都青白江,成都青白江,CNCDU,成都,30.8800,104.2000,UN/LOCODE / project curated
+CHN,logistics,西安国际港务区,西安国际港务区,CNSIA,西安,34.4000,109.0000,UN/LOCODE / project curated

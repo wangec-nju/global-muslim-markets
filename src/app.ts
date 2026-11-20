@@ -144,7 +144,12 @@ export async function createApp(): Promise<void> {
   }
 
   function pointForMarket(market: MarketCountry): { lat: number; lng: number } | null {
-    const city = market.profile?.cities[0];
+    const profile = market.profile;
+    const port = profile?.hubs.find(
+      (hub) => hub.type === 'port' && hub.lat != null && hub.lng != null,
+    );
+    if (port?.lat != null && port.lng != null) return { lat: port.lat, lng: port.lng };
+    const city = profile?.cities[0];
     if (city?.lat != null && city.lng != null) return { lat: city.lat, lng: city.lng };
     const shape = shapeById.get(market.id);
     return shape?.centroid ?? null;

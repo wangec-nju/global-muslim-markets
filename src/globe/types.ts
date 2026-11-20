@@ -45,7 +45,7 @@ export interface TradeArc {
 export interface GlobeHub {
   lat: number;
   lng: number;
-  type: 'airport' | 'port';
+  type: 'airport' | 'port' | 'logistics';
   label: string;
 }
 

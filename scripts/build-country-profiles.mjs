@@ -19,6 +19,7 @@ const admin1 = groupBy(readCsv(source('geo/admin1.csv')), (r) => r.iso3);
 const cities = groupBy(readCsv(source('geo/cities.csv')), (r) => r.iso3);
 const airports = groupBy(readCsv(source('geo/airports.csv')), (r) => r.iso3);
 const ports = groupBy(readCsv(source('geo/ports.csv')), (r) => r.iso3);
+const logistics = groupBy(readCsv(source('geo/logistics.csv')), (r) => r.iso3);
 const hs2Rows = groupBy(readCsv(source('hs2-imports.csv')), (r) => r.iso3);
 const chinaDivisions = readCsv(source('china-divisions.csv'));
 const chinaCities = readCsv(source('china-cities.csv'));
@@ -48,6 +49,7 @@ const sourceFiles = [
   'geo/cities.csv',
   'geo/airports.csv',
   'geo/ports.csv',
+  'geo/logistics.csv',
   'geo/city-labels.csv',
   'hs2-imports.csv',
   'china-divisions.csv',
@@ -126,6 +128,7 @@ function buildProfile(iso3, nameZh, unM49, isChina) {
     countryCities.slice(0, 3).map((city) => city.nameEn),
   ).slice(0, 3).map(airportHub);
   const countryPorts = (ports.get(iso3) ?? []).slice(0, 3).map(portHub);
+  const countryLogistics = (logistics.get(iso3) ?? []).slice(0, 2).map(logisticsHub);
   const hubs = isChina
     ? chinaHubs.map((row) => ({
         type: row.type,
@@ -136,7 +139,7 @@ function buildProfile(iso3, nameZh, unM49, isChina) {
         lat: toNumber(row.lat),
         lng: toNumber(row.lng),
       }))
-    : [...countryAirports, ...countryPorts];
+    : [...countryAirports, ...countryPorts, ...countryLogistics];
 
   const divisions = isChina
     ? chinaDivisions.map((row) => ({
@@ -148,7 +151,7 @@ function buildProfile(iso3, nameZh, unM49, isChina) {
     : (admin1.get(iso3) ?? []).map((row) => ({
         code: row.code,
         name: row.name,
-        nameZh: null,
+        nameZh: row.name_zh || null,
         type: null,
       }));
 
@@ -189,6 +192,7 @@ function buildProfile(iso3, nameZh, unM49, isChina) {
       cities: countryCities.length,
       airports: hubs.filter((hub) => hub.type === 'airport').length,
       ports: hubs.filter((hub) => hub.type === 'port').length,
+      logistics: hubs.filter((hub) => hub.type === 'logistics').length,
       hs2: hs2.length,
     },
     sources: {
@@ -196,7 +200,7 @@ function buildProfile(iso3, nameZh, unM49, isChina) {
       commonLanguages: 'CIA World Factbook',
       divisions: isChina ? 'Project curated' : 'GeoNames',
       cities: isChina ? 'Project curated / GeoNames' : 'GeoNames + Wikidata labels',
-      hubs: isChina ? 'Project curated / OurAirports / WPI' : 'OurAirports + NGA World Port Index',
+      hubs: isChina ? 'Project curated / OurAirports / WPI / UN/LOCODE' : 'OurAirports + NGA World Port Index + UN/LOCODE',
       hs2: 'UN Comtrade 2023',
     },
   };
@@ -231,6 +235,19 @@ function portHub(row) {
   return {
     type: 'port',
     subtype: row.size,
+    name: row.name,
+    nameZh: null,
+    code: row.locode || null,
+    city: null,
+    lat: toNumber(row.lat),
+    lng: toNumber(row.lng),
+  };
+}
+
+function logisticsHub(row) {
+  return {
+    type: 'logistics',
+    subtype: row.subtype,
     name: row.name,
     nameZh: null,
     code: row.locode || null,

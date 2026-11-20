@@ -363,3 +363,8 @@ body.is-dossier-open .hints { opacity: 0; pointer-events: none; }
   object-fit: cover;
   border-radius: 11px;
 }
+
+.dossier-hub__tag.is-logistics {
+  border-color: rgba(255, 145, 110, 0.4);
+  color: #ff916e;
+}

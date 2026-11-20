@@ -96,6 +96,100 @@ ALB,2023,66,"Umbrellas, sun umbrellas, walking-sticks, seat sticks, whips, ridin
 ALB,2023,61,Apparel and clothing accessories; knitted or crocheted,186076096.22,2.1465
 ALB,2023,97,Works of art; collectors' pieces and antiques,342175.67,0.0039
 ALB,2023,44,Wood and articles of wood; wood charcoal,121384609.55,1.4002
+DZA,2024,01,Animals; live,130200131.0,0.2748
+DZA,2024,02,Meat and edible meat offal,507326477.0,1.0709
+DZA,2024,03,"Fish and crustaceans, molluscs and other aquatic invertebrates",144450371.0,0.3049
+DZA,2024,04,"Dairy produce; birds' eggs; natural honey; edible products of animal origin, not elsewhere specified or included",1563334268.0,3.2998
+DZA,2024,05,Animal originated products; not elsewhere specified or included,361824.0,0.0008
+DZA,2024,06,"Trees and other plants, live; bulbs, roots and the like; cut flowers and ornamental foliage",21400797.0,0.0452
+DZA,2024,07,Vegetables and certain roots and tubers; edible,689474716.0,1.4553
+DZA,2024,08,"Fruit and nuts, edible; peel of citrus fruit or melons",426126616.0,0.8995
+DZA,2024,09,"Coffee, tea, mate and spices",557768094.0,1.1773
+DZA,2024,10,Cereals,4594832435.0,9.6987
+DZA,2024,11,"Products of the milling industry; malt, starches, inulin, wheat gluten",59453477.0,0.1255
+DZA,2024,12,"Oil seeds and oleaginous fruits; miscellaneous grains, seeds and fruit, industrial or medicinal plants; straw and fodder",1007677935.0,2.127
+DZA,2024,13,"Lac; gums, resins and other vegetable saps and extracts",32977581.0,0.0696
+DZA,2024,14,Vegetable plaiting materials; vegetable products not elsewhere specified or included,4728092.0,0.01
+DZA,2024,15,"Animal, vegetable or microbial fats and oils and their cleavage products; prepared edible fats; animal or vegetable waxes",1107831037.0,2.3384
+DZA,2024,16,"Meat, fish, crustaceans, molluscs or other aquatic invertebrates, or insects; preparations thereof",106886.0,0.0002
+DZA,2024,17,Sugars and sugar confectionery,1229184253.0,2.5945
+DZA,2024,18,Cocoa and cocoa preparations,118867891.0,0.2509
+DZA,2024,19,"Preparations of cereals, flour, starch or milk; pastrycooks' products",141433851.0,0.2985
+DZA,2024,20,"Preparations of vegetables, fruit, nuts or other parts of plants",47973476.0,0.1013
+DZA,2024,21,Miscellaneous edible preparations,391774892.0,0.8269
+DZA,2024,22,"Beverages, spirits and vinegar",3897388.0,0.0082
+DZA,2024,23,"Food industries, residues and wastes thereof; prepared animal fodder",329801990.0,0.6961
+DZA,2024,24,"Tobacco and manufactured tobacco substitutes; products, whether or not containing nicotine, intended for inhalation without combustion; other nicotine containing products intended for the intake of nicotine into the human body",372861043.0,0.787
+DZA,2024,25,"Salt; sulphur; earths, stone; plastering materials, lime and cement",189518537.0,0.4
+DZA,2024,26,"Ores, slag and ash",1066951795.0,2.2521
+DZA,2024,27,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",589027658.0,1.2433
+DZA,2024,28,"Inorganic chemicals; organic and inorganic compounds of precious metals; of rare earth metals, of radio-active elements and of isotopes",264139754.0,0.5575
+DZA,2024,29,Organic chemicals,834246467.0,1.7609
+DZA,2024,30,Pharmaceutical products,1970323880.0,4.1589
+DZA,2024,31,Fertilizers,221786631.0,0.4681
+DZA,2024,32,"Tanning or dyeing extracts; tannins and their derivatives; dyes, pigments and other colouring matter; paints, varnishes; putty, other mastics; inks",383817779.0,0.8102
+DZA,2024,33,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",296675515.0,0.6262
+DZA,2024,34,"Soap, organic surface-active agents; washing, lubricating, polishing or scouring preparations; artificial or prepared waxes, candles and similar articles, modelling pastes, dental waxes and dental preparations with a basis of plaster",218067990.0,0.4603
+DZA,2024,35,Albuminoidal substances; modified starches; glues; enzymes,147799052.0,0.312
+DZA,2024,36,Explosives; pyrotechnic products; matches; pyrophoric alloys; certain combustible preparations,6446805.0,0.0136
+DZA,2024,37,Photographic or cinematographic goods,22911408.0,0.0484
+DZA,2024,38,Chemical products n.e.c.,859794294.0,1.8148
+DZA,2024,39,Plastics and articles thereof,3106475074.0,6.5571
+DZA,2024,40,Rubber and articles thereof,485672279.0,1.0251
+DZA,2024,41,Raw hides and skins (other than furskins) and leather,1072938.0,0.0023
+DZA,2024,42,"Articles of leather; saddlery and harness; travel goods, handbags and similar containers; articles of animal gut (other than silk-worm gut)",73361676.0,0.1549
+DZA,2024,43,Furskins and artificial fur; manufactures thereof,279201.0,0.0006
+DZA,2024,44,Wood and articles of wood; wood charcoal,624371286.0,1.3179
+DZA,2024,45,Cork and articles of cork,732191.0,0.0015
+DZA,2024,46,"Manufactures of straw, esparto or other plaiting materials; basketware and wickerwork",1384452.0,0.0029
+DZA,2024,47,Pulp of wood or other fibrous cellulosic material; recovered (waste and scrap) paper or paperboard,98102539.0,0.2071
+DZA,2024,48,"Paper and paperboard; articles of paper pulp, of paper or paperboard",919389654.0,1.9406
+DZA,2024,49,"Printed books, newspapers, pictures and other products of the printing industry; manuscripts, typescripts and plans",32219019.0,0.068
+DZA,2024,50,Silk,157705.0,0.0003
+DZA,2024,51,"Wool, fine or coarse animal hair; horsehair yarn and woven fabric",895186.0,0.0019
+DZA,2024,52,Cotton,61531581.0,0.1299
+DZA,2024,53,Vegetable textile fibres; paper yarn and woven fabrics of paper yarn,16529088.0,0.0349
+DZA,2024,54,Man-made filaments; strip and the like of man-made textile materials,461429583.0,0.974
+DZA,2024,55,Man-made staple fibres,111026908.0,0.2344
+DZA,2024,56,"Wadding, felt and nonwovens, special yarns; twine, cordage, ropes and cables and articles thereof",153294322.0,0.3236
+DZA,2024,57,Carpets and other textile floor coverings,35400597.0,0.0747
+DZA,2024,58,"Fabrics; special woven fabrics, tufted textile fabrics, lace, tapestries, trimmings, embroidery",43763084.0,0.0924
+DZA,2024,59,"Textile fabrics; impregnated, coated, covered or laminated; textile articles of a kind suitable for industrial use",31441268.0,0.0664
+DZA,2024,60,Fabrics; knitted or crocheted,109822979.0,0.2318
+DZA,2024,61,Apparel and clothing accessories; knitted or crocheted,186976845.0,0.3947
+DZA,2024,62,Apparel and clothing accessories; not knitted or crocheted,169990494.0,0.3588
+DZA,2024,63,"Textiles, made up articles; sets; worn clothing and worn textile articles; rags",42288259.0,0.0893
+DZA,2024,64,Footwear; gaiters and the like; parts of such articles,266640184.0,0.5628
+DZA,2024,65,Headgear and parts thereof,9062502.0,0.0191
+DZA,2024,66,"Umbrellas, sun umbrellas, walking-sticks, seat sticks, whips, riding crops; and parts thereof",7189480.0,0.0152
+DZA,2024,67,"Feathers and down, prepared; and articles made of feather or of down; artificial flowers; articles of human hair",2093529.0,0.0044
+DZA,2024,68,"Stone, plaster, cement, asbestos, mica or similar materials; articles thereof",91086861.0,0.1923
+DZA,2024,69,Ceramic products,125576435.0,0.2651
+DZA,2024,70,Glass and glassware,288295098.0,0.6085
+DZA,2024,71,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",26040175.0,0.055
+DZA,2024,72,Iron and steel,1776493133.0,3.7498
+DZA,2024,73,Iron or steel articles,1479448985.0,3.1228
+DZA,2024,74,Copper and articles thereof,335060534.0,0.7072
+DZA,2024,75,Nickel and articles thereof,4366885.0,0.0092
+DZA,2024,76,Aluminium and articles thereof,613538337.0,1.295
+DZA,2024,78,Lead and articles thereof,6380585.0,0.0135
+DZA,2024,79,Zinc and articles thereof,34385018.0,0.0726
+DZA,2024,80,Tin; articles thereof,3804999.0,0.008
+DZA,2024,81,"Metals; n.e.c., cermets and articles thereof",2607841.0,0.0055
+DZA,2024,82,"Tools, implements, cutlery, spoons and forks, of base metal; parts thereof, of base metal",162618011.0,0.3433
+DZA,2024,83,Metal; miscellaneous products of base metal,232254412.0,0.4902
+DZA,2024,84,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",6636041768.0,14.0072
+DZA,2024,85,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",3161587546.0,6.6734
+DZA,2024,86,"Railway, tramway locomotives, rolling-stock and parts thereof; railway or tramway track fixtures and fittings and parts thereof; mechanical (including electro-mechanical) traffic signalling equipment of all kinds",15673695.0,0.0331
+DZA,2024,87,"Vehicles; other than railway or tramway rolling stock, and parts and accessories thereof",2951455791.0,6.2299
+DZA,2024,88,"Aircraft, spacecraft, and parts thereof",451595084.0,0.9532
+DZA,2024,89,"Ships, boats and floating structures",13641130.0,0.0288
+DZA,2024,90,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",940948917.0,1.9861
+DZA,2024,91,Clocks and watches and parts thereof,11566430.0,0.0244
+DZA,2024,92,Musical instruments; parts and accessories of such articles,487851.0,0.001
+DZA,2024,94,"Furniture; bedding, mattresses, mattress supports, cushions and similar stuffed furnishings; lamps and lighting fittings, n.e.c.; illuminated signs, illuminated name-plates and the like; prefabricated buildings",233555503.0,0.493
+DZA,2024,95,"Toys, games and sports requisites; parts and accessories thereof",61694179.0,0.1302
+DZA,2024,96,Miscellaneous manufactured articles,107772526.0,0.2275
 AZE,2023,31,Fertilizers,72047163.13,0.417
 AZE,2023,57,Carpets and other textile floor coverings,22822878.08,0.1321
 AZE,2023,81,"Metals; n.e.c., cermets and articles thereof",430752.59,0.0025

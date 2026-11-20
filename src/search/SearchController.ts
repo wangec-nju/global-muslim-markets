@@ -123,7 +123,7 @@ export class SearchController {
       }
       for (const hub of profile.hubs) {
         this.entries.push({
-          type: hub.type === 'airport' ? '机场' : '港口',
+          type: hub.type === 'airport' ? '机场' : hub.type === 'port' ? '港口' : '物流',
           label: hub.nameZh ?? hub.name,
           subtitle: `${market.nameZh} · ${[hub.code, hub.city].filter(Boolean).join(' · ')}`,
           haystack: normalize(`${hub.name} ${hub.nameZh ?? ''} ${hub.code ?? ''} ${hub.city ?? ''} ${market.nameZh}`),

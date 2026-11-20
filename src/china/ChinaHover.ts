@@ -77,7 +77,7 @@ export class ChinaHover {
     for (const hub of profile.hubs.slice(0, 8)) {
       hubs.append(
         el('span', { className: 'china-hub' },
-          el('b', { text: hub.type === 'airport' ? '空' : '港' }),
+          el('b', { text: hub.type === 'airport' ? '空' : hub.type === 'port' ? '港' : '物' }),
           el('span', { text: hub.nameZh ?? hub.name }),
           hub.code ? el('em', { text: hub.code }) : null,
         ),

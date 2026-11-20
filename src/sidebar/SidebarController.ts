@@ -248,9 +248,10 @@ function citiesSection(profile: CountryProfile): HTMLElement {
 
 function hubsSection(profile: CountryProfile): HTMLElement {
   const section = dossierSection('国际枢纽', 'OurAirports · NGA World Port Index');
-  const groups: Array<['airport' | 'port', string]> = [
+  const groups: Array<['airport' | 'port' | 'logistics', string]> = [
     ['airport', '机场'],
     ['port', '港口'],
+    ['logistics', '物流枢纽（铁路/公路）'],
   ];
   for (const [type, label] of groups) {
     const hubs = profile.hubs.filter((hub) => hub.type === type);
@@ -271,7 +272,10 @@ function hubsSection(profile: CountryProfile): HTMLElement {
 
 function hubRow(hub: ProfileHub): HTMLElement {
   return el('div', { className: 'dossier-hub' },
-    el('span', { className: `dossier-hub__tag${hub.type === 'port' ? ' is-port' : ''}`, text: hub.type === 'airport' ? '空' : '港' }),
+    el('span', {
+      className: `dossier-hub__tag${hub.type === 'port' ? ' is-port' : hub.type === 'logistics' ? ' is-logistics' : ''}`,
+      text: hub.type === 'airport' ? '空' : hub.type === 'port' ? '港' : '物',
+    }),
     el('div', {},
       el('strong', { text: hub.nameZh ?? hub.name }),
       el('span', { text: [hub.code, hub.city].filter(Boolean).join(' · ') || '—' }),
@@ -280,7 +284,8 @@ function hubRow(hub: ProfileHub): HTMLElement {
 }
 
 function hs2Section(profile: CountryProfile): HTMLElement {
-  const section = dossierSection('HS2 进口结构 · 2023', 'UN Comtrade');
+  const years = [...new Set(profile.hs2.map((product) => product.year).filter(Boolean))];
+  const section = dossierSection(`HS2 进口结构 · ${years.join('/') || '—'}`, 'UN Comtrade');
   if (!profile.hs2.length) {
     section.append(el('p', { className: 'dossier__empty', text: '该国 2023 年 HS2 数据暂不可得。' }));
     return section;
