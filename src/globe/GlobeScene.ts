@@ -141,13 +141,13 @@ export class GlobeScene {
       .pointLng('lng')
       .pointColor('color')
       .pointRadius('radius')
-      .pointAltitude(0.04)
+      .pointAltitude(0.016)
       .pointLabel('label')
       .pointsMerge(false)
       .pointsTransitionDuration(0)
       .pathsData([])
       .pathPoints('points')
-      .pathPointAlt(0.03)
+      .pathPointAlt(0.012)
       .pathColor('color')
       .pathStroke(null)
       .pathDashLength(1)
@@ -396,10 +396,10 @@ export class GlobeScene {
   private altitudeFor(datum: object): number {
     const country = this.lookupShape(datum);
     if (!country) return 0.008;
-    if (country.id === '156') return this.hovered?.id === country.id ? 0.026 : 0.012;
-    if (this.hovered?.id === country.id) return 0.022;
-    if (this.selectedId === country.id) return 0.014;
-    return this.focusIds.has(country.id) ? 0.01 : 0.007;
+    if (country.id === '156') return this.hovered?.id === country.id ? 0.01 : 0.004;
+    if (this.hovered?.id === country.id) return 0.01;
+    if (this.selectedId === country.id) return 0.007;
+    return this.focusIds.has(country.id) ? 0.004 : 0.003;
   }
 
   private capColorFor(datum: object): string {

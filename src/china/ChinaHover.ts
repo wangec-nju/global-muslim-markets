@@ -57,6 +57,7 @@ export class ChinaHover {
       point,
       { width: rect.width, height: rect.height },
       { width: window.innerWidth, height: window.innerHeight },
+      { offset: 28 },
     );
     this.root.style.transform = `translate3d(${placement.x}px, ${placement.y}px, 0)`;
   }

@@ -293,6 +293,7 @@ export class CardController {
       point,
       { width: rect.width, height: rect.height },
       { width: window.innerWidth, height: window.innerHeight },
+      { offset: 34 },
     );
 
     this.root.style.setProperty('--card-x', `${Math.round(placement.x)}px`);

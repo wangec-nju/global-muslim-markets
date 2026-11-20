@@ -1,15 +1,15 @@
 .search-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  height: 29px;
+  gap: 9px;
+  height: 38px;
   margin-left: auto;
-  padding: 0 11px;
-  border: 1px solid rgba(147, 205, 191, 0.16);
+  padding: 0 15px;
+  border: 1px solid rgba(147, 205, 191, 0.2);
   border-radius: 999px;
-  background: rgba(4, 16, 21, 0.62);
-  color: var(--faint);
-  font-size: 9.5px;
+  background: rgba(4, 16, 21, 0.68);
+  color: var(--muted);
+  font-size: 11px;
   letter-spacing: 0.04em;
   white-space: nowrap;
   cursor: pointer;
@@ -21,14 +21,14 @@
   color: var(--gold-bright);
 }
 
-.search-trigger svg { width: 13px; height: 13px; }
+.search-trigger svg { width: 16px; height: 16px; }
 .search-trigger kbd {
-  padding: 1px 4px;
-  border: 1px solid rgba(147, 205, 191, 0.16);
+  padding: 2px 5px;
+  border: 1px solid rgba(147, 205, 191, 0.18);
   border-radius: 4px;
-  color: #536b65;
+  color: #6f8a82;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 9px;
 }
 
 .search-layer {
@@ -46,8 +46,8 @@
 .search-layer[hidden] { display: none; }
 
 .search {
-  width: min(760px, 100%);
-  max-height: min(72vh, 680px);
+  width: min(900px, 100%);
+  max-height: min(78vh, 760px);
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(233, 185, 107, 0.26);
@@ -67,7 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 16px 0;
+  padding: 18px 20px 0;
 }
 
 .search__eyebrow {
@@ -91,8 +91,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 10px 16px 8px;
-  padding: 10px 12px;
+  margin: 12px 20px 10px;
+  padding: 14px 15px;
   border: 1px solid rgba(147, 205, 191, 0.18);
   border-radius: 11px;
   background: rgba(147, 205, 191, 0.035);
@@ -106,7 +106,7 @@
   background: transparent;
   color: #f1f8f4;
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .search__input::placeholder { color: #596f68; }
@@ -134,7 +134,7 @@
   grid-template-columns: 62px 1fr;
   gap: 2px 10px;
   width: 100%;
-  padding: 9px 10px;
+  padding: 11px 12px;
   border: 0;
   border-radius: 8px;
   background: transparent;
@@ -157,7 +157,7 @@
 .search-result__label {
   overflow: hidden;
   color: #e3f0eb;
-  font-size: 11px;
+  font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -165,7 +165,7 @@
 .search-result__sub {
   overflow: hidden;
   color: var(--faint);
-  font-size: 8.5px;
+  font-size: 9.5px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -179,7 +179,7 @@
 
 .search__hint {
   margin: 0;
-  padding: 9px 16px 12px;
+  padding: 11px 20px 14px;
   border-top: 1px solid rgba(147, 205, 191, 0.1);
   color: #536b65;
   font-size: 8.5px;
