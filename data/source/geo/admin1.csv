@@ -95,13 +95,13 @@ DZA,DZ.55,Tipaza,Tipaza,2476027,提帕萨省
 DZA,DZ.56,Tissemsilt,Tissemsilt,2475858,提塞姆西勒特省
 DZA,DZ.BA,Beni Abbes,Beni Abbes,12226385,貝尼阿巴斯省
 DZA,DZ.BB,Bordj Badji Mokhtar,Bordj Badji Mokhtar,12226383,巴吉穆赫塔尔堡省
-DZA,DZ.DJ,Djanet,Djanet,12226388,
-DZA,DZ.EM,El Menia,El Menia,12226389,
-DZA,DZ.IG,In Guezzam,In Guezzam,12226386,
-DZA,DZ.IS,In Salah,In Salah,12226387,
-DZA,DZ.MG,El Mghair,El Mghair,12226391,
-DZA,DZ.OD,Ouled Djellal,Ouled Djellal,12226392,
-DZA,DZ.TG,Touggourt,Touggourt,12226390,
+DZA,DZ.DJ,Djanet,Djanet,12226388,贾奈特
+DZA,DZ.EM,El Menia,El Menia,12226389,姆尼亚
+DZA,DZ.IG,In Guezzam,In Guezzam,12226386,因盖扎姆
+DZA,DZ.IS,In Salah,In Salah,12226387,因萨拉赫
+DZA,DZ.MG,El Mghair,El Mghair,12226391,姆盖尔
+DZA,DZ.OD,Ouled Djellal,Ouled Djellal,12226392,乌莱德杰拉勒
+DZA,DZ.TG,Touggourt,Touggourt,12226390,图古尔特
 DZA,DZ.TM,Timimoun,Timimoun,12226384,提米蒙省
 AZE,AZ.01,Abşeron,Abseron,587245,阿布歇隆區
 AZE,AZ.02,Ağcabǝdi,Aghjabadi Rayon,148615,阿格賈貝迪區
@@ -259,17 +259,17 @@ CIV,CI.82,Lagunes District,Lagunes District,11153057,潟湖區
 CIV,CI.87,Savanes District,Savanes District,11153060,薩瓦內區
 CIV,CI.90,Vallée du Bandama District,Vallee du Bandama District,11153061,邦達馬河谷區
 CIV,CI.92,Zanzan District,Zanzan District,11153063,贊贊區
-CIV,CI.93,Abidjan Autonomous District,Abidjan Autonomous District,11153151,
+CIV,CI.93,Abidjan Autonomous District,Abidjan Autonomous District,11153151,阿比让自治区
 CIV,CI.94,Comoé District,Comoe District,11153053,科莫埃區
 CIV,CI.95,Goh-Djiboua,Goh-Djiboua,11153055,戈吉布阿區
 CIV,CI.96,Sassandra-Marahoue,Sassandra-Marahoue,11153059,薩桑德拉-馬拉韋區
 CIV,CI.97,Woroba,Woroba,11153062,沃羅巴區
-CIV,CI.98,Yamoussoukro,Yamoussoukro,10629377,
+CIV,CI.98,Yamoussoukro,Yamoussoukro,10629377,亚穆苏克罗
 DJI,DJ.01,Ali Sabieh,Ali Sabieh,225282,阿里薩比州
 DJI,DJ.04,Obock,Obock,221525,奧博克州
 DJI,DJ.05,Tadjourah,Tadjourah,220781,塔朱拉州
 DJI,DJ.06,Dikhil,Dikhil,223889,迪基爾州
-DJI,DJ.07,Djibouti,Djibouti,223818,
+DJI,DJ.07,Djibouti,Djibouti,223818,吉布提
 DJI,DJ.08,Arta,Arta,449265,阿爾塔州 (吉布提)
 EGY,EG.01,Dakahlia,Dakahlia,361849,代蓋赫利耶省
 EGY,EG.02,Red Sea,Red Sea,361468,红海省
@@ -307,7 +307,7 @@ GAB,GA.06,Ogooué-Ivindo,Ogooue-Ivindo,2396926,奧果韋-伊溫多省
 GAB,GA.07,Ogooué-Lolo,Ogooue-Lolo,2396925,奧果韋-洛洛省
 GAB,GA.08,Ogooué-Maritime,Ogooue-Maritime,2396924,濱海奧果韋省
 GAB,GA.09,Woleu-Ntem,Woleu-Ntem,2396076,沃勒-恩特姆省
-GMB,GM.01,Banjul,Banjul,2413875,
+GMB,GM.01,Banjul,Banjul,2413875,班珠尔
 GMB,GM.02,Lower River,Lower River,2412716,下河區
 GMB,GM.03,Central River,Central River,2412707,中河區
 GMB,GM.04,Upper River,Upper River,2411711,上河區
@@ -427,7 +427,7 @@ IRQ,IQ.15,Nineveh,Nineveh,92877,尼尼微省
 IRQ,IQ.16,Wasit,Wasit,89693,瓦西特省
 IRQ,IQ.17,Najaf,Najaf,98862,納傑夫省
 IRQ,IQ.18,Salah ad Din,Salah ad Din,91695,萨拉赫丁省
-IRQ,IQ.19,Halabja,Halabja,12218240,
+IRQ,IQ.19,Halabja,Halabja,12218240,哈拉卜贾
 JOR,JO.02,Balqa,Balqa,250751,拜勒加省
 JOR,JO.09,Karak,Karak,250625,卡拉克
 JOR,JO.12,Tafielah,Tafielah,250199,塔菲拉省
@@ -475,7 +475,7 @@ KGZ,KG.06,Talas Region,Talas Region,1527297,塔拉斯州
 KGZ,KG.07,Issyk-Kul,Issyk-Kul,1528260,伊塞克湖州
 KGZ,KG.08,Osh Region,Osh Region,1346798,奧什州
 KGZ,KG.09,Batken,Batken,1463580,巴特肯州
-KGZ,KG.10,Osh City,Osh City,10300944,
+KGZ,KG.10,Osh City,Osh City,10300944,奥什市
 LBN,LB.04,Beirut,Beirut,276780,贝鲁特省
 LBN,LB.05,Mount Lebanon,Mount Lebanon,273607,黎巴嫩山省
 LBN,LB.06,South Governorate,South Governorate,279894,南部省
@@ -490,7 +490,7 @@ LBY,LY.65,Al Kufrah,Al Kufrah,88932,庫夫拉省
 LBY,LY.66,Al Marj,Al Marj,88904,邁爾季省
 LBY,LY.67,An Nuqat al Khams,An Nuqat al Khams,2593778,努加特海姆斯省
 LBY,LY.68,Az Zawiyah,Az Zawiyah,2218972,扎維耶省
-LBY,LY.69,Banghazi,Banghazi,88318,
+LBY,LY.69,Banghazi,Banghazi,88318,班加西
 LBY,LY.70,Darnah,Darnah,87204,德爾納省
 LBY,LY.71,Ghat,Ghat,2217350,加特
 LBY,LY.72,Misratah,Misratah,2214845,米蘇拉塔省
@@ -535,7 +535,7 @@ MDV,MV.36,Haa Alifu Atholhu,Haa Alifu Atholhu,1282294,哈阿利夫環礁
 MDV,MV.37,Haa Dhaalu Atholhu,Haa Dhaalu Atholhu,1282293,哈达卢环礁
 MDV,MV.38,Kaafu Atoll,Kaafu Atoll,1282208,卡富環礁
 MDV,MV.39,Faadhippolhu Atoll,Faadhippolhu Atoll,1282096,拉维亚尼环礁
-MDV,MV.40,Male,Male,1337624,
+MDV,MV.40,Male,Male,1337624,马累
 MDV,MV.41,Meemu Atholhu,Meemu Atholhu,1281985,梅穆環礁
 MDV,MV.42,Gnyaviyani Atoll,Gnyaviyani Atoll,1281945,尼亚维亚尼环礁
 MDV,MV.43,Noonu Atoll,Noonu Atoll,1281937,諾努環礁
@@ -552,8 +552,8 @@ MLI,ML.07,Koulikoro,Koulikoro,2454532,库利科罗区
 MLI,ML.08,Tombouctou,Tombouctou,2449066,通布圖區
 MLI,ML.09,Gao,Gao,2457161,加奥区
 MLI,ML.10,Kidal,Kidal,2597449,基達爾區
-MLI,ML.12070575,Taoudénit,Taoudenit,12070575,
-MLI,ML.12070577,Ménaka,Menaka,12070577,
+MLI,ML.12070575,Taoudénit,Taoudenit,12070575,陶代尼
+MLI,ML.12070577,Ménaka,Menaka,12070577,梅纳卡
 MRT,MR.01,Hodh Ech Chargi,Hodh Ech Chargi,2379025,東胡德省
 MRT,MR.02,Hodh El Gharbi,Hodh El Gharbi,2379024,西胡德省
 MRT,MR.03,Assaba,Assaba,2381344,阿薩巴省
@@ -566,20 +566,20 @@ MRT,MR.09,Tagant,Tagant,2376551,塔甘特省
 MRT,MR.10,Guidimaka,Guidimaka,2379216,吉迪馬卡省
 MRT,MR.11,Tiris Zemmour,Tiris Zemmour,2375989,提里斯-宰穆爾省
 MRT,MR.12,Inchiri,Inchiri,2378903,因希里省
-MRT,MR.13,Nouakchott West,Nouakchott West,11496391,
-MRT,MR.14,Nouakchott North,Nouakchott North,11496392,
+MRT,MR.13,Nouakchott West,Nouakchott West,11496391,努瓦克肖特西
+MRT,MR.14,Nouakchott North,Nouakchott North,11496392,努瓦克肖特北
 MRT,MR.15,Nouakchott South,Nouakchott South,11496393,南努瓦克肖特大区
-MAR,MA.01,Tanger-Tetouan-Al Hoceima,Tanger-Tetouan-Al Hoceima,11281874,
+MAR,MA.01,Tanger-Tetouan-Al Hoceima,Tanger-Tetouan-Al Hoceima,11281874,丹吉尔-得土安-胡塞马
 MAR,MA.02,Oriental,Oriental,11281875,东部大区
-MAR,MA.03,Fes-Meknes,Fes-Meknes,11281876,
+MAR,MA.03,Fes-Meknes,Fes-Meknes,11281876,非斯-梅克内斯
 MAR,MA.04,Rabat-Salé-Kénitra,Rabat-Sale-Kenitra,11281877,拉巴特-塞拉-盖尼特拉大区
-MAR,MA.05,Beni Mellal-Khenifra,Beni Mellal-Khenifra,11281878,
+MAR,MA.05,Beni Mellal-Khenifra,Beni Mellal-Khenifra,11281878,贝尼迈拉勒-海尼夫拉
 MAR,MA.06,Casablanca-Settat,Casablanca-Settat,11281879,卡薩布蘭卡-塞塔特大區
 MAR,MA.07,Marrakesh-Safi,Marrakesh-Safi,11281880,马拉喀什-萨菲大区
 MAR,MA.08,Drâa-Tafilalet,Draa-Tafilalet,11281881,德拉-塔菲拉勒特大區
 MAR,MA.09,Souss-Massa,Souss-Massa,11281882,蘇斯-馬塞大區
 MAR,MA.10,Guelmim-Oued Noun,Guelmim-Oued Noun,11281884,蓋勒敏-農河大區
-MAR,MA.11,Laayoune-Sakia El Hamra,Laayoune-Sakia El Hamra,11281885,
+MAR,MA.11,Laayoune-Sakia El Hamra,Laayoune-Sakia El Hamra,11281885,阿尤恩-萨基亚哈姆拉
 MAR,MA.12,Dakhla-Oued Ed-Dahab,Dakhla-Oued Ed-Dahab,11281886,达赫拉-乌德埃德达哈布
 MOZ,MZ.01,Cabo Delgado Province,Cabo Delgado Province,1051823,德尔加杜角省
 MOZ,MZ.02,Gaza Province,Gaza Province,1046058,加扎省
@@ -591,7 +591,7 @@ MOZ,MZ.07,Niassa Province,Niassa Province,1030006,尼亚萨省
 MOZ,MZ.08,Tete,Tete,1026010,太特省
 MOZ,MZ.09,Zambezia Province,Zambezia Province,1024312,赞比西亚省
 MOZ,MZ.10,Manica,Manica,1040947,马尼卡省
-MOZ,MZ.11,Maputo City,Maputo City,1105845,
+MOZ,MZ.11,Maputo City,Maputo City,1105845,马普托市
 NER,NE.01,Agadez,Agadez,2448083,阿加德兹大区
 NER,NE.02,Diffa,Diffa,2445702,迪法大区
 NER,NE.03,Dosso Region,Dosso Region,2445486,多索大区
@@ -659,12 +659,12 @@ PSE,PS.GZ,Gaza Strip,Gaza Strip,281132,加沙地带
 PSE,PS.WE,West Bank,West Bank,285153,約旦河西岸地區
 QAT,QA.01,Baladiyat ad Dawhah,Baladiyat ad Dawhah,389470,杜哈自治市
 QAT,QA.04,Al Khor,Al Khor,389465,豪尔
-QAT,QA.06,Baladiyat ar Rayyan,Baladiyat ar Rayyan,389469,
-QAT,QA.08,Madinat ash Shamal,Madinat ash Shamal,389462,
+QAT,QA.06,Baladiyat ar Rayyan,Baladiyat ar Rayyan,389469,赖扬市
+QAT,QA.08,Madinat ash Shamal,Madinat ash Shamal,389462,北部市
 QAT,QA.09,Umm Salal,Umm Salal,389467,烏姆錫拉勒
 QAT,QA.10,Al Wakrah,Al Wakrah,389472,沃克拉
 QAT,QA.13,Al Daayen,Al Daayen,8030540,宰阿因
-QAT,QA.14,Al-Shahaniya,Al-Shahaniya,11777514,
+QAT,QA.14,Al-Shahaniya,Al-Shahaniya,11777514,沙哈尼亚
 SAU,SA.02,Al Bahah Region,Al Bahah Region,109954,巴哈省
 SAU,SA.05,Medina Region,Medina Region,109224,麦地那省
 SAU,SA.06,Eastern Province,Eastern Province,108241,东部省
@@ -922,6 +922,6 @@ YEM,YE.22,Ḩajjah,Hajjah,6201195,哈杰省
 YEM,YE.23,Ibb Governorate,Ibb Governorate,6201196,伊卜省
 YEM,YE.24,Laḩij,Lahij,6201197,拉赫季省
 YEM,YE.25,Ta‘izz,Ta'izz,70222,塔伊茲省
-YEM,YE.26,Amanat Alasimah,Amanat Alasimah,6940571,
+YEM,YE.26,Amanat Alasimah,Amanat Alasimah,6940571,萨那首都区
 YEM,YE.27,Raymah,Raymah,71532,赖马省
 YEM,YE.28,Soqatra,Soqatra,9645387,索科特拉省

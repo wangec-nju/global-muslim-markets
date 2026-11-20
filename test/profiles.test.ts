@@ -36,6 +36,10 @@ describe('country profiles', () => {
     expect(profilesWithFlags.every((profile) => existsSync(`public/${profile.flagUrl}`))).toBe(true);
     const cities = profiles.profiles.flatMap((profile) => profile.cities);
     expect(cities.filter((city) => city.nameZh).length / cities.length).toBeGreaterThan(0.8);
+    const divisions = profiles.profiles.flatMap(
+      (profile) => profile.divisions as Array<{ nameZh: string | null }>,
+    );
+    expect(divisions.filter((division) => division.nameZh).length / divisions.length).toBeGreaterThan(0.9);
     expect(profiles.profiles.every((profile) => profile.coverage.logistics > 0)).toBe(true);
   });
 

@@ -318,7 +318,7 @@ npm test
 - **小岛国**：巴林、科摩罗、马尔代夫等 50m 几何很小，需要放大后点击；现在可以用搜索直接打开。
 - **年份不统一**：不同指标按各自最新可得年份展示；HS2 为 2023 年（阿尔及利亚为 2024 年），市场指标多为 2025 年。
 - **穆斯林人口覆盖有限**：只有 6 国官方普查；其余不推断。
-- **行政/城市/枢纽覆盖**：行政区为 GeoNames 一级名称，不含边界几何；城市中文名 338/338；枢纽为筛选样本；物流枢纽采用 UN/LOCODE 铁路/公路终端，不是仓库面。
+- **行政/城市/枢纽覆盖**：行政区为 GeoNames 一级名称（中文名 960/960），不含边界几何；城市中文名 338/338；枢纽为筛选样本；物流枢纽采用 UN/LOCODE 铁路/公路终端，不是仓库面。
 - **HS2 覆盖**：46 个 OIC 市场 + 中国；阿尔及利亚为 2024 年；11 个市场无可用数据，留空。
 - **航线**：UN Comtrade 只有贸易额，弧线是示意，不是实际航道。
 - **包体**：主 chunk 约 830KB gzip；地球纹理约 493KB，异步加载，不阻塞地球首帧。
@@ -331,7 +331,7 @@ npm test
 - 市场规模、人口、消费、互联网：世界银行 WDI（2020—2025 最新可得值）。
 - 中国贸易：中国海关年度数据（2020—2025）。
 - 分品类进口：UN Comtrade（印度尼西亚、马来西亚，2021—2025）。
-- 国家档案：world-countries（国旗/官方语言/首都/面积/货币/区号）、CIA World Factbook（常用语言）、GeoNames（一级行政区/城市）、Wikidata（城市中文名）、OurAirports（机场）、NGA World Port Index（港口）、UN/LOCODE（铁路/公路物流枢纽）、UN Comtrade（HS2 2023/2024）。
+- 国家档案：world-countries（国旗/官方语言/首都/面积/货币/区号）、CIA World Factbook（常用语言）、GeoNames（一级行政区/城市）、Wikidata（行政区/城市中文名）、OurAirports（机场）、NGA World Port Index（港口）、UN/LOCODE（铁路/公路物流枢纽）、UN Comtrade（HS2 2023/2024）。
 - 中国省级行政区/城市/枢纽：项目整理；详见 [data/source/profile-sources.md](data/source/profile-sources.md)。
 - OIC 57 国范围：SESRIC / OIC 研究样本。
 - 穆斯林人口：仅各国官方统计机构已核实的普查快照。

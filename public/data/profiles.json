@@ -5,7 +5,7 @@
     "sourceFiles": {
       "scope.csv": "af4a3c032afb4bb732dfab43d66488354d7c65daa2df71984ff3be5dd012e403",
       "profiles-factbook.csv": "f1e54a03d32a20e5f15b45008adbaa255cd65c6ae25b7cfd3997d2046672927e",
-      "geo/admin1.csv": "4cd5806260a4d037cb1658dac4254fe2895a2473a06d228ab5e76ba0615f7943",
+      "geo/admin1.csv": "92beac0e3d2c430c469cc3431d1aa19d81ab5b8d34aa14146d8138175ea9f445",
       "geo/cities.csv": "2ce4e7f175fd303cf1192d1bc9c4c2ff2defd79cc62c53f1d6248b5540aca888",
       "geo/airports.csv": "9d7e9b9df56c337a0fb9538214804ea2955082262e0c33a476e806298fa39b43",
       "geo/ports.csv": "31ff304decd6f955c244d2711536a692347b4b5e934b5f7d68600e4aeed79e7f",
@@ -1043,43 +1043,43 @@
         {
           "code": "DZ.DJ",
           "name": "Djanet",
-          "nameZh": null,
+          "nameZh": "贾奈特",
           "type": null
         },
         {
           "code": "DZ.EM",
           "name": "El Menia",
-          "nameZh": null,
+          "nameZh": "姆尼亚",
           "type": null
         },
         {
           "code": "DZ.IG",
           "name": "In Guezzam",
-          "nameZh": null,
+          "nameZh": "因盖扎姆",
           "type": null
         },
         {
           "code": "DZ.IS",
           "name": "In Salah",
-          "nameZh": null,
+          "nameZh": "因萨拉赫",
           "type": null
         },
         {
           "code": "DZ.MG",
           "name": "El Mghair",
-          "nameZh": null,
+          "nameZh": "姆盖尔",
           "type": null
         },
         {
           "code": "DZ.OD",
           "name": "Ouled Djellal",
-          "nameZh": null,
+          "nameZh": "乌莱德杰拉勒",
           "type": null
         },
         {
           "code": "DZ.TG",
           "name": "Touggourt",
-          "nameZh": null,
+          "nameZh": "图古尔特",
           "type": null
         },
         {
@@ -3938,7 +3938,7 @@
         {
           "code": "CI.93",
           "name": "Abidjan Autonomous District",
-          "nameZh": null,
+          "nameZh": "阿比让自治区",
           "type": null
         },
         {
@@ -3968,7 +3968,7 @@
         {
           "code": "CI.98",
           "name": "Yamoussoukro",
-          "nameZh": null,
+          "nameZh": "亚穆苏克罗",
           "type": null
         }
       ],
@@ -4209,7 +4209,7 @@
         {
           "code": "DJ.07",
           "name": "Djibouti",
-          "nameZh": null,
+          "nameZh": "吉布提",
           "type": null
         },
         {
@@ -5088,7 +5088,7 @@
         {
           "code": "GM.01",
           "name": "Banjul",
-          "nameZh": null,
+          "nameZh": "班珠尔",
           "type": null
         },
         {
@@ -6923,7 +6923,7 @@
         {
           "code": "IQ.19",
           "name": "Halabja",
-          "nameZh": null,
+          "nameZh": "哈拉卜贾",
           "type": null
         }
       ],
@@ -8037,7 +8037,7 @@
         {
           "code": "KG.10",
           "name": "Osh City",
-          "nameZh": null,
+          "nameZh": "奥什市",
           "type": null
         }
       ],
@@ -8525,7 +8525,7 @@
         {
           "code": "LY.69",
           "name": "Banghazi",
-          "nameZh": null,
+          "nameZh": "班加西",
           "type": null
         },
         {
@@ -9217,7 +9217,7 @@
         {
           "code": "MV.40",
           "name": "Male",
-          "nameZh": null,
+          "nameZh": "马累",
           "type": null
         },
         {
@@ -9471,13 +9471,13 @@
         {
           "code": "ML.12070575",
           "name": "Taoudénit",
-          "nameZh": null,
+          "nameZh": "陶代尼",
           "type": null
         },
         {
           "code": "ML.12070577",
           "name": "Ménaka",
-          "nameZh": null,
+          "nameZh": "梅纳卡",
           "type": null
         }
       ],
@@ -9752,13 +9752,13 @@
         {
           "code": "MR.13",
           "name": "Nouakchott West",
-          "nameZh": null,
+          "nameZh": "努瓦克肖特西",
           "type": null
         },
         {
           "code": "MR.14",
           "name": "Nouakchott North",
-          "nameZh": null,
+          "nameZh": "努瓦克肖特北",
           "type": null
         },
         {
@@ -9991,7 +9991,7 @@
         {
           "code": "MA.01",
           "name": "Tanger-Tetouan-Al Hoceima",
-          "nameZh": null,
+          "nameZh": "丹吉尔-得土安-胡塞马",
           "type": null
         },
         {
@@ -10003,7 +10003,7 @@
         {
           "code": "MA.03",
           "name": "Fes-Meknes",
-          "nameZh": null,
+          "nameZh": "非斯-梅克内斯",
           "type": null
         },
         {
@@ -10015,7 +10015,7 @@
         {
           "code": "MA.05",
           "name": "Beni Mellal-Khenifra",
-          "nameZh": null,
+          "nameZh": "贝尼迈拉勒-海尼夫拉",
           "type": null
         },
         {
@@ -10051,7 +10051,7 @@
         {
           "code": "MA.11",
           "name": "Laayoune-Sakia El Hamra",
-          "nameZh": null,
+          "nameZh": "阿尤恩-萨基亚哈姆拉",
           "type": null
         },
         {
@@ -10350,7 +10350,7 @@
         {
           "code": "MZ.11",
           "name": "Maputo City",
-          "nameZh": null,
+          "nameZh": "马普托市",
           "type": null
         }
       ],
@@ -12024,13 +12024,13 @@
         {
           "code": "QA.06",
           "name": "Baladiyat ar Rayyan",
-          "nameZh": null,
+          "nameZh": "赖扬市",
           "type": null
         },
         {
           "code": "QA.08",
           "name": "Madinat ash Shamal",
-          "nameZh": null,
+          "nameZh": "北部市",
           "type": null
         },
         {
@@ -12054,7 +12054,7 @@
         {
           "code": "QA.14",
           "name": "Al-Shahaniya",
-          "nameZh": null,
+          "nameZh": "沙哈尼亚",
           "type": null
         }
       ],
@@ -16772,7 +16772,7 @@
         {
           "code": "YE.26",
           "name": "Amanat Alasimah",
-          "nameZh": null,
+          "nameZh": "萨那首都区",
           "type": null
         },
         {

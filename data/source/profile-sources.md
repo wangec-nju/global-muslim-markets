@@ -8,7 +8,7 @@ file with SHA-256.
 | File | Source | License | Notes |
 | --- | --- | --- | --- |
 | `profiles-factbook.csv` | [CIA World Factbook JSON](https://github.com/factbook/factbook.json) | Public domain | `People and Society > Languages` text, used as “常用语言” |
-| `geo/admin1.csv` | [GeoNames admin1CodesASCII](https://download.geonames.org/export/dump/) | CC BY 4.0 | First-level division names; no boundary geometry |
+| `geo/admin1.csv` | [GeoNames admin1CodesASCII](https://download.geonames.org/export/dump/) | CC BY 4.0 | First-level division names; Wikidata Chinese labels; no boundary geometry |
 | `geo/cities.csv` | [GeoNames cities15000](https://download.geonames.org/export/dump/) | CC BY 4.0 | Major cities: capital/first-level seats first, then population; Chinese names 338/338; English/local/coordinates |
 | `geo/city-labels.csv` | [Wikidata](https://query.wikidata.org/) | CC0 | Chinese city labels via GeoNames id (P1566) |
 | `geo/airports.csv` | [OurAirports](https://ourairports.com/data/) | Public domain | Large/medium scheduled airports with IATA |
