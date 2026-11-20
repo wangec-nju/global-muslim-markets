@@ -123,6 +123,7 @@ export class SidebarController {
       ...[
         overviewSection(profile),
         marketSection(market),
+        muslimSection(market),
         divisionsSection(profile),
         citiesSection(profile),
         hubsSection(profile),
@@ -205,6 +206,69 @@ function marketSection(market: MarketCountry): HTMLElement {
       ),
     );
   }
+  return section;
+}
+
+function muslimSection(market: MarketCountry): HTMLElement {
+  const official = market.muslim;
+  const reference = market.muslimReference;
+  const section = dossierSection('穆斯林人口占比', '各国官方统计 · Pew 参考值');
+  const facts = el('dl', { className: 'dossier-facts' });
+
+  if (official.status === 'official') {
+    const rows: Array<[string, string]> = [
+      ['占比', formatPercent(official.share, 2)],
+      ['普查年份', official.year ?? '—'],
+      ['穆斯林人口', formatPopulation(official.population)],
+      ['统计机构', official.source ?? '—'],
+    ];
+    if (reference) {
+      rows.push(['Pew 参考', `${reference.display}（2010）`]);
+    }
+    for (const [label, value] of rows) {
+      facts.append(
+        el('div', { className: 'dossier-fact' },
+          el('dt', { text: label }),
+          el('dd', { text: value }),
+        ),
+      );
+    }
+    section.append(facts);
+    section.append(
+      el('p', {
+        className: 'dossier-note',
+        text: '官方普查优先；Pew 参考值只用于对照，不作为当前官方占比。',
+      }),
+    );
+    return section;
+  }
+
+  if (reference) {
+    const rows: Array<[string, string]> = [
+      ['参考占比', reference.display],
+      ['数据年份', `${reference.year ?? 2010}（Pew 估计）`],
+      ['口径', '非官方普查，仅作参考'],
+      ['来源', 'Pew Forum / Wikipedia OIC 表'],
+    ];
+    for (const [label, value] of rows) {
+      facts.append(
+        el('div', { className: 'dossier-fact' },
+          el('dt', { text: label }),
+          el('dd', { text: value }),
+        ),
+      );
+    }
+    section.append(facts);
+    section.append(
+      el('p', {
+        className: 'dossier-note',
+        text: '该国暂无已核实的官方穆斯林占比；这里展示 Pew 2010 参考值，不把它当作官方统计或当前值。',
+      }),
+    );
+    return section;
+  }
+
+  section.append(el('p', { className: 'dossier__empty', text: '暂无官方或参考占比。' }));
   return section;
 }
 

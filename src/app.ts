@@ -8,6 +8,7 @@ import { ProfileRepository } from './data/ProfileRepository';
 import type {
   AdminBoundaryDataset,
   MarketCountry,
+  MuslimReferenceDataset,
   SeaRouteDataset,
   SeaRouteInfo,
 } from './data/types';
@@ -41,10 +42,16 @@ export async function createApp(): Promise<void> {
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
   let adminBoundaries: AdminBoundaryDataset | null = null;
   let seaRoutes: SeaRouteDataset | null = null;
-  await Promise.all([repository.load(), profileRepository.load()]);
+  const [muslimReference] = await Promise.all([
+    fetchJson<MuslimReferenceDataset>(siteConfig.data.muslimReferenceUrl),
+    repository.load(),
+    profileRepository.load(),
+  ]);
   for (const market of repository.list()) {
     const profile = profileRepository.get(market.iso3);
     if (profile) market.profile = profile;
+    const reference = muslimReference.countries[market.iso3];
+    if (reference) market.muslimReference = reference;
   }
 
   async function loadGeoData(): Promise<void> {

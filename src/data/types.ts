@@ -196,6 +196,26 @@ export interface SeaRouteDataset {
   routes: Record<string, SeaRouteInfo>;
 }
 
+export interface MuslimReference {
+  share: number | null;
+  display: string;
+  qualifier: string;
+  year: number | null;
+  source: string;
+  sourceUrl: string;
+  wikipediaUrl: string;
+}
+
+export interface MuslimReferenceDataset {
+  meta: {
+    source: string;
+    generatedAt: string;
+    note: string;
+    sourceCsv: string;
+  };
+  countries: Record<string, MuslimReference>;
+}
+
 export interface MarketCountry {
   id: string;
   unM49: string;
@@ -218,6 +238,8 @@ export interface MarketCountry {
   profile?: CountryProfile;
   /** Shortest navigable sea route from Shanghai, attached at runtime. */
   seaRoute?: SeaRouteInfo;
+  /** Non-official Pew/Wikipedia reference for countries without a census. */
+  muslimReference?: MuslimReference;
 }
 
 export interface MarketMeta {

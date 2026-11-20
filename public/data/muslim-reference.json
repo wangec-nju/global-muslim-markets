@@ -1,0 +1,523 @@
+{
+  "meta": {
+    "source": "Wikipedia OIC table / Pew Forum 2010 estimates",
+    "generatedAt": "2026-11-20",
+    "note": "Reference only; not an official census. Prefer muslim-official.csv when available.",
+    "sourceCsv": "data/reference/oic-wikipedia.csv"
+  },
+  "countries": {
+    "AFG": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "ALB": {
+      "share": 80.3,
+      "display": "80.30%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "DZA": {
+      "share": 97.75,
+      "display": "97.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "AZE": {
+      "share": 96.75,
+      "display": "96.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "BHR": {
+      "share": 70.3,
+      "display": "70.30%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "BGD": {
+      "share": 89.8,
+      "display": "89.80%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "BEN": {
+      "share": 23.8,
+      "display": "23.80%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "BRN": {
+      "share": 75.1,
+      "display": "75.10%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "BFA": {
+      "share": 61.6,
+      "display": "61.60%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "CMR": {
+      "share": 18.3,
+      "display": "18.30%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "TCD": {
+      "share": 55.3,
+      "display": "55.30%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "COM": {
+      "share": 98.3,
+      "display": "98.30%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "CIV": {
+      "share": 37.5,
+      "display": "37.50%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "DJI": {
+      "share": 96.75,
+      "display": "96.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "EGY": {
+      "share": 94.75,
+      "display": "94.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "GAB": {
+      "share": 11.2,
+      "display": "11.20%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "GMB": {
+      "share": 95.1,
+      "display": "95.10%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "GIN": {
+      "share": 84.4,
+      "display": "84.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "GNB": {
+      "share": 50.0,
+      "display": "50.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "GUY": {
+      "share": 6.4,
+      "display": "~6.4%",
+      "qualifier": "~",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "IDN": {
+      "share": 87.2,
+      "display": "87.20%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "IRN": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "IRQ": {
+      "share": 99.0,
+      "display": "99.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "JOR": {
+      "share": 97.2,
+      "display": "97.20%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "KAZ": {
+      "share": 70.4,
+      "display": "70.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "KWT": {
+      "share": 74.1,
+      "display": "74.10%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "KGZ": {
+      "share": 88.0,
+      "display": "88.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "LBN": {
+      "share": 61.3,
+      "display": "61.30%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "LBY": {
+      "share": 96.6,
+      "display": "96.60%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "MYS": {
+      "share": 63.7,
+      "display": "63.70%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "MDV": {
+      "share": 98.4,
+      "display": "98.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "MLI": {
+      "share": 92.4,
+      "display": "92.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "MRT": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "MAR": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "MOZ": {
+      "share": 18.0,
+      "display": "18.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "NER": {
+      "share": 98.4,
+      "display": "98.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "NGA": {
+      "share": 50.4,
+      "display": "50.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "OMN": {
+      "share": 85.75,
+      "display": "85.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "PAK": {
+      "share": 96.4,
+      "display": "96.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "PSE": {
+      "share": 97.6,
+      "display": "97.60%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "QAT": {
+      "share": 67.7,
+      "display": "67.70%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SAU": {
+      "share": 93.0,
+      "display": "93.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SEN": {
+      "share": 96.4,
+      "display": "96.40%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SLE": {
+      "share": 78.0,
+      "display": "78.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SOM": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SDN": {
+      "share": 75.7,
+      "display": "75.70%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SUR": {
+      "share": 13.75,
+      "display": "13.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "SYR": {
+      "share": 97.0,
+      "display": "97.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "TJK": {
+      "share": 96.7,
+      "display": "96.70%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "TGO": {
+      "share": 14.0,
+      "display": "14.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "TUN": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "TUR": {
+      "share": 98.0,
+      "display": "98.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "TKM": {
+      "share": 93.0,
+      "display": "93.00%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "UGA": {
+      "share": 11.5,
+      "display": "11.50%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "ARE": {
+      "share": 76.75,
+      "display": "76.75%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "UZB": {
+      "share": 96.7,
+      "display": "96.70%",
+      "qualifier": "",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    },
+    "YEM": {
+      "share": 99.0,
+      "display": ">99.0%",
+      "qualifier": ">",
+      "year": 2010,
+      "source": "Pew Forum, Religious Composition by Country (2010 estimates)",
+      "sourceUrl": "https://web.archive.org/web/20130309232331/http://www.pewforum.org/uploadedFiles/Topics/Religious_Affiliation/globalReligion-tables.pdf",
+      "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87"
+    }
+  }
+}

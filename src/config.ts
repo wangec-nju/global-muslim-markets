@@ -23,6 +23,7 @@ export interface SiteConfig {
     profileUrl: string;
     adminBoundaryUrl: string;
     seaRouteUrl: string;
+    muslimReferenceUrl: string;
   };
 }
 
@@ -48,5 +49,6 @@ export const siteConfig: SiteConfig = {
     profileUrl: publicAsset('data/profiles.json'),
     adminBoundaryUrl: publicAsset('data/admin1-paths.json'),
     seaRouteUrl: publicAsset('data/sea-routes.json'),
+    muslimReferenceUrl: publicAsset('data/muslim-reference.json'),
   },
 };
