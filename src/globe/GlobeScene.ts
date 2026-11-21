@@ -262,6 +262,7 @@ export class GlobeScene {
 
   private refreshPaths(): void {
     this.globe.pathsData([...this.adminPaths, ...this.seaRoutes]);
+    this.muteOverlayRaycast();
   }
 
   /** Replace the airport/port markers for the hovered country. */
@@ -273,6 +274,7 @@ export class GlobeScene {
         radius: hub.type === 'airport' ? 0.28 : hub.type === 'port' ? 0.24 : 0.2,
       })),
     );
+    this.muteOverlayRaycast();
   }
 
   /** Fly the camera to a country, with a zoom level based on its extent. */
@@ -359,6 +361,29 @@ export class GlobeScene {
     this.options.onBackgroundClick?.();
   }
 
+  private muteOverlayRaycast(): void {
+    // Hubs and paths are visual overlays, never click targets. Letting them
+    // participate in globe.gl's raycast makes hover alternate between the
+    // country and an overlay, which flickers the card and the cursor.
+    const scene = this.globe.scene() as unknown as {
+      traverse: (callback: (object: unknown) => void) => void;
+    };
+    scene.traverse((object) => {
+      const tagged = object as {
+        __globeObjType?: string;
+        raycast?: () => void;
+      };
+      if (
+        tagged.__globeObjType === 'point' ||
+        tagged.__globeObjType === 'points' ||
+        tagged.__globeObjType === 'path' ||
+        tagged.__globeObjType === 'arc'
+      ) {
+        tagged.raycast = () => undefined;
+      }
+    });
+  }
+
   private handleReady(): void {
     if (this.ready) return;
     this.ready = true;
@@ -366,6 +391,7 @@ export class GlobeScene {
     // animation frame and show an empty canvas until the next resize.
     // Re-applying the current size forces an initial render.
     this.queueResize();
+    this.muteOverlayRaycast();
     this.options.onReady?.();
   }
 
