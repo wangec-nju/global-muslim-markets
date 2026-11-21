@@ -697,3 +697,47 @@
   object-fit: cover;
   border-radius: inherit;
 }
+
+.card-muslim {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 7px 0 0;
+  padding: 7px 10px;
+  border: 1px solid rgba(233, 185, 107, 0.18);
+  border-radius: 9px;
+  background: rgba(233, 185, 107, 0.06);
+}
+
+.card-muslim.is-reference {
+  border-color: rgba(95, 214, 194, 0.2);
+  background: rgba(95, 214, 194, 0.055);
+}
+
+.card-muslim__label {
+  color: var(--faint);
+  font-size: 8.5px;
+  letter-spacing: 0.03em;
+}
+
+.card-muslim__value {
+  color: var(--gold-bright);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.card-muslim.is-reference .card-muslim__value {
+  color: #8ffff0;
+}
+
+.card-muslim__note {
+  margin-left: auto;
+  color: #8d7c61;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.card-muslim.is-reference .card-muslim__note {
+  color: #6faba0;
+}

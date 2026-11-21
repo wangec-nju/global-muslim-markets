@@ -37,7 +37,7 @@ export const siteConfig: SiteConfig = {
   tagline: 'OIC 57 国市场探索器',
   cardRenderer: 'market',
   globe: {
-    textureUrl: publicAsset('textures/earth-night.jpg'),
+    textureUrl: publicAsset('textures/earth-night-8k.jpg'),
     bumpTextureUrl: publicAsset('textures/earth-topology.png'),
     initialView: { lat: 22, lng: 52, altitude: 2.0 },
     autoRotate: true,

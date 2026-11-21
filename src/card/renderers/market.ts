@@ -35,18 +35,16 @@ export function createMarketRenderer(): CardContentRenderer {
         ];
 
         nodes.push(metricGrid(market, compact));
+        nodes.push(muslimShareLine(market));
         nodes.push(profileBasics(market));
         nodes.push(geographySection(market, compact));
         nodes.push(tradeSection(market, compact));
-        if (market.muslim.status === 'official') {
-          nodes.push(muslimSection(market));
-        }
 
         if (!compact) {
           if (market.products.length > 0) nodes.push(productsSection(market));
           nodes.push(
             sourceNote(
-              '数据：世界银行 WDI · 中国海关 · UN Comtrade · 各国官方统计；穆斯林人口仅在有官方普查时展示，缺失值不补零。',
+              '数据：世界银行 WDI · 中国海关 · UN Comtrade；穆斯林占比优先使用官方普查，其余为 Pew 2010 参考值。',
             ),
           );
         } else {
@@ -219,39 +217,27 @@ function tradeFlow(
   return row;
 }
 
-function muslimSection(market: MarketCountry): HTMLElement {
-  const section = el('section', { className: 'market-section' });
-  section.append(sectionLabel('穆斯林人口', 'data/source/muslim-official.csv（各国官方统计）'));
-
-  const stats = el('div', { className: 'muslim-stats' });
-  stats.append(
-    el(
-      'div',
-      { className: 'muslim-stat' },
-      el('strong', { text: formatPercent(market.muslim.share) }),
-      el('span', { className: 'muslim-stat__label', text: '人口占比' }),
-    ),
-    el(
-      'div',
-      { className: 'muslim-stat' },
-      el('strong', { text: formatPopulation(market.muslim.population) }),
-      el('span', { className: 'muslim-stat__label', text: '穆斯林人口' }),
-    ),
+function muslimShareLine(market: MarketCountry): HTMLElement {
+  const official = market.muslim;
+  const reference = market.muslimReference;
+  const isOfficial = official.status === 'official' && official.share != null;
+  const value = isOfficial
+    ? formatPercent(official.share, 2)
+    : reference?.display ?? '—';
+  const note = isOfficial
+    ? `${official.year ?? ''} 官方普查`.trim()
+    : reference
+      ? `Pew ${reference.year ?? 2010} 参考`
+      : '暂无占比';
+  const row = el('div', {
+    className: `card-muslim${isOfficial ? ' is-official' : ' is-reference'}`,
+  });
+  row.append(
+    el('span', { className: 'card-muslim__label', text: '穆斯林占总人口' }),
+    el('strong', { className: 'card-muslim__value', text: value }),
+    el('span', { className: 'card-muslim__note', text: note }),
   );
-  section.append(stats);
-  section.append(
-    marketNote(
-      [
-        market.muslim.year ? `${market.muslim.year} 年普查` : null,
-        market.muslim.source,
-      ]
-        .filter(Boolean)
-        .join(' · ') || '官方普查快照',
-      'market-hint',
-    ),
-  );
-
-  return section;
+  return row;
 }
 
 function productsSection(market: MarketCountry): HTMLElement {
