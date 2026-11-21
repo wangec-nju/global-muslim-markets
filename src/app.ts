@@ -296,12 +296,10 @@ export async function createApp(): Promise<void> {
 
   function handleBackgroundClick(): void {
     if (performance.now() - lastCountryClickAt < 300) return;
-    // The sidebar is intentionally non-modal: clicking the globe must not
-    // dismiss it. Use its close button or Esc.
-    if (sidebar.isOpen) return;
     cancelOverlayClear();
     chinaHover.close();
     card?.close('external');
+    sidebar.close();
     scene.setSelected(null);
     scene.clearGeoOverlays();
     scene.setHubs([]);
