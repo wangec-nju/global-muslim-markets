@@ -103,16 +103,21 @@ export class CardController {
   openPreview(country: MarketCountry, point: ScreenPoint): void {
     if (this.isPinned) return;
 
+    const wasOpen = this.isOpen;
     const sameCountry = this.country?.id === country.id;
     this.country = country;
     this.mode = 'preview';
     this.anchor = point;
     this.root.hidden = false;
 
-    if (!sameCountry || !this.handle) {
+    // Reuse one reveal path for both modes. Replaying only on country change
+    // meant a card that had been closed while the dossier opened could be
+    // re-shown without its entrance animation.
+    if (!wasOpen || !sameCountry || !this.handle) {
       this.mountContent();
-      this.playReveal();
     }
+    // One animation path for both the default and sidebar-open modes.
+    this.playReveal();
     this.syncChrome();
     this.place(point);
   }
@@ -205,6 +210,7 @@ export class CardController {
 
   private playReveal(): void {
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    this.surface.getAnimations().forEach((animation) => animation.cancel());
     this.surface.animate(
       [
         { opacity: 0, transform: 'translateY(7px) scale(0.988)' },
