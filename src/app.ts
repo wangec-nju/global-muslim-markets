@@ -41,53 +41,18 @@ export async function createApp(): Promise<void> {
   const repository = new MarketRepository(siteConfig.data.marketUrl);
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
   let adminBoundaries: AdminBoundaryDataset | null = null;
-  // Start the big dossier/reference downloads immediately, but do not block
-  // the globe's first paint on them. Markets alone are enough to draw shapes.
-  const profileLoad = profileRepository.load();
-  const referenceLoad = fetchJson<MuslimReferenceDataset>(siteConfig.data.muslimReferenceUrl);
-  // Attach rejection handlers immediately even though hydration waits for the
-  // first paint.
-  const dossierData = Promise.allSettled([profileLoad, referenceLoad]);
+  // Start every first-screen request immediately, but reveal the app only
+  // after all of them have resolved. There is no second-stage UI.
+  const dossierData = Promise.allSettled([
+    profileRepository.load(),
+    fetchJson<MuslimReferenceDataset>(siteConfig.data.muslimReferenceUrl),
+  ]);
+  const geoData = Promise.allSettled([
+    fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
+    fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
+  ]);
+  const textureReady = loadImage(siteConfig.globe.textureUrl);
   await repository.load();
-
-  async function hydrateDossiers(): Promise<void> {
-    const [profileResult, referenceResult] = await dossierData;
-    if (profileResult.status === 'fulfilled') {
-      for (const market of repository.list()) {
-        const profile = profileRepository.get(market.iso3);
-        if (profile) market.profile = profile;
-      }
-    } else {
-      console.error('[profiles] failed to load dossiers', profileResult.reason);
-    }
-    if (referenceResult.status === 'fulfilled') {
-      for (const market of repository.list()) {
-        const reference = referenceResult.value.countries[market.iso3];
-        if (reference) market.muslimReference = reference;
-      }
-    } else {
-      console.error('[muslim] failed to load reference shares', referenceResult.reason);
-    }
-    search.setData(repository.list());
-    sidebar.refresh();
-    card?.refresh();
-  }
-
-  async function loadGeoData(): Promise<void> {
-    try {
-      const [admin, sea] = await Promise.all([
-        fetchJson<AdminBoundaryDataset>(siteConfig.data.adminBoundaryUrl),
-        fetchJson<SeaRouteDataset>(siteConfig.data.seaRouteUrl),
-      ]);
-      adminBoundaries = admin;
-      for (const market of repository.list()) {
-        const route = sea.routes[market.iso3];
-        if (route) market.seaRoute = route;
-      }
-    } catch (error) {
-      console.error('[geo] failed to load overlays', error);
-    }
-  }
 
   function routePaths(route: SeaRouteInfo): Array<{ points: number[][] }> {
     // Map shows the shortest origin per destination; the sidebar lists all 8
@@ -203,7 +168,6 @@ export async function createApp(): Promise<void> {
       openDossier(market);
     },
   });
-  search.setData(repository.list());
   searchButton?.addEventListener('click', () => search.open());
 
   card = new CardController(cardHost, {
@@ -330,15 +294,46 @@ export async function createApp(): Promise<void> {
     if (chinaHover.isOpen) chinaHover.move(point);
   }
 
+  // Wait for the complete first-screen state: profiles, Pew reference, admin
+  // boundaries, sea routes and the globe texture all land before the loader
+  // is removed. No card, search result or click layer is allowed to appear in
+  // a half-populated state.
+  const [dossierResult, geoResult] = await Promise.all([dossierData, geoData]);
+  const [profileResult, referenceResult] = dossierResult;
+  if (profileResult.status === 'rejected') {
+    throw new Error(`国家档案加载失败：${String(profileResult.reason)}`);
+  }
+  for (const market of repository.list()) {
+    const profile = profileRepository.get(market.iso3);
+    if (profile) market.profile = profile;
+  }
+  if (referenceResult.status === 'rejected') {
+    throw new Error(`穆斯林参考数据加载失败：${String(referenceResult.reason)}`);
+  }
+  for (const market of repository.list()) {
+    const reference = referenceResult.value.countries[market.iso3];
+    if (reference) market.muslimReference = reference;
+  }
+
+  const [adminResult, seaResult] = geoResult;
+  if (adminResult.status === 'rejected') {
+    throw new Error(`行政区边界加载失败：${String(adminResult.reason)}`);
+  }
+  if (seaResult.status === 'rejected') {
+    throw new Error(`海运路径加载失败：${String(seaResult.reason)}`);
+  }
+  const admin = adminResult.value;
+  const sea = seaResult.value;
+  adminBoundaries = admin;
+  for (const market of repository.list()) {
+    const route = sea.routes[market.iso3];
+    if (route) market.seaRoute = route;
+  }
+  search.setData(repository.list());
+
+  await Promise.race([textureReady, delay(10000)]);
   await Promise.race([sceneReady, delay(5000)]);
   hideLoader();
-  // Dossiers and reference shares hydrate after the globe is on screen.
-  void hydrateDossiers();
-  // Do not compete with the globe's first paint. Hover cards/hubs remain
-  // usable immediately; boundaries and routes arrive on the next idle turn.
-  window.setTimeout(() => {
-    void loadGeoData();
-  }, 120);
 
   if (import.meta.env.DEV) {
     console.info(
@@ -353,6 +348,22 @@ export async function createApp(): Promise<void> {
     search.destroy();
     scene.destroy();
   }, { once: true });
+}
+
+function loadImage(url: string): Promise<void> {
+  return new Promise((resolve) => {
+    const image = new Image();
+    image.decoding = 'async';
+    image.onload = () => {
+      if (image.decode) {
+        void image.decode().catch(() => undefined).finally(() => resolve());
+      } else {
+        resolve();
+      }
+    };
+    image.onerror = () => resolve();
+    image.src = url;
+  });
 }
 
 function delay(ms: number): Promise<void> {
