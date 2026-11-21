@@ -177,6 +177,14 @@ export class CardController {
     this.place(this.anchor);
   }
 
+  /** Re-render the current preview after its profile/reference arrives. */
+  refresh(): void {
+    if (!this.isOpen || !this.country) return;
+    this.mountContent();
+    this.syncChrome();
+    this.place(this.anchor);
+  }
+
   get isOpen(): boolean {
     return this.country !== null && !this.root.hidden;
   }

@@ -41,16 +41,36 @@ export async function createApp(): Promise<void> {
   const repository = new MarketRepository(siteConfig.data.marketUrl);
   const profileRepository = new ProfileRepository(siteConfig.data.profileUrl);
   let adminBoundaries: AdminBoundaryDataset | null = null;
-  const [muslimReference] = await Promise.all([
-    fetchJson<MuslimReferenceDataset>(siteConfig.data.muslimReferenceUrl),
-    repository.load(),
-    profileRepository.load(),
-  ]);
-  for (const market of repository.list()) {
-    const profile = profileRepository.get(market.iso3);
-    if (profile) market.profile = profile;
-    const reference = muslimReference.countries[market.iso3];
-    if (reference) market.muslimReference = reference;
+  // Start the big dossier/reference downloads immediately, but do not block
+  // the globe's first paint on them. Markets alone are enough to draw shapes.
+  const profileLoad = profileRepository.load();
+  const referenceLoad = fetchJson<MuslimReferenceDataset>(siteConfig.data.muslimReferenceUrl);
+  // Attach rejection handlers immediately even though hydration waits for the
+  // first paint.
+  const dossierData = Promise.allSettled([profileLoad, referenceLoad]);
+  await repository.load();
+
+  async function hydrateDossiers(): Promise<void> {
+    const [profileResult, referenceResult] = await dossierData;
+    if (profileResult.status === 'fulfilled') {
+      for (const market of repository.list()) {
+        const profile = profileRepository.get(market.iso3);
+        if (profile) market.profile = profile;
+      }
+    } else {
+      console.error('[profiles] failed to load dossiers', profileResult.reason);
+    }
+    if (referenceResult.status === 'fulfilled') {
+      for (const market of repository.list()) {
+        const reference = referenceResult.value.countries[market.iso3];
+        if (reference) market.muslimReference = reference;
+      }
+    } else {
+      console.error('[muslim] failed to load reference shares', referenceResult.reason);
+    }
+    search.setData(repository.list());
+    sidebar.refresh();
+    card?.refresh();
   }
 
   async function loadGeoData(): Promise<void> {
@@ -312,6 +332,8 @@ export async function createApp(): Promise<void> {
 
   await Promise.race([sceneReady, delay(5000)]);
   hideLoader();
+  // Dossiers and reference shares hydrate after the globe is on screen.
+  void hydrateDossiers();
   // Do not compete with the globe's first paint. Hover cards/hubs remain
   // usable immediately; boundaries and routes arrive on the next idle turn.
   window.setTimeout(() => {

@@ -75,6 +75,11 @@ export class SidebarController {
     this.options.onClose?.();
   }
 
+  /** Re-render the current dossier after its profile finishes loading. */
+  refresh(): void {
+    if (this.market) this.render(this.market);
+  }
+
   get isOpen(): boolean {
     return !this.root.hidden;
   }

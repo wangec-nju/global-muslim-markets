@@ -142,6 +142,7 @@ export class SearchController {
         });
       }
     }
+    if (this.isOpen) this.update();
   }
 
   open(): void {
