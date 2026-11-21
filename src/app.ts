@@ -241,13 +241,10 @@ export async function createApp(): Promise<void> {
 
   function handleHover(event: GlobeHoverEvent): void {
     if (!card) return;
-    // Sidebar keeps the selected market's detail layers; hovering other
-    // countries must not replace them. The globe still pans/zooms/clicks.
-    if (sidebar.isOpen) return;
     if (!event.country) {
       chinaHover.close();
       scheduleDismiss();
-      scheduleOverlayClear();
+      if (!sidebar.isOpen) scheduleOverlayClear();
       return;
     }
 
@@ -259,8 +256,10 @@ export async function createApp(): Promise<void> {
       cancelOverlayClear();
       card.close('external');
       chinaHover.close();
-      scene.setHubs([]);
-      scene.clearGeoOverlays();
+      if (!sidebar.isOpen) {
+        scene.setHubs([]);
+        scene.clearGeoOverlays();
+      }
       return;
     }
 
@@ -270,16 +269,19 @@ export async function createApp(): Promise<void> {
     if (card.isPinned) return;
     const market = marketFor(event.country);
     if (market) {
-      const color = highlightColor(market);
       card.openPreview(market, event.point);
-      // Hover only previews the country outline/administrative edges.
-      // Hubs and sea routes are detail layers, shown after a click.
-      scene.setGeoOverlays(
-        adminBoundaries?.countries[market.iso3] ?? [],
-        [],
-        color,
-      );
-      scene.setHubs([]);
+      // When the sidebar is open it owns the selected country's detail layers.
+      // Hover still gets the same preview card/highlight as the default mode,
+      // but must not replace those selected hubs/routes.
+      if (!sidebar.isOpen) {
+        const color = highlightColor(market);
+        scene.setGeoOverlays(
+          adminBoundaries?.countries[market.iso3] ?? [],
+          [],
+          color,
+        );
+        scene.setHubs([]);
+      }
     }
   }
 
