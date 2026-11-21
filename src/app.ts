@@ -101,27 +101,11 @@ export async function createApp(): Promise<void> {
 
   let card: CardController | null = null;
   let dismissTimer: number | undefined;
-  let overlayClearTimer: number | undefined;
   let lastCountryClickAt = 0;
 
   const cancelDismiss = (): void => {
     window.clearTimeout(dismissTimer);
     dismissTimer = undefined;
-  };
-
-  const cancelOverlayClear = (): void => {
-    window.clearTimeout(overlayClearTimer);
-    overlayClearTimer = undefined;
-  };
-
-  const scheduleOverlayClear = (delay = 1200): void => {
-    cancelOverlayClear();
-    overlayClearTimer = window.setTimeout(() => {
-      overlayClearTimer = undefined;
-      if (card?.isOpen || sidebar.isOpen || chinaHover.isOpen) return;
-      scene.setHubs([]);
-      scene.clearGeoOverlays();
-    }, delay);
   };
 
   const scheduleDismiss = (delay = PREVIEW_DISMISS_DELAY): void => {
@@ -173,11 +157,10 @@ export async function createApp(): Promise<void> {
   card = new CardController(cardHost, {
     renderer: resolveCardRenderer(siteConfig.cardRenderer),
     onClose: () => {
-      // Keep the country overlays briefly: a pointer moving over a hub point
-      // can produce a null polygon hover, and we must not flicker.
       if (!sidebar.isOpen) {
         scene.setSelected(null);
-        scheduleOverlayClear();
+        scene.clearGeoOverlays();
+        scene.setHubs([]);
       }
     },
     onPointerEnter: cancelDismiss,
@@ -190,7 +173,6 @@ export async function createApp(): Promise<void> {
 
   function openDossier(market: MarketCountry): void {
     cancelDismiss();
-    cancelOverlayClear();
     card?.close('external');
     chinaHover.close();
     sidebar.open(market);
@@ -228,7 +210,12 @@ export async function createApp(): Promise<void> {
     if (!event.country) {
       chinaHover.close();
       scheduleDismiss();
-      if (!sidebar.isOpen) scheduleOverlayClear();
+      if (!sidebar.isOpen) {
+        // The province/route preview belongs to the hovered country only.
+        // Clear it as soon as the country hover is lost; no linger timer.
+        scene.clearGeoOverlays();
+        scene.setHubs([]);
+      }
       return;
     }
 
@@ -237,7 +224,6 @@ export async function createApp(): Promise<void> {
       // a detail panel. Hubs/routes are click details for other markets and
       // China has no click action.
       cancelDismiss();
-      cancelOverlayClear();
       card.close('external');
       chinaHover.close();
       if (!sidebar.isOpen) {
@@ -248,7 +234,6 @@ export async function createApp(): Promise<void> {
     }
 
     cancelDismiss();
-    cancelOverlayClear();
     chinaHover.close();
     if (card.isPinned) return;
     const market = marketFor(event.country);
@@ -280,7 +265,6 @@ export async function createApp(): Promise<void> {
 
   function handleBackgroundClick(): void {
     if (performance.now() - lastCountryClickAt < 300) return;
-    cancelOverlayClear();
     chinaHover.close();
     card?.close('external');
     sidebar.close();
