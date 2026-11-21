@@ -8,6 +8,8 @@ interface SearchEntry {
   label: string;
   subtitle: string;
   haystack: string;
+  /** Data-completeness rank for the recommendation list. */
+  rankScore?: number;
   market: MarketCountry;
   profile?: CountryProfile;
 }
@@ -25,6 +27,7 @@ export class SearchController {
   private entries: SearchEntry[] = [];
   private activeIndex = 0;
   private visible: SearchEntry[] = [];
+  private resultButtons: HTMLButtonElement[] = [];
 
   constructor(host: HTMLElement, private readonly options: SearchOptions) {
     this.root = el('div', { className: 'search-layer', attrs: { hidden: true, role: 'dialog', 'aria-modal': 'true', 'aria-label': '搜索全部国家数据' } });
@@ -83,6 +86,7 @@ export class SearchController {
           label,
           subtitle,
           haystack: `${type} ${haystack}`,
+          rankScore: type === '国家' ? countryRankScore(market) : undefined,
           market,
           profile,
         });
@@ -270,8 +274,13 @@ export class SearchController {
     if (!query) {
       this.visible = this.entries
         .filter((entry) => entry.type === '国家')
-        .slice(0, 16);
-      this.count.textContent = `${this.entries.length} 条索引`;
+        .sort((a, b) =>
+          (b.rankScore ?? 0) - (a.rankScore ?? 0) ||
+          Number(b.market.focus) - Number(a.market.focus) ||
+          a.label.localeCompare(b.label, 'zh-CN'),
+        )
+        .slice(0, 12);
+      this.count.textContent = `推荐 ${this.visible.length} 国 · 关键指标完整度`;
     } else {
       const matches = this.entries
         .map((entry) => ({ entry, score: scoreSearch(entry, query) }))
@@ -286,6 +295,7 @@ export class SearchController {
 
   private renderResults(): void {
     this.results.replaceChildren();
+    this.resultButtons = [];
     if (!this.visible.length) {
       this.results.append(el('p', { className: 'search__empty', text: '没有匹配项；试试国家名、城市名、语言、机场代码或 HS 编码。' }));
       return;
@@ -300,12 +310,19 @@ export class SearchController {
         el('span', { className: 'search-result__label', text: entry.label }),
         el('span', { className: 'search-result__sub', text: entry.subtitle }),
       );
-      button.addEventListener('pointerenter', () => {
-        this.activeIndex = index;
-        this.renderResults();
-      });
+      // Do not re-render the list on pointerenter: replacing the button under
+      // the pointer swallows the subsequent click.
+      button.addEventListener('pointerenter', () => this.setActive(index));
       button.addEventListener('click', () => this.choose(entry));
+      this.resultButtons.push(button);
       this.results.append(button);
+    });
+  }
+
+  private setActive(index: number): void {
+    this.activeIndex = index;
+    this.resultButtons.forEach((button, buttonIndex) => {
+      button.classList.toggle('is-active', buttonIndex === index);
     });
   }
 
@@ -322,12 +339,10 @@ export class SearchController {
     if (!this.visible.length) return;
     if (event.key === 'ArrowDown') {
       event.preventDefault();
-      this.activeIndex = (this.activeIndex + 1) % this.visible.length;
-      this.renderResults();
+      this.setActive((this.activeIndex + 1) % this.visible.length);
     } else if (event.key === 'ArrowUp') {
       event.preventDefault();
-      this.activeIndex = (this.activeIndex - 1 + this.visible.length) % this.visible.length;
-      this.renderResults();
+      this.setActive((this.activeIndex - 1 + this.visible.length) % this.visible.length);
     } else if (event.key === 'Enter') {
       event.preventDefault();
       const entry = this.visible[this.activeIndex];
@@ -342,6 +357,43 @@ export class SearchController {
       this.open();
     }
   };
+}
+
+function countryRankScore(market: MarketCountry): number {
+  const metrics = market.metrics;
+  let score = 0;
+  for (const metric of [
+    metrics.population,
+    metrics.populationGrowth,
+    metrics.urbanShare,
+    metrics.youthShare,
+    metrics.workingAgeShare,
+    metrics.seniorShare,
+    metrics.gdp,
+    metrics.gdpPerCapita,
+    metrics.gniPerCapita,
+    metrics.householdConsumption,
+    metrics.householdConsumptionPerCapita,
+    metrics.internetPenetration,
+    metrics.goodsExports,
+    metrics.goodsImports,
+  ]) {
+    if (metric?.value != null) score += 1;
+  }
+  if (market.muslim.status === 'official') score += 2;
+  else if (market.muslimReference) score += 1;
+  if (market.chinaTrade?.exports) score += 1;
+  if (market.chinaTrade?.imports) score += 1;
+  const coverage = market.profile?.coverage;
+  if (coverage) {
+    score += Math.min(coverage.divisions, 3);
+    score += Math.min(coverage.cities, 3);
+    score += Math.min(coverage.airports, 2);
+    score += Math.min(coverage.ports, 2);
+    score += Math.min(coverage.logistics, 2);
+    score += Math.min(coverage.hs2, 3);
+  }
+  return score;
 }
 
 function truncate(value: string, limit: number): string {
